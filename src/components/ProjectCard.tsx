@@ -1,6 +1,6 @@
 
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface ProjectCardProps {
@@ -11,9 +11,19 @@ interface ProjectCardProps {
   slug: string;
   color?: string;
   index: number;
+  comingSoon?: boolean;
 }
 
-const ProjectCard = ({ title, description, image, tags, slug, color = '#6366f1', index }: ProjectCardProps) => {
+const ProjectCard = ({ 
+  title, 
+  description, 
+  image, 
+  tags, 
+  slug, 
+  color = '#6366f1', 
+  index,
+  comingSoon = false
+}: ProjectCardProps) => {
   return (
     <motion.div
       className="group relative overflow-hidden rounded-xl"
@@ -28,6 +38,15 @@ const ProjectCard = ({ title, description, image, tags, slug, color = '#6366f1',
       />
       
       <div className="p-6 md:p-8 flex flex-col h-full border border-border/40 rounded-xl backdrop-blur-sm relative z-10">
+        {comingSoon && (
+          <div className="absolute top-4 right-4 z-30">
+            <div className="flex items-center bg-black/30 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
+              <Clock className="h-3 w-3 mr-1" />
+              <span>Coming Soon</span>
+            </div>
+          </div>
+        )}
+        
         <div className="mb-4 flex">
           {tags.map((tag, i) => (
             <span 
@@ -47,13 +66,16 @@ const ProjectCard = ({ title, description, image, tags, slug, color = '#6366f1',
           <img 
             src={image} 
             alt={title} 
-            className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            className={cn(
+              "w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105", 
+              comingSoon && "opacity-80"
+            )}
           />
           <div className="absolute inset-0 border border-border/20 rounded-lg" />
         </div>
         
         <motion.a
-          href={`/projects/${slug}`}
+          href={comingSoon ? "#" : `/projects/${slug}`}
           className={cn(
             "inline-flex items-center gap-2 text-sm font-medium", 
             "transition-all duration-300 hover:gap-3"
@@ -61,7 +83,7 @@ const ProjectCard = ({ title, description, image, tags, slug, color = '#6366f1',
           whileHover={{ x: 5 }}
           style={{ color }}
         >
-          View Project <ArrowRight className="h-4 w-4" />
+          {comingSoon ? "Learn More" : "View Project"} <ArrowRight className="h-4 w-4" />
         </motion.a>
       </div>
     </motion.div>

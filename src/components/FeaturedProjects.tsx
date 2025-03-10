@@ -9,7 +9,8 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
     tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
-    color: "#EC4899"
+    color: "#EC4899",
+    comingSoon: false
   },
   {
     title: "SAVE RAPUNZEL",
@@ -17,7 +18,8 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
     tags: ["Instructional Design"],
     slug: "save-rapunzel",
-    color: "#10B981"
+    color: "#10B981",
+    comingSoon: false
   },
   {
     title: "BIP",
@@ -25,7 +27,8 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
     tags: ["UX/UI Design"],
     slug: "bip",
-    color: "#8B5CF6"
+    color: "#8B5CF6",
+    comingSoon: false
   },
   {
     title: "STUDIT",
@@ -33,7 +36,8 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
     tags: ["UX/UI Design"],
     slug: "studit",
-    color: "#F59E0B"
+    color: "#F59E0B",
+    comingSoon: false
   }
 ];
 
@@ -64,6 +68,7 @@ const FeaturedProjects = () => {
               slug={project.slug}
               color={project.color}
               index={index}
+              comingSoon={project.comingSoon}
             />
           ))}
         </div>
