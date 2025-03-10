@@ -4,19 +4,53 @@ import { motion } from 'framer-motion';
 const skillsCategories = [
   {
     title: "Design",
-    skills: ["UI Design", "UX Design", "Wireframing", "Prototyping", "Design Systems", "Visual Design"]
+    skills: [
+      "UX/UI Design", 
+      "Wireframing & Prototyping", 
+      "Visual & Interaction Design", 
+      "Design Thinking & Information Architecture",
+      "UX Writing & Content Strategy",
+      "Design Systems"
+    ]
   },
   {
-    title: "Tools",
-    skills: ["Figma", "Adobe XD", "Sketch", "Photoshop", "Illustrator", "InVision", "Principle"]
+    title: "User Research & Testing",
+    skills: [
+      "User Research & Interviews", 
+      "Usability Testing & A/B Testing", 
+      "Persona Development & User Flows"
+    ]
   },
   {
-    title: "Research",
-    skills: ["User Interviews", "Usability Testing", "A/B Testing", "Heuristic Evaluation", "Persona Creation"]
+    title: "Tools & Software",
+    skills: [
+      "Figma", 
+      "Adobe XD", 
+      "Photoshop", 
+      "Illustrator",
+      "Rise 360", 
+      "Storyline", 
+      "Canva", 
+      "Microsoft Office"
+    ]
   },
   {
-    title: "Other",
-    skills: ["HTML/CSS", "Basic JavaScript", "Information Architecture", "Agile Methodology", "Design Thinking"]
+    title: "Development & Technical",
+    skills: [
+      "HTML/CSS", 
+      "Basic JavaScript",
+      "C#", 
+      "SQL", 
+      "Unity"
+    ]
+  },
+  {
+    title: "Collaboration & Project Management",
+    skills: [
+      "Agile / Scrum Methodologies",
+      "Cross-Functional Teamwork",
+      "Leadership & Communication"
+    ]
   }
 ];
 
@@ -37,7 +71,7 @@ const Skills = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {skillsCategories.map((category, index) => (
             <motion.div 
               key={index}

@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -9,7 +8,7 @@ const projectsData = [
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
-    tags: ["UX/UI Design", "Educational"],
+    tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#EC4899",
     case: "Designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner."
@@ -18,7 +17,7 @@ const projectsData = [
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Educational"],
+    tags: ["Instructional Design"],
     slug: "save-rapunzel",
     color: "#10B981",
     case: "Designed a dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge."
@@ -53,16 +52,23 @@ const projectsData = [
 
 const upcomingProjects = [
   {
+    title: "FreeFit App Redesign",
+    description: "A comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
+    image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=2070&auto=format&fit=crop",
+    tags: ["UX/UI Design"],
+    color: "#0EA5E9"
+  },
+  {
     title: "Playtika Manager Onboarding Guide",
     description: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
     image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Educational"],
+    tags: ["Instructional Design"],
     color: "#D946EF"
   }
 ];
 
-// Filter categories - simplified as requested
-const categories = ["All", "UX/UI Design", "Educational"];
+// Filter categories - updated as requested
+const categories = ["All", "UX/UI Design", "Instructional Design"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

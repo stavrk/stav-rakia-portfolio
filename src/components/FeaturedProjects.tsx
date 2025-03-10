@@ -7,7 +7,7 @@ const projectsData = [
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
-    tags: ["UX/UI Design", "Educational"],
+    tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#EC4899"
   },
@@ -15,7 +15,7 @@ const projectsData = [
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Educational"],
+    tags: ["Instructional Design"],
     slug: "save-rapunzel",
     color: "#10B981"
   },

@@ -107,10 +107,16 @@ const About = () => {
             <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-0.5 before:bg-border">
               {[
                 {
-                  role: "UX/UI Design Intern",
-                  company: "ORCAM Technologies",
+                  role: "UX/UI Design Intern & Deputy Team Leader",
+                  company: "OrCam Technologies",
                   period: "2023 - Present",
-                  description: "Contributing to the 'Orcam Hear' application design, participating in conceptualization, UI design, and user testing phases."
+                  description: "Contributing to the development of the OrCam Hear application in a dual role. As a UX/UI Design Intern, I participate in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allows me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
+                },
+                {
+                  role: "Military Service (Reserve Duty)",
+                  company: "Israeli Air Force (IAF)",
+                  period: "October 8, 2023 – February 2024",
+                  description: "Served as an Air Force Command & Control Intelligence Analyst, conducting in-depth investigations and operational analysis to support real-time decision-making in control units."
                 },
                 {
                   role: "Volunteer Designer",
@@ -173,13 +179,13 @@ const About = () => {
                 degree: "B.Sc in Instructional Technologies",
                 institution: "Holon Institute of Technology (HIT)",
                 year: "2020 - Present",
-                description: "Dean's List honoree with a GPA of 97. Focus on combining programming, graphic design, and instructional development."
+                description: "Dean's List Honoree – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design. The curriculum integrates Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), and Artificial Intelligence (AI) with technical development and design methodologies. Relevant Coursework: UX/UI Design & Analysis, Knowledge Organization & Representation, Interactive Learning Environments, Visual Communication & Graphic Design, Mobile Interface Design & Interactive Media."
               },
               {
-                degree: "JavaScript & React Development",
-                institution: "Self-paced Learning",
-                year: "2022",
-                description: "Completed comprehensive courses in modern JavaScript and React development to enhance technical skillset for UX/UI implementation."
+                degree: "Product Management Certification",
+                institution: "Women in Tech (WIT) Program – HIT",
+                year: "2023",
+                description: "A six-month intensive program designed for women entering product management, managed by HIT's FUTURE Innovation Center, in collaboration with the Israel Innovation Authority. Key Modules: Market Needs & Product Strategy, UX/UI in Product Development, Agile & Scrum, Data-Driven Decision-Making, Go-to-Market Strategy & Product Launch. The program blended theoretical knowledge with hands-on industry mentorship, culminating in a final practical project."
               },
               {
                 degree: "UX/UI Design Certification",
