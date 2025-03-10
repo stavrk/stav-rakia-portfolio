@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
+import { Clock } from "lucide-react"; // Adding the missing import
 
 // Combined project data with comingSoon flag
 const projectsData = [
