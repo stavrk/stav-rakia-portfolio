@@ -2,66 +2,66 @@
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
+import { Clock } from "lucide-react";
 
 const projectsData = [
   {
-    title: "BIP",
-    description: "A comprehensive financial management platform redesigned for better user experience and accessibility.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    tags: ["UX/UI Design", "Financial Tech"],
-    slug: "bip",
-    color: "#8B5CF6",
-    case: "Redesigned the entire user interface to improve usability while maintaining robust functionality. Created a new design system, simplified complex financial workflows, and improved accessibility features."
-  },
-  {
     title: "ROOMIE",
-    description: "A modern roommate matching application with intuitive onboarding and secure messaging features.",
+    description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
-    tags: ["App Design", "UX Research"],
+    tags: ["UX/UI Design", "User Research"],
     slug: "roomie",
     color: "#EC4899",
-    case: "Designed a mobile app focused on matching compatible roommates based on lifestyle preferences. Created an intuitive onboarding flow, secure messaging system, and profile verification process."
+    case: "Designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner."
   },
   {
-    title: "Save Rapunzel",
-    description: "An educational game aimed at teaching children basic coding concepts through interactive storytelling.",
+    title: "SAVE RAPUNZEL",
+    description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
     tags: ["Game Design", "Educational"],
     slug: "save-rapunzel",
     color: "#10B981",
-    case: "Created an engaging educational game that teaches children programming concepts through interactive storytelling. Designed intuitive game mechanics, character animations, and level progression."
+    case: "Designed a dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge."
   },
   {
-    title: "Health Tracker",
-    description: "A wellness application that helps users track their physical and mental health metrics.",
+    title: "BIP",
+    description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Speculative Design", "Financial Tech"],
+    slug: "bip",
+    color: "#8B5CF6",
+    case: "Reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception."
+  },
+  {
+    title: "STUDIT",
+    description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
     image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Mobile App", "Health Tech"],
-    slug: "health-tracker",
+    tags: ["Educational Tech", "AI"],
+    slug: "studit",
     color: "#F59E0B",
-    case: "Designed a wellness app with intuitive dashboards for monitoring health metrics. Created visualizations for data tracking and implemented gamification elements to encourage healthy habits."
-  },
+    case: "Designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions."
+  }
+];
+
+const upcomingProjects = [
   {
-    title: "Artisan",
-    description: "An e-commerce platform for independent artisans to showcase and sell their handcrafted products.",
+    title: "FreeFit App Redesign",
+    description: "A comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience.",
     image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=2070&auto=format&fit=crop",
-    tags: ["E-commerce", "Web Design"],
-    slug: "artisan",
-    color: "#0EA5E9",
-    case: "Designed an e-commerce platform that highlights the craftsmanship of artisanal products. Created a clean, image-focused interface with streamlined checkout process and seller management tools."
+    tags: ["App Redesign", "Fitness"],
+    color: "#0EA5E9"
   },
   {
-    title: "Urban Transit",
-    description: "A public transportation app redesigned to improve navigation and real-time updates for commuters.",
+    title: "Playtika Manager Onboarding Guide",
+    description: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
     image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Mobile App", "Transportation"],
-    slug: "urban-transit",
-    color: "#D946EF",
-    case: "Reimagined a public transportation app to provide clear navigation and real-time updates. Designed an accessible interface with offline functionality and multi-modal trip planning features."
+    tags: ["E-Learning", "Onboarding"],
+    color: "#D946EF"
   }
 ];
 
 // Filter categories
-const categories = ["All", "Mobile App", "Web Design", "UX/UI Design", "Game Design", "E-commerce"];
+const categories = ["All", "UX/UI Design", "Educational", "Speculative Design", "App Redesign", "E-Learning"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -82,7 +82,7 @@ const Projects = () => {
           >
             <h1 className="text-4xl md:text-5xl font-medium mb-4">My Projects</h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of my work across various industries and platforms.
+              A collection of my UX/UI design work across various industries and platforms.
             </p>
           </motion.div>
           
@@ -153,6 +153,70 @@ const Projects = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+          
+          {/* Upcoming Projects Section */}
+          <div className="mt-20">
+            <motion.div 
+              className="mb-12 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-medium mb-4">Coming Soon</h2>
+              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                Projects currently in development.
+              </p>
+            </motion.div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {upcomingProjects.map((project, index) => (
+                <motion.div 
+                  key={index}
+                  className="group overflow-hidden rounded-xl border border-border/40 relative"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
+                >
+                  <div className="absolute top-4 right-4 z-30">
+                    <div className="flex items-center bg-black/30 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
+                      <Clock className="h-3 w-3 mr-1" />
+                      <span>Coming Soon</span>
+                    </div>
+                  </div>
+                  
+                  <div className="relative aspect-video overflow-hidden opacity-80">
+                    <div 
+                      className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"
+                    />
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      className="w-full h-full object-cover object-center"
+                    />
+                    <div className="absolute bottom-0 left-0 z-20 p-6 w-full">
+                      <div className="flex flex-wrap gap-2 mb-2">
+                        {project.tags.map((tag, i) => (
+                          <span 
+                            key={i} 
+                            className="text-xs font-medium px-2.5 py-1 rounded-full bg-black/30 text-white backdrop-blur-sm"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <h3 className="text-2xl font-medium text-white mb-1">{project.title}</h3>
+                    </div>
+                  </div>
+                  
+                  <div className="p-6">
+                    <p className="text-muted-foreground">{project.description}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

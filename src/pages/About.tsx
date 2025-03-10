@@ -18,18 +18,24 @@ const About = () => {
             >
               <h1 className="text-4xl md:text-5xl font-medium mb-6">About Me</h1>
               <p className="text-muted-foreground text-lg mb-6">
-                I'm Stav Rakia, a UX/UI designer with over 5 years of experience creating 
-                intuitive and engaging digital experiences across various platforms and industries.
+                I'm Stav Rakia, a Product Designer and final-year Instructional Technologies 
+                student at HIT (Holon Institute of Technology), where I'm proud to be a Dean's 
+                List honoree with a GPA of 97. My educational background combines programming, 
+                graphic design, and instructional development, giving me a unique perspective 
+                on creating user-centered digital experiences.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
-                My approach combines user-centered design principles with strategic thinking 
-                to create products that are not only beautiful but also functional and accessible.
-                I'm passionate about solving complex problems through thoughtful design and 
-                continuous iteration based on user feedback.
+                Growing up in "Gallery Rakia," my family's art gallery, I was immersed in creativity 
+                from an early age. Beginning my journey with jewelry making at 12 years old taught me 
+                patience and attention to detail – qualities that now drive my passion for UX/UI design. 
+                I thrive at the intersection of art and functionality, using design thinking to solve 
+                complex problems with elegant solutions.
               </p>
               <p className="text-muted-foreground text-lg mb-8">
-                When I'm not designing, you can find me exploring new design trends, 
-                attending UX workshops, or hiking in the great outdoors.
+                My professional experience at ORCAM Technologies allowed me to contribute to the 'Orcam Hear' 
+                application, where I participated in its conceptualization, UI design, and user testing. 
+                I'm passionate about creating digital experiences that are not only visually appealing but 
+                also genuinely enhance users' lives.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -41,7 +47,7 @@ const About = () => {
                   Download Resume
                 </a>
                 <a 
-                  href="https://linkedin.com" 
+                  href="https://www.linkedin.com/in/stav-rakia/" 
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center px-6 py-3 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:translate-y-[-2px]"
@@ -72,8 +78,8 @@ const About = () => {
                 transition={{ delay: 0.4, duration: 0.5 }}
               >
                 <div className="text-center">
-                  <p className="font-medium mb-1">UX/UI Designer</p>
-                  <p className="text-sm text-muted-foreground">Based in Tel Aviv</p>
+                  <p className="font-medium mb-1">Product Designer</p>
+                  <p className="text-sm text-muted-foreground">Based in Israel</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -93,7 +99,7 @@ const About = () => {
           >
             <h2 className="text-3xl md:text-4xl font-medium mb-4">Experience</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              My professional journey in design.
+              My professional journey in design and technology.
             </p>
           </motion.div>
           
@@ -101,22 +107,22 @@ const About = () => {
             <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-0.5 before:bg-border">
               {[
                 {
-                  role: "Senior UX/UI Designer",
-                  company: "TechSolutions Inc.",
-                  period: "2021 - Present",
-                  description: "Leading design for financial and educational products. Established design system and conducted extensive user research."
+                  role: "UX/UI Design Intern",
+                  company: "ORCAM Technologies",
+                  period: "2023 - Present",
+                  description: "Contributing to the 'Orcam Hear' application design, participating in conceptualization, UI design, and user testing phases."
                 },
                 {
-                  role: "UX Designer",
-                  company: "DigitalCraft Agency",
+                  role: "Volunteer Designer",
+                  company: "Atid Plus Association",
+                  period: "2022 - Present",
+                  description: "Developing educational presentations that align with brand guidelines and creating engaging visual content for social programs."
+                },
+                {
+                  role: "Simulator Instructor",
+                  company: "Israeli Air Force",
                   period: "2018 - 2021",
-                  description: "Designed user interfaces for various client projects across e-commerce, healthcare, and fintech sectors."
-                },
-                {
-                  role: "UI Designer",
-                  company: "CreativeMinds Studio",
-                  period: "2016 - 2018",
-                  description: "Created visual designs for websites and applications with focus on aesthetics and brand consistency."
+                  description: "Trained Air Force personnel in tactical scenarios, developing skills in explaining complex systems and adapting instruction to different learning styles."
                 }
               ].map((experience, index) => (
                 <motion.div 
@@ -164,28 +170,28 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {[
               {
-                degree: "Master's in Interaction Design",
-                institution: "Design Academy",
-                year: "2016",
-                description: "Focused on human-computer interaction, user research methodologies, and interactive prototyping."
+                degree: "B.Sc in Instructional Technologies",
+                institution: "Holon Institute of Technology (HIT)",
+                year: "2020 - Present",
+                description: "Dean's List honoree with a GPA of 97. Focus on combining programming, graphic design, and instructional development."
               },
               {
-                degree: "Bachelor's in Graphic Design",
-                institution: "Creative Arts University",
-                year: "2014",
-                description: "Studied visual communication, typography, color theory, and basic web design principles."
+                degree: "JavaScript & React Development",
+                institution: "Self-paced Learning",
+                year: "2022",
+                description: "Completed comprehensive courses in modern JavaScript and React development to enhance technical skillset for UX/UI implementation."
               },
               {
-                degree: "UX Design Certification",
+                degree: "UX/UI Design Certification",
                 institution: "Google",
-                year: "2018",
+                year: "2021",
                 description: "Professional certification covering the end-to-end UX design process, from research to high-fidelity prototyping."
               },
               {
-                degree: "Accessibility in Design Workshop",
-                institution: "Inclusive Design Institute",
-                year: "2020",
-                description: "Intensive workshop on creating accessible digital experiences for users with diverse abilities."
+                degree: "Military Service",
+                institution: "Israeli Air Force",
+                year: "2018 - 2021",
+                description: "Served as a Simulator Instructor, developing skills in training methodology, complex systems explanation, and adaptive instruction."
               }
             ].map((education, index) => (
               <motion.div 

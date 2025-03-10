@@ -52,9 +52,10 @@ const Contact = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-3xl md:text-4xl font-medium mb-4">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Let's Create Something Amazing Together</h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Have a project in mind or want to discuss a potential collaboration? I'd love to hear from you.
+              I'm currently seeking opportunities to apply my skills in UX/UI design and instructional technology. 
+              Whether you're looking for a full-time designer or collaboration on a specific project, I'd love to hear from you.
             </p>
           </motion.div>
           
@@ -128,11 +129,11 @@ const Contact = () => {
                 
                 <div className="flex justify-between items-center">
                   <a 
-                    href="mailto:contact@stavrakia.com" 
+                    href="mailto:stavsim282@gmail.com" 
                     className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     <Mail className="h-4 w-4 mr-2" />
-                    contact@stavrakia.com
+                    stavsim282@gmail.com
                   </a>
                   
                   <button

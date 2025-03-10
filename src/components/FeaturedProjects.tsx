@@ -4,28 +4,36 @@ import ProjectCard from './ProjectCard';
 
 const projectsData = [
   {
-    title: "BIP",
-    description: "A comprehensive financial management platform redesigned for better user experience and accessibility.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    tags: ["UX/UI Design", "Financial Tech"],
-    slug: "bip",
-    color: "#8B5CF6"
-  },
-  {
     title: "ROOMIE",
-    description: "A modern roommate matching application with intuitive onboarding and secure messaging features.",
+    description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
-    tags: ["App Design", "UX Research"],
+    tags: ["UX/UI Design", "User Research"],
     slug: "roomie",
     color: "#EC4899"
   },
   {
-    title: "Save Rapunzel",
-    description: "An educational game aimed at teaching children basic coding concepts through interactive storytelling.",
+    title: "SAVE RAPUNZEL",
+    description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
     tags: ["Game Design", "Educational"],
     slug: "save-rapunzel",
     color: "#10B981"
+  },
+  {
+    title: "BIP",
+    description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Speculative Design", "Financial Tech"],
+    slug: "bip",
+    color: "#8B5CF6"
+  },
+  {
+    title: "STUDIT",
+    description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Educational Tech", "AI"],
+    slug: "studit",
+    color: "#F59E0B"
   }
 ];
 
@@ -41,11 +49,11 @@ const FeaturedProjects = () => {
         >
           <h2 className="text-3xl md:text-4xl font-medium mb-4">Featured Projects</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A selection of my recent work spanning various industries and platforms.
+            A selection of my UX/UI design work across various platforms and industries.
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
           {projectsData.map((project, index) => (
             <ProjectCard 
               key={project.slug}

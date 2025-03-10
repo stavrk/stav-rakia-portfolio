@@ -12,8 +12,8 @@ const Hero = () => {
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 tracking-tight">
-          <span className="hero-text-gradient">UX/UI Designer</span> crafting
-          <br /> intuitive digital experiences
+          <span className="hero-text-gradient">Product Designer</span> creating
+          <br /> meaningful digital experiences
         </h1>
         
         <motion.p 
@@ -22,8 +22,8 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          I'm Stav Rakia, a designer focused on creating beautiful, functional, and 
-          accessible interfaces that solve real user problems.
+          I'm Stav Rakia, a Designer and Instructional Technologies student focused on creating 
+          intuitive, functional, and user-centered digital experiences.
         </motion.p>
         
         <motion.div 

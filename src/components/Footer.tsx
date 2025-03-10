@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ExternalLink, Mail, Linkedin, Twitter } from 'lucide-react';
+import { ExternalLink, Mail, Linkedin, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -13,8 +13,8 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">Stav Rakia</h3>
             <p className="text-muted-foreground text-sm mb-4 max-w-md">
-              UX/UI designer focused on creating intuitive and engaging digital experiences
-              that solve real problems.
+              Product Designer and Instructional Technologies student focused on 
+              creating intuitive and engaging digital experiences that solve real problems.
             </p>
           </div>
           
@@ -43,7 +43,7 @@ const Footer = () => {
             <h3 className="text-lg font-medium mb-4">Connect</h3>
             <div className="flex space-x-4">
               <motion.a 
-                href="mailto:contact@stavrakia.com" 
+                href="mailto:stavsim282@gmail.com" 
                 className="p-2 rounded-full hover:bg-secondary transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -52,7 +52,7 @@ const Footer = () => {
                 <Mail className="h-5 w-5" />
               </motion.a>
               <motion.a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/stav-rakia/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-full hover:bg-secondary transition-colors"
@@ -63,15 +63,13 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </motion.a>
               <motion.a 
-                href="https://twitter.com" 
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+9725476764647" 
                 className="p-2 rounded-full hover:bg-secondary transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
-                aria-label="Twitter"
+                aria-label="Phone"
               >
-                <Twitter className="h-5 w-5" />
+                <Phone className="h-5 w-5" />
               </motion.a>
             </div>
           </div>

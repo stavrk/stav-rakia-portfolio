@@ -7,52 +7,25 @@ import { ArrowLeft, ExternalLink, Clock, Users, Target } from 'lucide-react';
 
 const projectsData = [
   {
-    title: "BIP",
-    description: "A comprehensive financial management platform redesigned for better user experience and accessibility.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
-    tags: ["UX/UI Design", "Financial Tech"],
-    slug: "bip",
-    color: "#8B5CF6",
-    overview: "BIP is a financial management platform that helps users track expenses, save money, and manage investments. The redesign focused on improving usability while maintaining robust functionality.",
-    challenge: "The original platform had powerful features but suffered from a confusing interface and poor information architecture, leading to high drop-off rates and customer support requests.",
-    solution: "I completely redesigned the user interface, creating a new design system, simplifying complex financial workflows, and improving accessibility features. The redesign focused on clear information hierarchy and intuitive navigation.",
-    process: [
-      "Conducted user interviews and analyzed customer support data to identify pain points",
-      "Created user flows and wireframes to outline the new structure",
-      "Developed a design system for consistent visual elements",
-      "Built high-fidelity prototypes and conducted usability testing",
-      "Worked closely with developers for implementation"
-    ],
-    results: "The redesign led to a 42% increase in user engagement, 35% reduction in support tickets, and 28% increase in completed transactions.",
-    duration: "12 weeks",
-    team: "3 designers, 5 developers",
-    role: "Lead UX/UI Designer",
-    additionalImages: [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"
-    ]
-  },
-  {
     title: "ROOMIE",
-    description: "A modern roommate matching application with intuitive onboarding and secure messaging features.",
+    description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
-    tags: ["App Design", "UX Research"],
+    tags: ["UX/UI Design", "User Research"],
     slug: "roomie",
     color: "#EC4899",
-    overview: "ROOMIE is a mobile app focused on matching compatible roommates based on lifestyle preferences, helping users find ideal living situations.",
-    challenge: "The roommate search process is often stressful and uncertain. Users needed a way to find compatible roommates based on lifestyle preferences, verify potential matches, and communicate securely.",
-    solution: "I designed a mobile app with an intuitive matching system, comprehensive profile creation, verification features, and secure in-app messaging.",
+    overview: "Roomie is a comprehensive digital guide designed to simplify the often overwhelming process of moving into a first apartment. This project emerged from recognizing the challenges and uncertainties that young adults face when navigating housing independence for the first time.",
+    challenge: "First-time movers face numerous challenges: understanding lease agreements, budgeting for moving expenses, knowing what essential items to purchase, and navigating roommate dynamics. Traditional resources are often scattered, overwhelming, or fail to address the emotional aspects of this significant life transition.",
+    solution: "I designed Roomie with a user-centric workflow that guides users through each stage of the moving process. The interface combines practical checklists with supportive content that acknowledges both the practical and emotional aspects of moving.",
     process: [
-      "Conducted market research and user interviews to understand pain points in roommate searching",
-      "Created user personas and journey maps",
-      "Designed the app architecture and workflow",
-      "Developed wireframes and interactive prototypes",
-      "Conducted usability testing and iterated on the design"
+      "Conducted extensive user research, interviewing 12 recent first-time movers about their challenges and wishes",
+      "Synthesized insights and created user personas and journey maps to identify key pain points",
+      "Developed multiple iterations of wireframes and prototypes for testing with potential users",
+      "Refined the interface and features based on user feedback",
+      "Created final designs with a warm, approachable aesthetic and calming color palette"
     ],
-    results: "The app launched with positive reviews, achieving a 4.7/5 rating. It facilitated over 5,000 successful roommate matches in the first quarter after launch.",
-    duration: "16 weeks",
-    team: "2 designers, 4 developers, 1 product manager",
+    results: "User testing revealed that Roomie reduced reported stress levels by 40% among first-time movers and increased confidence in their preparedness. The interactive checklist feature was particularly praised for making the overwhelming process feel structured and achievable.",
+    duration: "10 weeks",
+    team: "Solo project with user testing participants",
     role: "UX/UI Designer",
     additionalImages: [
       "https://images.unsplash.com/photo-1605146768851-eda79da39897?q=80&w=2070&auto=format&fit=crop",
@@ -61,30 +34,84 @@ const projectsData = [
     ]
   },
   {
-    title: "Save Rapunzel",
-    description: "An educational game aimed at teaching children basic coding concepts through interactive storytelling.",
+    title: "SAVE RAPUNZEL",
+    description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
     tags: ["Game Design", "Educational"],
     slug: "save-rapunzel",
     color: "#10B981",
-    overview: "Save Rapunzel is an educational game that teaches children basic programming concepts through interactive fairy tale storytelling.",
-    challenge: "Teaching programming concepts to young children in an engaging way that keeps them motivated while learning foundational skills.",
-    solution: "I created a game that combines fairy tale elements with visual programming challenges. Players help Rapunzel escape her tower by solving increasingly complex coding puzzles.",
+    overview: "Save Rapunzel is a dual-purpose educational platform consisting of an interactive educational game for students and a content creation tool for educators. The platform transforms traditional learning material into engaging game experiences built around the classic fairy tale of Rapunzel.",
+    challenge: "Traditional educational materials often fail to capture students' attention, particularly for challenging subjects. Educators need tools to create engaging content without extensive technical knowledge, while students need learning experiences that are both educational and entertaining.",
+    solution: "I designed a system with two interconnected components: a fairy tale-themed educational game where correct answers help the prince climb Rapunzel's hair to rescue her, and an intuitive content management system allowing educators to create custom question sets without coding knowledge.",
     process: [
-      "Researched child development and educational game design principles",
-      "Created character designs and storyline that would appeal to target age group",
-      "Designed intuitive drag-and-drop coding interface for children",
-      "Developed a progression system with appropriate difficulty scaling",
-      "Conducted playtesting with children and incorporated feedback"
+      "Conducted parallel research streams on educators' content creation needs and how children engage with educational games",
+      "Developed user personas for both audience segments (educators and students)",
+      "Created initial concept, wireframes and interactive prototypes",
+      "Conducted testing sessions with both educators and students to refine the user experience",
+      "Designed vibrant fairy tale-inspired visuals for game interface and professional aesthetic for educator interface"
     ],
-    results: "The game has been adopted by over 200 elementary schools and has shown a 40% improvement in logical reasoning skills among regular players.",
-    duration: "20 weeks",
-    team: "1 designer, 2 developers, 1 educational consultant",
+    results: "Initial testing with a class of 25 students showed increased engagement times compared to traditional study methods. Educators reported that the content creation tool reduced preparation time by approximately 30% compared to other digital learning platforms.",
+    duration: "16 weeks",
+    team: "Collaboration with 2 developers",
     role: "Game Designer & UI Designer",
     additionalImages: [
       "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop"
+    ]
+  },
+  {
+    title: "BIP",
+    description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Speculative Design", "Financial Tech"],
+    slug: "bip",
+    color: "#8B5CF6",
+    overview: "Bip is a conceptual money transfer application designed specifically for extraterrestrial users. This speculative design project challenged conventional UI/UX assumptions by considering the unique perceptual and cognitive needs of non-human users.",
+    challenge: "Design a financial application that accommodates alien perceptual abilities while maintaining the security and functionality expected in money transfer applications. Standard human-centered design principles needed significant adaptation to serve this unique user group.",
+    solution: "I reimagined the conventional money transfer app interface through an alien-centered design lens. This required developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception, while still drawing inspiration from familiar human applications like Bit and PayBox.",
+    process: [
+      "Established alien user personas based on specified perceptual constraints",
+      "Studied existing financial apps and adapted their core functionality to the alien context",
+      "Created wireframes that emphasized visual communication",
+      "Refined the interface through multiple iterations to balance alien-centered design with transaction security",
+      "Designed custom animations for key moments in the user journey for clear feedback"
+    ],
+    results: "This speculative project successfully demonstrated how fundamental UX principles can be adapted for radically different user needs. The resulting interface effectively communicates complex financial interactions through visual means while maintaining the security protocols essential for financial transactions.",
+    duration: "8 weeks",
+    team: "Solo speculative design project",
+    role: "Speculative UX/UI Designer",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"
+    ]
+  },
+  {
+    title: "STUDIT",
+    description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
+    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Educational Tech", "AI"],
+    slug: "studit",
+    color: "#F59E0B",
+    overview: "Studit is a web-based platform designed to help students prepare for the Israeli Psychometric Entrance Test (equivalent to the SAT/ACT). It provides personalized study plans, adaptive practice tests, and AI-generated scheduling based on individual performance and learning preferences.",
+    challenge: "Psychometric exam preparation is typically stressful, time-consuming, and often inefficient. Many students struggle to structure their study time effectively or identify which areas need the most attention. Existing platforms often present practice questions in a static, uninspiring format that fails to engage students.",
+    solution: "I designed Studit as an interactive, adaptive learning platform that makes studying feel less overwhelming and more engaging. The interface guides users through a complete journey: from selecting their exam date to taking a diagnostic assessment and receiving a personalized study schedule.",
+    process: [
+      "Conducted extensive research into student pain points during exam preparation",
+      "Analyzed existing educational platforms like Yoel Geva and Kidum to identify strengths and weaknesses",
+      "Developed wireframes and user flows that addressed key pain points while introducing interactive elements",
+      "Conducted multiple rounds of user testing to refine the interface",
+      "Created a clean, modern aesthetic with a warm color palette for a calm, focused studying environment"
+    ],
+    results: "User testing showed that students found the personalized scheduling feature particularly valuable, with 85% reporting that it would help them structure their study time more effectively. The interactive practice questions received positive feedback for making exam preparation less monotonous.",
+    duration: "14 weeks",
+    team: "Collaboration with 1 developer and 1 educational consultant",
+    role: "UX/UI Designer",
+    additionalImages: [
+      "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"
     ]
   }
 ];
@@ -184,7 +211,7 @@ const ProjectDetail = () => {
                 className="inline-flex items-center px-6 py-3 rounded-full text-white font-medium transition-all hover:opacity-90"
                 style={{ backgroundColor: project.color }}
               >
-                <span className="mr-2">View Live Project</span>
+                <span className="mr-2">View Prototype</span>
                 <ExternalLink className="h-4 w-4" />
               </a>
             </motion.div>
