@@ -22,7 +22,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          I'm Stav Rakia, a Designer and Instructional Technologies student focused on creating 
+          I'm Stav Rakia, a UX/UI Designer and Product Designer focused on creating 
           intuitive, functional, and user-centered digital experiences.
         </motion.p>
         
