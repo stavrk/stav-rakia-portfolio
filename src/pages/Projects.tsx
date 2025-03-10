@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -6,25 +5,6 @@ import { Clock } from "lucide-react"; // Adding the missing import
 
 // Combined project data with comingSoon flag
 const projectsData = [
-  // Coming Soon projects appear first
-  {
-    title: "FreeFit App Redesign",
-    description: "A comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
-    image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=2070&auto=format&fit=crop",
-    tags: ["UX/UI Design"],
-    color: "#0EA5E9",
-    case: "Undertaking a comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
-    comingSoon: true
-  },
-  {
-    title: "Playtika Manager Onboarding Guide",
-    description: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
-    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Instructional Design"],
-    color: "#D946EF",
-    case: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process. This custom e-learning solution will equip managers with the tools, knowledge, and resources to effectively introduce team members to company policies, systems, and culture in an engaging and efficient manner.",
-    comingSoon: true
-  },
   // Regular projects
   {
     title: "ROOMIE",
@@ -65,6 +45,25 @@ const projectsData = [
     color: "#F59E0B",
     case: "Designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions.",
     comingSoon: false
+  },
+  // Coming Soon projects at the end
+  {
+    title: "FreeFit App Redesign",
+    description: "A comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
+    image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=2070&auto=format&fit=crop",
+    tags: ["UX/UI Design"],
+    color: "#0EA5E9",
+    case: "Undertaking a comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
+    comingSoon: true
+  },
+  {
+    title: "Playtika Manager Onboarding Guide",
+    description: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
+    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
+    tags: ["Instructional Design"],
+    color: "#D946EF",
+    case: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process. This custom e-learning solution will equip managers with the tools, knowledge, and resources to effectively introduce team members to company policies, systems, and culture in an engaging and efficient manner.",
+    comingSoon: true
   }
 ];
 
@@ -74,9 +73,19 @@ const categories = ["All", "UX/UI Design", "Instructional Design"];
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   
+  // Get filtered projects based on selected category
   const filteredProjects = selectedCategory === "All" 
     ? projectsData 
     : projectsData.filter(project => project.tags.includes(selectedCategory));
+  
+  // Sort to ensure completed projects appear first and coming soon projects last
+  // This is redundant right now since we've already ordered the array, but keeps the logic
+  // in case the project data order changes in the future
+  const sortedProjects = [...filteredProjects].sort((a, b) => {
+    if (a.comingSoon && !b.comingSoon) return 1;
+    if (!a.comingSoon && b.comingSoon) return -1;
+    return 0;
+  });
   
   return (
     <Layout>
@@ -116,7 +125,7 @@ const Projects = () => {
           
           {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {filteredProjects.map((project, index) => (
+            {sortedProjects.map((project, index) => (
               <motion.div 
                 key={project.slug || index}
                 className="group overflow-hidden rounded-xl border border-border/40"
