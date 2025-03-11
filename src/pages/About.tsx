@@ -59,7 +59,7 @@ const About = () => {
             </motion.div>
             
             <motion.div
-              className="relative max-w-md mx-auto"
+              className="relative w-full max-w-sm mx-auto"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -239,7 +239,7 @@ const About = () => {
             >
               <div className="mb-6 rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" 
                   alt="Music" 
                   className="w-full h-40 object-cover"
                 />
@@ -283,7 +283,7 @@ const About = () => {
             >
               <div className="mb-6 rounded-lg overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1517364702321-f8118fb21b7b?q=80&w=2071&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=2070&auto=format&fit=crop" 
                   alt="Hobbies" 
                   className="w-full h-40 object-cover"
                 />

@@ -1,7 +1,8 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Clock } from "lucide-react"; // Adding the missing import
+import { Clock } from "lucide-react";
 
 // Combined project data with comingSoon flag
 const projectsData = [
@@ -24,7 +25,8 @@ const projectsData = [
     slug: "save-rapunzel",
     color: "#10B981",
     case: "Designed a dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge.",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://saverapunzel.telem-hit.net/GamesList"
   },
   {
     title: "BIP",
@@ -34,7 +36,8 @@ const projectsData = [
     slug: "bip",
     color: "#8B5CF6",
     case: "Reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
   },
   {
     title: "STUDIT",
@@ -44,7 +47,19 @@ const projectsData = [
     slug: "studit",
     color: "#F59E0B",
     case: "Designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions.",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
+  },
+  {
+    title: "PLANT LEARNING MODULE",
+    description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
+    image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop",
+    tags: ["Instructional Design", "E-Learning"],
+    slug: "plant-module",
+    color: "#22C55E",
+    case: "Developed a comprehensive e-learning module to educate customers on proper plant care, featuring interactive elements and assessment activities to boost confidence in houseplant selection and maintenance.",
+    comingSoon: false,
+    link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   },
   // Coming Soon projects at the end
   {
@@ -68,7 +83,7 @@ const projectsData = [
 ];
 
 // Filter categories
-const categories = ["All", "UX/UI Design", "Instructional Design"];
+const categories = ["All", "UX/UI Design", "Instructional Design", "E-Learning"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -79,8 +94,6 @@ const Projects = () => {
     : projectsData.filter(project => project.tags.includes(selectedCategory));
   
   // Sort to ensure completed projects appear first and coming soon projects last
-  // This is redundant right now since we've already ordered the array, but keeps the logic
-  // in case the project data order changes in the future
   const sortedProjects = [...filteredProjects].sort((a, b) => {
     if (a.comingSoon && !b.comingSoon) return 1;
     if (!a.comingSoon && b.comingSoon) return -1;
@@ -176,13 +189,25 @@ const Projects = () => {
                       In Development
                     </span>
                   ) : (
-                    <a 
-                      href={`/projects/${project.slug}`} 
-                      className="inline-block px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-secondary/70"
-                      style={{ borderColor: project.color }}
-                    >
-                      View Case Study
-                    </a>
+                    <div className="flex flex-wrap gap-3">
+                      <a 
+                        href={`/projects/${project.slug}`} 
+                        className="inline-block px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-secondary/70"
+                        style={{ borderColor: project.color }}
+                      >
+                        View Case Study
+                      </a>
+                      {project.link && (
+                        <a 
+                          href={project.link} 
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block px-5 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90"
+                        >
+                          Live Project
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </motion.div>
