@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -6,7 +5,6 @@ import { Clock } from "lucide-react";
 
 // Combined project data with comingSoon flag
 const projectsData = [
-  // Regular projects
   {
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
@@ -15,7 +13,8 @@ const projectsData = [
     slug: "roomie",
     color: "#EC4899",
     case: "Designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner.",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
   },
   {
     title: "SAVE RAPUNZEL",
@@ -61,7 +60,6 @@ const projectsData = [
     comingSoon: false,
     link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   },
-  // Coming Soon projects at the end
   {
     title: "FreeFit App Redesign",
     description: "A comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
@@ -83,7 +81,7 @@ const projectsData = [
 ];
 
 // Filter categories
-const categories = ["All", "UX/UI Design", "Instructional Design", "E-Learning"];
+const categories = ["All", "UX/UI Design", "Instructional Design"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");

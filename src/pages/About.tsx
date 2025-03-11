@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -6,6 +5,33 @@ import { motion } from "framer-motion";
 import { ExternalLink, Download, Music, Palette, Heart } from "lucide-react";
 
 const About = () => {
+  const artistsData = [
+    {
+      name: "Jorja Smith",
+      image: "/lovable-uploads/f99f7926-bde6-4388-952d-e96f73b9ca2b.png"
+    },
+    {
+      name: "Adele",
+      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop"
+    },
+    {
+      name: "Alicia Keys",
+      image: "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=2069&auto=format&fit=crop"
+    },
+    {
+      name: "Ninet Tayeb",
+      image: "https://images.unsplash.com/photo-1614634491088-949c495ef04e?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      name: "Red Band",
+      image: "https://images.unsplash.com/photo-1635070792143-98ca86e94560?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      name: "Olivia Dean",
+      image: "https://images.unsplash.com/photo-1684337993728-56a39518919b?q=80&w=2070&auto=format&fit=crop"
+    }
+  ];
+
   return (
     <Layout>
       <section className="py-20">
@@ -251,27 +277,25 @@ const About = () => {
                 <h3 className="text-xl font-medium">🎵 Artists I Love</h3>
               </div>
               
-              <ul className="grid grid-cols-2 gap-3">
-                {[
-                  "Jorja Smith",
-                  "Adele",
-                  "Alicia Keys", 
-                  "Ninet Tayeb",
-                  "Red Band",
-                  "Olivia Dean"
-                ].map((artist, index) => (
-                  <motion.li 
-                    key={index}
-                    className="p-3 rounded-lg bg-secondary text-secondary-foreground text-sm font-medium"
+              <div className="grid grid-cols-2 gap-3">
+                {artistsData.map((artist, i) => (
+                  <motion.div 
+                    key={i} 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground"
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ delay: index * 0.05, duration: 0.3 }}
+                    transition={{ delay: i * 0.05, duration: 0.3 }}
                   >
-                    {artist}
-                  </motion.li>
+                    <img 
+                      src={artist.image} 
+                      alt={artist.name}
+                      className="w-16 h-16 rounded-full object-cover mb-2"
+                    />
+                    <span className="text-sm font-medium">{artist.name}</span>
+                  </motion.div>
                 ))}
-              </ul>
+              </div>
             </motion.div>
             
             <motion.div

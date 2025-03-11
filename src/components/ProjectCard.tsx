@@ -1,7 +1,7 @@
-
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ProjectLink from './ProjectLink';
 
 interface ProjectCardProps {
   title: string;
@@ -12,6 +12,7 @@ interface ProjectCardProps {
   color?: string;
   index: number;
   comingSoon?: boolean;
+  link?: string;
 }
 
 const ProjectCard = ({ 
@@ -22,7 +23,8 @@ const ProjectCard = ({
   slug, 
   color = '#6366f1', 
   index,
-  comingSoon = false
+  comingSoon = false,
+  link
 }: ProjectCardProps) => {
   return (
     <motion.div
