@@ -3,7 +3,8 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
+import ProjectLink from '@/components/ProjectLink';
 
 const projectsData = [
   {
@@ -46,7 +47,8 @@ const projectsData = [
       "https://images.unsplash.com/photo-1605146768851-eda79da39897?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1615551043360-33de8b5f410c?q=80&w=3276&auto=format&fit=crop"
-    ]
+    ],
+    link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
   },
   {
     title: "SAVE RAPUNZEL",
@@ -88,7 +90,8 @@ const projectsData = [
       "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop"
-    ]
+    ],
+    link: "https://saverapunzel.telem-hit.net/GamesList"
   },
   {
     title: "BIP",
@@ -130,7 +133,8 @@ const projectsData = [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"
-    ]
+    ],
+    link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
   },
   {
     title: "STUDIT",
@@ -172,7 +176,51 @@ const projectsData = [
       "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"
-    ]
+    ],
+    link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
+  },
+  {
+    title: "PLANT LEARNING MODULE",
+    description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
+    image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop",
+    tags: ["Instructional Design"],
+    slug: "plant-module",
+    color: "#22C55E",
+    overview: "The Plant Learning Module was developed for 'Mishak 50', a company experiencing declining houseplant sales. The primary goal was to increase sales by educating customers and boosting their confidence in plant care through an interactive learning experience.",
+    challenge: "Many potential plant buyers lack confidence in their ability to care for houseplants, resulting in hesitation to purchase. The challenge was to create an educational solution that would effectively build this confidence through clear, accessible information and interactive learning experiences.",
+    solution: "I designed a comprehensive e-learning module focused on six key houseplants, with detailed care instructions, interactive assessments, and engaging visuals. The module employs a branching navigation model allowing users to personalize their learning journey based on their specific interests.",
+    process: [
+      "Analyzed 'Mishak 50' sales data to identify key plants with potential for increased sales",
+      "Conducted user research to understand common plant care misconceptions and learning preferences",
+      "Developed the instructional framework based on plant categories and care requirements",
+      "Created interactive elements including pre-learning assessments and knowledge checks",
+      "Designed a clean, plant-themed aesthetic with high-quality visuals and intuitive navigation"
+    ],
+    designProcessAndAesthetics: "For the Plant Learning Module, I designed a visual experience that embodies the natural, organic feel of the subject matter. The color palette centers on various shades of green with white space for balance, creating a fresh, clean aesthetic that evokes plant life while maintaining excellent readability.\n\nTypography choices prioritize clarity and accessibility, with sans-serif fonts at appropriate sizes for comfortable reading on various devices. Headings use a slightly bolder weight of the same font family to maintain visual harmony while creating clear information hierarchy.\n\nThe interface layout employs a grid system that organizes content into digestible sections, with consistent spacing and alignment. Plant images feature prominently throughout the module, serving both instructional and aesthetic purposes. Each plant category uses subtle visual cues to help users track where they are in the learning journey.\n\nInteractive elements employ a consistent design language, with clearly indicated touch/click targets and visual feedback on user actions. Drag-and-drop activities for plant placement and animated transitions between sections enhance engagement while reinforcing learning objectives.",
+    challengesAndSolutions: "A key challenge was balancing comprehensive plant care information with an approachable, non-overwhelming user experience. Many users reported feeling intimidated by detailed care instructions in initial testing. I addressed this by implementing a layered information architecture that presents essential care details first, with the option to expand sections for more detailed information.\n\nAnother challenge was creating effective assessment activities that would genuinely measure understanding rather than simple recall. I developed application-based questions that ask users to make decisions about plant placement and care schedules based on specific scenarios. These contextual assessments proved more effective at building confidence than traditional knowledge-checking questions.\n\nThe technical implementation presented challenges regarding the integration of high-quality visuals while maintaining performance across devices. I optimized image assets and implemented progressive loading to ensure the module remained responsive and engaging even on lower-bandwidth connections.",
+    designImages: [
+      {
+        title: "Color Palette",
+        image: "https://images.unsplash.com/photo-1447753072255-ca9a2c22afe7?q=80&w=2076&auto=format&fit=crop",
+        description: "Various shades of green with white space for a fresh, plant-inspired aesthetic"
+      },
+      {
+        title: "Typography & Layout",
+        image: "https://images.unsplash.com/photo-1582640299692-63b2d1e1a2e3?q=80&w=2069&auto=format&fit=crop",
+        description: "Clean, accessible typography with consistent spacing and alignment"
+      },
+      {
+        title: "Interactive Elements",
+        image: "https://images.unsplash.com/photo-1581022294576-c6d2an29d9af?q=80&w=2070&auto=format&fit=crop",
+        description: "Engaging interactive elements with clear visual feedback"
+      }
+    ],
+    additionalImages: [
+      "https://images.unsplash.com/photo-1545165311-508ed0c91361?q=80&w=2070&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=2074&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1467043198406-dc953a3defa0?q=80&w=2070&auto=format&fit=crop"
+    ],
+    link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   }
 ];
 
@@ -236,14 +284,9 @@ const ProjectDetail = () => {
                 {project.overview}
               </p>
               
-              <a 
-                href="#" 
-                className="inline-flex items-center px-6 py-3 rounded-full text-white font-medium transition-all hover:opacity-90"
-                style={{ backgroundColor: project.color }}
-              >
-                <span className="mr-2">View Prototype</span>
-                <ExternalLink className="h-4 w-4" />
-              </a>
+              {project.link && (
+                <ProjectLink href={project.link} />
+              )}
             </motion.div>
             
             <motion.div

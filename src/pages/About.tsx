@@ -1,8 +1,9 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
-import { ExternalLink, Download, Music, Palette, Heart } from "lucide-react";
+import { ExternalLink, Download, Heart } from "lucide-react";
 
 const About = () => {
   const artistsData = [
@@ -85,7 +86,7 @@ const About = () => {
             </motion.div>
             
             <motion.div
-              className="relative w-full max-w-sm mx-auto"
+              className="relative w-full max-w-xs mx-auto"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
@@ -126,6 +127,12 @@ const About = () => {
                   company: "OrCam Technologies",
                   period: "2021 - 2024",
                   description: "Contributing to the development of the OrCam Hear application in a dual role. I participated in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allowed me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
+                },
+                {
+                  role: "Simulator Instructor for IDF Officers",
+                  company: "TSAI Service - Israeli Defense Forces",
+                  period: "2020 - 2021",
+                  description: "Led simulator-based training exercises for IDF officers, developing and implementing structured training modules to enhance command and decision-making skills in simulated combat scenarios. Provided real-time feedback and evaluation while adapting training approaches to accommodate different learning styles and experience levels among participants."
                 },
                 {
                   role: "Military Service (Reserve Duty)",
@@ -263,16 +270,9 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
-              <div className="mb-6 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop" 
-                  alt="Music" 
-                  className="w-full h-40 object-cover"
-                />
-              </div>
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-full bg-pink-100 mr-4">
-                  <Music className="h-6 w-6 text-pink-500" />
+                  <Heart className="h-6 w-6 text-pink-500" />
                 </div>
                 <h3 className="text-xl font-medium">🎵 Artists I Love</h3>
               </div>
@@ -305,16 +305,9 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <div className="mb-6 rounded-lg overflow-hidden">
-                <img 
-                  src="https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?q=80&w=2070&auto=format&fit=crop" 
-                  alt="Hobbies" 
-                  className="w-full h-40 object-cover"
-                />
-              </div>
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-full bg-blue-100 mr-4">
-                  <Palette className="h-6 w-6 text-blue-500" />
+                  <Heart className="h-6 w-6 text-blue-500" />
                 </div>
                 <h3 className="text-xl font-medium">🎨 Hobbies</h3>
               </div>
@@ -327,8 +320,12 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.05, duration: 0.3 }}
                 >
-                  <div className="mr-3 w-8 h-8 flex items-center justify-center rounded-full bg-blue-100">
-                    <span className="text-blue-500 text-lg">💎</span>
+                  <div className="mr-3 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1974&auto=format&fit=crop"
+                      alt="Jewelry making"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <span className="font-medium">Jewelry making</span>
                 </motion.div>
@@ -340,8 +337,12 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.1, duration: 0.3 }}
                 >
-                  <div className="mr-3 w-8 h-8 flex items-center justify-center rounded-full bg-blue-100">
-                    <span className="text-blue-500 text-lg">🧘‍♀️</span>
+                  <div className="mr-3 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?q=80&w=1974&auto=format&fit=crop"
+                      alt="Pilates reformer"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <span className="font-medium">Pilates reformer</span>
                 </motion.div>
@@ -353,10 +354,14 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.15, duration: 0.3 }}
                 >
-                  <div className="mr-3 w-8 h-8 flex items-center justify-center rounded-full bg-blue-100">
-                    <span className="text-blue-500 text-lg">🐕</span>
+                  <div className="mr-3 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 overflow-hidden">
+                    <img 
+                      src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop"
+                      alt="Volunteering with Dogs"
+                      className="w-full h-full object-cover"
+                    />
                   </div>
-                  <span className="font-medium">Dog lover</span>
+                  <span className="font-medium">Volunteering with Dogs</span>
                 </motion.div>
               </div>
             </motion.div>

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
+import ProjectLink from '@/components/ProjectLink';
 
 // Combined project data with comingSoon flag
 const projectsData = [
@@ -53,7 +54,7 @@ const projectsData = [
     title: "PLANT LEARNING MODULE",
     description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
     image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop",
-    tags: ["Instructional Design", "E-Learning"],
+    tags: ["Instructional Design"],
     slug: "plant-module",
     color: "#22C55E",
     case: "Developed a comprehensive e-learning module to educate customers on proper plant care, featuring interactive elements and assessment activities to boost confidence in houseplant selection and maintenance.",
@@ -196,14 +197,7 @@ const Projects = () => {
                         View Case Study
                       </a>
                       {project.link && (
-                        <a 
-                          href={project.link} 
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block px-5 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90"
-                        >
-                          Live Project
-                        </a>
+                        <ProjectLink href={project.link} />
                       )}
                     </div>
                   )}

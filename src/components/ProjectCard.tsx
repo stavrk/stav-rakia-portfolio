@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { ArrowRight, Clock } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -76,17 +77,23 @@ const ProjectCard = ({
           <div className="absolute inset-0 border border-border/20 rounded-lg" />
         </div>
         
-        <motion.a
-          href={comingSoon ? "#" : `/projects/${slug}`}
-          className={cn(
-            "inline-flex items-center gap-2 text-sm font-medium", 
-            "transition-all duration-300 hover:gap-3"
+        <div className="flex justify-between items-center">
+          <motion.a
+            href={comingSoon ? "#" : `/projects/${slug}`}
+            className={cn(
+              "inline-flex items-center gap-2 text-sm font-medium", 
+              "transition-all duration-300 hover:gap-3"
+            )}
+            whileHover={{ x: 5 }}
+            style={{ color }}
+          >
+            {comingSoon ? "Learn More" : "View Project"} <ArrowRight className="h-4 w-4" />
+          </motion.a>
+          
+          {!comingSoon && link && (
+            <ProjectLink href={link} />
           )}
-          whileHover={{ x: 5 }}
-          style={{ color }}
-        >
-          {comingSoon ? "Learn More" : "View Project"} <ArrowRight className="h-4 w-4" />
-        </motion.a>
+        </div>
       </div>
     </motion.div>
   );
