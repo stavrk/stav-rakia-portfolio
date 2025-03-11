@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 
 const skillsCategories = [
@@ -47,7 +46,6 @@ const skillsCategories = [
   {
     title: "Collaboration & Project Management",
     skills: [
-      "Agile / Scrum Methodologies",
       "Cross-Functional Teamwork",
       "Leadership & Communication"
     ]

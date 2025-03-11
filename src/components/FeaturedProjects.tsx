@@ -51,7 +51,7 @@ const FeaturedProjects = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl md:text-4xl font-medium mb-4">Featured Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">My Projects</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
             A selection of my UX/UI design work across various platforms and industries.
           </p>

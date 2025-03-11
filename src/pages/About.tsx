@@ -18,8 +18,8 @@ const About = () => {
             >
               <h1 className="text-4xl md:text-5xl font-medium mb-6">About Me</h1>
               <p className="text-muted-foreground text-lg mb-6">
-                I'm Stav Rakia, a Product Designer and final-year Instructional Technologies 
-                student at HIT (Holon Institute of Technology), where I'm proud to be a Dean's 
+                I'm Stav Rakia, a UX/UI Designer and graduate of Instructional Technologies 
+                at HIT (Holon Institute of Technology), where I was a Dean's 
                 List honoree with a GPA of 97. My educational background combines programming, 
                 graphic design, and instructional development, giving me a unique perspective 
                 on creating user-centered digital experiences.
@@ -59,12 +59,12 @@ const About = () => {
             </motion.div>
             
             <motion.div
-              className="relative"
+              className="relative max-w-md mx-auto"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <div className="aspect-square rounded-xl overflow-hidden border-4 border-white shadow-xl">
+              <div className="aspect-square w-3/4 mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
                   alt="Stav Rakia" 
@@ -96,10 +96,10 @@ const About = () => {
             <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-0.5 before:bg-border">
               {[
                 {
-                  role: "UX/UI Design Intern & Deputy Team Leader",
+                  role: "Deputy Team Leader | Orcam Hear App Involvement",
                   company: "OrCam Technologies",
-                  period: "2023 - Present",
-                  description: "Contributing to the development of the OrCam Hear application in a dual role. As a UX/UI Design Intern, I participate in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allows me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
+                  period: "2021 - 2024",
+                  description: "Contributing to the development of the OrCam Hear application in a dual role. I participated in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allowed me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
                 },
                 {
                   role: "Military Service (Reserve Duty)",
@@ -112,12 +112,6 @@ const About = () => {
                   company: "Atid Plus Association",
                   period: "2022 - Present",
                   description: "Developing educational presentations that align with brand guidelines and creating engaging visual content for social programs."
-                },
-                {
-                  role: "Simulator Instructor",
-                  company: "Israeli Air Force",
-                  period: "2018 - 2021",
-                  description: "Trained Air Force personnel in tactical scenarios, developing skills in explaining complex systems and adapting instruction to different learning styles."
                 }
               ].map((experience, index) => (
                 <motion.div 
@@ -179,10 +173,10 @@ const About = () => {
               <h3 className="text-xl font-medium mb-1">B.Sc in Instructional Technologies</h3>
               <div className="flex justify-between items-center mb-3">
                 <p className="text-muted-foreground">Holon Institute of Technology</p>
-                <p className="text-sm text-muted-foreground">2020 - Present</p>
+                <p className="text-sm text-muted-foreground">2020 - 2024</p>
               </div>
               <p className="flex-grow overflow-y-auto text-sm">
-                Dean's List Honoree – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design. The curriculum integrates Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), and Artificial Intelligence (AI) with technical development and design methodologies.
+                Dean's List Honoree – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design.
               </p>
               <div className="mt-4 pt-4 border-t border-border/40">
                 <p className="text-sm font-medium">Relevant Coursework:</p>
@@ -243,6 +237,13 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
+              <div className="mb-6 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?q=80&w=2070&auto=format&fit=crop" 
+                  alt="Music" 
+                  className="w-full h-40 object-cover"
+                />
+              </div>
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-full bg-pink-100 mr-4">
                   <Music className="h-6 w-6 text-pink-500" />
@@ -280,6 +281,13 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
+              <div className="mb-6 rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1517364702321-f8118fb21b7b?q=80&w=2071&auto=format&fit=crop" 
+                  alt="Hobbies" 
+                  className="w-full h-40 object-cover"
+                />
+              </div>
               <div className="flex items-center mb-6">
                 <div className="p-3 rounded-full bg-blue-100 mr-4">
                   <Palette className="h-6 w-6 text-blue-500" />

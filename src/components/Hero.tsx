@@ -12,7 +12,7 @@ const Hero = () => {
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 tracking-tight">
-          <span className="hero-text-gradient">Stav Rakia</span> | 
+          <span className="hero-text-gradient">Stav Rakia</span>
           <br /> UX/UI Designer
         </h1>
         
