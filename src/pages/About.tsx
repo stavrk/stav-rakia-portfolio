@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
-import { ExternalLink, Download } from "lucide-react";
+import { ExternalLink, Download, Music, Palette, Heart } from "lucide-react";
 
 const About = () => {
   return (
@@ -71,17 +71,6 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <motion.div 
-                className="absolute -bottom-8 -left-8 p-5 rounded-xl bg-background border border-border/40 shadow-lg"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.4, duration: 0.5 }}
-              >
-                <div className="text-center">
-                  <p className="font-medium mb-1">Product Designer</p>
-                  <p className="text-sm text-muted-foreground">Based in Israel</p>
-                </div>
-              </motion.div>
             </motion.div>
           </div>
         </div>
@@ -116,7 +105,7 @@ const About = () => {
                   role: "Military Service (Reserve Duty)",
                   company: "Israeli Air Force (IAF)",
                   period: "October 8, 2023 – February 2024",
-                  description: "Served as an Air Force Command & Control Intelligence Analyst, conducting in-depth investigations and operational analysis to support real-time decision-making in control units."
+                  description: "At the Air Force Headquarters."
                 },
                 {
                   role: "Volunteer Designer",
@@ -173,49 +162,172 @@ const About = () => {
             </p>
           </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            {[
-              {
-                degree: "B.Sc in Instructional Technologies",
-                institution: "Holon Institute of Technology (HIT)",
-                year: "2020 - Present",
-                description: "Dean's List Honoree – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design. The curriculum integrates Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), and Artificial Intelligence (AI) with technical development and design methodologies. Relevant Coursework: UX/UI Design & Analysis, Knowledge Organization & Representation, Interactive Learning Environments, Visual Communication & Graphic Design, Mobile Interface Design & Interactive Media."
-              },
-              {
-                degree: "Product Management Certification",
-                institution: "Women in Tech (WIT) Program – HIT",
-                year: "2023",
-                description: "A six-month intensive program designed for women entering product management, managed by HIT's FUTURE Innovation Center, in collaboration with the Israel Innovation Authority. Key Modules: Market Needs & Product Strategy, UX/UI in Product Development, Agile & Scrum, Data-Driven Decision-Making, Go-to-Market Strategy & Product Launch. The program blended theoretical knowledge with hands-on industry mentorship, culminating in a final practical project."
-              },
-              {
-                degree: "UX/UI Design Certification",
-                institution: "Google",
-                year: "2021",
-                description: "Professional certification covering the end-to-end UX design process, from research to high-fidelity prototyping."
-              },
-              {
-                degree: "Military Service",
-                institution: "Israeli Air Force",
-                year: "2018 - 2021",
-                description: "Served as a Simulator Instructor, developing skills in training methodology, complex systems explanation, and adaptive instruction."
-              }
-            ].map((education, index) => (
-              <motion.div 
-                key={index}
-                className="p-6 rounded-xl bg-background border border-border/40"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <h3 className="text-xl font-medium mb-1">{education.degree}</h3>
-                <div className="flex justify-between items-center mb-3">
-                  <p className="text-muted-foreground">{education.institution}</p>
-                  <p className="text-sm text-muted-foreground">{education.year}</p>
+          {/* Square Education Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <motion.div
+              className="p-6 rounded-xl bg-background border border-border/40 aspect-square flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="mb-4 p-4 rounded-lg bg-primary/10 inline-block">
+                <div className="h-12 w-12 flex items-center justify-center rounded-full bg-primary text-white">
+                  <span className="text-lg font-bold">HIT</span>
                 </div>
-                <p>{education.description}</p>
-              </motion.div>
-            ))}
+              </div>
+              <h3 className="text-xl font-medium mb-1">B.Sc in Instructional Technologies</h3>
+              <div className="flex justify-between items-center mb-3">
+                <p className="text-muted-foreground">Holon Institute of Technology</p>
+                <p className="text-sm text-muted-foreground">2020 - Present</p>
+              </div>
+              <p className="flex-grow overflow-y-auto text-sm">
+                Dean's List Honoree – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design. The curriculum integrates Virtual Reality (VR), Augmented Reality (AR), Mixed Reality (MR), and Artificial Intelligence (AI) with technical development and design methodologies.
+              </p>
+              <div className="mt-4 pt-4 border-t border-border/40">
+                <p className="text-sm font-medium">Relevant Coursework:</p>
+                <p className="text-xs text-muted-foreground">UX/UI Design & Analysis, Knowledge Organization & Representation, Interactive Learning Environments, Visual Communication & Graphic Design, Mobile Interface Design & Interactive Media</p>
+              </div>
+            </motion.div>
+            
+            <motion.div
+              className="p-6 rounded-xl bg-background border border-border/40 aspect-square flex flex-col"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.1, duration: 0.5 }}
+            >
+              <div className="mb-4 p-4 rounded-lg bg-purple-500/10 inline-block">
+                <div className="h-12 w-12 flex items-center justify-center rounded-full bg-purple-500 text-white">
+                  <span className="text-lg font-bold">WIT</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-medium mb-1">Product Management Certification</h3>
+              <div className="flex justify-between items-center mb-3">
+                <p className="text-muted-foreground">Women in Tech Program – HIT</p>
+                <p className="text-sm text-muted-foreground">2025</p>
+              </div>
+              <p className="flex-grow overflow-y-auto text-sm">
+                A six-month intensive program designed for women entering product management, managed by HIT's FUTURE Innovation Center, in collaboration with the Israel Innovation Authority.
+              </p>
+              <div className="mt-4 pt-4 border-t border-border/40">
+                <p className="text-sm font-medium">Key Modules:</p>
+                <p className="text-xs text-muted-foreground">Market Needs & Product Strategy, UX/UI in Product Development, Agile & Scrum, Data-Driven Decision-Making, Go-to-Market Strategy & Product Launch</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Personal Interests Section */}
+      <section className="py-20">
+        <div className="container">
+          <motion.div 
+            className="mb-12 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-medium mb-4">Beyond Design</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              The things that inspire me outside of work.
+            </p>
+          </motion.div>
+          
+          <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+            <motion.div
+              className="p-6 rounded-xl bg-background border border-border/40"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <div className="flex items-center mb-6">
+                <div className="p-3 rounded-full bg-pink-100 mr-4">
+                  <Music className="h-6 w-6 text-pink-500" />
+                </div>
+                <h3 className="text-xl font-medium">🎵 Artists I Love</h3>
+              </div>
+              
+              <ul className="grid grid-cols-2 gap-3">
+                {[
+                  "Jorja Smith",
+                  "Adele",
+                  "Alicia Keys", 
+                  "Ninet Tayeb",
+                  "Red Band",
+                  "Olivia Dean"
+                ].map((artist, index) => (
+                  <motion.li 
+                    key={index}
+                    className="p-3 rounded-lg bg-secondary text-secondary-foreground text-sm font-medium"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05, duration: 0.3 }}
+                  >
+                    {artist}
+                  </motion.li>
+                ))}
+              </ul>
+            </motion.div>
+            
+            <motion.div
+              className="p-6 rounded-xl bg-background border border-border/40"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <div className="flex items-center mb-6">
+                <div className="p-3 rounded-full bg-blue-100 mr-4">
+                  <Palette className="h-6 w-6 text-blue-500" />
+                </div>
+                <h3 className="text-xl font-medium">🎨 Hobbies</h3>
+              </div>
+              
+              <div className="grid grid-cols-1 gap-3">
+                <motion.div
+                  className="p-4 rounded-lg bg-secondary flex items-center"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.05, duration: 0.3 }}
+                >
+                  <div className="mr-3 w-8 h-8 flex items-center justify-center rounded-full bg-blue-100">
+                    <span className="text-blue-500 text-lg">💎</span>
+                  </div>
+                  <span className="font-medium">Jewelry making</span>
+                </motion.div>
+                
+                <motion.div
+                  className="p-4 rounded-lg bg-secondary flex items-center"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1, duration: 0.3 }}
+                >
+                  <div className="mr-3 w-8 h-8 flex items-center justify-center rounded-full bg-blue-100">
+                    <span className="text-blue-500 text-lg">🧘‍♀️</span>
+                  </div>
+                  <span className="font-medium">Pilates reformer</span>
+                </motion.div>
+                
+                <motion.div
+                  className="p-4 rounded-lg bg-secondary flex items-center"
+                  initial={{ opacity: 0, x: -10 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.15, duration: 0.3 }}
+                >
+                  <div className="mr-3 w-8 h-8 flex items-center justify-center rounded-full bg-blue-100">
+                    <span className="text-blue-500 text-lg">🐕</span>
+                  </div>
+                  <span className="font-medium">Dog lover</span>
+                </motion.div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

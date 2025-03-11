@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Clock, Users, Target } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 
 const projectsData = [
   {
@@ -24,9 +24,8 @@ const projectsData = [
       "Created final designs with a warm, approachable aesthetic and calming color palette"
     ],
     results: "User testing revealed that Roomie reduced reported stress levels by 40% among first-time movers and increased confidence in their preparedness. The interactive checklist feature was particularly praised for making the overwhelming process feel structured and achievable.",
-    duration: "10 weeks",
-    team: "Solo project with user testing participants",
-    role: "UX/UI Designer",
+    designProcessAndAesthetics: "For Roomie, I crafted a visual language that balances practicality with emotional support. The color palette features warm, calming tones—primarily muted blues and soft oranges—to counteract the stress typically associated with moving. This deliberate choice helps create a sense of stability amidst the chaos of relocation.\n\nTypography plays a crucial role in the interface, with the primary font family being Assistant for its excellent readability and modern feel. Headers use weightier versions of the font (600-700) to create clear visual hierarchy, while body text maintains comfortable readability at 16px minimum.\n\nThe visual components follow a consistent rounded design system—buttons, cards, and input fields all feature softly rounded corners (8px radius) that contribute to the approachable feel of the application. Interactive elements like checklists and the budget calculator use subtle shadows and state changes to provide clear feedback to users.",
+    challengesAndSolutions: "One significant challenge emerged during user testing: participants felt overwhelmed by seeing all moving tasks simultaneously. I addressed this by implementing a progressive disclosure system that reveals tasks based on timeline relevance, with a customizable view option for users who prefer seeing the complete picture. This solution required several iterations of the information architecture and careful consideration of how to balance comprehensive information with manageable cognitive load.\n\nThe roommate agreement generator presented another challenge—how to create legally sound templates while keeping them accessible to young adults with no legal background. The solution involved collaboration with a legal consultant and multiple rounds of simplification testing to strike the right balance between comprehensiveness and clarity.",
     additionalImages: [
       "https://images.unsplash.com/photo-1605146768851-eda79da39897?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1524069290683-0457abfe42c3?q=80&w=2070&auto=format&fit=crop",
@@ -51,9 +50,8 @@ const projectsData = [
       "Designed vibrant fairy tale-inspired visuals for game interface and professional aesthetic for educator interface"
     ],
     results: "Initial testing with a class of 25 students showed increased engagement times compared to traditional study methods. Educators reported that the content creation tool reduced preparation time by approximately 30% compared to other digital learning platforms.",
-    duration: "16 weeks",
-    team: "Collaboration with 2 developers",
-    role: "Game Designer & UI Designer",
+    designProcessAndAesthetics: "For Save Rapunzel, I developed a dual-interface design system that serves both young learners and their educators. The game interface employs a vibrant, fairy tale-inspired color scheme dominated by purples, reds, and golds that evoke a sense of fantasy while maintaining sufficient contrast for readability.\n\nTypography choices differ between the student and educator interfaces. The game side uses rounded, playful fonts (minimum 18px) to engage younger users, while the educator dashboard employs a more structured font family (Assistant) with clear weight distinctions to create visual hierarchy in the content management system.\n\nThe character design for Rapunzel and the prince was carefully considered to be engaging without being distracting—stylized illustrations with clear expressions help reinforce the narrative element without overwhelming the educational focus. Background elements like the tower and clouds were designed with subtle animation properties to create a living world without competing for attention with the question content.\n\nInteractive elements employ consistent visual cues—correct answers trigger animations of the prince climbing higher on Rapunzel's hair, providing immediate visual feedback that reinforces learning progress. The editor interface uses drag-and-drop functionality and inline editing to make content creation intuitive for educators with varying levels of technical expertise.",
+    challengesAndSolutions: "A significant challenge emerged in balancing engaging visuals with educational clarity. Early prototypes showed that students were sometimes distracted by animations during question-answering phases. I addressed this by implementing a \"focus mode\" that temporarily simplifies the visual environment during active question engagement, then returns to the full visual experience during progress moments.\n\nAnother challenge was designing a content editor flexible enough to accommodate various question types while remaining simple for non-technical educators. The solution involved extensive card-sorting exercises with educators to determine the most intuitive organization of functions, resulting in a template-based approach with customization options revealed progressively as users become more comfortable with the system.",
     additionalImages: [
       "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop",
@@ -78,9 +76,8 @@ const projectsData = [
       "Designed custom animations for key moments in the user journey for clear feedback"
     ],
     results: "This speculative project successfully demonstrated how fundamental UX principles can be adapted for radically different user needs. The resulting interface effectively communicates complex financial interactions through visual means while maintaining the security protocols essential for financial transactions.",
-    duration: "8 weeks",
-    team: "Solo speculative design project",
-    role: "Speculative UX/UI Designer",
+    designProcessAndAesthetics: "The Bip money transfer app required a complete reimagining of financial interface conventions for extraterrestrial users. The color palette features high-contrast, vibrant combinations with bold blues and bright yellows against deep space-themed backgrounds. This choice directly addresses the perceptual constraints of the alien users, who struggle with gray tones and low-contrast interfaces.\n\nTypography was a critical consideration—all text elements are significantly larger than human-centered applications, with a minimum size of 14px for secondary information and 18-24px for primary interface elements. Font selection prioritized circular, open letterforms with substantial weight to enhance legibility for alien visual systems.\n\nThe interface employs a consistent rounded design language with substantial padding around interactive elements to accommodate potential differences in alien motor control precision. All buttons feature both color and icon changes in their active states to provide redundant feedback cues. The space-themed iconography replaces traditional financial symbols, creating culturally appropriate visual metaphors for the target users.\n\nInteractive animations play a crucial role in communicating process status, particularly during transaction verification and confirmation. I designed custom animations using principles of anticipation and follow-through to signal the beginning and completion of processes, helping users understand system status without relying on text.",
+    challengesAndSolutions: "The primary challenge was designing without access to actual extraterrestrial users for testing. To address this, I created detailed alien personas with specific perceptual constraints and decision-making patterns, then validated design choices against these profiles. This speculative design approach required multiple revisions as new constraints emerged during the design process.\n\nThe security verification system presented another unique challenge—how to implement secure authentication without relying on human biometric patterns. The solution involved creating a facial recognition system that accommodates alien facial structures, with animated guides to help users position correctly during scanning. This required careful consideration of how to communicate proper positioning without assuming human facial reference points.",
     additionalImages: [
       "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop",
@@ -105,9 +102,8 @@ const projectsData = [
       "Created a clean, modern aesthetic with a warm color palette for a calm, focused studying environment"
     ],
     results: "User testing showed that students found the personalized scheduling feature particularly valuable, with 85% reporting that it would help them structure their study time more effectively. The interactive practice questions received positive feedback for making exam preparation less monotonous.",
-    duration: "14 weeks",
-    team: "Collaboration with 1 developer and 1 educational consultant",
-    role: "UX/UI Designer",
+    designProcessAndAesthetics: "For Studit, I developed a visual language that balances academic seriousness with engaging interactivity. The color palette features warm neutrals (beiges and soft browns) as a base, accented with muted blues and occasional touches of yellow to create focus points without overwhelming the learning content. This restrained approach creates a calm environment conducive to focused study while providing enough visual interest to maintain engagement.\n\nTypography choices were critical for supporting extended reading periods. I selected Assistant as the primary font for its excellent readability and comprehensive Hebrew character support. Text hierarchy uses weight variation rather than dramatic size differences, with a minimum body text size of 16px to ensure comfortable reading during study sessions.\n\nThe layout employs generous white space and a consistent grid system to organize complex information clearly. Cards with subtle shadows and rounded corners (4px radius) contain related information groups, while interactive elements use slightly more pronounced shadows and state changes to indicate their functionality.\n\nUser flow considerations were paramount, with the interface guiding users through a logical progression from exam selection to diagnostic assessment and personalized scheduling. Each stage features animated transitions that provide both functional feedback and moments of delight in what could otherwise be a stressful process.",
+    challengesAndSolutions: "A significant design challenge emerged in making practice questions interactive without sacrificing academic rigor. Traditional multiple-choice formats felt static and disengaging, but overly gamified approaches risked undermining the serious purpose of the platform. The solution involved developing custom interaction patterns for different question types—drag-and-drop completions for verbal reasoning, interactive graphs for quantitative sections—that enhance engagement while maintaining focus on the academic content.\n\nAnother challenge was designing the AI-powered scheduling system to feel trustworthy and valuable rather than arbitrary. Early user testing revealed skepticism about algorithmically generated schedules. I addressed this by creating a transparent process that reveals the factors influencing schedule creation and allows users to adjust parameters while still benefiting from AI optimization. The schedule customization interface went through five iterations before achieving the right balance of guidance and user control.\n\nThe loading screens presented a particular design opportunity—rather than passive waiting periods, I transformed them into micro-moments of encouragement with progress animations and supportive messages. User testing showed this significantly reduced perceived waiting time and helped maintain motivation throughout the assessment process.",
     additionalImages: [
       "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop",
@@ -175,36 +171,6 @@ const ProjectDetail = () => {
               <p className="text-lg mb-8">
                 {project.overview}
               </p>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-                <div className="flex items-center">
-                  <div className="p-2 rounded-full bg-secondary mr-3">
-                    <Clock className="h-5 w-5" style={{ color: project.color }} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Duration</p>
-                    <p className="font-medium">{project.duration}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="p-2 rounded-full bg-secondary mr-3">
-                    <Users className="h-5 w-5" style={{ color: project.color }} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Team</p>
-                    <p className="font-medium">{project.team}</p>
-                  </div>
-                </div>
-                <div className="flex items-center">
-                  <div className="p-2 rounded-full bg-secondary mr-3">
-                    <Target className="h-5 w-5" style={{ color: project.color }} />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">My Role</p>
-                    <p className="font-medium">{project.role}</p>
-                  </div>
-                </div>
-              </div>
               
               <a 
                 href="#" 
@@ -289,6 +255,38 @@ const ProjectDetail = () => {
                     </div>
                     <p>{step}</p>
                   </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            
+            {/* Design Process & Aesthetics Section - New */}
+            <motion.div
+              className="mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+              <div className="prose prose-lg max-w-none">
+                {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                ))}
+              </div>
+            </motion.div>
+            
+            {/* Challenges & Solutions Section - New */}
+            <motion.div
+              className="mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
+              <div className="prose prose-lg max-w-none">
+                {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
                 ))}
               </div>
             </motion.div>
