@@ -33,6 +33,21 @@ const About = () => {
     }
   ];
 
+  const hobbiesData = [
+    {
+      name: "Jewelry making",
+      image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1974&auto=format&fit=crop"
+    },
+    {
+      name: "Pilates reformer",
+      image: "https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?q=80&w=1974&auto=format&fit=crop"
+    },
+    {
+      name: "Volunteering with Dogs",
+      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop"
+    }
+  ];
+
   return (
     <Layout>
       <section className="py-20">
@@ -45,11 +60,7 @@ const About = () => {
             >
               <h1 className="text-4xl md:text-5xl font-medium mb-6">About Me</h1>
               <p className="text-muted-foreground text-lg mb-6">
-                I'm Stav Rakia, a UX/UI Designer and graduate of Instructional Technologies 
-                at HIT (Holon Institute of Technology), where I was a Dean's 
-                List honoree with a GPA of 97. My educational background combines programming, 
-                graphic design, and instructional development, giving me a unique perspective 
-                on creating user-centered digital experiences.
+                I'm Stav Rakia, a UX/UI Designer focused on creating intuitive, functional, and user-centered digital experiences.
               </p>
               <p className="text-muted-foreground text-lg mb-6">
                 Growing up in "Gallery Rakia," my family's art gallery, I was immersed in creativity 
@@ -129,10 +140,10 @@ const About = () => {
                   description: "Contributing to the development of the OrCam Hear application in a dual role. I participated in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allowed me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
                 },
                 {
-                  role: "Simulator Instructor for IDF Officers",
-                  company: "TSAI Service - Israeli Defense Forces",
-                  period: "2020 - 2021",
-                  description: "Led simulator-based training exercises for IDF officers, developing and implementing structured training modules to enhance command and decision-making skills in simulated combat scenarios. Provided real-time feedback and evaluation while adapting training approaches to accommodate different learning styles and experience levels among participants."
+                  role: "MILITARY SERVICE",
+                  company: "Simulator Instructor",
+                  period: "2019 - 2021",
+                  description: ""Mekusharim" - tactical training of the air force fighter planes."
                 },
                 {
                   role: "Military Service (Reserve Duty)",
@@ -270,12 +281,7 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
-              <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-pink-100 mr-4">
-                  <Heart className="h-6 w-6 text-pink-500" />
-                </div>
-                <h3 className="text-xl font-medium">🎵 Artists I Love</h3>
-              </div>
+              <h3 className="text-xl font-medium mb-6">Artists I Love</h3>
               
               <div className="grid grid-cols-2 gap-3">
                 {artistsData.map((artist, i) => (
@@ -305,64 +311,26 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <div className="flex items-center mb-6">
-                <div className="p-3 rounded-full bg-blue-100 mr-4">
-                  <Heart className="h-6 w-6 text-blue-500" />
-                </div>
-                <h3 className="text-xl font-medium">🎨 Hobbies</h3>
-              </div>
+              <h3 className="text-xl font-medium mb-6">Hobbies</h3>
               
-              <div className="grid grid-cols-1 gap-3">
-                <motion.div
-                  className="p-4 rounded-lg bg-secondary flex items-center"
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.05, duration: 0.3 }}
-                >
-                  <div className="mr-3 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 overflow-hidden">
+              <div className="grid grid-cols-2 gap-3">
+                {hobbiesData.map((hobby, i) => (
+                  <motion.div 
+                    key={i} 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground"
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.05, duration: 0.3 }}
+                  >
                     <img 
-                      src="https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1974&auto=format&fit=crop"
-                      alt="Jewelry making"
-                      className="w-full h-full object-cover"
+                      src={hobby.image} 
+                      alt={hobby.name}
+                      className="w-16 h-16 rounded-full object-cover mb-2"
                     />
-                  </div>
-                  <span className="font-medium">Jewelry making</span>
-                </motion.div>
-                
-                <motion.div
-                  className="p-4 rounded-lg bg-secondary flex items-center"
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1, duration: 0.3 }}
-                >
-                  <div className="mr-3 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?q=80&w=1974&auto=format&fit=crop"
-                      alt="Pilates reformer"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <span className="font-medium">Pilates reformer</span>
-                </motion.div>
-                
-                <motion.div
-                  className="p-4 rounded-lg bg-secondary flex items-center"
-                  initial={{ opacity: 0, x: -10 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.15, duration: 0.3 }}
-                >
-                  <div className="mr-3 w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 overflow-hidden">
-                    <img 
-                      src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop"
-                      alt="Volunteering with Dogs"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <span className="font-medium">Volunteering with Dogs</span>
-                </motion.div>
+                    <span className="text-sm font-medium">{hobby.name}</span>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
