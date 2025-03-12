@@ -97,12 +97,12 @@ const About = () => {
             </motion.div>
             
             <motion.div
-              className="relative w-full max-w-xs mx-auto"
+              className="relative w-full max-w-md mx-auto"
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <div className="aspect-square w-3/4 mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
+              <div className="aspect-square w-full mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
                   alt="Stav Rakia" 
@@ -136,26 +136,26 @@ const About = () => {
                 {
                   role: "Deputy Team Leader | Orcam Hear App Involvement",
                   company: "OrCam Technologies",
-                  period: "2021 - 2024",
+                  period: "2023 - 2025",
                   description: "Contributing to the development of the OrCam Hear application in a dual role. I participated in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allowed me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
+                },
+                {
+                  role: "Military Service (Reserve Duty)",
+                  company: "Israeli Air Force (IAF)",
+                  period: "2021 - 2024",
+                  description: "At the Air Force Headquarters."
+                },
+                {
+                  role: "Volunteer Designer",
+                  company: "Atid Plus Association",
+                  period: "2022",
+                  description: "Developing educational presentations that align with brand guidelines and creating engaging visual content for social programs."
                 },
                 {
                   role: "MILITARY SERVICE",
                   company: "Simulator Instructor",
                   period: "2019 - 2021",
                   description: "\"Mekusharim\" - tactical training of the air force fighter planes."
-                },
-                {
-                  role: "Military Service (Reserve Duty)",
-                  company: "Israeli Air Force (IAF)",
-                  period: "October 8, 2023 – February 2024",
-                  description: "At the Air Force Headquarters."
-                },
-                {
-                  role: "Volunteer Designer",
-                  company: "Atid Plus Association",
-                  period: "2022 - Present",
-                  description: "Developing educational presentations that align with brand guidelines and creating engaging visual content for social programs."
                 }
               ].map((experience, index) => (
                 <motion.div 
@@ -313,7 +313,7 @@ const About = () => {
             >
               <h3 className="text-xl font-medium mb-6">Hobbies</h3>
               
-              <div className="grid grid-cols-2 gap-3">
+              <div className="flex flex-col space-y-3">
                 {hobbiesData.map((hobby, i) => (
                   <motion.div 
                     key={i} 

@@ -13,7 +13,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">Stav Rakia</h3>
             <p className="text-muted-foreground text-sm mb-4 max-w-md">
-              Product Designer and Instructional Technologies student focused on 
+              UX/UI Designer and Instructional Designer focused on 
               creating intuitive and engaging digital experiences that solve real problems.
             </p>
           </div>
