@@ -1,9 +1,8 @@
-
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
-import { ExternalLink, Download } from "lucide-react";
+import { ExternalLink, Download, Heart } from "lucide-react";
 
 const About = () => {
   const artistsData = [
@@ -45,6 +44,45 @@ const About = () => {
     {
       name: "Volunteering with Dogs",
       image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop"
+    },
+    {
+      name: "Ceramic Art",
+      image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=2070&auto=format&fit=crop"
+    },
+    {
+      name: "Meeting Friends",
+      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2069&auto=format&fit=crop"
+    },
+    {
+      name: "Traveling in Israel",
+      image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?q=80&w=2070&auto=format&fit=crop"
+    }
+  ];
+
+  const experienceData = [
+    {
+      role: "Military Service (Reserve Duty)",
+      company: "Israeli Air Force (IAF)",
+      period: "2023 - 2025",
+      description: "At the Air Force Headquarters."
+    },
+    {
+      role: "Deputy Team Leader | Orcam Hear App Involvement",
+      company: "OrCam Technologies",
+      period: "2021 - 2024",
+      description: "Contributing to the development of the OrCam Hear application in a dual role. I participated in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allowed me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
+    },
+    {
+      role: "Volunteer Designer",
+      company: "Atid Plus Association",
+      period: "2022",
+      description: "Developing educational presentations that align with brand guidelines and creating engaging visual content for social programs."
+    },
+    {
+      role: "Military Service (Regular Service)",
+      company: "Simulator Instructor",
+      period: "2019 - 2021",
+      description: "\"Mekusharim\" - tactical training of the air force fighter planes."
     }
   ];
 
@@ -132,32 +170,7 @@ const About = () => {
           
           <div className="max-w-3xl mx-auto">
             <div className="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-2 before:w-0.5 before:bg-border">
-              {[
-                {
-                  role: "Deputy Team Leader | Orcam Hear App Involvement",
-                  company: "OrCam Technologies",
-                  period: "2023 - 2025",
-                  description: "Contributing to the development of the OrCam Hear application in a dual role. I participated in the conceptualization, interface design, and user testing phases, helping craft accessible experiences for users with hearing impairments. As Deputy Team Leader for the Data Collection & Entry Team, I manage teams both in Israel and abroad, coordinate with R&D departments, and support strategic work planning. This unique role allowed me to bridge UX design thinking with operational leadership, working on assistive technology that profoundly impacts users' lives."
-                },
-                {
-                  role: "Military Service (Reserve Duty)",
-                  company: "Israeli Air Force (IAF)",
-                  period: "2021 - 2024",
-                  description: "At the Air Force Headquarters."
-                },
-                {
-                  role: "Volunteer Designer",
-                  company: "Atid Plus Association",
-                  period: "2022",
-                  description: "Developing educational presentations that align with brand guidelines and creating engaging visual content for social programs."
-                },
-                {
-                  role: "MILITARY SERVICE",
-                  company: "Simulator Instructor",
-                  period: "2019 - 2021",
-                  description: "\"Mekusharim\" - tactical training of the air force fighter planes."
-                }
-              ].map((experience, index) => (
+              {experienceData.map((experience, index) => (
                 <motion.div 
                   key={index}
                   className="mb-8 relative"
@@ -281,7 +294,9 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
             >
-              <h3 className="text-xl font-medium mb-6">Artists I Love</h3>
+              <h3 className="text-xl font-medium mb-6 flex items-center gap-2">
+                Artists I Love
+              </h3>
               
               <div className="grid grid-cols-2 gap-3">
                 {artistsData.map((artist, i) => (
@@ -311,9 +326,11 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <h3 className="text-xl font-medium mb-6">Hobbies</h3>
+              <h3 className="text-xl font-medium mb-6 flex items-center gap-2">
+                Hobbies <Heart className="h-5 w-5 text-primary" />
+              </h3>
               
-              <div className="flex flex-col space-y-3">
+              <div className="flex flex-col gap-3">
                 {hobbiesData.map((hobby, i) => (
                   <motion.div 
                     key={i} 
