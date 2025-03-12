@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
-import { ExternalLink, Download, Heart } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
 
 const About = () => {
   const artistsData = [
@@ -143,7 +143,7 @@ const About = () => {
                   role: "MILITARY SERVICE",
                   company: "Simulator Instructor",
                   period: "2019 - 2021",
-                  description: ""Mekusharim" - tactical training of the air force fighter planes."
+                  description: "\"Mekusharim\" - tactical training of the air force fighter planes."
                 },
                 {
                   role: "Military Service (Reserve Duty)",
