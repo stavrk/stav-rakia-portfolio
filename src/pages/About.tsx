@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -51,11 +50,11 @@ const About = () => {
       image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      name: "Meeting Friends",
+      name: "Hanging Out with Friends",
       image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2069&auto=format&fit=crop"
     },
     {
-      name: "Traveling in Israel",
+      name: "Traveling",
       image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?q=80&w=2070&auto=format&fit=crop"
     }
   ];
