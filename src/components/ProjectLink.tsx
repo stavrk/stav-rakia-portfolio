@@ -14,15 +14,15 @@ const ProjectLink = ({ href, className }: ProjectLinkProps) => {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex items-center px-6 py-3 rounded-full",
+        "inline-flex items-center justify-center px-6 py-3 rounded-full",
         "bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground",
         "font-medium transition-all duration-300",
         "border border-primary/20 hover:border-primary",
         className
       )}
     >
-      Check It Out
-      <ExternalLink className="ml-2 h-4 w-4" />
+      <span className="mr-2">Check It Out</span>
+      <ExternalLink className="h-4 w-4" />
     </a>
   );
 };

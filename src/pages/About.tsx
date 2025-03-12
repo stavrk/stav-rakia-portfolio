@@ -1,8 +1,9 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
-import { ExternalLink, Download, Heart } from "lucide-react";
+import { ExternalLink, Download } from "lucide-react";
 
 const About = () => {
   const artistsData = [
@@ -326,11 +327,11 @@ const About = () => {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <h3 className="text-xl font-medium mb-6 flex items-center gap-2">
-                Hobbies <Heart className="h-5 w-5 text-primary" />
+              <h3 className="text-xl font-medium mb-6">
+                Hobbies
               </h3>
               
-              <div className="flex flex-col gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 {hobbiesData.map((hobby, i) => (
                   <motion.div 
                     key={i} 
