@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -61,15 +60,6 @@ const projectsData = [
     case: "Our team developed a comprehensive e-learning module to educate customers on proper plant care, featuring interactive elements and assessment activities to boost confidence in houseplant selection and maintenance.",
     comingSoon: false,
     link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
-  },
-  {
-    title: "FreeFit App Redesign",
-    description: "A comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
-    image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=2070&auto=format&fit=crop",
-    tags: ["UX/UI Design"],
-    color: "#0EA5E9",
-    case: "I am undertaking a comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
-    comingSoon: true
   },
   {
     title: "Playtika Manager Onboarding Guide",
