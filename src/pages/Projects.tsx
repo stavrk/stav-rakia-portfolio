@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -13,7 +14,7 @@ const projectsData = [
     tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#EC4899",
-    case: "Designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner.",
+    case: "We designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Our team created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
   },
@@ -24,7 +25,7 @@ const projectsData = [
     tags: ["Instructional Design"],
     slug: "save-rapunzel",
     color: "#10B981",
-    case: "Designed a dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge.",
+    case: "We designed a dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge.",
     comingSoon: false,
     link: "https://saverapunzel.telem-hit.net/GamesList"
   },
@@ -35,7 +36,7 @@ const projectsData = [
     tags: ["UX/UI Design"],
     slug: "bip",
     color: "#8B5CF6",
-    case: "Reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
+    case: "My team and I reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
   },
@@ -46,7 +47,7 @@ const projectsData = [
     tags: ["UX/UI Design"],
     slug: "studit",
     color: "#F59E0B",
-    case: "Designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions.",
+    case: "We designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
   },
@@ -57,7 +58,7 @@ const projectsData = [
     tags: ["Instructional Design"],
     slug: "plant-module",
     color: "#22C55E",
-    case: "Developed a comprehensive e-learning module to educate customers on proper plant care, featuring interactive elements and assessment activities to boost confidence in houseplant selection and maintenance.",
+    case: "Our team developed a comprehensive e-learning module to educate customers on proper plant care, featuring interactive elements and assessment activities to boost confidence in houseplant selection and maintenance.",
     comingSoon: false,
     link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   },
@@ -67,7 +68,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=2070&auto=format&fit=crop",
     tags: ["UX/UI Design"],
     color: "#0EA5E9",
-    case: "Undertaking a comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
+    case: "We are undertaking a comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
     comingSoon: true
   },
   {
@@ -76,7 +77,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
     tags: ["Instructional Design"],
     color: "#D946EF",
-    case: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process. This custom e-learning solution will equip managers with the tools, knowledge, and resources to effectively introduce team members to company policies, systems, and culture in an engaging and efficient manner.",
+    case: "We're creating an interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process. Our custom e-learning solution will equip managers with the tools, knowledge, and resources to effectively introduce team members to company policies, systems, and culture in an engaging and efficient manner.",
     comingSoon: true
   }
 ];

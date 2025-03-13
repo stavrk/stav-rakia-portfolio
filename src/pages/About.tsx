@@ -50,7 +50,7 @@ const About = () => {
       image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=2070&auto=format&fit=crop"
     },
     {
-      name: "Hanging Out with Friends",
+      name: "Friends",
       image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2069&auto=format&fit=crop"
     },
     {
@@ -345,7 +345,7 @@ const About = () => {
                       alt={hobby.name}
                       className="w-16 h-16 rounded-full object-cover mb-2"
                     />
-                    <span className="text-sm font-medium">{hobby.name}</span>
+                    <span className="text-sm font-medium text-center">{hobby.name}</span>
                   </motion.div>
                 ))}
               </div>

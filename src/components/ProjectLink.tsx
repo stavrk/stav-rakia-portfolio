@@ -21,7 +21,7 @@ const ProjectLink = ({ href, className }: ProjectLinkProps) => {
         className
       )}
     >
-      <span className="mr-2">Check It Out</span>
+      <span className="flex items-center justify-center mr-2">Check It Out</span>
       <ExternalLink className="h-4 w-4" />
     </a>
   );
