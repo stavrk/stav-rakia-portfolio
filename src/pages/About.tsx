@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -8,54 +9,54 @@ const About = () => {
   const artistsData = [
     {
       name: "Jorja Smith",
-      image: "/lovable-uploads/f99f7926-bde6-4388-952d-e96f73b9ca2b.png"
+      image: "/lovable-uploads/91d6a29d-d21d-4937-b3b0-66516afd5972.png"
     },
     {
       name: "Adele",
-      image: "https://images.unsplash.com/photo-1508700115892-45ecd05ae2ad?q=80&w=2069&auto=format&fit=crop"
+      image: "/lovable-uploads/3e513c8d-b8d5-4362-ac41-ef2940c7196d.png"
     },
     {
       name: "Alicia Keys",
-      image: "https://images.unsplash.com/photo-1499364615650-ec38552f4f34?q=80&w=2069&auto=format&fit=crop"
+      image: "/lovable-uploads/db222a8b-2a27-4c27-9ad0-b62eba54647e.png"
     },
     {
       name: "Ninet Tayeb",
-      image: "https://images.unsplash.com/photo-1614634491088-949c495ef04e?q=80&w=2070&auto=format&fit=crop"
+      image: "/lovable-uploads/046a816a-e5b7-4e86-99e1-08d10fdc6a75.png"
     },
     {
       name: "Red Band",
-      image: "https://images.unsplash.com/photo-1635070792143-98ca86e94560?q=80&w=2070&auto=format&fit=crop"
+      image: "/lovable-uploads/1eeacbf6-5f0d-4e22-9792-6ea96328dfc4.png"
     },
     {
       name: "Olivia Dean",
-      image: "https://images.unsplash.com/photo-1684337993728-56a39518919b?q=80&w=2070&auto=format&fit=crop"
+      image: "/lovable-uploads/049c7740-d430-41f4-9ba1-2e985a2ae4be.png"
     }
   ];
 
   const hobbiesData = [
     {
       name: "Jewelry making",
-      image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?q=80&w=1974&auto=format&fit=crop"
+      image: "/lovable-uploads/6ae19bfb-ba54-4f5c-a4d7-041f98fa1ca9.png"
     },
     {
       name: "Pilates reformer",
-      image: "https://images.unsplash.com/photo-1570655652364-2e0a67455ac6?q=80&w=1974&auto=format&fit=crop"
+      image: "/lovable-uploads/46d5114d-6177-4e20-8241-6a28781a920b.png"
     },
     {
       name: "Volunteering with Dogs",
-      image: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=2069&auto=format&fit=crop"
+      image: "/lovable-uploads/eaa8d20c-7335-403b-853a-b43218228e55.png"
     },
     {
       name: "Ceramic Art",
-      image: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=2070&auto=format&fit=crop"
+      image: "/lovable-uploads/103e68e0-0f98-4c89-bab7-a177ea172f66.png"
     },
     {
       name: "Friends",
-      image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=2069&auto=format&fit=crop"
+      image: "/lovable-uploads/098ffff5-ceb1-4ab0-8644-ab1cd94accb6.png"
     },
     {
       name: "Traveling",
-      image: "https://images.unsplash.com/photo-1544198365-f5d60b6d8190?q=80&w=2070&auto=format&fit=crop"
+      image: "/lovable-uploads/95929c0c-a1ab-4969-bf78-1dcfebb6bd35.png"
     }
   ];
 
@@ -142,7 +143,7 @@ const About = () => {
             >
               <div className="aspect-square w-full mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop" 
+                  src="/lovable-uploads/6eca0a82-eae5-4159-9730-9a7a3a3eb109.png" 
                   alt="Stav Rakia" 
                   className="w-full h-full object-cover"
                 />
