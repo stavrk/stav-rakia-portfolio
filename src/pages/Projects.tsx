@@ -68,7 +68,7 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1607082350899-7e105aa886ae?q=80&w=2070&auto=format&fit=crop",
     tags: ["UX/UI Design"],
     color: "#0EA5E9",
-    case: "We are undertaking a comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
+    case: "I am undertaking a comprehensive redesign of the FreeFit fitness application, focusing on improved usability, enhanced scheduling functionality, and a more motivating user experience for booking and managing workout sessions.",
     comingSoon: true
   },
   {
@@ -112,7 +112,7 @@ const Projects = () => {
           >
             <h1 className="text-4xl md:text-5xl font-medium mb-4">My Projects</h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of my UX/UI design work across various platforms and industries.
+              A collection of my UX/UI and Instructional design work.
             </p>
           </motion.div>
           
@@ -192,7 +192,7 @@ const Projects = () => {
                     <div className="flex flex-wrap gap-3">
                       <a 
                         href={`/projects/${project.slug}`} 
-                        className="inline-block px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-secondary/70"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-secondary/70"
                         style={{ borderColor: project.color }}
                       >
                         View Case Study
