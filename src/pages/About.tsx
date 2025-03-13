@@ -136,7 +136,7 @@ const About = () => {
             </motion.div>
             
             <motion.div
-              className="relative w-full max-w-md mx-auto"
+              className="relative w-full max-w-lg mx-auto" /* Changed from max-w-md to max-w-lg to enlarge the image */
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2, duration: 0.5 }}
