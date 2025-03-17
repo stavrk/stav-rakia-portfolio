@@ -1,8 +1,10 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
 import { ExternalLink, Download } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const About = () => {
   const artistsData = [{
@@ -302,22 +304,40 @@ const About = () => {
           }}>
               <h3 className="text-xl font-medium mb-6 text-center">My Kind of Music</h3>
               
-              <div className="grid grid-cols-2 gap-3">
-                {artistsData.map((artist, i) => <motion.div key={i} className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" initial={{
-                opacity: 0,
-                x: -10
-              }} whileInView={{
-                opacity: 1,
-                x: 0
-              }} viewport={{
-                once: true
-              }} transition={{
-                delay: i * 0.05,
-                duration: 0.3
-              }}>
-                    <img src={artist.image} alt={artist.name} className="w-16 h-16 rounded-full object-cover mb-2" />
+              <div className="grid grid-cols-2 gap-4">
+                {artistsData.map((artist, i) => (
+                  <motion.div 
+                    key={i} 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" 
+                    initial={{
+                      opacity: 0,
+                      x: -10
+                    }} 
+                    whileInView={{
+                      opacity: 1,
+                      x: 0
+                    }} 
+                    viewport={{
+                      once: true
+                    }} 
+                    transition={{
+                      delay: i * 0.05,
+                      duration: 0.3
+                    }}
+                  >
+                    <div className="w-20 h-20 mb-3 rounded-full overflow-hidden">
+                      <AspectRatio ratio={1/1} className="bg-muted">
+                        <img 
+                          src={artist.image} 
+                          alt={artist.name} 
+                          className="w-full h-full object-cover rounded-full" 
+                          loading="lazy"
+                        />
+                      </AspectRatio>
+                    </div>
                     <span className="text-sm font-medium">{artist.name}</span>
-                  </motion.div>)}
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
             
@@ -338,22 +358,40 @@ const About = () => {
                 Hobbies
               </h3>
               
-              <div className="grid grid-cols-2 gap-3">
-                {hobbiesData.map((hobby, i) => <motion.div key={i} className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" initial={{
-                opacity: 0,
-                x: -10
-              }} whileInView={{
-                opacity: 1,
-                x: 0
-              }} viewport={{
-                once: true
-              }} transition={{
-                delay: i * 0.05,
-                duration: 0.3
-              }}>
-                    <img src={hobby.image} alt={hobby.name} className="w-16 h-16 rounded-full object-cover mb-2" />
+              <div className="grid grid-cols-2 gap-4">
+                {hobbiesData.map((hobby, i) => (
+                  <motion.div 
+                    key={i} 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" 
+                    initial={{
+                      opacity: 0,
+                      x: -10
+                    }} 
+                    whileInView={{
+                      opacity: 1,
+                      x: 0
+                    }} 
+                    viewport={{
+                      once: true
+                    }} 
+                    transition={{
+                      delay: i * 0.05,
+                      duration: 0.3
+                    }}
+                  >
+                    <div className="w-20 h-20 mb-3 rounded-full overflow-hidden">
+                      <AspectRatio ratio={1/1} className="bg-muted">
+                        <img 
+                          src={hobby.image} 
+                          alt={hobby.name} 
+                          className="w-full h-full object-cover rounded-full" 
+                          loading="lazy"
+                        />
+                      </AspectRatio>
+                    </div>
                     <span className="text-sm font-medium text-center">{hobby.name}</span>
-                  </motion.div>)}
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -365,4 +403,3 @@ const About = () => {
 };
 
 export default About;
-
