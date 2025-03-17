@@ -300,7 +300,7 @@ const About = () => {
           }} transition={{
             duration: 0.5
           }}>
-              <h3 className="text-xl font-medium mb-6 flex items-center gap-2">My Kind of Music</h3>
+              <h3 className="text-xl font-medium mb-6 flex items-center gap-2 text-justify">My Kind of Music</h3>
               
               <div className="grid grid-cols-2 gap-3">
                 {artistsData.map((artist, i) => <motion.div key={i} className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" initial={{
