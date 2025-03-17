@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -300,7 +301,7 @@ const About = () => {
           }} transition={{
             duration: 0.5
           }}>
-              <h3 className="text-xl font-medium mb-6 flex items-center gap-2 text-center px-0 mx-[107px]">My Kind of Music</h3>
+              <h3 className="text-xl font-medium mb-6 text-center">My Kind of Music</h3>
               
               <div className="grid grid-cols-2 gap-3">
                 {artistsData.map((artist, i) => <motion.div key={i} className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" initial={{
@@ -334,7 +335,7 @@ const About = () => {
             delay: 0.2,
             duration: 0.5
           }}>
-              <h3 className="text-xl font-medium mb-6 mx-[150px]">
+              <h3 className="text-xl font-medium mb-6 text-center">
                 Hobbies
               </h3>
               
