@@ -34,7 +34,7 @@ const About = () => {
     name: "Pilates reformer",
     image: "/lovable-uploads/21a9e39f-fdaf-4593-8535-65abbb7e36b3.png"
   }, {
-    name: "Volunteering with Dogs",
+    name: "Volunteers with dogs",
     image: "/lovable-uploads/26705183-2a3e-4509-baa3-037b884f3117.png"
   }, {
     name: "Ceramic Art",
