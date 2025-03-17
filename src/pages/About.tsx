@@ -1,29 +1,30 @@
-
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
 import { ExternalLink, Download } from "lucide-react";
+
 const About = () => {
   const artistsData = [{
     name: "Jorja Smith",
-    image: "/lovable-uploads/91d6a29d-d21d-4937-b3b0-66516afd5972.png"
+    image: "/lovable-uploads/8254fdaf-e168-45d1-804b-feffed551b76.png"
   }, {
     name: "Adele",
-    image: "/lovable-uploads/3e513c8d-b8d5-4362-ac41-ef2940c7196d.png"
+    image: "/lovable-uploads/db9d63a5-a1df-4b2c-8020-f40b8ff96d67.png"
   }, {
     name: "Alicia Keys",
-    image: "/lovable-uploads/db222a8b-2a27-4c27-9ad0-b62eba54647e.png"
+    image: "/lovable-uploads/dbff0825-df43-4301-b818-fd007d961677.png"
   }, {
     name: "Ninet Tayeb",
-    image: "/lovable-uploads/046a816a-e5b7-4e86-99e1-08d10fdc6a75.png"
+    image: "/lovable-uploads/ac268743-104c-47b7-a397-070001c6d649.png"
   }, {
     name: "Red Band",
-    image: "/lovable-uploads/1eeacbf6-5f0d-4e22-9792-6ea96328dfc4.png"
+    image: "/lovable-uploads/2b04e738-4994-4b70-a947-7ba58241a2b8.png"
   }, {
     name: "Olivia Dean",
-    image: "/lovable-uploads/049c7740-d430-41f4-9ba1-2e985a2ae4be.png"
+    image: "/lovable-uploads/20433a57-43ed-4175-902d-8df5cd8bb366.png"
   }];
+  
   const hobbiesData = [{
     name: "Jewelry making",
     image: "/lovable-uploads/6ae19bfb-ba54-4f5c-a4d7-041f98fa1ca9.png"
@@ -43,6 +44,7 @@ const About = () => {
     name: "Traveling",
     image: "/lovable-uploads/95929c0c-a1ab-4969-bf78-1dcfebb6bd35.png"
   }];
+  
   const experienceData = [{
     role: "Military Service (Reserve Duty)",
     company: "Israeli Air Force (IAF)",
@@ -64,6 +66,7 @@ const About = () => {
     period: "2019 - 2021",
     description: "\"Mekusharim\" - tactical training of the air force fighter planes."
   }];
+  
   return <Layout>
       <section className="py-20">
         <div className="container">
@@ -107,7 +110,7 @@ const About = () => {
               </div>
             </motion.div>
             
-            <motion.div className="relative w-full max-w-lg mx-auto" /* Changed from max-w-md to max-w-lg to enlarge the image */ initial={{
+            <motion.div className="relative w-full max-w-lg mx-auto" initial={{
             opacity: 0,
             x: 20
           }} animate={{
@@ -125,7 +128,6 @@ const About = () => {
         </div>
       </section>
       
-      {/* Experience Section */}
       <section className="py-20 bg-secondary/50">
         <div className="container">
           <motion.div className="mb-12 text-center" initial={{
@@ -178,7 +180,6 @@ const About = () => {
       
       <Skills />
       
-      {/* Education Section */}
       <section className="py-20 bg-secondary/50">
         <div className="container">
           <motion.div className="mb-12 text-center" initial={{
@@ -199,7 +200,6 @@ const About = () => {
             </p>
           </motion.div>
           
-          {/* Square Education Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <motion.div className="p-6 rounded-xl bg-background border border-border/40 aspect-square flex flex-col" initial={{
             opacity: 0,
@@ -267,7 +267,6 @@ const About = () => {
         </div>
       </section>
       
-      {/* Personal Interests Section */}
       <section className="py-20">
         <div className="container">
           <motion.div className="mb-12 text-center" initial={{
@@ -364,4 +363,5 @@ const About = () => {
       <Contact />
     </Layout>;
 };
+
 export default About;
