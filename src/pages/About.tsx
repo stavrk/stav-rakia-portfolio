@@ -27,22 +27,22 @@ const About = () => {
   
   const hobbiesData = [{
     name: "Jewelry making",
-    image: "/lovable-uploads/6ae19bfb-ba54-4f5c-a4d7-041f98fa1ca9.png"
+    image: "/lovable-uploads/21415086-1df6-4acf-ab75-7268709814b3.png"
   }, {
     name: "Pilates reformer",
-    image: "/lovable-uploads/46d5114d-6177-4e20-8241-6a28781a920b.png"
+    image: "/lovable-uploads/21a9e39f-fdaf-4593-8535-65abbb7e36b3.png"
   }, {
     name: "Volunteering with Dogs",
-    image: "/lovable-uploads/eaa8d20c-7335-403b-853a-b43218228e55.png"
+    image: "/lovable-uploads/26705183-2a3e-4509-baa3-037b884f3117.png"
   }, {
     name: "Ceramic Art",
-    image: "/lovable-uploads/103e68e0-0f98-4c89-bab7-a177ea172f66.png"
+    image: "/lovable-uploads/370e0139-e3a2-4963-8719-9ad27d3fb570.png"
   }, {
     name: "Friends",
-    image: "/lovable-uploads/098ffff5-ceb1-4ab0-8644-ab1cd94accb6.png"
+    image: "/lovable-uploads/b9c95a06-8869-4dfb-b425-1994f710ca1c.png"
   }, {
     name: "Traveling",
-    image: "/lovable-uploads/95929c0c-a1ab-4969-bf78-1dcfebb6bd35.png"
+    image: "/lovable-uploads/40563f20-2012-49e7-949e-bd6c06d55c21.png"
   }];
   
   const experienceData = [{
@@ -365,3 +365,4 @@ const About = () => {
 };
 
 export default About;
+
