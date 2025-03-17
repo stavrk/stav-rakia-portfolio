@@ -10,7 +10,7 @@ const projectsData = [
   {
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
-    image: "/lovable-uploads/‏‏ROOMIE-home-page.png",
+    image: "/lovable-uploads/‏‏roomie-home-page.png",
     tags: ["UX/UI Design", "User Research"],
     slug: "roomie",
     color: "#EC4899",
