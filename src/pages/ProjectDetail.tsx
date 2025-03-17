@@ -29,12 +29,12 @@ const projectsData = [
     designImages: [
       {
         title: "Color Palette",
-        image: "https://images.unsplash.com/photo-1515630278258-407f66498911?q=80&w=2069&auto=format&fit=crop",
+        image: "/lovable-uploads/color-palette-roomie.png",
         description: "Warm, calming tones—primarily muted blues and soft oranges"
       },
       {
         title: "Typography",
-        image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=2000&auto=format&fit=crop",
+        image: "/lovable-uploads/‏‏typography-roomie.png",
         description: "Assistant font family with weight variations for hierarchy"
       },
       {
