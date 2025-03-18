@@ -1,5 +1,5 @@
+import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowLeft } from 'lucide-react';
@@ -315,7 +315,59 @@ const ProjectDetail = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* Project Structure Section - only show if exists */}
+      {project.structureTree && (
+        <section className="py-20 bg-secondary/30">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title}</h2>
+                <div className="rounded-lg overflow-hidden border border-border/40 mb-6">
+                  <img 
+                    src={project.structureTree.image} 
+                    alt="Project Structure" 
+                    className="w-full h-auto"
+                  />
+                </div>
+                <p className="text-muted-foreground">{project.structureTree.description}</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Wireframes Section - only show for ROOMIE */}
+      {project.wireframes && project.slug === 'roomie' && (
+        <section className="py-20">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <div className="rounded-lg overflow-hidden border border-border/40 mb-6">
+                  <img 
+                    src={project.wireframes.image} 
+                    alt="Wireframes" 
+                    className="w-full h-auto"
+                  />
+                </div>
+                <p className="text-muted-foreground">{project.wireframes.description}</p>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Challenge & Solution Section */}
       <section className="py-20">
         <div className="container">
@@ -371,54 +423,3 @@ const ProjectDetail = () => {
                     </div>
                     <p>{step}</p>
                   </motion.div>
-                ))}
-              </div>
-            </motion.div>
-            
-            {/* Design Process & Aesthetics Section with images */}
-            <motion.div
-              className="mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
-              
-              <div className="space-y-8">
-                {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
-                  <div key={idx} className="mb-8">
-                    <p className="mb-4 text-muted-foreground">{paragraph}</p>
-                    
-                    {/* Display relevant design image if available */}
-                    {project.designImages && idx < project.designImages.length && (
-                      <motion.div 
-                        className="mt-6 rounded-lg overflow-hidden border border-border/40"
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                      >
-                        <img 
-                          src={project.designImages[idx].image} 
-                          alt={project.designImages[idx].title} 
-                          className={idx === 2 ? "w-full h-96 object-cover" : "w-full h-64 object-cover"}
-                        />
-                        <div className="p-4 bg-secondary/30">
-                          <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
-                          <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
-                        </div>
-                      </motion.div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
-};
-
-export default ProjectDetail;
