@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
 import ProjectLink from '@/components/ProjectLink';
 
-// Combined project data with comingSoon flag
 const projectsData = [
   {
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
+    image: "/lovable-uploads/roomie-home-page.png",
     tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
-    color: "#EC4899",
+    color: "#F4DB8B",
     case: "We designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Our team created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
@@ -35,7 +34,7 @@ const projectsData = [
     tags: ["UX/UI Design"],
     slug: "bip",
     color: "#8B5CF6",
-    case: "My team and I reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
+    case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
   },
@@ -72,18 +71,15 @@ const projectsData = [
   }
 ];
 
-// Filter categories
 const categories = ["All", "UX/UI Design", "Instructional Design"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   
-  // Get filtered projects based on selected category
   const filteredProjects = selectedCategory === "All" 
     ? projectsData 
     : projectsData.filter(project => project.tags.includes(selectedCategory));
   
-  // Sort to ensure completed projects appear first and coming soon projects last
   const sortedProjects = [...filteredProjects].sort((a, b) => {
     if (a.comingSoon && !b.comingSoon) return 1;
     if (!a.comingSoon && b.comingSoon) return -1;
@@ -106,7 +102,6 @@ const Projects = () => {
             </p>
           </motion.div>
           
-          {/* Filter */}
           <div className="flex flex-wrap justify-center gap-2 mb-12">
             {categories.map((category, index) => (
               <motion.button
@@ -126,7 +121,6 @@ const Projects = () => {
             ))}
           </div>
           
-          {/* Projects Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {sortedProjects.map((project, index) => (
               <motion.div 

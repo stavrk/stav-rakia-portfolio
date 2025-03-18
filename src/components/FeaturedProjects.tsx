@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
@@ -6,10 +5,10 @@ const projectsData = [
   {
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
+    image: "/lovable-uploads/roomie-home-page.png",
     tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
-    color: "#EC4899",
+    color: "#F4DB8B",
     comingSoon: false
   },
   {
