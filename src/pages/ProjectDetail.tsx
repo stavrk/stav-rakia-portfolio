@@ -402,7 +402,7 @@ const ProjectDetail = () => {
                         <img 
                           src={project.designImages[idx].image} 
                           alt={project.designImages[idx].title} 
-                          className="w-full h-64 object-cover"
+                          className={idx === 2 ? "w-full h-96 object-cover" : "w-full h-64 object-cover"}
                         />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
@@ -414,10 +414,11 @@ const ProjectDetail = () => {
                 ))}
               </div>
             </motion.div>
-            
-            {/* Challenges & Solutions Section - New */}
-            <motion.div
-              className="mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
