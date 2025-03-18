@@ -15,9 +15,8 @@ const ProjectLink = ({ href, className }: ProjectLinkProps) => {
       rel="noopener noreferrer"
       className={cn(
         "inline-flex items-center justify-center px-6 py-3 rounded-full",
-        "bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground",
+        "bg-primary text-primary-foreground hover:bg-primary/90",
         "font-medium transition-all duration-300",
-        "border border-primary/20 hover:border-primary",
         className
       )}
     >
