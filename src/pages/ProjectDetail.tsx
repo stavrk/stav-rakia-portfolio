@@ -10,12 +10,22 @@ const projectsData = [
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "/lovable-uploads/roomie-home-page.png",
-    tags: ["UX/UI Design", "User Research"],
+    tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#F4DB8B",
     overview: "Roomie is a comprehensive digital guide designed to simplify the often overwhelming process of moving into a first apartment. This project emerged from recognizing the challenges and uncertainties that young adults face when navigating housing independence for the first time.",
     challenge: "First-time movers face numerous challenges: understanding lease agreements, budgeting for moving expenses, knowing what essential items to purchase, and navigating roommate dynamics. Traditional resources are often scattered, overwhelming, or fail to address the emotional aspects of this significant life transition.",
     solution: "We designed Roomie with a user-centric workflow that guides users through each stage of the moving process. The interface combines practical checklists with supportive content that acknowledges both the practical and emotional aspects of moving.",
+    structureTree: {
+      title: "Project Structure",
+      image: "/lovable-uploads/map-roomie.png",
+      description: "Our project's structure was carefully planned to ensure a logical flow of information and features. The map above illustrates how different sections of the application interconnect, making the moving process more manageable for users."
+    },
+    wireframes: {
+      title: "Initial Wireframes",
+      image: "/lovable-uploads/roomie-wireframe.png",
+      description: "At the beginning of our process, we focused heavily on wireframing to prioritize product definition, interaction design, and user experience. These wireframes helped us establish the core functionality and user flows before moving into the visual design phase."
+    },
     process: [
       "Conducted extensive user research, interviewing 12 recent first-time movers about their challenges and wishes",
       "Synthesized insights and created user personas and journey maps to identify key pain points",
@@ -483,6 +493,60 @@ const ProjectDetail = () => {
           </div>
         </div>
       </section>
+      
+      {/* Add Structure Tree Section after Challenge & Solution Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="mb-12"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-medium mb-6">{project.structureTree?.title || "Project Structure"}</h2>
+              <p className="text-muted-foreground mb-8">{project.structureTree?.description}</p>
+              
+              <div className="rounded-xl overflow-hidden border border-border/40">
+                <img 
+                  src={project.structureTree?.image} 
+                  alt="Project Structure"
+                  className="w-full h-auto"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Add Wireframes Section for ROOMIE project only */}
+      {project.slug === 'roomie' && project.wireframes && (
+        <section className="py-20">
+          <div className="container">
+            <div className="max-w-4xl mx-auto">
+              <motion.div
+                className="mb-12"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireframes.image} 
+                    alt="Project Wireframes"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+      )}
     </Layout>
   );
 };
