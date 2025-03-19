@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -387,10 +388,10 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Reordered sections for Save Rapunzel */}
+            {/* Reordered and merged sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
               <>
-                {/* Content Generator Showcase Section */}
+                {/* Content Generator Showcase Section - MERGED */}
                 {project.editorShowcase && (
                   <motion.div
                     className="mb-16"
@@ -410,7 +411,7 @@ const ProjectDetail = () => {
                       />
                     </div>
                     
-                    {/* Merged paragraphs from Content Generator section */}
+                    {/* Content Generator section */}
                     <div className="prose prose-lg max-w-none">
                       {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
                         <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
@@ -464,7 +465,7 @@ const ProjectDetail = () => {
                   </motion.div>
                 )}
 
-                {/* Technical Challenges Section */}
+                {/* Technical & Development Challenges Section - MERGED */}
                 {project.technicalChallenges && (
                   <motion.div
                     className="mb-16"
@@ -473,26 +474,17 @@ const ProjectDetail = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h2 className="text-2xl font-medium mb-6">Technical Challenges and Solutions</h2>
+                    <h2 className="text-2xl font-medium mb-6">🛠 Technical & Development Challenges</h2>
                     <div className="prose prose-lg max-w-none">
+                      {/* Technical Challenges content */}
                       {project.technicalChallenges.split('\n\n').map((paragraph, idx) => (
                         <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
                       ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Collaborative Development Section - kept with Technical Challenges */}
-                {project.collaborativeDevelopment && (
-                  <motion.div
-                    className="mb-16"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">Collaborative Development Process</h2>
-                    <div className="prose prose-lg max-w-none">
+                      
+                      {/* Add a small separator */}
+                      <div className="my-6 border-t border-border/40"></div>
+                      
+                      {/* Collaborative Development content */}
                       {project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => (
                         <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
                       ))}
@@ -546,7 +538,7 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Design Process & Aesthetics Section with images */}
+            {/* Design Process & Aesthetics Section with images - OPTIMIZED */}
             <motion.div
               className="mb-16"
               initial={{ opacity: 0, y: 20 }}
@@ -586,21 +578,47 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Challenges & Solutions Section */}
-            <motion.div
-              className="mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
-              <div className="prose prose-lg max-w-none">
-                {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
-                  <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                ))}
-              </div>
-            </motion.div>
+            {/* Challenges & Solutions Section - WITH STREAMLINED CONTENT */}
+            {project.slug !== 'save-rapunzel' && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
+                <div className="prose prose-lg max-w-none">
+                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Streamlined Challenges section for Save Rapunzel */}
+            {project.slug === 'save-rapunzel' && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
+                <div className="prose prose-lg max-w-none">
+                  <p className="mb-4 text-muted-foreground">
+                    Beyond the technical challenges mentioned above, we faced several design and implementation hurdles throughout the project. One significant challenge was balancing engaging visuals with educational clarity. Early prototypes showed that students were sometimes distracted by animations during question-answering phases.
+                  </p>
+                  <p className="mb-4 text-muted-foreground">
+                    We addressed this by implementing a "focus mode" that temporarily simplifies the visual environment during active question engagement, then returns to the full visual experience during progress moments. This solution required careful timing and visual design to ensure a seamless transition between modes.
+                  </p>
+                  <p className="mb-4 text-muted-foreground">
+                    Another challenge was ensuring the educational content remained engaging without compromising learning objectives. Through extensive testing with students, we refined the difficulty curve and feedback mechanisms to maintain motivation while still challenging learners appropriately.
+                  </p>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
