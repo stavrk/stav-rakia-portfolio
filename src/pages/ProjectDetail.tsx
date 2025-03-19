@@ -356,11 +356,13 @@ const ProjectDetail = () => {
               </motion.div>
             </div>
             
+            {/* Design Process Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5 }}
+              className="mb-16"
             >
               <h2 className="text-2xl font-medium mb-6">Design Process</h2>
               <div className="space-y-4 mb-8">
@@ -385,53 +387,38 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Project Structure Section - MOVED to after Design Process */}
-            {project.structureTree && (
-              <motion.div
-                className="mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
-                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.structureTree.image} 
-                    alt="Project Structure"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-
-            {/* Wireframes Section - MOVED to after Design Process */}
-            {project.slug === 'roomie' && project.wireframes && (
-              <motion.div
-                className="mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
-                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireframes.image} 
-                    alt="Project Wireframes"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* New Sections for Save Rapunzel */}
+            {/* Reordered sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
               <>
+                {/* Content Generator Showcase Section */}
+                {project.editorShowcase && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
+                    <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
+                    
+                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
+                      <img 
+                        src={project.editorShowcase.image} 
+                        alt="Content Generator Interface"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    
+                    {/* Merged paragraphs from Content Generator section */}
+                    <div className="prose prose-lg max-w-none">
+                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
                 {/* Graphic Development Section */}
                 {project.graphicDevelopment && (
                   <motion.div
@@ -448,7 +435,7 @@ const ProjectDetail = () => {
                       ))}
                     </div>
                     
-                    {/* Moved the image here from the Design Evolution section */}
+                    {/* Moved image from Design Evolution section */}
                     <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
                       <img 
                         src="/lovable-uploads/first-version-save-repunzel.png" 
@@ -458,9 +445,9 @@ const ProjectDetail = () => {
                     </div>
                   </motion.div>
                 )}
-
-                {/* Content Generator Showcase Section */}
-                {project.editorShowcase && (
+                
+                {/* Animation Features Section */}
+                {project.animationFeatures && (
                   <motion.div
                     className="mb-16"
                     initial={{ opacity: 0, y: 20 }}
@@ -468,15 +455,11 @@ const ProjectDetail = () => {
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
-                    <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
-                    
-                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg">
-                      <img 
-                        src={project.editorShowcase.image} 
-                        alt="Content Generator Interface"
-                        className="w-full h-auto"
-                      />
+                    <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.animationFeatures.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
                     </div>
                   </motion.div>
                 )}
@@ -499,43 +482,7 @@ const ProjectDetail = () => {
                   </motion.div>
                 )}
 
-                {/* Content Generator Specifications Section */}
-                {project.contentGenerator && (
-                  <motion.div
-                    className="mb-16"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">Content Generator Specifications and Interface</h2>
-                    <div className="prose prose-lg max-w-none">
-                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Animation Features Section */}
-                {project.animationFeatures && (
-                  <motion.div
-                    className="mb-16"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
-                    <div className="prose prose-lg max-w-none">
-                      {project.animationFeatures.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Collaborative Development Section */}
+                {/* Collaborative Development Section - kept with Technical Challenges */}
                 {project.collaborativeDevelopment && (
                   <motion.div
                     className="mb-16"
@@ -553,6 +500,50 @@ const ProjectDetail = () => {
                   </motion.div>
                 )}
               </>
+            )}
+            
+            {/* Project Structure Section - For Roomie project */}
+            {project.structureTree && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
+                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.structureTree.image} 
+                    alt="Project Structure"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+
+            {/* Wireframes Section - For Roomie project */}
+            {project.slug === 'roomie' && project.wireframes && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireframes.image} 
+                    alt="Project Wireframes"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
             )}
             
             {/* Design Process & Aesthetics Section with images */}
