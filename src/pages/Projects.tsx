@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -19,7 +20,7 @@ const projectsData = [
   {
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
-    image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
+    image: "/lovable-uploads/save-repunzel.png",
     tags: ["Instructional Design"],
     slug: "save-rapunzel",
     color: "#10B981",
