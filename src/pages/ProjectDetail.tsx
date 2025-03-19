@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -62,13 +63,28 @@ const projectsData = [
   {
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
-    image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
+    image: "/lovable-uploads/save-repunzel.png",
     tags: ["Game Design", "Educational"],
     slug: "save-rapunzel",
     color: "#10B981",
     overview: "Save Rapunzel is a dual-purpose educational platform consisting of an interactive educational game for students and a content creation tool for educators. The platform transforms traditional learning material into engaging game experiences built around the classic fairy tale of Rapunzel.",
     challenge: "Traditional educational materials often fail to capture students' attention, particularly for challenging subjects. Educators need tools to create engaging content without extensive technical knowledge, while students need learning experiences that are both educational and entertaining.",
     solution: "I designed a system with two interconnected components: a fairy tale-themed educational game where correct answers help the prince climb Rapunzel's hair to rescue her, and an intuitive content management system allowing educators to create custom question sets without coding knowledge.",
+    graphicDevelopment: "The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. As a team, we developed all graphics and visual elements ourselves, carefully tailoring them to the user experience we aimed to create.\n\nWe began with a traditional storybook concept to tell the tale, but after user research and consultations, we completely pivoted our approach toward an interactive animation where Rapunzel walks to the window as the story unfolds. This change significantly deepened the user experience and resulted in greater student engagement.",
+    technicalChallenges: "One significant challenge was creating a system that allowed both simple interaction for students and flexibility for teachers in content creation. We developed an intuitive content generator that enables teachers with no technical background to create customized questions, incorporate images, and define parameters such as time per question.\n\nWe tackled the challenge of displaying Hebrew text and navigating a bidirectional interface, developing a unique solution for reversing numbers and English words in mixed text, which significantly enhanced the user experience for Hebrew speakers.",
+    contentGenerator: "The generator we developed represents a revolutionary approach to creating educational content. Unlike traditional systems, we designed an interface that balances simplicity with power, featuring built-in protection mechanisms that prevent the publication of invalid games and provide teachers with immediate feedback.\n\nThe generator includes a progressive approval system that encourages users to create at least 10 quality questions before publishing the game, with a maximum allowance of 30 questions per game. These specifications were established after extensive user research with teachers and education professionals.",
+    animationFeatures: "We incorporated unique animations that enhance the user experience without distracting from the learning process. For instance, when a student answers correctly, the prince climbs higher on Rapunzel's hair, providing immediate visual feedback on progress and strengthening the emotional connection to the story.\n\nWe also developed an opening animation sequence showing Rapunzel walking through the tower, with a gradual zoom to the window when she reaches it—a substantial change from the original storybook concept that significantly improved student engagement.",
+    collaborativeDevelopment: "The project was characterized by close teamwork, with each team member bringing their skills and strengths to the table. We developed an efficient workflow for file and version management, including systematic backups, change documentation, and meticulous organization of graphic assets.\n\nDespite technical challenges, such as partial code loss at one stage, the system we developed allowed us to continue working efficiently and arrive at a final product that precisely meets user needs.",
+    designEvolution: {
+      title: "Design Evolution",
+      image: "/lovable-uploads/first-version-save-repunzel.png",
+      description: "Our design vision for Save Rapunzel evolved dramatically throughout the development process. We began with a traditional storybook aesthetic before transitioning to a more interactive and engaging approach that better served our educational goals."
+    },
+    editorShowcase: {
+      title: "Content Generator Interface",
+      image: "/lovable-uploads/save-repunzel-editor.png",
+      description: "Our intuitive content generator allows educators to create customized educational content without technical knowledge, featuring an easy-to-use interface with built-in validation and guidance."
+    },
     process: [
       "Conducted parallel research streams on educators' content creation needs and how children engage with educational games",
       "Developed user personas for both audience segments (educators and students)",
@@ -81,24 +97,24 @@ const projectsData = [
     designImages: [
       {
         title: "Color Palette",
-        image: "https://images.unsplash.com/photo-1534637950656-9e6753b6da6b?q=80&w=2076&auto=format&fit=crop",
+        image: "/lovable-uploads/save-repunzel-color-palette.png",
         description: "Vibrant, fairy tale-inspired color scheme with purples, reds, and golds"
       },
       {
         title: "Typography & Interface",
-        image: "https://images.unsplash.com/photo-1555436169-20e93ea9a7ff?q=80&w=2070&auto=format&fit=crop",
+        image: "/lovable-uploads/save-repunzel-font.png",
         description: "Rounded, playful fonts for students; structured fonts for educators"
       },
       {
         title: "Character Design",
-        image: "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
+        image: "/lovable-uploads/save-repunzel-interface.png",
         description: "Stylized characters with clear expressions to reinforce narrative"
       }
     ],
     additionalImages: [
-      "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop"
+      "/lovable-uploads/save-repunzel-third.png",
+      "/lovable-uploads/save-repunzel-my-games.png",
+      "/lovable-uploads/save-repunzel-sec.png"
     ],
     link: "https://saverapunzel.telem-hit.net/GamesList"
   },
@@ -419,6 +435,145 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
+            {/* New Sections for Save Rapunzel */}
+            {project.slug === 'save-rapunzel' && (
+              <>
+                {/* Design Evolution Section */}
+                {project.designEvolution && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">{project.designEvolution.title}</h2>
+                    <p className="text-muted-foreground mb-8">{project.designEvolution.description}</p>
+                    
+                    <div className="rounded-xl overflow-hidden border border-border/40">
+                      <img 
+                        src={project.designEvolution.image} 
+                        alt="Initial Design Concept"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Graphic Development Section */}
+                {project.graphicDevelopment && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Graphic Development and Design Evolution</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.graphicDevelopment.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Content Generator Showcase Section */}
+                {project.editorShowcase && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
+                    <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
+                    
+                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg">
+                      <img 
+                        src={project.editorShowcase.image} 
+                        alt="Content Generator Interface"
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Technical Challenges Section */}
+                {project.technicalChallenges && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Technical Challenges and Solutions</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.technicalChallenges.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Content Generator Specifications Section */}
+                {project.contentGenerator && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Content Generator Specifications and Interface</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Animation Features Section */}
+                {project.animationFeatures && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.animationFeatures.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Collaborative Development Section */}
+                {project.collaborativeDevelopment && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Collaborative Development Process</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </>
+            )}
+            
             {/* Design Process & Aesthetics Section with images */}
             <motion.div
               className="mb-16"
@@ -446,7 +601,7 @@ const ProjectDetail = () => {
                         <img 
                           src={project.designImages[idx].image} 
                           alt={project.designImages[idx].title} 
-                          className={`w-full object-cover ${idx === 2 ? "h-96" : "h-64"}`}
+                          className={`w-full object-cover ${idx === 2 ? "h-[500px]" : "h-64"}`}
                         />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
