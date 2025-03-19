@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
@@ -15,12 +14,11 @@ const projectsData = [
   {
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
-    image: "/lovable-uploads/save-repunzel.png",
+    image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
     tags: ["Instructional Design"],
     slug: "save-rapunzel",
     color: "#10B981",
-    comingSoon: false,
-    link: "https://saverapunzel.telem-hit.net/GamesList"
+    comingSoon: false
   },
   {
     title: "BIP",
@@ -70,7 +68,6 @@ const FeaturedProjects = () => {
               color={project.color}
               index={index}
               comingSoon={project.comingSoon}
-              link={project.link}
             />
           ))}
         </div>

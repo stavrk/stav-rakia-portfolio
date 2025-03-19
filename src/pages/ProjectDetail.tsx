@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -388,10 +387,10 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Reordered and merged sections for Save Rapunzel */}
+            {/* Reordered sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
               <>
-                {/* Content Generator Showcase Section - MERGED */}
+                {/* Content Generator Showcase Section */}
                 {project.editorShowcase && (
                   <motion.div
                     className="mb-16"
@@ -403,217 +402,129 @@ const ProjectDetail = () => {
                     <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
                     <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
                     
-                    <div className="rounded-xl overflow-hidden shadow-xl border border-muted mb-6">
+                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
                       <img 
                         src={project.editorShowcase.image} 
-                        alt={project.editorShowcase.title} 
+                        alt="Content Generator Interface"
                         className="w-full h-auto"
                       />
                     </div>
                     
-                    <p className="text-muted-foreground">
-                      {project.contentGenerator}
-                    </p>
+                    {/* Merged paragraphs from Content Generator section */}
+                    <div className="prose prose-lg max-w-none">
+                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Graphic Development Section */}
+                {project.graphicDevelopment && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Graphic Development and Design Evolution</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.graphicDevelopment.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                    
+                    {/* Moved image from Design Evolution section */}
+                    <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+                      <img 
+                        src="/lovable-uploads/first-version-save-repunzel.png" 
+                        alt="Initial Design Concept"
+                        className="w-full h-auto"
+                      />
+                    </div>
                   </motion.div>
                 )}
                 
-                {/* Graphic Development Section */}
-                <motion.div
-                  className="mb-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-4">Graphic Development and Design Evolution</h2>
-                  <p className="text-muted-foreground">
-                    {project.graphicDevelopment}
-                  </p>
-                </motion.div>
-                
-                {/* Design Process & Aesthetics Section */}
-                <motion.div
-                  className="mb-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-4">Design Process & Aesthetics</h2>
-                  <p className="text-muted-foreground mb-8">
-                    {project.designProcessAndAesthetics}
-                  </p>
-                </motion.div>
-                
                 {/* Animation Features Section */}
-                <motion.div
-                  className="mb-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-4">Animation and Interaction Features</h2>
-                  <p className="text-muted-foreground">
-                    {project.animationFeatures}
-                  </p>
-                </motion.div>
-                
-                {/* Technical & Development Challenges Section - MERGED */}
-                <motion.div
-                  className="mb-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-4">🛠 Technical & Development Challenges</h2>
-                  <p className="text-muted-foreground mb-4">
-                    {project.technicalChallenges}
-                  </p>
-                  <p className="text-muted-foreground">
-                    {project.collaborativeDevelopment}
-                  </p>
-                </motion.div>
-                
-                {/* Challenges & Solutions Section - Non-redundant */}
-                <motion.div
-                  className="mb-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-4">Additional Challenges & Solutions</h2>
-                  <p className="text-muted-foreground">
-                    {project.challengesAndSolutions}
-                  </p>
-                </motion.div>
+                {project.animationFeatures && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.animationFeatures.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Technical Challenges Section */}
+                {project.technicalChallenges && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Technical Challenges and Solutions</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.technicalChallenges.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Collaborative Development Section - kept with Technical Challenges */}
+                {project.collaborativeDevelopment && (
+                  <motion.div
+                    className="mb-16"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Collaborative Development Process</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
               </>
             )}
             
-            {/* For other projects, show regular sections */}
-            {project.slug !== 'save-rapunzel' && (
-              <>
-                {/* Design Process & Aesthetics Section */}
-                <motion.div
-                  className="mb-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-4">Design Process & Aesthetics</h2>
-                  <p className="text-muted-foreground mb-8">
-                    {project.designProcessAndAesthetics}
-                  </p>
-                </motion.div>
+            {/* Project Structure Section - For Roomie project */}
+            {project.structureTree && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
+                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
                 
-                {/* Challenges & Solutions Section */}
-                <motion.div
-                  className="mb-16"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-4">Challenges & Solutions</h2>
-                  <p className="text-muted-foreground">
-                    {project.challengesAndSolutions}
-                  </p>
-                </motion.div>
-              </>
-            )}
-            
-            {/* Design Elements Showcase */}
-            {project.designImages && (
-              <motion.div
-                className="mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Design Elements</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {project.designImages.map((image, index) => (
-                    <motion.div
-                      key={index}
-                      className="rounded-xl overflow-hidden border border-muted"
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                    >
-                      <div className="aspect-square overflow-hidden bg-background">
-                        <img 
-                          src={image.image} 
-                          alt={image.title} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="p-4">
-                        <h3 className="font-medium mb-1">{image.title}</h3>
-                        <p className="text-sm text-muted-foreground">{image.description}</p>
-                      </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Project Gallery */}
-            {project.additionalImages && (
-              <motion.div
-                className="mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Project Gallery</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  {project.additionalImages.map((image, index) => (
-                    <motion.div
-                      key={index}
-                      className="rounded-xl overflow-hidden shadow-md aspect-video"
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1, duration: 0.5 }}
-                    >
-                      <img 
-                        src={image} 
-                        alt={`${project.title} gallery image ${index + 1}`} 
-                        className="w-full h-full object-cover"
-                      />
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Specialized sections for individual projects */}
-            {project.slug === 'roomie' && project.structureTree && (
-              <motion.div
-                className="mb-16"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-4">{project.structureTree.title}</h2>
-                <p className="text-muted-foreground mb-6">{project.structureTree.description}</p>
-                <div className="rounded-xl overflow-hidden shadow-xl border border-muted">
+                <div className="rounded-xl overflow-hidden border border-border/40">
                   <img 
                     src={project.structureTree.image} 
-                    alt={project.structureTree.title} 
+                    alt="Project Structure"
                     className="w-full h-auto"
                   />
                 </div>
               </motion.div>
             )}
-            
+
+            {/* Wireframes Section - For Roomie project */}
             {project.slug === 'roomie' && project.wireframes && (
               <motion.div
                 className="mb-16"
@@ -622,17 +533,134 @@ const ProjectDetail = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl font-medium mb-4">{project.wireframes.title}</h2>
-                <p className="text-muted-foreground mb-6">{project.wireframes.description}</p>
-                <div className="rounded-xl overflow-hidden shadow-xl border border-muted">
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
                   <img 
                     src={project.wireframes.image} 
-                    alt={project.wireframes.title} 
+                    alt="Project Wireframes"
                     className="w-full h-auto"
                   />
                 </div>
               </motion.div>
             )}
+            
+            {/* Design Process & Aesthetics Section with images */}
+            <motion.div
+              className="mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+              
+              <div className="space-y-8">
+                {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
+                  <div key={idx} className="mb-8">
+                    <p className="mb-4 text-muted-foreground">{paragraph}</p>
+                    
+                    {/* Display relevant design image if available */}
+                    {project.designImages && idx < project.designImages.length && (
+                      <motion.div 
+                        className="mt-6 rounded-lg overflow-hidden border border-border/40"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                      >
+                        <img 
+                          src={project.designImages[idx].image} 
+                          alt={project.designImages[idx].title} 
+                          className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`}
+                        />
+                        <div className="p-4 bg-secondary/30">
+                          <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
+                          <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
+                        </div>
+                      </motion.div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+            
+            {/* Challenges & Solutions Section */}
+            <motion.div
+              className="mb-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
+              <div className="prose prose-lg max-w-none">
+                {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
+                  <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Images Section */}
+      <section className="py-20 bg-secondary/50">
+        <div className="container">
+          <motion.h2 
+            className="text-2xl font-medium mb-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            Project Gallery
+          </motion.h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {project.additionalImages.map((image, index) => (
+              <motion.div 
+                key={index}
+                className="rounded-xl overflow-hidden shadow-lg"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <img 
+                  src={image} 
+                  alt={`${project.title} - Image ${index + 1}`} 
+                  className="w-full h-auto"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Next Project */}
+      <section className="py-20">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <motion.div
+              className="text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <p className="text-muted-foreground mb-4">Next Project</p>
+              <h3 className="text-2xl font-medium mb-6">
+                {projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].title}
+              </h3>
+              <a 
+                href={`/projects/${projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].slug}`} 
+                className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
+              >
+                View Next Project
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
