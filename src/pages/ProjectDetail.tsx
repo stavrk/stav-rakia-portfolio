@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -75,11 +74,6 @@ const projectsData = [
     contentGenerator: "The generator we developed represents a revolutionary approach to creating educational content. Unlike traditional systems, we designed an interface that balances simplicity with power, featuring built-in protection mechanisms that prevent the publication of invalid games and provide teachers with immediate feedback.\n\nThe generator includes a progressive approval system that encourages users to create at least 10 quality questions before publishing the game, with a maximum allowance of 30 questions per game. These specifications were established after extensive user research with teachers and education professionals.",
     animationFeatures: "We incorporated unique animations that enhance the user experience without distracting from the learning process. For instance, when a student answers correctly, the prince climbs higher on Rapunzel's hair, providing immediate visual feedback on progress and strengthening the emotional connection to the story.\n\nWe also developed an opening animation sequence showing Rapunzel walking through the tower, with a gradual zoom to the window when she reaches it—a substantial change from the original storybook concept that significantly improved student engagement.",
     collaborativeDevelopment: "The project was characterized by close teamwork, with each team member bringing their skills and strengths to the table. We developed an efficient workflow for file and version management, including systematic backups, change documentation, and meticulous organization of graphic assets.\n\nDespite technical challenges, such as partial code loss at one stage, the system we developed allowed us to continue working efficiently and arrive at a final product that precisely meets user needs.",
-    designEvolution: {
-      title: "Design Evolution",
-      image: "/lovable-uploads/first-version-save-repunzel.png",
-      description: "Our design vision for Save Rapunzel evolved dramatically throughout the development process. We began with a traditional storybook aesthetic before transitioning to a more interactive and engaging approach that better served our educational goals."
-    },
     editorShowcase: {
       title: "Content Generator Interface",
       image: "/lovable-uploads/save-repunzel-editor.png",
@@ -92,7 +86,7 @@ const projectsData = [
       "Conducted testing sessions with both educators and students to refine the user experience",
       "Designed vibrant fairy tale-inspired visuals for game interface and professional aesthetic for educator interface"
     ],
-    designProcessAndAesthetics: "For Save Rapunzel, I developed a dual-interface design system that serves both young learners and their educators. The game interface employs a vibrant, fairy tale-inspired color scheme dominated by purples, reds, and golds that evoke a sense of fantasy while maintaining sufficient contrast for readability.\n\nTypography choices differ between the student and educator interfaces. The game side uses rounded, playful fonts (minimum 18px) to engage younger users, while the educator dashboard employs a more structured font family (Assistant) with clear weight distinctions to create visual hierarchy in the content management system.\n\nThe character design for Rapunzel and the prince was carefully considered to be engaging without being distracting—stylized illustrations with clear expressions help reinforce the narrative element without overwhelming the educational focus. Background elements like the tower and clouds were designed with subtle animation properties to create a living world without competing for attention with the question content.\n\nInteractive elements employ consistent visual cues—correct answers trigger animations of the prince climbing higher on Rapunzel's hair, providing immediate visual feedback that reinforces learning progress. The editor interface uses drag-and-drop functionality and inline editing to make content creation intuitive for educators with varying levels of technical expertise.",
+    designProcessAndAesthetics: "For Save Rapunzel, I developed a dual-interface design system that serves both young learners and their educators. The game interface employs a vibrant, fairy tale-inspired color scheme dominated by purples, reds, and golds that evoke a sense of fantasy while maintaining sufficient contrast for readability.\n\nTypography choices differ between the student and educator interfaces. The game side uses the rounded, playful Fredoka font (minimum 18px) to engage younger users, while the educator dashboard employs the same font family with clear weight distinctions to create a visual hierarchy in the content management system.\n\nThe visual elements in Save Rapunzel were carefully designed to create an engaging yet focused learning environment. Game elements like buttons, answer cards, and progress indicators feature rounded edges and vibrant colors that appeal to younger users. Background elements like the tower and clouds incorporate subtle animations to create a living world without distracting from the educational content.\n\nInteractive elements employ consistent visual cues—correct answers trigger animations of the prince climbing higher on Rapunzel's hair, providing immediate visual feedback that reinforces learning progress. The editor interface uses drag-and-drop functionality and inline editing to make content creation intuitive for educators with varying levels of technical expertise.",
     challengesAndSolutions: "A significant challenge emerged in balancing engaging visuals with educational clarity. Early prototypes showed that students were sometimes distracted by animations during question-answering phases. I addressed this by implementing a \"focus mode\" that temporarily simplifies the visual environment during active question engagement, then returns to the full visual experience during progress moments.\n\nAnother challenge was designing a content editor flexible enough to accommodate various question types while remaining simple for non-technical educators. The solution involved extensive card-sorting exercises with educators to determine the most intuitive organization of functions, resulting in a template-based approach with customization options revealed progressively as users become more comfortable with the system.",
     designImages: [
       {
@@ -101,14 +95,14 @@ const projectsData = [
         description: "Vibrant, fairy tale-inspired color scheme with purples, reds, and golds"
       },
       {
-        title: "Typography & Interface",
+        title: "Typography",
         image: "/lovable-uploads/save-repunzel-font.png",
-        description: "Rounded, playful fonts for students; structured fonts for educators"
+        description: "Rounded, playful Fredoka font with consistent sizing for optimal readability"
       },
       {
-        title: "Character Design",
+        title: "Visual Elements",
         image: "/lovable-uploads/save-repunzel-interface.png",
-        description: "Stylized characters with clear expressions to reinforce narrative"
+        description: "Rounded, vibrant interface elements with consistent visual language"
       }
     ],
     additionalImages: [
@@ -438,28 +432,6 @@ const ProjectDetail = () => {
             {/* New Sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
               <>
-                {/* Design Evolution Section */}
-                {project.designEvolution && (
-                  <motion.div
-                    className="mb-16"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">{project.designEvolution.title}</h2>
-                    <p className="text-muted-foreground mb-8">{project.designEvolution.description}</p>
-                    
-                    <div className="rounded-xl overflow-hidden border border-border/40">
-                      <img 
-                        src={project.designEvolution.image} 
-                        alt="Initial Design Concept"
-                        className="w-full h-auto"
-                      />
-                    </div>
-                  </motion.div>
-                )}
-
                 {/* Graphic Development Section */}
                 {project.graphicDevelopment && (
                   <motion.div
@@ -474,6 +446,15 @@ const ProjectDetail = () => {
                       {project.graphicDevelopment.split('\n\n').map((paragraph, idx) => (
                         <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
                       ))}
+                    </div>
+                    
+                    {/* Moved the image here from the Design Evolution section */}
+                    <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+                      <img 
+                        src="/lovable-uploads/first-version-save-repunzel.png" 
+                        alt="Initial Design Concept"
+                        className="w-full h-auto"
+                      />
                     </div>
                   </motion.div>
                 )}
@@ -601,7 +582,7 @@ const ProjectDetail = () => {
                         <img 
                           src={project.designImages[idx].image} 
                           alt={project.designImages[idx].title} 
-                          className={`w-full object-cover ${idx === 2 ? "h-[500px]" : "h-64"}`}
+                          className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`}
                         />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
