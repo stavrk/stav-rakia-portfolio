@@ -375,6 +375,50 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
+            {/* Project Structure Section - MOVED to after Design Process */}
+            {project.structureTree && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
+                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.structureTree.image} 
+                    alt="Project Structure"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+
+            {/* Wireframes Section - MOVED to after Design Process */}
+            {project.slug === 'roomie' && project.wireframes && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireframes.image} 
+                    alt="Project Wireframes"
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
             {/* Design Process & Aesthetics Section with images */}
             <motion.div
               className="mb-16"
@@ -402,7 +446,7 @@ const ProjectDetail = () => {
                         <img 
                           src={project.designImages[idx].image} 
                           alt={project.designImages[idx].title} 
-                          className="w-full h-64 object-cover"
+                          className={`w-full object-cover ${idx === 2 ? "h-96" : "h-64"}`}
                         />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
@@ -415,7 +459,7 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Challenges & Solutions Section - New */}
+            {/* Challenges & Solutions Section */}
             <motion.div
               className="mb-16"
               initial={{ opacity: 0, y: 20 }}
@@ -493,60 +537,6 @@ const ProjectDetail = () => {
           </div>
         </div>
       </section>
-      
-      {/* Add Structure Tree Section after Challenge & Solution Section */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <motion.div
-              className="mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-2xl font-medium mb-6">{project.structureTree?.title || "Project Structure"}</h2>
-              <p className="text-muted-foreground mb-8">{project.structureTree?.description}</p>
-              
-              <div className="rounded-xl overflow-hidden border border-border/40">
-                <img 
-                  src={project.structureTree?.image} 
-                  alt="Project Structure"
-                  className="w-full h-auto"
-                />
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Add Wireframes Section for ROOMIE project only */}
-      {project.slug === 'roomie' && project.wireframes && (
-        <section className="py-20">
-          <div className="container">
-            <div className="max-w-4xl mx-auto">
-              <motion.div
-                className="mb-12"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
-                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireframes.image} 
-                    alt="Project Wireframes"
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-      )}
     </Layout>
   );
 };
