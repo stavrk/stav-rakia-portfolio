@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowLeft } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
+
 const projectsData = [{
   title: "ROOMIE",
   description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
@@ -165,6 +166,7 @@ const projectsData = [{
   additionalImages: ["https://images.unsplash.com/photo-1545165311-508ed0c91361?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=2074&auto=format&fit=crop", "https://images.unsplash.com/photo-1467043198406-dc953a3defa0?q=80&w=2070&auto=format&fit=crop"],
   link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
 }];
+
 const ProjectDetail = () => {
   const {
     slug
@@ -179,7 +181,8 @@ const ProjectDetail = () => {
   if (!project) {
     return null;
   }
-  return <Layout>
+  return (
+    <Layout>
       {/* Hero Section */}
       <section className="pt-20 pb-32 relative" style={{
       backgroundColor: `${project.color}10`
@@ -585,37 +588,37 @@ const ProjectDetail = () => {
       {/* Images Section */}
       <section className="py-20 bg-secondary/50">
         <div className="container">
-          <motion.h2 className="text-2xl font-medium mb-8 text-center" initial={{
-          opacity: 0,
-          y: 20
-        }} whileInView={{
-          opacity: 1,
-          y: 0
-        }} viewport={{
-          once: true,
-          margin: "-100px"
-        }} transition={{
-          duration: 0.5
-        }}>
+          <motion.h2 
+            className="text-2xl font-medium mb-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
             Project Gallery
           </motion.h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {project.additionalImages.map((image, index) => <motion.div key={index} className="rounded-xl overflow-hidden shadow-lg" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            delay: index * 0.1,
-            duration: 0.5
-          }}>
-                <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-auto" />
-              </motion.div>)}
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${project.slug === 'bip' ? '2' : '3'} gap-6`}>
+            {project.additionalImages.map((image, index) => (
+              <motion.div
+                key={index}
+                className={`rounded-xl overflow-hidden shadow-lg ${
+                  project.slug === 'bip' ? 'max-w-[414px] mx-auto' : ''
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <img
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className={`w-full h-auto ${
+                    project.slug === 'bip' ? 'aspect-[414/896] object-cover' : ''
+                  }`}
+                />
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -648,6 +651,8 @@ const ProjectDetail = () => {
           </div>
         </div>
       </section>
-    </Layout>;
+    </Layout>
+  );
 };
+
 export default ProjectDetail;
