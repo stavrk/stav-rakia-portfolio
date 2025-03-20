@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -345,20 +346,16 @@ const ProjectDetail = () => {
             
             {/* Reordered and merged sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
-                <>
+              <>
                 {/* Content Generator Interface - MERGED */}
-                {project.editorShowcase && <motion.div className="mb-16" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true,
-              margin: "-100px"
-            }} transition={{
-              duration: 0.5
-            }}>
+                {project.editorShowcase && (
+                  <motion.div 
+                    className="mb-16" 
+                    initial={{ opacity: 0, y: 20 }} 
+                    whileInView={{ opacity: 1, y: 0 }} 
+                    viewport={{ once: true, margin: "-100px" }} 
+                    transition={{ duration: 0.5 }}
+                  >
                     <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
                     <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
                     
@@ -368,13 +365,19 @@ const ProjectDetail = () => {
                     
                     {/* Content from contentGenerator property */}
                     <div className="prose prose-lg max-w-none">
-                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
                     </div>
-                  </motion.div>}
+                  </motion.div>
+                )}
+              </>
+            )}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
 
-                {/* Graphic Development Section */}
-                {project.graphicDevelopment && <motion.div className="mb-16" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1
+export default ProjectDetail;
