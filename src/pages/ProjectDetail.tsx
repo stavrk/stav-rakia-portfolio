@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -504,7 +503,7 @@ const ProjectDetail = () => {
                   </motion.div>
                 )}
 
-                {/* Technical & Development Challenges Section - MERGED */}
+                {/* Technical & Development Challenges Section - REPLACED */}
                 <motion.div
                   className="mb-16"
                   initial={{ opacity: 0, y: 20 }}
@@ -514,18 +513,26 @@ const ProjectDetail = () => {
                 >
                   <h2 className="text-2xl font-medium mb-6">🛠 Technical & Development Challenges</h2>
                   
-                  {/* Technical Challenges Content */}
-                  <div className="prose prose-lg max-w-none mb-8">
-                    {project.technicalChallenges.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
-                  </div>
-                  
-                  {/* Collaborative Development Content */}
-                  <div className="prose prose-lg max-w-none">
-                    {project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
+                  <div className="prose prose-lg max-w-none space-y-4">
+                    <p className="text-muted-foreground">
+                      Developing a flexible yet intuitive content creation system posed a significant challenge. The content editor needed to support a variety of question types while remaining simple enough for non-technical educators. Extensive card-sorting exercises with teachers helped identify the most intuitive organization, leading to a template-based approach where customization options are progressively introduced as users gain familiarity.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      Handling Hebrew text and bidirectional interface complexities was another major technical hurdle. Displaying right-to-left text, reversing numbers, and ensuring proper alignment of English words within Hebrew sentences required a custom-built solution that significantly improved readability and usability for Hebrew-speaking users.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      Optimizing visual engagement without compromising educational clarity was critical. Early prototypes showed that students were sometimes distracted by animations during question-answering phases. The solution involved implementing a "focus mode" that temporarily simplified the visual environment during active question engagement while preserving interactive elements that reinforce learning progress.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      The development process also required robust workflow management. A structured system for file versioning, backups, and asset organization was essential to maintaining efficiency. At one stage, partial code loss occurred, but thanks to meticulous documentation and backup protocols, the team was able to recover and continue development without significant setbacks.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      These challenges, tackled through iterative testing, technical innovation, and structured problem-solving, ensured that the final product met both usability and pedagogical goals without compromising on flexibility or performance.
+                    </p>
                   </div>
                 </motion.div>
               </>
@@ -617,21 +624,23 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Challenges & Solutions Section - For all projects, refined for Save Rapunzel */}
-            <motion.div
-              className="mb-16"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
-              <div className="prose prose-lg max-w-none">
-                {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
-                  <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                ))}
-              </div>
-            </motion.div>
+            {/* Challenges & Solutions Section - For all projects except Save Rapunzel */}
+            {project.slug !== 'save-rapunzel' && (
+              <motion.div
+                className="mb-16"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
+                <div className="prose prose-lg max-w-none">
+                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
@@ -700,3 +709,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+
