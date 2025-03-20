@@ -322,95 +322,81 @@ const ProjectDetail = () => {
             {/* Reordered and merged sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
               <div>
-                {/* Content for Save Rapunzel project would go here */}
-                <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} viewport={{
-                once: true,
-                margin: "-100px"
-              }} transition={{
-                duration: 0.5
-              }} className="mb-16">
+                {/* Content for Save Rapunzel project */}
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  viewport={{ once: true, margin: "-100px" }} 
+                  transition={{ duration: 0.5 }} 
+                  className="mb-16"
+                >
                   <h2 className="text-2xl font-medium mb-6">Graphic Development</h2>
                   <div className="prose prose-lg max-w-none">
-                    {project.graphicDevelopment && project.graphicDevelopment.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    {project.graphicDevelopment && project.graphicDevelopment.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                    ))}
                   </div>
                 </motion.div>
                 
-                <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} viewport={{
-                once: true,
-                margin: "-100px"
-              }} transition={{
-                duration: 0.5
-              }} className="mb-16">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  viewport={{ once: true, margin: "-100px" }} 
+                  transition={{ duration: 0.5 }} 
+                  className="mb-16"
+                >
                   <h2 className="text-2xl font-medium mb-6">Technical Challenges</h2>
                   <div className="prose prose-lg max-w-none">
-                    {project.technicalChallenges && project.technicalChallenges.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    {project.technicalChallenges && project.technicalChallenges.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                    ))}
                   </div>
                 </motion.div>
                 
-                <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} viewport={{
-                once: true,
-                margin: "-100px"
-              }} transition={{
-                duration: 0.5
-              }} className="mb-16">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  viewport={{ once: true, margin: "-100px" }} 
+                  transition={{ duration: 0.5 }} 
+                  className="mb-16"
+                >
                   <h2 className="text-2xl font-medium mb-6">Content Generator</h2>
                   <div className="prose prose-lg max-w-none">
-                    {project.contentGenerator && project.contentGenerator.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    {project.contentGenerator && project.contentGenerator.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                    ))}
                   </div>
                 </motion.div>
                 
-                <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} viewport={{
-                once: true,
-                margin: "-100px"
-              }} transition={{
-                duration: 0.5
-              }} className="mb-16">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  viewport={{ once: true, margin: "-100px" }} 
+                  transition={{ duration: 0.5 }} 
+                  className="mb-16"
+                >
                   <h2 className="text-2xl font-medium mb-6">Animation Features</h2>
                   <div className="prose prose-lg max-w-none">
-                    {project.animationFeatures && project.animationFeatures.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    {project.animationFeatures && project.animationFeatures.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                    ))}
                   </div>
                 </motion.div>
                 
-                <motion.div initial={{
-                opacity: 0,
-                y: 20
-              }} whileInView={{
-                opacity: 1,
-                y: 0
-              }} viewport={{
-                once: true,
-                margin: "-100px"
-              }} transition={{
-                duration: 0.5
-              }} className="mb-16">
+                <motion.div 
+                  initial={{ opacity: 0, y: 20 }} 
+                  whileInView={{ opacity: 1, y: 0 }} 
+                  viewport={{ once: true, margin: "-100px" }} 
+                  transition={{ duration: 0.5 }} 
+                  className="mb-16"
+                >
                   <h2 className="text-2xl font-medium mb-6">Collaborative Development</h2>
                   <div className="prose prose-lg max-w-none">
-                    {project.collaborativeDevelopment && project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    {project.collaborativeDevelopment && project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                    ))}
                   </div>
                 </motion.div>
                 
-                {project.editorShowcase && <motion.div className="mb-16"
+                {project.editorShowcase && (
+                  <motion.div
