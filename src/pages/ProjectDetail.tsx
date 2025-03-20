@@ -84,30 +84,45 @@ const projectsData = [{
 }, {
   title: "BIP",
   description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
-  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+  image: "/lovable-uploads/bip-lots of iphones.png",
   tags: ["Speculative Design", "Financial Tech"],
   slug: "bip",
   color: "#8B5CF6",
-  overview: "Bip is a conceptual money transfer application designed specifically for extraterrestrial users. This speculative design project challenged conventional UI/UX assumptions by considering the unique perceptual and cognitive needs of non-human users.",
+  overview: "BIP is a conceptual money transfer application designed specifically for extraterrestrial users. This speculative design project challenged conventional UI/UX assumptions by considering the unique perceptual and cognitive needs of non-human users.",
   challenge: "Design a financial application that accommodates alien perceptual abilities while maintaining the security and functionality expected in money transfer applications. Standard human-centered design principles needed significant adaptation to serve this unique user group.",
-  solution: "I reimagined the conventional money transfer app interface through an alien-centered design lens. This required developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception, while still drawing inspiration from familiar human applications like Bit and PayBox.",
+  solution: "A reimagined money transfer app interface through an alien-centered design lens, with new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception, while still drawing inspiration from familiar human applications like Bit and PayBox.",
+  wireflow: {
+    title: "Wireflow",
+    image: "/lovable-uploads/bip-wireflow.png",
+    description: "The wireflow diagram illustrates the navigation paths and interaction flows for extraterrestrial users, with special attention to non-linear thinking patterns and multiple sensory feedback loops throughout the transaction process."
+  },
+  designImages: [
+    {
+      title: "Color Palette",
+      image: "/lovable-uploads/bip-colors.png",
+      description: "High-contrast, vibrant colors with bold blues and bright yellows"
+    },
+    {
+      title: "Typography & Layout",
+      image: "/lovable-uploads/bip-typography.png",
+      description: "Large text elements with circular, open letterforms and substantial weight"
+    },
+    {
+      title: "Interface Elements",
+      image: "/lovable-uploads/bip-intarface.png",
+      description: "Rounded design language with substantial padding and redundant feedback cues"
+    }
+  ],
+  additionalImages: [
+    "/lovable-uploads/bip-group-page.png",
+    "/lovable-uploads/bip-home-page.png",
+    "/lovable-uploads/bip-loading-page.png",
+    "/lovable-uploads/bip-transfer-details.png"
+  ],
   process: ["Established alien user personas based on specified perceptual constraints", "Studied existing financial apps and adapted their core functionality to the alien context", "Created wireframes that emphasized visual communication", "Refined the interface through multiple iterations to balance alien-centered design with transaction security", "Designed custom animations for key moments in the user journey for clear feedback"],
   designProcessAndAesthetics: "The Bip money transfer app required a complete reimagining of financial interface conventions for extraterrestrial users. The color palette features high-contrast, vibrant combinations with bold blues and bright yellows against deep space-themed backgrounds. This choice directly addresses the perceptual constraints of the alien users, who struggle with gray tones and low-contrast interfaces.\n\nTypography was a critical consideration—all text elements are significantly larger than human-centered applications, with a minimum size of 14px for secondary information and 18-24px for primary interface elements. Font selection prioritized circular, open letterforms with substantial weight to enhance legibility for alien visual systems.\n\nThe interface employs a consistent rounded design language with substantial padding around interactive elements to accommodate potential differences in alien motor control precision. All buttons feature both color and icon changes in their active states to provide redundant feedback cues. The space-themed iconography replaces traditional financial symbols, creating culturally appropriate visual metaphors for the target users.\n\nInteractive animations play a crucial role in communicating process status, particularly during transaction verification and confirmation. I designed custom animations using principles of anticipation and follow-through to signal the beginning and completion of processes, helping users understand system status without relying on text.",
-  challengesAndSolutions: "The primary challenge was designing without access to actual extraterrestrial users for testing. To address this, I created detailed alien personas with specific perceptual constraints and decision-making patterns, then validated design choices against these profiles. This speculative design approach required multiple revisions as new constraints emerged during the design process.\n\nThe security verification system presented another unique challenge—how to implement secure authentication without relying on human biometric patterns. The solution involved creating a facial recognition system that accommodates alien facial structures, with animated guides to help users position correctly during scanning. This required careful consideration of how to communicate proper positioning without assuming human facial reference points.",
-  designImages: [{
-    title: "Color Palette",
-    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop",
-    description: "High-contrast, vibrant colors with bold blues and bright yellows"
-  }, {
-    title: "Typography & Layout",
-    image: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop",
-    description: "Large text elements with circular, open letterforms and substantial weight"
-  }, {
-    title: "Interface Elements",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop",
-    description: "Rounded design language with substantial padding and redundant feedback cues"
-  }],
-  additionalImages: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop", "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"],
+  case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
+  comingSoon: false,
   link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
 }, {
   title: "STUDIT",
@@ -168,58 +183,59 @@ const projectsData = [{
 }];
 
 const ProjectDetail = () => {
-  const {
-    slug
-  } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.slug === slug);
+  
   useEffect(() => {
     if (!project) {
       navigate('/projects');
     }
   }, [project, navigate]);
+  
   if (!project) {
     return null;
   }
+  
   return (
     <Layout>
       {/* Hero Section */}
       <section className="pt-20 pb-32 relative" style={{
-      backgroundColor: `${project.color}10`
-    }}>
+        backgroundColor: `${project.color}10`
+      }}>
         <div className="container">
-          <motion.button onClick={() => navigate('/projects')} className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" initial={{
-          opacity: 0,
-          x: -20
-        }} animate={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 0.5
-        }}>
+          <motion.button 
+            onClick={() => navigate('/projects')} 
+            className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" 
+            initial={{ opacity: 0, x: -20 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.5 }}
+          >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Projects
           </motion.button>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5
-          }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5 }}
+            >
               <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, i) => <span key={i} className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-background text-foreground">
+                {project.tags.map((tag, i) => (
+                  <span 
+                    key={i} 
+                    className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-background text-foreground"
+                  >
                     {tag}
-                  </span>)}
+                  </span>
+                ))}
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-medium mb-6" style={{
-              color: project.color
-            }}>
+              <h1 
+                className="text-4xl md:text-6xl font-medium mb-6" 
+                style={{ color: project.color }}
+              >
                 {project.title}
               </h1>
               
@@ -230,16 +246,12 @@ const ProjectDetail = () => {
               {project.link && <ProjectLink href={project.link} />}
             </motion.div>
             
-            <motion.div className="relative" initial={{
-            opacity: 0,
-            scale: 0.9
-          }} animate={{
-            opacity: 1,
-            scale: 1
-          }} transition={{
-            delay: 0.2,
-            duration: 0.5
-          }}>
+            <motion.div 
+              className="relative" 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
               <div className="rounded-xl overflow-hidden shadow-xl border-4 border-white">
                 <img src={project.image} alt={project.title} className="w-full h-auto" />
               </div>
@@ -253,37 +265,24 @@ const ProjectDetail = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              <motion.div initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true,
-              margin: "-100px"
-            }} transition={{
-              duration: 0.5
-            }}>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true, margin: "-100px" }} 
+                transition={{ duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-4">The Challenge</h2>
                 <p className="text-muted-foreground">
                   {project.challenge}
                 </p>
               </motion.div>
               
-              <motion.div initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true,
-              margin: "-100px"
-            }} transition={{
-              delay: 0.2,
-              duration: 0.5
-            }}>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true, margin: "-100px" }} 
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-4">The Solution</h2>
                 <p className="text-muted-foreground">
                   {project.solution}
@@ -292,44 +291,61 @@ const ProjectDetail = () => {
             </div>
             
             {/* Design Process Section */}
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }} className="mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true, margin: "-100px" }} 
+              transition={{ duration: 0.5 }} 
+              className="mb-16"
+            >
               <h2 className="text-2xl font-medium mb-6">Design Process</h2>
               <div className="space-y-4 mb-8">
-                {project.process.map((step, index) => <motion.div key={index} className="flex items-start" initial={{
-                opacity: 0,
-                x: -20
-              }} whileInView={{
-                opacity: 1,
-                x: 0
-              }} viewport={{
-                once: true
-              }} transition={{
-                delay: index * 0.1,
-                duration: 0.5
-              }}>
-                    <div className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" style={{
-                  backgroundColor: project.color
-                }}>
+                {project.process && project.process.map((step, index) => (
+                  <motion.div 
+                    key={index} 
+                    className="flex items-start" 
+                    initial={{ opacity: 0, x: -20 }} 
+                    whileInView={{ opacity: 1, x: 0 }} 
+                    viewport={{ once: true }} 
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                  >
+                    <div 
+                      className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" 
+                      style={{ backgroundColor: project.color }}
+                    >
                       {index + 1}
                     </div>
                     <p>{step}</p>
-                  </motion.div>)}
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
             
+            {/* Wireflow Section - For BIP project */}
+            {project.slug === 'bip' && project.wireflow && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireflow.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflow.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
             {/* Reordered and merged sections for Save Rapunzel */}
-            {project.slug === 'save-rapunzel' && <>
+            {project.slug === 'save-rapunzel' && (
+                <>
                 {/* Content Generator Interface - MERGED */}
                 {project.editorShowcase && <motion.div className="mb-16" initial={{
               opacity: 0,
@@ -477,110 +493,169 @@ const ProjectDetail = () => {
                     </p>
                   </div>
                 </motion.div>
-              </>}
+              </>
+            )}
             
             {/* Project Structure Section - For Roomie project */}
-            {project.structureTree && <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
+            {project.slug === 'roomie' && project.structureTree && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
                 <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img src={project.structureTree.image} alt="Project Structure" className="w-full h-auto" />
+                  <img 
+                    src={project.structureTree.image} 
+                    alt="Project Structure" 
+                    className="w-full h-auto" 
+                  />
                 </div>
-              </motion.div>}
+              </motion.div>
+            )}
 
             {/* Wireframes Section - For Roomie project */}
-            {project.slug === 'roomie' && project.wireframes && <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
+            {project.slug === 'roomie' && project.wireframes && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
                 <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img src={project.wireframes.image} alt="Project Wireframes" className="w-full h-auto" />
+                  <img 
+                    src={project.wireframes.image} 
+                    alt="Project Wireframes" 
+                    className="w-full h-auto" 
+                  />
                 </div>
-              </motion.div>}
+              </motion.div>
+            )}
             
             {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
-            {project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
+            {project.slug !== 'save-rapunzel' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
                 
                 <div className="space-y-8">
-                  {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => <div key={idx} className="mb-8">
+                  {project.designProcessAndAesthetics && project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
+                    <div key={idx} className="mb-8">
                       <p className="mb-4 text-muted-foreground">{paragraph}</p>
                       
                       {/* Display relevant design image if available */}
-                      {project.designImages && idx < project.designImages.length && <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
-                  opacity: 0,
-                  y: 20
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} viewport={{
-                  once: true
-                }} transition={{
-                  delay: 0.2,
-                  duration: 0.5
-                }}>
-                          <img src={project.designImages[idx].image} alt={project.designImages[idx].title} className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} />
+                      {project.designImages && idx < project.designImages.length && (
+                        <motion.div 
+                          className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.2, duration: 0.5 }}
+                        >
+                          <img 
+                            src={project.designImages[idx].image} 
+                            alt={project.designImages[idx].title} 
+                            className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} 
+                          />
                           <div className="p-4 bg-secondary/30">
                             <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
                             <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
                           </div>
-                        </motion.div>}
-                    </div>)}
+                        </motion.div>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              </motion.div>}
+              </motion.div>
+            )}
+            
+            {/* Animation Features Section - For BIP */}
+            {project.slug === 'bip' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
+                <div className="prose prose-lg max-w-none space-y-4">
+                  <p className="text-muted-foreground">
+                    The BIP application features custom animations designed specifically for extraterrestrial perception patterns. Key interaction moments are highlighted with visual feedback that accommodates alien visual processing.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    Transaction confirmations use animated spaceships and meteorite visuals to represent successful payments. Loading states feature orbital animations that maintain user engagement while processing occurs in the background.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    The interface responds to touch with immediate visual feedback, providing redundant confirmation through color shifts, size changes, and animated transitions to ensure clarity for users with different perceptual abilities.
+                  </p>
+                </div>
+              </motion.div>
+            )}
             
             {/* Challenges & Solutions Section - For all projects except Save Rapunzel */}
-            {project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
+            {project.challengesAndSolutions && project.slug !== 'save-rapunzel' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
                 <div className="prose prose-lg max-w-none">
-                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
                 </div>
-              </motion.div>}
+              </motion.div>
+            )}
+            
+            {/* Technical & Development Challenges Section - For BIP */}
+            {project.slug === 'bip' && !project.challengesAndSolutions && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
+                
+                <div className="prose prose-lg max-w-none space-y-4">
+                  <p className="text-muted-foreground">
+                    Developing for extraterrestrial users presented unique technical challenges, particularly in the absence of direct user testing possibilities. The solution involved creating detailed alien personas with specific perceptual constraints and validating designs against these constraints.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    Security verification posed another significant challenge. A specialized facial recognition system was designed to accommodate alien facial structures, with animated guides for proper positioning, balancing security needs with accessibility.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    The visual design required complete reimagining for alien perception. Color schemes, typography, and spacing were adapted to address the specific visual needs of extraterrestrial users while maintaining the functional elements expected in a money transfer application.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    Balancing innovation with usability was perhaps the greatest challenge. The solution involved maintaining recognizable patterns from human financial applications while introducing novel interaction methods tailored to alien cognitive patterns.
+                  </p>
+                </div>
+              </motion.div>
+            )}
           </div>
         </div>
       </section>
@@ -598,12 +673,12 @@ const ProjectDetail = () => {
             Project Gallery
           </motion.h2>
           
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${project.slug === 'bip' ? '2' : '3'} gap-6`}>
-            {project.additionalImages.map((image, index) => (
+          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${project.slug === 'bip' ? 'max-w-4xl mx-auto' : ''}`}>
+            {project.additionalImages && project.additionalImages.map((image, index) => (
               <motion.div
                 key={index}
                 className={`rounded-xl overflow-hidden shadow-lg ${
-                  project.slug === 'bip' ? 'max-w-[414px] mx-auto' : ''
+                  project.slug === 'bip' ? 'max-w-[350px] mx-auto' : ''
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -627,24 +702,21 @@ const ProjectDetail = () => {
       <section className="py-20">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <motion.div className="text-center" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            delay: 0.2,
-            duration: 0.5
-          }}>
+            <motion.div 
+              className="text-center" 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
               <p className="text-muted-foreground mb-4">Next Project</p>
               <h3 className="text-2xl font-medium mb-6">
                 {projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].title}
               </h3>
-              <a href={`/projects/${projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].slug}`} className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg">
+              <a 
+                href={`/projects/${projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].slug}`} 
+                className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
+              >
                 View Next Project
               </a>
             </motion.div>
