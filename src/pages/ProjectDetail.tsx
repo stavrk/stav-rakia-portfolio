@@ -150,7 +150,7 @@ const projectsData = [{
     image: "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop",
     description: "Cards with subtle shadows and clear visual feedback"
   }],
-  additionalImages: ["https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop", "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"],
+  additionalImages: ["https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1423800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop", "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"],
   link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
 }, {
   title: "PLANT LEARNING MODULE",
@@ -473,7 +473,7 @@ const ProjectDetail = () => {
                   
                   <div className="prose prose-lg max-w-none space-y-4">
                     <p className="text-muted-foreground">
-                      Developing a flexible yet intuitive content creation system posed a significant challenge. The content editor needed to support a variety of question types while remaining simple enough for non-technical educators. Extensive card-sorting exercises with teachers helped identify the most intuitive organization, leading to a template-based approach where customization options are progressively introduced as users gain familiarity.
+                      Developing a flexible yet intuitive content creation system posed a significant challenge. The content editor needed to support a variety of question types while remaining simple enough for non-technical educators. Extensive card-sorting exercises with educators helped identify the most intuitive organization, leading to a template-based approach where customization options are progressively introduced as users gain familiarity.
                     </p>
                     
                     <p className="text-muted-foreground">
