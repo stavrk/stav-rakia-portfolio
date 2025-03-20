@@ -84,30 +84,43 @@ const projectsData = [{
 }, {
   title: "BIP",
   description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
-  image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
+  image: "/lovable-uploads/bip-lots of iphones.png",
   tags: ["Speculative Design", "Financial Tech"],
   slug: "bip",
   color: "#8B5CF6",
-  overview: "Bip is a conceptual money transfer application designed specifically for extraterrestrial users. This speculative design project challenged conventional UI/UX assumptions by considering the unique perceptual and cognitive needs of non-human users.",
+  overview: "BIP is a conceptual money transfer application designed specifically for extraterrestrial users. This speculative design project challenged conventional UI/UX assumptions by considering the unique perceptual and cognitive needs of non-human users.",
   challenge: "Design a financial application that accommodates alien perceptual abilities while maintaining the security and functionality expected in money transfer applications. Standard human-centered design principles needed significant adaptation to serve this unique user group.",
-  solution: "I reimagined the conventional money transfer app interface through an alien-centered design lens. This required developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception, while still drawing inspiration from familiar human applications like Bit and PayBox.",
-  process: ["Established alien user personas based on specified perceptual constraints", "Studied existing financial apps and adapted their core functionality to the alien context", "Created wireframes that emphasized visual communication", "Refined the interface through multiple iterations to balance alien-centered design with transaction security", "Designed custom animations for key moments in the user journey for clear feedback"],
-  designProcessAndAesthetics: "The Bip money transfer app required a complete reimagining of financial interface conventions for extraterrestrial users. The color palette features high-contrast, vibrant combinations with bold blues and bright yellows against deep space-themed backgrounds. This choice directly addresses the perceptual constraints of the alien users, who struggle with gray tones and low-contrast interfaces.\n\nTypography was a critical consideration—all text elements are significantly larger than human-centered applications, with a minimum size of 14px for secondary information and 18-24px for primary interface elements. Font selection prioritized circular, open letterforms with substantial weight to enhance legibility for alien visual systems.\n\nThe interface employs a consistent rounded design language with substantial padding around interactive elements to accommodate potential differences in alien motor control precision. All buttons feature both color and icon changes in their active states to provide redundant feedback cues. The space-themed iconography replaces traditional financial symbols, creating culturally appropriate visual metaphors for the target users.\n\nInteractive animations play a crucial role in communicating process status, particularly during transaction verification and confirmation. I designed custom animations using principles of anticipation and follow-through to signal the beginning and completion of processes, helping users understand system status without relying on text.",
-  challengesAndSolutions: "The primary challenge was designing without access to actual extraterrestrial users for testing. To address this, I created detailed alien personas with specific perceptual constraints and decision-making patterns, then validated design choices against these profiles. This speculative design approach required multiple revisions as new constraints emerged during the design process.\n\nThe security verification system presented another unique challenge—how to implement secure authentication without relying on human biometric patterns. The solution involved creating a facial recognition system that accommodates alien facial structures, with animated guides to help users position correctly during scanning. This required careful consideration of how to communicate proper positioning without assuming human facial reference points.",
-  designImages: [{
-    title: "Color Palette",
-    image: "https://images.unsplash.com/photo-1541701494587-cb58502866ab?q=80&w=2070&auto=format&fit=crop",
-    description: "High-contrast, vibrant colors with bold blues and bright yellows"
-  }, {
-    title: "Typography & Layout",
-    image: "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop",
-    description: "Large text elements with circular, open letterforms and substantial weight"
-  }, {
-    title: "Interface Elements",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop",
-    description: "Rounded design language with substantial padding and redundant feedback cues"
-  }],
-  additionalImages: ["https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1915&auto=format&fit=crop", "https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"],
+  solution: "A reimagined money transfer app interface through an alien-centered design lens, with new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception, while still drawing inspiration from familiar human applications like Bit and PayBox.",
+  wireflow: {
+    title: "Wireflow",
+    image: "/lovable-uploads/bip-wireflow.png",
+    description: "The wireflow diagram illustrates the navigation paths and interaction flows for extraterrestrial users, with special attention to non-linear thinking patterns and multiple sensory feedback loops throughout the transaction process."
+  },
+  designImages: [
+    {
+      title: "Color Palette",
+      image: "/lovable-uploads/bip-colors.png",
+      description: "High-contrast, vibrant colors with bold blues and bright yellows"
+    },
+    {
+      title: "Typography & Layout",
+      image: "/lovable-uploads/bip-typography.png",
+      description: "Large text elements with circular, open letterforms and substantial weight"
+    },
+    {
+      title: "Interface Elements",
+      image: "/lovable-uploads/bip-intarface.png",
+      description: "Rounded design language with substantial padding and redundant feedback cues"
+    }
+  ],
+  additionalImages: [
+    "/lovable-uploads/bip-group-page.png",
+    "/lovable-uploads/bip-home-page.png",
+    "/lovable-uploads/bip-loading-page.png",
+    "/lovable-uploads/bip-transfer-details.png"
+  ],
+  case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
+  comingSoon: false,
   link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
 }, {
   title: "STUDIT",
@@ -329,7 +342,8 @@ const ProjectDetail = () => {
             </motion.div>
             
             {/* Reordered and merged sections for Save Rapunzel */}
-            {project.slug === 'save-rapunzel' && <>
+            {project.slug === 'save-rapunzel' && (
+              <>
                 {/* Content Generator Interface - MERGED */}
                 {project.editorShowcase && <motion.div className="mb-16" initial={{
               opacity: 0,
@@ -477,7 +491,8 @@ const ProjectDetail = () => {
                     </p>
                   </div>
                 </motion.div>
-              </>}
+              </>
+            )}
             
             {/* Project Structure Section - For Roomie project */}
             {project.structureTree && <motion.div className="mb-16" initial={{
@@ -520,6 +535,28 @@ const ProjectDetail = () => {
                   <img src={project.wireframes.image} alt="Project Wireframes" className="w-full h-auto" />
                 </div>
               </motion.div>}
+            
+            {/* Wireflow Section - For BIP project */}
+            {project.slug === 'bip' && project.wireflow && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireflow.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflow.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
             
             {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
             {project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
@@ -603,7 +640,7 @@ const ProjectDetail = () => {
               <motion.div
                 key={index}
                 className={`rounded-xl overflow-hidden shadow-lg ${
-                  project.slug === 'bip' ? 'max-w-[414px] mx-auto' : ''
+                  project.slug === 'bip' ? 'max-w-[380px] mx-auto' : ''
                 }`}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
