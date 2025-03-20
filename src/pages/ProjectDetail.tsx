@@ -148,7 +148,7 @@ const projectsData = [{
     image: "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop",
     description: "Cards with subtle shadows and clear visual feedback"
   }],
-  additionalImages: ["https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1423800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop", "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"],
+  additionalImages: ["https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop", "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"],
   link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
 }, {
   title: "PLANT LEARNING MODULE",
@@ -181,59 +181,58 @@ const projectsData = [{
 }];
 
 const ProjectDetail = () => {
-  const { slug } = useParams();
+  const {
+    slug
+  } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.slug === slug);
-  
   useEffect(() => {
     if (!project) {
       navigate('/projects');
     }
   }, [project, navigate]);
-  
   if (!project) {
     return null;
   }
-  
   return (
     <Layout>
       {/* Hero Section */}
       <section className="pt-20 pb-32 relative" style={{
-        backgroundColor: `${project.color}10`
-      }}>
+      backgroundColor: `${project.color}10`
+    }}>
         <div className="container">
-          <motion.button 
-            onClick={() => navigate('/projects')} 
-            className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" 
-            initial={{ opacity: 0, x: -20 }} 
-            animate={{ opacity: 1, x: 0 }} 
-            transition={{ duration: 0.5 }}
-          >
+          <motion.button onClick={() => navigate('/projects')} className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" initial={{
+          opacity: 0,
+          x: -20
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.5
+        }}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Projects
           </motion.button>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.5 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5
+          }}>
               <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, i) => (
-                  <span 
-                    key={i} 
-                    className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-background text-foreground"
-                  >
+                {project.tags.map((tag, i) => <span key={i} className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-background text-foreground">
                     {tag}
-                  </span>
-                ))}
+                  </span>)}
               </div>
               
-              <h1 
-                className="text-4xl md:text-6xl font-medium mb-6" 
-                style={{ color: project.color }}
-              >
+              <h1 className="text-4xl md:text-6xl font-medium mb-6" style={{
+              color: project.color
+            }}>
                 {project.title}
               </h1>
               
@@ -244,12 +243,16 @@ const ProjectDetail = () => {
               {project.link && <ProjectLink href={project.link} />}
             </motion.div>
             
-            <motion.div 
-              className="relative" 
-              initial={{ opacity: 0, scale: 0.9 }} 
-              animate={{ opacity: 1, scale: 1 }} 
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
+            <motion.div className="relative" initial={{
+            opacity: 0,
+            scale: 0.9
+          }} animate={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            delay: 0.2,
+            duration: 0.5
+          }}>
               <div className="rounded-xl overflow-hidden shadow-xl border-4 border-white">
                 <img src={project.image} alt={project.title} className="w-full h-auto" />
               </div>
@@ -263,24 +266,37 @@ const ProjectDetail = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true, margin: "-100px" }} 
-                transition={{ duration: 0.5 }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
                 <h2 className="text-2xl font-medium mb-4">The Challenge</h2>
                 <p className="text-muted-foreground">
                   {project.challenge}
                 </p>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true, margin: "-100px" }} 
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              delay: 0.2,
+              duration: 0.5
+            }}>
                 <h2 className="text-2xl font-medium mb-4">The Solution</h2>
                 <p className="text-muted-foreground">
                   {project.solution}
@@ -289,114 +305,391 @@ const ProjectDetail = () => {
             </div>
             
             {/* Design Process Section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              viewport={{ once: true, margin: "-100px" }} 
-              transition={{ duration: 0.5 }} 
-              className="mb-16"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }} className="mb-16">
               <h2 className="text-2xl font-medium mb-6">Design Process</h2>
               <div className="space-y-4 mb-8">
-                {project.process && project.process.map((step, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="flex items-start" 
-                    initial={{ opacity: 0, x: -20 }} 
-                    whileInView={{ opacity: 1, x: 0 }} 
-                    viewport={{ once: true }} 
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                  >
-                    <div 
-                      className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" 
-                      style={{ backgroundColor: project.color }}
-                    >
+                {project.process.map((step, index) => <motion.div key={index} className="flex items-start" initial={{
+                opacity: 0,
+                x: -20
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                delay: index * 0.1,
+                duration: 0.5
+              }}>
+                    <div className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" style={{
+                  backgroundColor: project.color
+                }}>
                       {index + 1}
                     </div>
                     <p>{step}</p>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </motion.div>
             
             {/* Reordered and merged sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
-              <div>
-                {/* Content for Save Rapunzel project */}
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  whileInView={{ opacity: 1, y: 0 }} 
-                  viewport={{ once: true, margin: "-100px" }} 
-                  transition={{ duration: 0.5 }} 
-                  className="mb-16"
-                >
-                  <h2 className="text-2xl font-medium mb-6">Graphic Development</h2>
-                  <div className="prose prose-lg max-w-none">
-                    {project.graphicDevelopment && project.graphicDevelopment.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
+              <>
+                {/* Content Generator Interface - MERGED */}
+                {project.editorShowcase && <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
+                    <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
+                    <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
+                    
+                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
+                      <img src={project.editorShowcase.image} alt="Content Generator Interface" className="w-full h-auto" />
+                    </div>
+                    
+                    {/* Content from contentGenerator property */}
+                    <div className="prose prose-lg max-w-none">
+                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    </div>
+                  </motion.div>}
+
+                {/* Graphic Development Section */}
+                {project.graphicDevelopment && <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
+                    <h2 className="text-2xl font-medium mb-6">Graphic Development and Design Evolution</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.graphicDevelopment.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    </div>
+                    
+                    <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+                      <img src="/lovable-uploads/first-version-save-repunzel.png" alt="Initial Design Concept" className="w-full h-auto" />
+                    </div>
+                  </motion.div>}
+                
+                {/* Design Process & Aesthetics Section */}
+                <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
+                  <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+                  
+                  <div className="space-y-8">
+                    {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => <div key={idx} className="mb-8">
+                        <p className="mb-4 text-muted-foreground">{paragraph}</p>
+                        
+                        {/* Display relevant design image if available */}
+                        {project.designImages && idx < project.designImages.length && <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
+                    opacity: 0,
+                    y: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    delay: 0.2,
+                    duration: 0.5
+                  }}>
+                            <img src={project.designImages[idx].image} alt={project.designImages[idx].title} className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} />
+                            <div className="p-4 bg-secondary/30">
+                              <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
+                              <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
+                            </div>
+                          </motion.div>}
+                      </div>)}
                   </div>
                 </motion.div>
                 
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  whileInView={{ opacity: 1, y: 0 }} 
-                  viewport={{ once: true, margin: "-100px" }} 
-                  transition={{ duration: 0.5 }} 
-                  className="mb-16"
-                >
-                  <h2 className="text-2xl font-medium mb-6">Technical Challenges</h2>
-                  <div className="prose prose-lg max-w-none">
-                    {project.technicalChallenges && project.technicalChallenges.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
+                {/* Animation Features Section */}
+                {project.animationFeatures && <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
+                    <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.animationFeatures.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                    </div>
+                  </motion.div>}
+
+                {/* Technical & Development Challenges Section - REPLACED */}
+                <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
+                  <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
+                  
+                  <div className="prose prose-lg max-w-none space-y-4">
+                    <p className="text-muted-foreground">
+                      Developing a flexible yet intuitive content creation system posed a significant challenge. The content editor needed to support a variety of question types while remaining simple enough for non-technical educators. Extensive card-sorting exercises with teachers helped identify the most intuitive organization, leading to a template-based approach where customization options are progressively introduced as users gain familiarity.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      Handling Hebrew text and bidirectional interface complexities was another major technical hurdle. Displaying right-to-left text, reversing numbers, and ensuring proper alignment of English words within Hebrew sentences required a custom-built solution that significantly improved readability and usability for Hebrew-speaking users.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      Optimizing visual engagement without compromising educational clarity was critical. Early prototypes showed that students were sometimes distracted by animations during question-answering phases. The solution involved implementing a "focus mode" that temporarily simplified the visual environment during active question engagement while preserving interactive elements that reinforce learning progress.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      The development process also required robust workflow management. A structured system for file versioning, backups, and asset organization was essential to maintaining efficiency. At one stage, partial code loss occurred, but thanks to meticulous documentation and backup protocols, the team was able to recover and continue development without significant setbacks.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      These challenges, tackled through iterative testing, technical innovation, and structured problem-solving, ensured that the final product met both usability and pedagogical goals without compromising on flexibility or performance.
+                    </p>
                   </div>
                 </motion.div>
+              </>
+            )}
+            
+            {/* Project Structure Section - For Roomie project */}
+            {project.structureTree && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
+                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
+                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
                 
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  whileInView={{ opacity: 1, y: 0 }} 
-                  viewport={{ once: true, margin: "-100px" }} 
-                  transition={{ duration: 0.5 }} 
-                  className="mb-16"
-                >
-                  <h2 className="text-2xl font-medium mb-6">Content Generator</h2>
-                  <div className="prose prose-lg max-w-none">
-                    {project.contentGenerator && project.contentGenerator.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
-                  </div>
-                </motion.div>
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img src={project.structureTree.image} alt="Project Structure" className="w-full h-auto" />
+                </div>
+              </motion.div>}
+
+            {/* Wireframes Section - For Roomie project */}
+            {project.slug === 'roomie' && project.wireframes && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
                 
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  whileInView={{ opacity: 1, y: 0 }} 
-                  viewport={{ once: true, margin: "-100px" }} 
-                  transition={{ duration: 0.5 }} 
-                  className="mb-16"
-                >
-                  <h2 className="text-2xl font-medium mb-6">Animation Features</h2>
-                  <div className="prose prose-lg max-w-none">
-                    {project.animationFeatures && project.animationFeatures.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
-                  </div>
-                </motion.div>
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img src={project.wireframes.image} alt="Project Wireframes" className="w-full h-auto" />
+                </div>
+              </motion.div>}
+            
+            {/* Wireflow Section - For BIP project */}
+            {project.slug === 'bip' && project.wireflow && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireflow.description}</p>
                 
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }} 
-                  whileInView={{ opacity: 1, y: 0 }} 
-                  viewport={{ once: true, margin: "-100px" }} 
-                  transition={{ duration: 0.5 }} 
-                  className="mb-16"
-                >
-                  <h2 className="text-2xl font-medium mb-6">Collaborative Development</h2>
-                  <div className="prose prose-lg max-w-none">
-                    {project.collaborativeDevelopment && project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
-                  </div>
-                </motion.div>
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflow.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
+            {project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
+                <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
                 
-                {project.editorShowcase && (
-                  <motion.div
+                <div className="space-y-8">
+                  {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => <div key={idx} className="mb-8">
+                      <p className="mb-4 text-muted-foreground">{paragraph}</p>
+                      
+                      {/* Display relevant design image if available */}
+                      {project.designImages && idx < project.designImages.length && <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} viewport={{
+                  once: true
+                }} transition={{
+                  delay: 0.2,
+                  duration: 0.5
+                }}>
+                          <img src={project.designImages[idx].image} alt={project.designImages[idx].title} className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} />
+                          <div className="p-4 bg-secondary/30">
+                            <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
+                            <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
+                          </div>
+                        </motion.div>}
+                    </div>)}
+                </div>
+              </motion.div>}
+            
+            {/* Challenges & Solutions Section - For all projects except Save Rapunzel */}
+            {project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
+                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
+                <div className="prose prose-lg max-w-none">
+                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                </div>
+              </motion.div>}
+          </div>
+        </div>
+      </section>
+      
+      {/* Images Section */}
+      <section className="py-20 bg-secondary/50">
+        <div className="container">
+          <motion.h2 
+            className="text-2xl font-medium mb-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            Project Gallery
+          </motion.h2>
+          
+          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${project.slug === 'bip' ? '2' : '3'} gap-6`}>
+            {project.additionalImages.map((image, index) => (
+              <motion.div
+                key={index}
+                className={`rounded-xl overflow-hidden shadow-lg ${
+                  project.slug === 'bip' ? 'max-w-[380px] mx-auto' : ''
+                }`}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+              >
+                <img
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className={`w-full h-auto ${
+                    project.slug === 'bip' ? 'aspect-[414/896] object-cover' : ''
+                  }`}
+                />
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Next Project */}
+      <section className="py-20">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <motion.div className="text-center" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            delay: 0.2,
+            duration: 0.5
+          }}>
+              <p className="text-muted-foreground mb-4">Next Project</p>
+              <h3 className="text-2xl font-medium mb-6">
+                {projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].title}
+              </h3>
+              <a href={`/projects/${projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].slug}`} className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg">
+                View Next Project
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
