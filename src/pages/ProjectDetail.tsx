@@ -181,58 +181,59 @@ const projectsData = [{
 }];
 
 const ProjectDetail = () => {
-  const {
-    slug
-  } = useParams();
+  const { slug } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.slug === slug);
+  
   useEffect(() => {
     if (!project) {
       navigate('/projects');
     }
   }, [project, navigate]);
+  
   if (!project) {
     return null;
   }
+  
   return (
     <Layout>
       {/* Hero Section */}
       <section className="pt-20 pb-32 relative" style={{
-      backgroundColor: `${project.color}10`
-    }}>
+        backgroundColor: `${project.color}10`
+      }}>
         <div className="container">
-          <motion.button onClick={() => navigate('/projects')} className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" initial={{
-          opacity: 0,
-          x: -20
-        }} animate={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 0.5
-        }}>
+          <motion.button 
+            onClick={() => navigate('/projects')} 
+            className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" 
+            initial={{ opacity: 0, x: -20 }} 
+            animate={{ opacity: 1, x: 0 }} 
+            transition={{ duration: 0.5 }}
+          >
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Projects
           </motion.button>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} animate={{
-            opacity: 1,
-            y: 0
-          }} transition={{
-            duration: 0.5
-          }}>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.5 }}
+            >
               <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, i) => <span key={i} className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-background text-foreground">
+                {project.tags.map((tag, i) => (
+                  <span 
+                    key={i} 
+                    className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-background text-foreground"
+                  >
                     {tag}
-                  </span>)}
+                  </span>
+                ))}
               </div>
               
-              <h1 className="text-4xl md:text-6xl font-medium mb-6" style={{
-              color: project.color
-            }}>
+              <h1 
+                className="text-4xl md:text-6xl font-medium mb-6" 
+                style={{ color: project.color }}
+              >
                 {project.title}
               </h1>
               
@@ -243,16 +244,12 @@ const ProjectDetail = () => {
               {project.link && <ProjectLink href={project.link} />}
             </motion.div>
             
-            <motion.div className="relative" initial={{
-            opacity: 0,
-            scale: 0.9
-          }} animate={{
-            opacity: 1,
-            scale: 1
-          }} transition={{
-            delay: 0.2,
-            duration: 0.5
-          }}>
+            <motion.div 
+              className="relative" 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              animate={{ opacity: 1, scale: 1 }} 
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
               <div className="rounded-xl overflow-hidden shadow-xl border-4 border-white">
                 <img src={project.image} alt={project.title} className="w-full h-auto" />
               </div>
@@ -266,37 +263,24 @@ const ProjectDetail = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              <motion.div initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true,
-              margin: "-100px"
-            }} transition={{
-              duration: 0.5
-            }}>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true, margin: "-100px" }} 
+                transition={{ duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-4">The Challenge</h2>
                 <p className="text-muted-foreground">
                   {project.challenge}
                 </p>
               </motion.div>
               
-              <motion.div initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true,
-              margin: "-100px"
-            }} transition={{
-              delay: 0.2,
-              duration: 0.5
-            }}>
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true, margin: "-100px" }} 
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
                 <h2 className="text-2xl font-medium mb-4">The Solution</h2>
                 <p className="text-muted-foreground">
                   {project.solution}
@@ -305,305 +289,128 @@ const ProjectDetail = () => {
             </div>
             
             {/* Design Process Section */}
-            <motion.div initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }} className="mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true, margin: "-100px" }} 
+              transition={{ duration: 0.5 }} 
+              className="mb-16"
+            >
               <h2 className="text-2xl font-medium mb-6">Design Process</h2>
               <div className="space-y-4 mb-8">
-                {project.process && project.process.map((step, index) => <motion.div key={index} className="flex items-start" initial={{
-                opacity: 0,
-                x: -20
-              }} whileInView={{
-                opacity: 1,
-                x: 0
-              }} viewport={{
-                once: true
-              }} transition={{
-                delay: index * 0.1,
-                duration: 0.5
-              }}>
-                    <div className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" style={{
-                  backgroundColor: project.color
-                }}>
+                {project.process && project.process.map((step, index) => (
+                  <motion.div 
+                    key={index} 
+                    className="flex items-start" 
+                    initial={{ opacity: 0, x: -20 }} 
+                    whileInView={{ opacity: 1, x: 0 }} 
+                    viewport={{ once: true }} 
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                  >
+                    <div 
+                      className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" 
+                      style={{ backgroundColor: project.color }}
+                    >
                       {index + 1}
                     </div>
                     <p>{step}</p>
-                  </motion.div>)}
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
             
             {/* Reordered and merged sections for Save Rapunzel */}
             {project.slug === 'save-rapunzel' && (
-              // ... keep existing code (Save Rapunzel specific sections)
-            )}
-            
-            {/* Wireflow Section - For BIP project */}
-            {project.slug === 'bip' && project.wireflow && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
-                <p className="text-muted-foreground mb-8">{project.wireflow.description}</p>
+              <div>
+                {/* Content for Save Rapunzel project would go here */}
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true,
+                margin: "-100px"
+              }} transition={{
+                duration: 0.5
+              }} className="mb-16">
+                  <h2 className="text-2xl font-medium mb-6">Graphic Development</h2>
+                  <div className="prose prose-lg max-w-none">
+                    {project.graphicDevelopment && project.graphicDevelopment.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                  </div>
+                </motion.div>
                 
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireflow.image} 
-                    alt="Wireflow Diagram" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Project Structure Section - For Roomie project */}
-            {project.slug === 'roomie' && project.structureTree && <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
-                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
-                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true,
+                margin: "-100px"
+              }} transition={{
+                duration: 0.5
+              }} className="mb-16">
+                  <h2 className="text-2xl font-medium mb-6">Technical Challenges</h2>
+                  <div className="prose prose-lg max-w-none">
+                    {project.technicalChallenges && project.technicalChallenges.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                  </div>
+                </motion.div>
                 
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img src={project.structureTree.image} alt="Project Structure" className="w-full h-auto" />
-                </div>
-              </motion.div>}
-
-            {/* Wireframes Section - For Roomie project */}
-            {project.slug === 'roomie' && project.wireframes && <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
-                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
-                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true,
+                margin: "-100px"
+              }} transition={{
+                duration: 0.5
+              }} className="mb-16">
+                  <h2 className="text-2xl font-medium mb-6">Content Generator</h2>
+                  <div className="prose prose-lg max-w-none">
+                    {project.contentGenerator && project.contentGenerator.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                  </div>
+                </motion.div>
                 
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img src={project.wireframes.image} alt="Project Wireframes" className="w-full h-auto" />
-                </div>
-              </motion.div>}
-            
-            {/* Design Process & Aesthetics Section with images */}
-            <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
-                <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true,
+                margin: "-100px"
+              }} transition={{
+                duration: 0.5
+              }} className="mb-16">
+                  <h2 className="text-2xl font-medium mb-6">Animation Features</h2>
+                  <div className="prose prose-lg max-w-none">
+                    {project.animationFeatures && project.animationFeatures.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                  </div>
+                </motion.div>
                 
-                <div className="space-y-8">
-                  {project.designProcessAndAesthetics && project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => <div key={idx} className="mb-8">
-                      <p className="mb-4 text-muted-foreground">{paragraph}</p>
-                      
-                      {/* Display relevant design image if available */}
-                      {project.designImages && idx < project.designImages.length && <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
-                  opacity: 0,
-                  y: 20
-                }} whileInView={{
-                  opacity: 1,
-                  y: 0
-                }} viewport={{
-                  once: true
-                }} transition={{
-                  delay: 0.2,
-                  duration: 0.5
-                }}>
-                          <img src={project.designImages[idx].image} alt={project.designImages[idx].title} className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} />
-                          <div className="p-4 bg-secondary/30">
-                            <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
-                            <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
-                          </div>
-                        </motion.div>}
-                    </div>)}
-                </div>
-              </motion.div>
-            
-            {/* Animation Features Section - For BIP */}
-            {project.slug === 'bip' && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
-                <div className="prose prose-lg max-w-none space-y-4">
-                  <p className="text-muted-foreground">
-                    The BIP application features custom animations designed specifically for extraterrestrial perception patterns. Key interaction moments are highlighted with visual feedback that accommodates alien visual processing.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Transaction confirmations use animated spaceships and meteorite visuals to represent successful payments. Loading states feature orbital animations that maintain user engagement while processing occurs in the background.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    The interface responds to touch with immediate visual feedback, providing redundant confirmation through color shifts, size changes, and animated transitions to ensure clarity for users with different perceptual abilities.
-                  </p>
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Challenges & Solutions Section */}
-            {project.challengesAndSolutions && project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            duration: 0.5
-          }}>
-                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
-                <div className="prose prose-lg max-w-none">
-                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
-                </div>
-              </motion.div>}
-            
-            {/* Technical & Development Challenges Section - For BIP */}
-            {project.slug === 'bip' && !project.challengesAndSolutions && (
-              <motion.div className="mb-16" initial={{
-              opacity: 0,
-              y: 20
-            }} whileInView={{
-              opacity: 1,
-              y: 0
-            }} viewport={{
-              once: true,
-              margin: "-100px"
-            }} transition={{
-              duration: 0.5
-            }}>
-                <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} viewport={{
+                once: true,
+                margin: "-100px"
+              }} transition={{
+                duration: 0.5
+              }} className="mb-16">
+                  <h2 className="text-2xl font-medium mb-6">Collaborative Development</h2>
+                  <div className="prose prose-lg max-w-none">
+                    {project.collaborativeDevelopment && project.collaborativeDevelopment.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                  </div>
+                </motion.div>
                 
-                <div className="prose prose-lg max-w-none space-y-4">
-                  <p className="text-muted-foreground">
-                    Developing for extraterrestrial users presented unique technical challenges, particularly in the absence of direct user testing possibilities. The solution involved creating detailed alien personas with specific perceptual constraints and validating designs against these constraints.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Security verification posed another significant challenge. A specialized facial recognition system was designed to accommodate alien facial structures, with animated guides for proper positioning, balancing security needs with accessibility.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    The visual design required complete reimagining for alien perception. Color schemes, typography, and spacing were adapted to address the specific visual needs of extraterrestrial users while maintaining the functional elements expected in a money transfer application.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Balancing innovation with usability was perhaps the greatest challenge. The solution involved maintaining recognizable patterns from human financial applications while introducing novel interaction methods tailored to alien cognitive patterns.
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
-      
-      {/* Images Section */}
-      <section className="py-20 bg-secondary/50">
-        <div className="container">
-          <motion.h2 
-            className="text-2xl font-medium mb-8 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-          >
-            Project Gallery
-          </motion.h2>
-          
-          <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${project.slug === 'bip' ? '2' : '3'} gap-6`}>
-            {project.additionalImages && project.additionalImages.map((image, index) => (
-              <motion.div
-                key={index}
-                className={`rounded-xl overflow-hidden shadow-lg ${
-                  project.slug === 'bip' ? 'max-w-[350px] mx-auto' : ''
-                }`}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: index * 0.1, duration: 0.5 }}
-              >
-                <img
-                  src={image}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  className={`w-full h-auto ${
-                    project.slug === 'bip' ? 'aspect-[414/896] object-cover' : ''
-                  }`}
-                />
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
-      {/* Next Project */}
-      <section className="py-20">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <motion.div className="text-center" initial={{
-            opacity: 0,
-            y: 20
-          }} whileInView={{
-            opacity: 1,
-            y: 0
-          }} viewport={{
-            once: true,
-            margin: "-100px"
-          }} transition={{
-            delay: 0.2,
-            duration: 0.5
-          }}>
-              <p className="text-muted-foreground mb-4">Next Project</p>
-              <h3 className="text-2xl font-medium mb-6">
-                {projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].title}
-              </h3>
-              <a href={`/projects/${projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].slug}`} className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg">
-                View Next Project
-              </a>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
-};
-
-export default ProjectDetail;
+                {project.editorShowcase && <motion.div className="mb-16"
