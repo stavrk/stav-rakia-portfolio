@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -349,4 +350,238 @@ const ProjectDetail = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl font
+                <h2 className="text-2xl font-medium mb-4">{project.wireflow.title}</h2>
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img 
+                    src={project.wireflow.image} 
+                    alt={project.wireflow.title} 
+                    className="w-full h-auto" 
+                  />
+                </div>
+                <p className="mt-4 text-muted-foreground">{project.wireflow.description}</p>
+              </motion.div>
+            )}
+
+            {/* Structure Tree Section - For ROOMIE project */}
+            {project.slug === 'roomie' && project.structureTree && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-4">{project.structureTree.title}</h2>
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img 
+                    src={project.structureTree.image} 
+                    alt={project.structureTree.title} 
+                    className="w-full h-auto" 
+                  />
+                </div>
+                <p className="mt-4 text-muted-foreground">{project.structureTree.description}</p>
+              </motion.div>
+            )}
+
+            {/* Wireframes Section - For ROOMIE project */}
+            {project.slug === 'roomie' && project.wireframes && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-4">{project.wireframes.title}</h2>
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img 
+                    src={project.wireframes.image} 
+                    alt={project.wireframes.title} 
+                    className="w-full h-auto" 
+                  />
+                </div>
+                <p className="mt-4 text-muted-foreground">{project.wireframes.description}</p>
+              </motion.div>
+            )}
+
+            {/* Content Generator Interface - For Save Rapunzel */}
+            {project.slug === 'save-rapunzel' && project.editorShowcase && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-4">{project.editorShowcase.title}</h2>
+                <div className="rounded-lg overflow-hidden shadow-md">
+                  <img 
+                    src={project.editorShowcase.image} 
+                    alt={project.editorShowcase.title} 
+                    className="w-full h-auto" 
+                  />
+                </div>
+                <p className="mt-4 text-muted-foreground">{project.editorShowcase.description}</p>
+                {project.slug === 'save-rapunzel' && (
+                  <p className="mt-4 text-muted-foreground">
+                    {project.contentGenerator}
+                  </p>
+                )}
+              </motion.div>
+            )}
+            
+            {/* Graphic Development Section */}
+            {project.graphicDevelopment && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-4">Graphic Development and Design Evolution</h2>
+                <p className="text-muted-foreground mb-4 whitespace-pre-line">
+                  {project.graphicDevelopment}
+                </p>
+              </motion.div>
+            )}
+            
+            {/* Design Process & Aesthetics Section */}
+            <motion.div 
+              className="mb-16" 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-2xl font-medium mb-4">Design Process & Aesthetics</h2>
+              <p className="text-muted-foreground mb-8 whitespace-pre-line">
+                {project.designProcessAndAesthetics}
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {project.designImages && project.designImages.map((image, index) => (
+                  <motion.div 
+                    key={index}
+                    className="border rounded-lg overflow-hidden shadow-md"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1, duration: 0.5 }}
+                  >
+                    <div className="aspect-w-16 aspect-h-9 bg-gray-100">
+                      <img 
+                        src={image.image} 
+                        alt={image.title} 
+                        className="w-full h-auto object-cover"
+                      />
+                    </div>
+                    <div className="p-4">
+                      <h3 className="font-medium mb-2">{image.title}</h3>
+                      <p className="text-sm text-muted-foreground">{image.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+            
+            {/* Animation and Interaction Features Section */}
+            {project.animationFeatures && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-4">Animation and Interaction Features</h2>
+                <p className="text-muted-foreground whitespace-pre-line">
+                  {project.animationFeatures}
+                </p>
+              </motion.div>
+            )}
+            
+            {/* Technical & Development Challenges Section */}
+            {(project.technicalChallenges || project.slug === 'save-rapunzel') && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-4">Technical & Development Challenges</h2>
+                {project.slug === 'save-rapunzel' ? (
+                  <p className="text-muted-foreground whitespace-pre-line">
+                    Developing a flexible yet intuitive content creation system posed a significant challenge. The content editor needed to support a variety of question types while remaining simple enough for non-technical educators. Extensive card-sorting exercises with teachers helped identify the most intuitive organization, leading to a template-based approach where customization options are progressively introduced as users gain familiarity.
+                    <br /><br />
+                    Handling Hebrew text and bidirectional interface complexities was another major technical hurdle. Displaying right-to-left text, reversing numbers, and ensuring proper alignment of English words within Hebrew sentences required a custom-built solution that significantly improved readability and usability for Hebrew-speaking users.
+                    <br /><br />
+                    Optimizing visual engagement without compromising educational clarity was critical. Early prototypes showed that students were sometimes distracted by animations during question-answering phases. The solution involved implementing a "focus mode" that temporarily simplified the visual environment during active question engagement while preserving interactive elements that reinforce learning progress.
+                    <br /><br />
+                    The development process also required robust workflow management. A structured system for file versioning, backups, and asset organization was essential to maintaining efficiency. At one stage, partial code loss occurred, but thanks to meticulous documentation and backup protocols, the team was able to recover and continue development without significant setbacks.
+                    <br /><br />
+                    These challenges, tackled through iterative testing, technical innovation, and structured problem-solving, ensured that the final product met both usability and pedagogical goals without compromising on flexibility or performance.
+                  </p>
+                ) : (
+                  <p className="text-muted-foreground whitespace-pre-line">
+                    {project.technicalChallenges}
+                  </p>
+                )}
+              </motion.div>
+            )}
+            
+            {/* Challenges & Solutions Section */}
+            {project.challengesAndSolutions && project.slug !== 'save-rapunzel' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-4">Challenges & Solutions</h2>
+                <p className="text-muted-foreground whitespace-pre-line">
+                  {project.challengesAndSolutions}
+                </p>
+              </motion.div>
+            )}
+            
+            {/* Project Gallery */}
+            {project.additionalImages && project.additionalImages.length > 0 && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Project Gallery</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {project.additionalImages.map((image, index) => (
+                    <motion.div 
+                      key={index}
+                      className="rounded-lg overflow-hidden shadow-md"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1, duration: 0.5 }}
+                    >
+                      <img 
+                        src={image} 
+                        alt={`${project.title} Gallery ${index + 1}`} 
+                        className="w-full h-auto"
+                      />
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
