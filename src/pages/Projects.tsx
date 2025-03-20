@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -20,7 +19,7 @@ const projectsData = [
   {
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
-    image: "/lovable-uploads/save-repunzel-editor.png",
+    image: "https://images.unsplash.com/photo-1616161560417-66d4db5892ec?q=80&w=2070&auto=format&fit=crop",
     tags: ["Instructional Design"],
     slug: "save-rapunzel",
     color: "#10B981",
@@ -31,7 +30,7 @@ const projectsData = [
   {
     title: "BIP",
     description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
-    image: "/lovable-uploads/bip-lots-of-iphones.png",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2070&auto=format&fit=crop",
     tags: ["UX/UI Design"],
     slug: "bip",
     color: "#8B5CF6",
