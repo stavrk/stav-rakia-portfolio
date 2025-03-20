@@ -84,7 +84,7 @@ const projectsData = [{
 }, {
   title: "BIP",
   description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
-  image: "/lovable-uploads/bip-lots of iphones.png",
+  image: "/lovable-uploads/bip-lots-of-iphones.png",
   tags: ["Speculative Design", "Financial Tech"],
   slug: "bip",
   color: "#8B5CF6",

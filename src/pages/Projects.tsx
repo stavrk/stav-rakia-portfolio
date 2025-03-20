@@ -30,41 +30,10 @@ const projectsData = [
   {
     title: "BIP",
     description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
-    image: "/lovable-uploads/bip-lots of iphones.png",
+    image: "/lovable-uploads/bip-lots-of-iphones.png",
     tags: ["Speculative Design", "Financial Tech"],
     slug: "bip",
     color: "#8B5CF6",
-    overview: "BIP is a conceptual money transfer application designed specifically for extraterrestrial users. This speculative design project challenged conventional UI/UX assumptions by considering the unique perceptual and cognitive needs of non-human users.",
-    challenge: "Design a financial application that accommodates alien perceptual abilities while maintaining the security and functionality expected in money transfer applications. Standard human-centered design principles needed significant adaptation to serve this unique user group.",
-    solution: "A reimagined money transfer app interface through an alien-centered design lens, with new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception, while still drawing inspiration from familiar human applications like Bit and PayBox.",
-    wireflow: {
-      title: "Wireflow",
-      image: "/lovable-uploads/bip-wireflow.png",
-      description: "The wireflow diagram illustrates the navigation paths and interaction flows for extraterrestrial users, with special attention to non-linear thinking patterns and multiple sensory feedback loops throughout the transaction process."
-    },
-    designImages: [
-      {
-        title: "Color Palette",
-        image: "/lovable-uploads/bip-colors.png",
-        description: "High-contrast, vibrant colors with bold blues and bright yellows"
-      },
-      {
-        title: "Typography & Layout",
-        image: "/lovable-uploads/bip-typography.png",
-        description: "Large text elements with circular, open letterforms and substantial weight"
-      },
-      {
-        title: "Interface Elements",
-        image: "/lovable-uploads/bip-intarface.png",
-        description: "Rounded design language with substantial padding and redundant feedback cues"
-      }
-    ],
-    additionalImages: [
-      "/lovable-uploads/bip-group-page.png",
-      "/lovable-uploads/bip-home-page.png",
-      "/lovable-uploads/bip-loading-page.png",
-      "/lovable-uploads/bip-transfer-details.png"
-    ],
     case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
