@@ -50,11 +50,11 @@ const ProjectCard = ({
           </div>
         )}
         
-        <div className="mb-4 flex">
+        <div className="mb-4 flex flex-wrap">
           {tags.map((tag, i) => (
             <span 
               key={i} 
-              className="inline-block text-xs font-medium px-2.5 py-1 rounded-full mr-2 bg-secondary text-secondary-foreground"
+              className="inline-block text-xs font-medium px-2.5 py-1 rounded-full mr-2 mb-2 bg-secondary text-secondary-foreground"
             >
               {tag}
             </span>

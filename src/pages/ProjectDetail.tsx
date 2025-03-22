@@ -127,17 +127,37 @@ const projectsData = [{
   link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
 }, {
   title: "STUDIT",
-  description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
+  description: "An AI-powered study companion for Israeli Psychometric Entrance Test and matriculation (bagrut) exams preparation with personalized study plans.",
   image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
   tags: ["Educational Tech", "AI"],
   slug: "studit",
   color: "#F59E0B",
-  overview: "Studit is a web-based platform designed to help students prepare for the Israeli Psychometric Entrance Test (equivalent to the SAT/ACT). It provides personalized study plans, adaptive practice tests, and AI-generated scheduling based on individual performance and learning preferences.",
-  challenge: "Psychometric exam preparation is typically stressful, time-consuming, and often inefficient. Many students struggle to structure their study time effectively or identify which areas need the most attention. Existing platforms often present practice questions in a static, uninspiring format that fails to engage students.",
-  solution: "I designed Studit as an interactive, adaptive learning platform that makes studying feel less overwhelming and more engaging. The interface guides users through a complete journey: from selecting their exam date to taking a diagnostic assessment and receiving a personalized study schedule.",
-  process: ["Conducted extensive research into student pain points during exam preparation", "Analyzed existing educational platforms like Yoel Geva and Kidum to identify strengths and weaknesses", "Developed wireframes and user flows that addressed key pain points while introducing interactive elements", "Conducted multiple rounds of user testing to refine the interface", "Created a clean, modern aesthetic with a warm color palette for a calm, focused studying environment"],
-  designProcessAndAesthetics: "For Studit, I developed a visual language that balances academic seriousness with engaging interactivity. The color palette features warm neutrals (beiges and soft browns) as a base, accented with muted blues and occasional touches of yellow to create focus points without overwhelming the learning content. This restrained approach creates a calm environment conducive to focused study while providing enough visual interest to maintain engagement.\n\nTypography choices were critical for supporting extended reading periods. I selected Assistant as the primary font for its excellent readability and comprehensive Hebrew character support. Text hierarchy uses weight variation rather than dramatic size differences, with a minimum body text size of 16px to ensure comfortable reading during study sessions.\n\nThe layout employs generous white space and a consistent grid system to organize complex information clearly. Cards with subtle shadows and rounded corners (4px radius) contain related information groups, while interactive elements use slightly more pronounced shadows and state changes to indicate their functionality.\n\nUser flow considerations were paramount, with the interface guiding users through a logical progression from exam selection to diagnostic assessment and personalized scheduling. Each stage features animated transitions that provide both functional feedback and moments of delight in what could otherwise be a stressful process.",
-  challengesAndSolutions: "A significant design challenge emerged in making practice questions interactive without sacrificing academic rigor. Traditional multiple-choice formats felt static and disengaging, but overly gamified approaches risked undermining the serious purpose of the platform. The solution involved developing custom interaction patterns for different question types—drag-and-drop completions for verbal reasoning, interactive graphs for quantitative sections—that enhance engagement while maintaining focus on the academic content.\n\nAnother challenge was designing the AI-powered scheduling system to feel trustworthy and valuable rather than arbitrary. Early user testing revealed skepticism about algorithmically generated schedules. I addressed this by creating a transparent process that reveals the factors influencing schedule creation and allows users to adjust parameters while still benefiting from AI optimization. The schedule customization interface went through five iterations before achieving the right balance of guidance and user control.\n\nThe loading screens presented a particular design opportunity—rather than passive waiting periods, I transformed them into micro-moments of encouragement with progress animations and supportive messages. User testing showed this significantly reduced perceived waiting time and helped maintain motivation throughout the assessment process.",
+  overview: "Studit is a web-based platform designed to help students prepare for the Israeli Psychometric Entrance Test and matriculation (bagrut) exams. It provides personalized study plans, adaptive practice tests, and scheduling based on diagnostic tests and user preferences.",
+  challenge: "Psychometric and matriculation exam preparation is typically stressful, time-consuming, and often inefficient. Many students struggle to structure their study time effectively or identify which areas need the most attention. Existing platforms often present practice questions in a static, uninspiring format that fails to engage students.",
+  solution: "Designed by Stav Rakia and Eden Nisoyev, Studit is an interactive, adaptive learning platform that makes studying feel less overwhelming and more engaging. The interface guides users through a complete journey: from selecting their exam date to taking a diagnostic assessment and receiving a personalized study schedule based on their performance and preferences.",
+  wireflow: {
+    title: "Wireflow",
+    image: "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
+    description: "The wireframing stage for Studit focused on creating a clear, guided user journey through the exam preparation process. I developed low-fidelity wireframes that mapped out the core journey from exam selection to personalized study plan generation."
+  },
+  designResearch: {
+    title: "Design Research",
+    description: "Before diving into the design process, I conducted comprehensive research of existing platforms in the test preparation space. This analysis of Israeli market leaders like Yoel Geva, Kidum, and Niv Revach revealed both opportunities and limitations in current offerings.\nFrom Kidum's homepage, I adopted their clear subject emphasis and scroll-prompting arrow, while Yoel Geva's interactive regional map inspired our location selection feature. Studying interactive educational platforms like Wordwall led to the implementation of drag-and-drop functionality for verbal reasoning questions, transforming traditionally static multiple-choice questions into engaging interactive challenges.\nThis competitive analysis uncovered several gaps: most platforms presented practice materials in a visually uninspiring format, lacked meaningful interaction, and failed to personalize the study experience. I noticed that navigation was often confusing and users struggled to understand where they were in the preparation process.\nThese insights directly informed Studit's design approach: creating a step-by-step guided journey with clear progress indicators, implementing interactive question formats, and developing a visually distinctive yet professional aesthetic that stands out from competitors while maintaining educational credibility."
+  },
+  wireflowDetails: {
+    title: "Wireflow",
+    image: "/lovable-uploads/studit-wireflow.png",
+    description: "The wireframing stage for Studit focused on creating a clear, guided user journey through the exam preparation process. I developed low-fidelity wireframes that mapped out the core journey from exam selection to personalized study plan generation.\nKey wireframe decisions included:\n\nA vertical scrolling homepage that gradually reveals each step of the preparation process\n\nClear sectioning between different diagnostic test subjects (verbal, quantitative, English)\n\nInteractive elements placed strategically to maintain engagement\n\nMinimalist layouts to prevent cognitive overload while studying\n\nConsistent placement of navigation elements throughout the journey\nThese wireframes were crucial in validating the user flow before adding visual design elements, ensuring that the structure effectively supported the educational goals while maintaining an engaging experience."
+  },
+  process: [
+    "Conducted extensive research into student pain points during exam preparation", 
+    "Analyzed existing educational platforms like Yoel Geva, Kidum, and Niv Revach to identify strengths and weaknesses", 
+    "Developed wireframes and user flows that addressed key pain points while introducing interactive elements", 
+    "Conducted multiple rounds of user testing to refine the interface", 
+    "Created a clean, modern aesthetic with a warm color palette for a calm, focused studying environment"
+  ],
+  designProcessAndAesthetics: "For Studit, we developed a visual language that balances academic seriousness with engaging interactivity. The color palette features warm neutrals (beiges and soft browns) as a base, accented with muted blues and occasional touches of yellow to create focus points without overwhelming the learning content. This restrained approach creates a calm environment conducive to focused study while providing enough visual interest to maintain engagement.\n\nTypography choices were critical for supporting extended reading periods. We selected Assistant as the primary font for its excellent readability and comprehensive Hebrew character support, with Indie Flower as an accent font for highlighting important elements. Text hierarchy uses weight variation rather than dramatic size differences, with a minimum body text size of 16px to ensure comfortable reading during study sessions.\n\nThe layout employs generous white space and a consistent grid system to organize complex information clearly. Cards with subtle shadows and rounded corners (4px radius) contain related information groups, while interactive elements use slightly more pronounced shadows and state changes to indicate their functionality.\n\nUser flow considerations were paramount, with the interface guiding users through a logical progression from homepage through exam/date selection, location selection, diagnostic assessment and personalized scheduling. Each stage features animated transitions that provide both functional feedback and moments of delight in what could otherwise be a stressful process.",
+  challengesAndSolutions: "A significant design challenge emerged in making practice questions interactive without sacrificing academic rigor. Traditional multiple-choice formats felt static and disengaging, but overly gamified approaches risked undermining the serious purpose of the platform. The solution involved developing custom interaction patterns for different question types—drag-and-drop completions for verbal reasoning, interactive maps for selecting exam locations—that enhance engagement while maintaining focus on the academic content.\n\nAnother challenge was designing the scheduling system to feel trustworthy and valuable. Early user testing revealed skepticism about scheduling systems. We addressed this by creating a transparent process that reveals the factors influencing schedule creation and allows users to adjust parameters while still benefiting from optimization. The schedule customization interface went through five iterations before achieving the right balance of guidance and user control.\n\nThe loading screens presented a particular design opportunity—rather than passive waiting periods, we transformed them into micro-moments of encouragement with progress animations and motivational messages. User testing showed this significantly reduced perceived waiting time and helped maintain motivation throughout the assessment process. Additionally, we incorporated color customization for the schedule to help students personalize their study experience.",
   designImages: [{
     title: "Color Palette",
     image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop",
@@ -145,7 +165,7 @@ const projectsData = [{
   }, {
     title: "Typography & Layout",
     image: "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
-    description: "Assistant font with weight variations and generous white space"
+    description: "Assistant and Indie Flower fonts with weight variations and generous white space"
   }, {
     title: "Interface Components",
     image: "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop",
@@ -187,6 +207,10 @@ const ProjectDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.slug === slug);
+  
+  // Find next project data for the navigation section
+  const nextProjectIndex = (projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length;
+  const nextProject = projectsData[nextProjectIndex];
   
   useEffect(() => {
     if (!project) {
@@ -321,6 +345,50 @@ const ProjectDetail = () => {
                 ))}
               </div>
             </motion.div>
+            
+            {/* Design Research Section - For STUDIT project */}
+            {project.slug === 'studit' && project.designResearch && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.designResearch.title}</h2>
+                <div className="prose prose-lg max-w-none">
+                  {project.designResearch.description.split('\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Wireflow Section - For STUDIT project */}
+            {project.slug === 'studit' && project.wireflowDetails && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflowDetails.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.wireflowDetails.description.split('\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflowDetails.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
             
             {/* Wireflow Section - For BIP project */}
             {project.slug === 'bip' && project.wireflow && (
@@ -661,30 +729,30 @@ const ProjectDetail = () => {
           </motion.h2>
           
           {/* Updated gallery grid - with different layout for BIP and new images added */}
-          <div className={`grid grid-cols-1 md:grid-cols-2 gap-6 ${project.slug === 'bip' ? 'max-w-4xl mx-auto' : ''}`}>
-            {project.additionalImages && project.additionalImages.map((image, index) => {
-              // Handle BIP images differently - make them smaller
-              if (project.slug === 'bip') {
-                return (
-                  <motion.div
-                    key={index}
-                    className="rounded-xl overflow-hidden shadow-lg max-w-[280px] mx-auto"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                  >
-                    <img
-                      src={image}
-                      alt={`${project.title} - Image ${index + 1}`}
-                      className="w-full h-auto aspect-[414/896] object-cover"
-                    />
-                  </motion.div>
-                );
-              }
-              
-              // For other projects
-              return (
+          {project.slug === 'bip' ? (
+            // BIP gallery - 4 images in one row
+            <div className="grid grid-cols-4 gap-6 max-w-5xl mx-auto">
+              {project.additionalImages && project.additionalImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="rounded-xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} - Image ${index + 1}`}
+                    className="w-full h-auto aspect-[9/19] object-cover"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            // For other projects - 2-column grid
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.additionalImages && project.additionalImages.map((image, index) => (
                 <motion.div
                   key={index}
                   className="rounded-xl overflow-hidden shadow-lg"
@@ -699,47 +767,47 @@ const ProjectDetail = () => {
                     className="w-full h-auto"
                   />
                 </motion.div>
-              );
-            })}
-            
-            {/* Add roomie-expenses to ROOMIE gallery */}
-            {project.slug === 'roomie' && (
-              <motion.div
-                className="rounded-xl overflow-hidden shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                <img
-                  src="/lovable-uploads/roomie-expenses.png"
-                  alt="ROOMIE - Expense Tracking Interface"
-                  className="w-full h-auto"
-                />
-              </motion.div>
-            )}
-            
-            {/* Add save-repunzel-my-games-add to SAVE RAPUNZEL gallery */}
-            {project.slug === 'save-rapunzel' && (
-              <motion.div
-                className="rounded-xl overflow-hidden shadow-lg"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: 0.3, duration: 0.5 }}
-              >
-                <img
-                  src="/lovable-uploads/save-repunzel-my-games-add.png"
-                  alt="SAVE RAPUNZEL - Add New Game Interface"
-                  className="w-full h-auto"
-                />
-              </motion.div>
-            )}
-          </div>
+              ))}
+              
+              {/* Add roomie-expenses to ROOMIE gallery */}
+              {project.slug === 'roomie' && (
+                <motion.div
+                  className="rounded-xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                  <img
+                    src="/lovable-uploads/roomie-expenses.png"
+                    alt="ROOMIE - Expense Tracking Interface"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              )}
+              
+              {/* Add save-repunzel-my-games-add to SAVE RAPUNZEL gallery */}
+              {project.slug === 'save-rapunzel' && (
+                <motion.div
+                  className="rounded-xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                  <img
+                    src="/lovable-uploads/save-repunzel-my-games-add.png"
+                    alt="SAVE RAPUNZEL - Add New Game Interface"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              )}
+            </div>
+          )}
         </div>
       </section>
       
-      {/* Check It Out section - NEW */}
+      {/* Check It Out section */}
       <section className="py-16 bg-gradient-to-b from-secondary/30 to-transparent">
         <div className="container">
           <motion.div
@@ -772,23 +840,32 @@ const ProjectDetail = () => {
         </div>
       </section>
       
-      {/* Next Project */}
-      <section className="py-20">
+      {/* Next Project - Updated with image and title */}
+      <section className="py-20 bg-background border-t border-border/30">
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <motion.div 
-              className="text-center" 
+              className="text-center mb-8" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 0.5 }}
             >
-              <p className="text-muted-foreground mb-4">Next Project</p>
-              <h3 className="text-2xl font-medium mb-6">
-                {projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].title}
+              <p className="text-muted-foreground mb-2">Next Project</p>
+              <h3 className="text-2xl font-medium mb-6" style={{ color: nextProject.color }}>
+                {nextProject.title}
               </h3>
+              
+              <div className="mb-8 max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={nextProject.image} 
+                  alt={nextProject.title} 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
               <a 
-                href={`/projects/${projectsData[(projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length].slug}`} 
+                href={`/projects/${nextProject.slug}`} 
                 className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
               >
                 View Next Project
