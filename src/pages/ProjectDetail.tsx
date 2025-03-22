@@ -128,26 +128,22 @@ const projectsData = [{
 }, {
   title: "STUDIT",
   description: "An AI-powered study companion for Israeli Psychometric Entrance Test and matriculation (bagrut) exams preparation with personalized study plans.",
-  image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
+  image: "/lovable-uploads/studit-home-page.png",
   tags: ["Educational Tech", "AI"],
   slug: "studit",
   color: "#F59E0B",
   overview: "Studit is a web-based platform designed to help students prepare for the Israeli Psychometric Entrance Test and matriculation (bagrut) exams. It provides personalized study plans, adaptive practice tests, and scheduling based on diagnostic tests and user preferences.",
   challenge: "Psychometric and matriculation exam preparation is typically stressful, time-consuming, and often inefficient. Many students struggle to structure their study time effectively or identify which areas need the most attention. Existing platforms often present practice questions in a static, uninspiring format that fails to engage students.",
   solution: "Designed by Stav Rakia and Eden Nisoyev, Studit is an interactive, adaptive learning platform that makes studying feel less overwhelming and more engaging. The interface guides users through a complete journey: from selecting their exam date to taking a diagnostic assessment and receiving a personalized study schedule based on their performance and preferences.",
-  wireflow: {
+  wireflowDetails: {
     title: "Wireflow",
-    image: "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
+    image: "/lovable-uploads/studit-wireflow.png",
     description: "The wireframing stage for Studit focused on creating a clear, guided user journey through the exam preparation process. I developed low-fidelity wireframes that mapped out the core journey from exam selection to personalized study plan generation."
   },
   designResearch: {
     title: "Design Research",
+    image: "/lovable-uploads/studit-design-research.png",
     description: "Before diving into the design process, I conducted comprehensive research of existing platforms in the test preparation space. This analysis of Israeli market leaders like Yoel Geva, Kidum, and Niv Revach revealed both opportunities and limitations in current offerings.\nFrom Kidum's homepage, I adopted their clear subject emphasis and scroll-prompting arrow, while Yoel Geva's interactive regional map inspired our location selection feature. Studying interactive educational platforms like Wordwall led to the implementation of drag-and-drop functionality for verbal reasoning questions, transforming traditionally static multiple-choice questions into engaging interactive challenges.\nThis competitive analysis uncovered several gaps: most platforms presented practice materials in a visually uninspiring format, lacked meaningful interaction, and failed to personalize the study experience. I noticed that navigation was often confusing and users struggled to understand where they were in the preparation process.\nThese insights directly informed Studit's design approach: creating a step-by-step guided journey with clear progress indicators, implementing interactive question formats, and developing a visually distinctive yet professional aesthetic that stands out from competitors while maintaining educational credibility."
-  },
-  wireflowDetails: {
-    title: "Wireflow",
-    image: "/lovable-uploads/studit-wireflow.png",
-    description: "The wireframing stage for Studit focused on creating a clear, guided user journey through the exam preparation process. I developed low-fidelity wireframes that mapped out the core journey from exam selection to personalized study plan generation.\nKey wireframe decisions included:\n\nA vertical scrolling homepage that gradually reveals each step of the preparation process\n\nClear sectioning between different diagnostic test subjects (verbal, quantitative, English)\n\nInteractive elements placed strategically to maintain engagement\n\nMinimalist layouts to prevent cognitive overload while studying\n\nConsistent placement of navigation elements throughout the journey\nThese wireframes were crucial in validating the user flow before adding visual design elements, ensuring that the structure effectively supported the educational goals while maintaining an engaging experience."
   },
   process: [
     "Conducted extensive research into student pain points during exam preparation", 
@@ -160,18 +156,18 @@ const projectsData = [{
   challengesAndSolutions: "A significant design challenge emerged in making practice questions interactive without sacrificing academic rigor. Traditional multiple-choice formats felt static and disengaging, but overly gamified approaches risked undermining the serious purpose of the platform. The solution involved developing custom interaction patterns for different question types—drag-and-drop completions for verbal reasoning, interactive maps for selecting exam locations—that enhance engagement while maintaining focus on the academic content.\n\nAnother challenge was designing the scheduling system to feel trustworthy and valuable. Early user testing revealed skepticism about scheduling systems. We addressed this by creating a transparent process that reveals the factors influencing schedule creation and allows users to adjust parameters while still benefiting from optimization. The schedule customization interface went through five iterations before achieving the right balance of guidance and user control.\n\nThe loading screens presented a particular design opportunity—rather than passive waiting periods, we transformed them into micro-moments of encouragement with progress animations and motivational messages. User testing showed this significantly reduced perceived waiting time and helped maintain motivation throughout the assessment process. Additionally, we incorporated color customization for the schedule to help students personalize their study experience.",
   designImages: [{
     title: "Color Palette",
-    image: "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=2070&auto=format&fit=crop",
+    image: "/lovable-uploads/studit-colors.png",
     description: "Warm neutrals with muted blues and yellow accents"
   }, {
-    title: "Typography & Layout",
-    image: "https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop",
+    title: "Typography",
+    image: "/lovable-uploads/studit-typography.png",
     description: "Assistant and Indie Flower fonts with weight variations and generous white space"
   }, {
     title: "Interface Components",
-    image: "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop",
+    image: "/lovable-uploads/studit-interface.png",
     description: "Cards with subtle shadows and clear visual feedback"
   }],
-  additionalImages: ["https://images.unsplash.com/photo-1553481187-be93c21490a9?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1423800503107-5bc3ba2a6f81?q=80&w=2080&auto=format&fit=crop", "https://images.unsplash.com/photo-1587620962725-abab7fe55159?q=80&w=1931&auto=format&fit=crop"],
+  additionalImages: ["/lovable-uploads/studit-1.png", "/lovable-uploads/studit-2.png", "/lovable-uploads/studit-3.png", "/lovable-uploads/studit-4.png"],
   link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
 }, {
   title: "PLANT LEARNING MODULE",
@@ -356,10 +352,18 @@ const ProjectDetail = () => {
                 transition={{ duration: 0.5 }}
               >
                 <h2 className="text-2xl font-medium mb-6">{project.designResearch.title}</h2>
-                <div className="prose prose-lg max-w-none">
+                <div className="prose prose-lg max-w-none mb-8">
                   {project.designResearch.description.split('\n').map((paragraph, idx) => (
                     <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
                   ))}
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40 mt-6">
+                  <img 
+                    src={project.designResearch.image} 
+                    alt="Design Research" 
+                    className="w-full h-auto"
+                  />
                 </div>
               </motion.div>
             )}
@@ -375,9 +379,7 @@ const ProjectDetail = () => {
               >
                 <h2 className="text-2xl font-medium mb-6">{project.wireflowDetails.title}</h2>
                 <div className="prose prose-lg max-w-none mb-8">
-                  {project.wireflowDetails.description.split('\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
+                  <p className="mb-4 text-muted-foreground">{project.wireflowDetails.description}</p>
                 </div>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
@@ -731,7 +733,7 @@ const ProjectDetail = () => {
           {/* Updated gallery grid - with different layout for BIP and new images added */}
           {project.slug === 'bip' ? (
             // BIP gallery - 4 images in one row
-            <div className="grid grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
               {project.additionalImages && project.additionalImages.map((image, index) => (
                 <motion.div
                   key={index}

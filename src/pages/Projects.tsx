@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -41,7 +42,7 @@ const projectsData = [
   {
     title: "STUDIT",
     description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
-    image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070&auto=format&fit=crop",
+    image: "/lovable-uploads/studit-home-page.png",
     tags: ["UX/UI Design"],
     slug: "studit",
     color: "#F59E0B",
