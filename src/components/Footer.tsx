@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ExternalLink, Mail, Linkedin, Phone } from 'lucide-react';
+import { ExternalLink, Mail, Linkedin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -61,15 +61,6 @@ const Footer = () => {
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-5 w-5" />
-              </motion.a>
-              <motion.a 
-                href="tel:+9725476764647" 
-                className="p-2 rounded-full hover:bg-secondary transition-colors"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                aria-label="Phone"
-              >
-                <Phone className="h-5 w-5" />
               </motion.a>
             </div>
           </div>

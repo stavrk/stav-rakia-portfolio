@@ -19,6 +19,7 @@ const ProjectLink = ({ href, className, children }: ProjectLinkProps) => {
         "bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground",
         "font-medium transition-all duration-300",
         "border border-primary/20 hover:border-primary",
+        "hover:scale-105 hover:shadow-md",
         className
       )}
     >

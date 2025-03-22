@@ -16,7 +16,7 @@ const projectsData = [
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "/lovable-uploads/save-repunzel-editor.png",
-    tags: ["Instructional Design"],
+    tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
     color: "#10B981",
     comingSoon: false
@@ -25,7 +25,7 @@ const projectsData = [
     title: "BIP",
     description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
     image: "/lovable-uploads/bip-lots-of-iphones.png",
-    tags: ["UX/UI Design"],
+    tags: ["UX/UI Design", "Speculative Design"],
     slug: "bip",
     color: "#8B5CF6",
     comingSoon: false
@@ -34,7 +34,7 @@ const projectsData = [
     title: "STUDIT",
     description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
     image: "/lovable-uploads/studit-home-page.png",
-    tags: ["UX/UI Design"],
+    tags: ["UX/UI Design", "Educational"],
     slug: "studit",
     color: "#F59E0B",
     comingSoon: false

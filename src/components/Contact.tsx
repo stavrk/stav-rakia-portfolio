@@ -24,7 +24,8 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
+    // Form will be sent to stavsim282@gmail.com
+    // This is a simulation of form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -139,7 +140,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg disabled:opacity-70"
+                    className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/80 hover:scale-105 hover:shadow-md disabled:opacity-70 disabled:hover:scale-100 disabled:hover:shadow-none"
                   >
                     {isSubmitting ? (
                       <>

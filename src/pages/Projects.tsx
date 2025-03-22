@@ -21,7 +21,7 @@ const projectsData = [
     title: "SAVE RAPUNZEL",
     description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "/lovable-uploads/save-repunzel-editor.png",
-    tags: ["Game Design", "Educational"],
+    tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
     color: "#10B981",
     case: "We designed a dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge.",
@@ -32,7 +32,7 @@ const projectsData = [
     title: "BIP",
     description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
     image: "/lovable-uploads/bip-lots-of-iphones.png",
-    tags: ["Speculative Design", "Financial Tech"],
+    tags: ["UX/UI Design", "Speculative Design"],
     slug: "bip",
     color: "#8B5CF6",
     case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
@@ -43,7 +43,7 @@ const projectsData = [
     title: "STUDIT",
     description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
     image: "/lovable-uploads/studit-home-page.png",
-    tags: ["UX/UI Design"],
+    tags: ["UX/UI Design", "Educational"],
     slug: "studit",
     color: "#F59E0B",
     case: "We designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions.",
@@ -54,7 +54,7 @@ const projectsData = [
     title: "PLANT LEARNING MODULE",
     description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
     image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop",
-    tags: ["Instructional Design"],
+    tags: ["Instructional Design", "Educational"],
     slug: "plant-module",
     color: "#22C55E",
     case: "Our team developed a comprehensive e-learning module to educate customers on proper plant care, featuring interactive elements and assessment activities to boost confidence in houseplant selection and maintenance.",
@@ -65,14 +65,14 @@ const projectsData = [
     title: "Playtika Manager Onboarding Guide",
     description: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
     image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Instructional Design"],
+    tags: ["Instructional Design", "Educational"],
     color: "#D946EF",
     case: "We're creating an interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process. Our custom e-learning solution will equip managers with the tools, knowledge, and resources to effectively introduce team members to company policies, systems, and culture in an engaging and efficient manner.",
     comingSoon: true
   }
 ];
 
-const categories = ["All", "UX/UI Design", "Instructional Design"];
+const categories = ["All", "UX/UI Design", "Instructional Design", "Educational", "Game Design", "Speculative Design"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -177,7 +177,7 @@ const Projects = () => {
                     <div className="flex flex-wrap gap-3">
                       <a 
                         href={`/projects/${project.slug}`} 
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-secondary/70"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-primary hover:text-primary-foreground hover:scale-105 hover:shadow-md"
                         style={{ borderColor: project.color }}
                       >
                         View Case Study

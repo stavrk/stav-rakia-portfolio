@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -101,11 +100,7 @@ const About = () => {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <a href="/CV_StavRakia.pdf" className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download Resume
-                </a>
-                <a href="https://www.linkedin.com/in/stav-rakia/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:translate-y-[-2px]">
+                <a href="https://www.linkedin.com/in/stav-rakia/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:translate-y-[-2px] hover:bg-secondary/80">
                   <span className="mr-2">LinkedIn</span>
                   <ExternalLink className="h-4 w-4" />
                 </a>

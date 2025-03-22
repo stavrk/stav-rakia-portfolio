@@ -82,7 +82,7 @@ const ProjectCard = ({
             href={comingSoon ? "#" : `/projects/${slug}`}
             className={cn(
               "inline-flex items-center gap-2 text-sm font-medium", 
-              "transition-all duration-300 hover:gap-3"
+              "transition-all duration-300 hover:gap-3 hover:text-primary"
             )}
             whileHover={{ x: 5 }}
             style={{ color }}
