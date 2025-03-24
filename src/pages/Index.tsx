@@ -4,6 +4,7 @@ import Hero from "@/components/Hero";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
+import { motion } from "framer-motion";
 
 const Index = () => {
   return (

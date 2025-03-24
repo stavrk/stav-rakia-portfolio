@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -46,8 +47,8 @@ const projectsData = [{
 }, {
   title: "SAVE RAPUNZEL",
   description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
-  image: "/lovable-uploads/save-repunzel-editor.png",
-  tags: ["Instructional Design", "Game Design"],
+  image: "/lovable-uploads/save-repunzel.png",
+  tags: ["Game Design", "Educational"],
   slug: "save-rapunzel",
   color: "#10B981",
   overview: "Save Rapunzel is a dual-purpose educational platform consisting of an interactive educational game for students and a content creation tool for educators. The platform transforms traditional learning material into engaging game experiences built around the classic fairy tale of Rapunzel.",
@@ -171,49 +172,30 @@ const projectsData = [{
 }, {
   title: "PLANT LEARNING MODULE",
   description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
-  image: "/lovable-uploads/plant-first-page.png",
+  image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop",
   tags: ["Instructional Design"],
   slug: "plant-module",
   color: "#22C55E",
-  overview: "This e-learning module teaches users how to successfully care for houseplants through engaging, interactive content. The module focuses on six common houseplants, providing detailed care requirements and practical guidance in a user-friendly format.",
-  challenge: "Many potential plant owners lack confidence in their ability to properly care for houseplants. This hesitation stems from uncertainty about watering needs, light requirements, and general maintenance. The challenge was to create a learning solution that would effectively build confidence through clear, accessible information and interactive learning experiences.",
-  solution: "I designed a comprehensive e-learning module focused on six key houseplants, with detailed care instructions, interactive assessments, and engaging visuals. The module employs a branching navigation model allowing users to personalize their learning journey based on their specific interests. This approach enables learners to focus on plants that match their home environment and lifestyle.",
-  wireflowDetails: {
-    title: "Wireflow",
-    image: "/lovable-uploads/plant-wireflow.png",
-    description: "The wireflow demonstrates the module's branching structure, allowing users to navigate through content based on their specific interests. The design includes:\n\nAn introduction section explaining the importance of houseplants\n\nCategory-based navigation allowing users to explore specific plant types\n\nInteractive elements for learning assessment\n\nPractical applications section for real-world implementation"
-  },
-  instructionalDesign: {
-    title: "Instructional Design",
-    description: "My instructional design process focused on creating an effective learning experience by:\n\nAnalyzing the target audience needs and potential knowledge gaps\n\nEstablishing clear learning objectives for each module section\n\nStructuring content in logical categories based on plant types and care requirements\n\nDeveloping instructional strategies that incorporate interactive elements\n\nCreating opportunities for practical application and knowledge assessment\n\nThe module uses a category-based approach, allowing learners to explore content about specific plants, with detailed information on watering requirements, light needs, and compatibility with pets. This structure supports self-directed learning and accommodates different learning preferences."
-  },
-  interactiveElements: {
-    title: "Interactive Elements & Assessment",
-    description: "The module includes several interactive elements designed to engage learners and reinforce key concepts:\n\nDrag-and-drop activities for matching plants to their ideal light conditions\n\nInteractive quizzes testing knowledge about watering requirements\n\nVisual simulations showing plant responses to different care conditions\n\nProgress tracking to help learners monitor their advancement\n\nThese assessment components go beyond simple recall, requiring users to apply their knowledge in practical scenarios that simulate real-world plant care decisions."
-  },
-  process: [
-    "Analyzed the target audience needs and potential knowledge gaps",
-    "Established clear learning objectives for each module section",
-    "Structured content in logical categories based on plant types and care requirements",
-    "Developed instructional strategies that incorporate interactive elements",
-    "Created opportunities for practical application and knowledge assessment"
-  ],
-  designProcessAndAesthetics: "For the Plant Learning Module, I designed a visual experience that embodies the natural, organic feel of the subject matter. The color palette centers on various shades of green with earth tones for balance, creating a fresh, clean aesthetic that evokes plant life while maintaining excellent readability.\n\nTypography choices prioritize clarity and accessibility, with the Assistant font family at appropriate sizes for comfortable reading on various devices. Headings use SemiBold weight to maintain visual harmony while creating clear information hierarchy.\n\nThe interface layout employs a grid system that organizes content into digestible sections, with consistent spacing and alignment. Plant images feature prominently throughout the module, serving both instructional and aesthetic purposes. Each plant category uses subtle visual cues to help users track where they are in the learning journey.",
-  challengesAndSolutions: "A key challenge was balancing comprehensive plant care information with an approachable, non-overwhelming user experience. Initial feedback indicated that detailed care instructions could intimidate novice plant owners. I addressed this by:\n\nImplementing a layered information architecture that presents essential care details first, with options to expand sections for more detailed information\n\nUsing visual indicators to clearly mark beginner-friendly plants\n\nIncluding reassuring messaging about common plant care mistakes and recovery techniques\n\nAnother challenge was creating effective assessment activities that would genuinely measure understanding rather than simple recall. I developed application-based questions asking users to make decisions about plant placement and care schedules based on specific scenarios, which proved more effective at building confidence than traditional knowledge-checking questions.\n\nThis project demonstrated my ability to transform complex instructional content into an engaging, user-friendly learning experience while addressing specific user needs and learning objectives.",
+  overview: "The Plant Learning Module was developed for 'Mishak 50', a company experiencing declining houseplant sales. The primary goal was to increase sales by educating customers and boosting their confidence in plant care through an interactive learning experience.",
+  challenge: "Many potential plant buyers lack confidence in their ability to care for houseplants, resulting in hesitation to purchase. The challenge was to create an educational solution that would effectively build this confidence through clear, accessible information and interactive learning experiences.",
+  solution: "I designed a comprehensive e-learning module focused on six key houseplants, with detailed care instructions, interactive assessments, and engaging visuals. The module employs a branching navigation model allowing users to personalize their learning journey based on their specific interests.",
+  process: ["Analyzed 'Mishak 50' sales data to identify key plants with potential for increased sales", "Conducted user research to understand common plant care misconceptions and learning preferences", "Developed the instructional framework based on plant categories and care requirements", "Created interactive elements including pre-learning assessments and knowledge checks", "Designed a clean, plant-themed aesthetic with high-quality visuals and intuitive navigation"],
+  designProcessAndAesthetics: "For the Plant Learning Module, I designed a visual experience that embodies the natural, organic feel of the subject matter. The color palette centers on various shades of green with white space for balance, creating a fresh, clean aesthetic that evokes plant life while maintaining excellent readability.\n\nTypography choices prioritize clarity and accessibility, with sans-serif fonts at appropriate sizes for comfortable reading on various devices. Headings use a slightly bolder weight of the same font family to maintain visual harmony while creating clear information hierarchy.\n\nThe interface layout employs a grid system that organizes content into digestible sections, with consistent spacing and alignment. Plant images feature prominently throughout the module, serving both instructional and aesthetic purposes. Each plant category uses subtle visual cues to help users track where they are in the learning journey.\n\nInteractive elements employ a consistent design language, with clearly indicated touch/click targets and visual feedback on user actions. Drag-and-drop activities for plant placement and animated transitions between sections enhance engagement while reinforcing learning objectives.",
+  challengesAndSolutions: "A key challenge was balancing comprehensive plant care information with an approachable, non-overwhelming user experience. Many users reported feeling intimidated by detailed care instructions in initial testing. I addressed this by implementing a layered information architecture that presents essential care details first, with the option to expand sections for more detailed information.\n\nAnother challenge was creating effective assessment activities that would genuinely measure understanding rather than simple recall. I developed application-based questions that ask users to make decisions about plant placement and care schedules based on specific scenarios. These contextual assessments proved more effective at building confidence than traditional knowledge-checking questions.\n\nThe technical implementation presented challenges regarding the integration of high-quality visuals while maintaining performance across devices. I optimized image assets and implemented progressive loading to ensure the module remained responsive and engaging even on lower-bandwidth connections.",
   designImages: [{
     title: "Color Palette",
-    image: "/lovable-uploads/plant-colors.png",
-    description: "Various shades of green with earth tones for a fresh, plant-inspired aesthetic"
+    image: "https://images.unsplash.com/photo-1447753072255-ca9a2c22afe7?q=80&w=2076&auto=format&fit=crop",
+    description: "Various shades of green with white space for a fresh, plant-inspired aesthetic"
   }, {
-    title: "Typography",
-    image: "/lovable-uploads/plant-typography.png",
-    description: "Assistant font family with weight variations for hierarchy"
+    title: "Typography & Layout",
+    image: "https://images.unsplash.com/photo-1582640299692-63b2d1e1a2e3?q=80&w=2069&auto=format&fit=crop",
+    description: "Clean, accessible typography with consistent spacing and alignment"
   }, {
-    title: "Interface Elements",
-    image: "/lovable-uploads/plant-interface.png",
-    description: "Clean, accessible interface with consistent layout and visual cues"
+    title: "Interactive Elements",
+    image: "https://images.unsplash.com/photo-1581022294576-c6d2an29d9af?q=80&w=2070&auto=format&fit=crop",
+    description: "Engaging interactive elements with clear visual feedback"
   }],
-  additionalImages: ["/lovable-uploads/plant-1.png", "/lovable-uploads/plant-2.png", "/lovable-uploads/plant-3.png", "/lovable-uploads/plant-4.png"],
+  additionalImages: ["https://images.unsplash.com/photo-1545165311-508ed0c91361?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=2074&auto=format&fit=crop", "https://images.unsplash.com/photo-1467043198406-dc953a3defa0?q=80&w=2070&auto=format&fit=crop"],
   link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
 }];
 
@@ -393,3 +375,509 @@ const ProjectDetail = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflowDetails.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  <p className="mb-4 text-muted-foreground">{project.wireflowDetails.description}</p>
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflowDetails.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Wireflow Section - For BIP project */}
+            {project.slug === 'bip' && project.wireflow && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireflow.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflow.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Reordered and merged sections for Save Rapunzel */}
+            {project.slug === 'save-rapunzel' && (
+              <>
+                {/* Content Generator Interface - MERGED */}
+                {project.editorShowcase && (
+                  <motion.div 
+                    className="mb-16" 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
+                    <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
+                    
+                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
+                      <img src={project.editorShowcase.image} alt="Content Generator Interface" className="w-full h-auto" />
+                    </div>
+                    
+                    {/* Content from contentGenerator property */}
+                    <div className="prose prose-lg max-w-none">
+                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Graphic Development Section */}
+                {project.graphicDevelopment && (
+                  <motion.div 
+                    className="mb-16" 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Graphic Development and Design Evolution</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.graphicDevelopment.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                    
+                    <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+                      <img src="/lovable-uploads/first-version-save-repunzel.png" alt="Initial Design Concept" className="w-full h-auto" />
+                    </div>
+                  </motion.div>
+                )}
+                
+                {/* Design Process & Aesthetics Section */}
+                <motion.div 
+                  className="mb-16" 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+                  
+                  <div className="space-y-8">
+                    {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
+                      <div key={idx} className="mb-8">
+                        <p className="mb-4 text-muted-foreground">{paragraph}</p>
+                        
+                        {/* Display relevant design image if available */}
+                        {project.designImages && idx < project.designImages.length && (
+                          <motion.div 
+                            className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.2, duration: 0.5 }}
+                          >
+                            <img src={project.designImages[idx].image} alt={project.designImages[idx].title} className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} />
+                            <div className="p-4 bg-secondary/30">
+                              <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
+                              <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
+                            </div>
+                          </motion.div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+                
+                {/* Animation Features Section */}
+                {project.animationFeatures && (
+                  <motion.div 
+                    className="mb-16" 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
+                    <div className="prose prose-lg max-w-none">
+                      {project.animationFeatures.split('\n\n').map((paragraph, idx) => (
+                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+
+                {/* Technical & Development Challenges Section - REPLACED */}
+                <motion.div 
+                  className="mb-16" 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
+                  
+                  <div className="prose prose-lg max-w-none space-y-4">
+                    <p className="text-muted-foreground">
+                      Developing a flexible yet intuitive content creation system posed a significant challenge. The content editor needed to support a variety of question types while remaining simple enough for non-technical educators. Extensive card-sorting exercises with educators helped identify the most intuitive organization, leading to a template-based approach where customization options are progressively introduced as users gain familiarity.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      Handling Hebrew text and bidirectional interface complexities was another major technical hurdle. Displaying right-to-left text, reversing numbers, and ensuring proper alignment of English words within Hebrew sentences required a custom-built solution that significantly improved readability and usability for Hebrew-speaking users.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      Optimizing visual engagement without compromising educational clarity was critical. Early prototypes showed that students were sometimes distracted by animations during question-answering phases. The solution involved implementing a "focus mode" that temporarily simplified the visual environment during active question engagement while preserving interactive elements that reinforce learning progress.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      The development process also required robust workflow management. A structured system for file versioning, backups, and asset organization was essential to maintaining efficiency. At one stage, partial code loss occurred, but thanks to meticulous documentation and backup protocols, the team was able to recover and continue development without significant setbacks.
+                    </p>
+                    
+                    <p className="text-muted-foreground">
+                      These challenges, tackled through iterative testing, technical innovation, and structured problem-solving, ensured that the final product met both usability and pedagogical goals without compromising on flexibility or performance.
+                    </p>
+                  </div>
+                </motion.div>
+              </>
+            )}
+            
+            {/* Project Structure Section - For Roomie project */}
+            {project.slug === 'roomie' && project.structureTree && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
+                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.structureTree.image} 
+                    alt="Project Structure" 
+                    className="w-full h-auto" 
+                  />
+                </div>
+              </motion.div>
+            )}
+
+            {/* Wireframes Section - For Roomie project */}
+            {project.slug === 'roomie' && project.wireframes && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireframes.image} 
+                    alt="Project Wireframes" 
+                    className="w-full h-auto" 
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
+            {project.slug !== 'save-rapunzel' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+                
+                <div className="space-y-8">
+                  {project.designProcessAndAesthetics && project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
+                    <div key={idx} className="mb-8">
+                      <p className="mb-4 text-muted-foreground">{paragraph}</p>
+                      
+                      {/* Display relevant design image if available */}
+                      {project.designImages && idx < project.designImages.length && (
+                        <motion.div 
+                          className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: 0.2, duration: 0.5 }}
+                        >
+                          <img 
+                            src={project.designImages[idx].image} 
+                            alt={project.designImages[idx].title} 
+                            className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} 
+                          />
+                          <div className="p-4 bg-secondary/30">
+                            <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
+                            <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Animation Features Section - For BIP */}
+            {project.slug === 'bip' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
+                <div className="prose prose-lg max-w-none space-y-4">
+                  <p className="text-muted-foreground">
+                    The BIP application features custom animations designed specifically for extraterrestrial perception patterns. Key interaction moments are highlighted with visual feedback that accommodates alien visual processing.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    Transaction confirmations use animated spaceships and meteorite visuals to represent successful payments. Loading states feature orbital animations that maintain user engagement while processing occurs in the background.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    The interface responds to touch with immediate visual feedback, providing redundant confirmation through color shifts, size changes, and animated transitions to ensure clarity for users with different perceptual abilities.
+                  </p>
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Challenges & Solutions Section - For all projects except Save Rapunzel */}
+            {project.challengesAndSolutions && project.slug !== 'save-rapunzel' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
+                <div className="prose prose-lg max-w-none">
+                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Technical & Development Challenges Section - For BIP */}
+            {project.slug === 'bip' && !project.challengesAndSolutions && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
+                
+                <div className="prose prose-lg max-w-none space-y-4">
+                  <p className="text-muted-foreground">
+                    Developing for extraterrestrial users presented unique technical challenges, particularly in the absence of direct user testing possibilities. The solution involved creating detailed alien personas with specific perceptual constraints and validating designs against these constraints.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    Security verification posed another significant challenge. A specialized facial recognition system was designed to accommodate alien facial structures, with animated guides for proper positioning, balancing security needs with accessibility.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    The visual design required complete reimagining for alien perception. Color schemes, typography, and spacing were adapted to address the specific visual needs of extraterrestrial users while maintaining the functional elements expected in a money transfer application.
+                  </p>
+                  
+                  <p className="text-muted-foreground">
+                    Balancing innovation with usability was perhaps the greatest challenge. The solution involved maintaining recognizable patterns from human financial applications while introducing novel interaction methods tailored to alien cognitive patterns.
+                  </p>
+                </div>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
+      
+      {/* Images Section */}
+      <section className="py-20 bg-secondary/50">
+        <div className="container">
+          <motion.h2 
+            className="text-2xl font-medium mb-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            Project Gallery
+          </motion.h2>
+          
+          {/* Updated gallery grid - with different layout for BIP and new images added */}
+          {project.slug === 'bip' ? (
+            // BIP gallery - 4 images in one row
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              {project.additionalImages && project.additionalImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="rounded-xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} - Image ${index + 1}`}
+                    className="w-full h-auto aspect-[9/19] object-cover"
+                  />
+                </motion.div>
+              ))}
+            </div>
+          ) : (
+            // For other projects - 2-column grid
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.additionalImages && project.additionalImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="rounded-xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
+                >
+                  <img
+                    src={image}
+                    alt={`${project.title} - Image ${index + 1}`}
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              ))}
+              
+              {/* Add roomie-expenses to ROOMIE gallery */}
+              {project.slug === 'roomie' && (
+                <motion.div
+                  className="rounded-xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                  <img
+                    src="/lovable-uploads/roomie-expenses.png"
+                    alt="ROOMIE - Expense Tracking Interface"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              )}
+              
+              {/* Add save-repunzel-my-games-add to SAVE RAPUNZEL gallery */}
+              {project.slug === 'save-rapunzel' && (
+                <motion.div
+                  className="rounded-xl overflow-hidden shadow-lg"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                >
+                  <img
+                    src="/lovable-uploads/save-repunzel-my-games-add.png"
+                    alt="SAVE RAPUNZEL - Add New Game Interface"
+                    className="w-full h-auto"
+                  />
+                </motion.div>
+              )}
+            </div>
+          )}
+        </div>
+      </section>
+      
+      {/* Check It Out section */}
+      <section className="py-16 bg-gradient-to-b from-secondary/30 to-transparent">
+        <div className="container">
+          <motion.div
+            className="max-w-md mx-auto text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.5 }}
+          >
+            <h3 className="text-2xl font-medium mb-4">
+              Ready to see it in action?
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              Check out the full {project.title} project to explore all the features and interactions.
+            </p>
+            
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              transition={{ type: "spring", stiffness: 400, damping: 17 }}
+            >
+              <ProjectLink 
+                href={project.link} 
+                className="px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
+              >
+                View Full Project
+              </ProjectLink>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Next Project - Updated with image and title */}
+      <section className="py-20 bg-background border-t border-border/30">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <motion.div 
+              className="text-center mb-8" 
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <p className="text-muted-foreground mb-2">Next Project</p>
+              <h3 className="text-2xl font-medium mb-6" style={{ color: nextProject.color }}>
+                {nextProject.title}
+              </h3>
+              
+              <div className="mb-8 max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
+                <img 
+                  src={nextProject.image} 
+                  alt={nextProject.title} 
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+              
+              <a 
+                href={`/projects/${nextProject.slug}`} 
+                className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
+              >
+                View Next Project
+              </a>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
