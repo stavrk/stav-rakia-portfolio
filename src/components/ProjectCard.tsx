@@ -27,6 +27,11 @@ const ProjectCard = ({
   comingSoon = false,
   link
 }: ProjectCardProps) => {
+  // Special case for ROOMIE project to use yellow background
+  const isRoomie = title === "ROOMIE";
+  const cardBackgroundColor = isRoomie ? "#FEF7CD" : "transparent";
+  const textColor = isRoomie ? "#a67c52" : color;
+
   return (
     <motion.div
       className="group relative overflow-hidden rounded-xl"
@@ -34,6 +39,7 @@ const ProjectCard = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
       whileHover={{ y: -5 }}
+      style={{ backgroundColor: cardBackgroundColor }}
     >
       <div 
         className="absolute inset-0 opacity-10 z-0 transition-opacity duration-500 group-hover:opacity-20" 
@@ -87,7 +93,7 @@ const ProjectCard = ({
               "transition-all duration-300 hover:gap-3 hover:text-primary"
             )}
             whileHover={{ x: 5 }}
-            style={{ color: title === "ROOMIE" ? "#a67c52" : color }}
+            style={{ color: textColor }}
           >
             {comingSoon ? "Learn More" : "View Project"} <ArrowRight className="h-4 w-4" />
           </motion.a>

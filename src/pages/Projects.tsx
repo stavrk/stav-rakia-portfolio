@@ -10,7 +10,7 @@ const projectsData = [
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "/lovable-uploads/roomie-home-page.png",
-    tags: ["UX/UI Design", "Instructional Design"],
+    tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#F4DB8B",
     case: "We designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Our team created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner.",
@@ -32,7 +32,7 @@ const projectsData = [
     title: "BIP",
     description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
     image: "/lovable-uploads/bip-lots-of-iphones.png",
-    tags: ["UX/UI Design", "Speculative Design"],
+    tags: ["UX UI Design", "Speculative Design"],
     slug: "bip",
     color: "#8B5CF6",
     case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
@@ -43,7 +43,7 @@ const projectsData = [
     title: "STUDIT",
     description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
     image: "/lovable-uploads/studit-home-page.png",
-    tags: ["UX/UI Design", "Educational"],
+    tags: ["UX UI Design", "Instructional Design"],
     slug: "studit",
     color: "#F59E0B",
     case: "We designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions.",
@@ -52,9 +52,9 @@ const projectsData = [
   },
   {
     title: "PLANT LEARNING MODULE",
-    description: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
+    description: "An interactive experience designed to build confidence in houseplant care by providing clear, accessible information.",
     image: "/lovable-uploads/plant-first-page.png",
-    tags: ["Instructional Design", "Educational"],
+    tags: ["Instructional Design"],
     slug: "plant-module",
     color: "#22C55E",
     case: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
@@ -64,15 +64,15 @@ const projectsData = [
   {
     title: "Playtika Manager Onboarding Guide",
     description: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
-    image: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=2070&auto=format&fit=crop",
-    tags: ["Instructional Design", "Educational"],
+    image: "/lovable-uploads/playtika-home.jpg",
+    tags: ["Instructional Design"],
     color: "#D946EF",
     case: "We're creating an interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process. Our custom e-learning solution will equip managers with the tools, knowledge, and resources to effectively introduce team members to company policies, systems, and culture in an engaging and efficient manner.",
     comingSoon: true
   }
 ];
 
-const categories = ["All", "UX/UI Design", "Instructional Design", "Educational", "Game Design", "Speculative Design"];
+const categories = ["All", "UX UI Design", "Instructional Design", "Game Design", "Speculative Design"];
 
 const Projects = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -99,7 +99,7 @@ const Projects = () => {
           >
             <h1 className="text-4xl md:text-5xl font-medium mb-4">My Projects</h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              A collection of my UX/UI and Instructional design work.
+              A collection of my UX UI and Instructional design work.
             </p>
           </motion.div>
           

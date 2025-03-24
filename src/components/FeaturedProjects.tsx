@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
@@ -6,7 +7,7 @@ const projectsData = [
     title: "ROOMIE",
     description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
     image: "/lovable-uploads/roomie-home-page.png",
-    tags: ["UX/UI Design", "Instructional Design"],
+    tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#a67c52",
     comingSoon: false
@@ -24,7 +25,7 @@ const projectsData = [
     title: "BIP",
     description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
     image: "/lovable-uploads/bip-lots-of-iphones.png",
-    tags: ["UX/UI Design", "Speculative Design"],
+    tags: ["UX UI Design", "Speculative Design"],
     slug: "bip",
     color: "#8B5CF6",
     comingSoon: false
@@ -33,16 +34,16 @@ const projectsData = [
     title: "STUDIT",
     description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
     image: "/lovable-uploads/studit-home-page.png",
-    tags: ["UX/UI Design", "Educational"],
+    tags: ["UX UI Design", "Instructional Design"],
     slug: "studit",
     color: "#F59E0B",
     comingSoon: false
   },
   {
     title: "PLANT LEARNING MODULE",
-    description: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
+    description: "An interactive experience designed to build confidence in houseplant care by providing clear, accessible information.",
     image: "/lovable-uploads/plant-first-page.png",
-    tags: ["Instructional Design", "Educational"],
+    tags: ["Instructional Design"],
     slug: "plant-module",
     color: "#22C55E",
     comingSoon: false
@@ -61,7 +62,7 @@ const FeaturedProjects = () => {
         >
           <h2 className="text-3xl md:text-4xl font-medium mb-4">My Projects</h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            A selection of my UX/UI design work across various platforms and industries.
+            A selection of my UX UI design work across various platforms and industries.
           </p>
         </motion.div>
         

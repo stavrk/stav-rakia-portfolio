@@ -13,7 +13,7 @@ const Hero = () => {
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 tracking-tight">
           <span className="hero-text-gradient">Stav Rakia</span>
-          <br /> UX/UI Designer
+          <br /> UX UI Designer
         </h1>
         
         <motion.p 
@@ -22,7 +22,7 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
         >
-          I'm Stav Rakia, a UX/UI Designer focused on creating 
+          I'm Stav Rakia, a UX UI Designer focused on creating 
           intuitive, functional, and user-centered digital experiences.
         </motion.p>
         
