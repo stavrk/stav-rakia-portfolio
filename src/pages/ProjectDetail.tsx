@@ -7,27 +7,53 @@ import ProjectLink from '@/components/ProjectLink';
 
 const projectsData = [{
   title: "ROOMIE",
+  subtitle: "First Apartment Guide for Young Adults",
   description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
   image: "/lovable-uploads/roomie-home-page.png",
-  tags: ["UX/UI Design", "Instructional Design"],
+  tags: ["UX UI Design", "Instructional Design"],
   slug: "roomie",
-  color: "#F4DB8B",
-  overview: "Roomie is a comprehensive digital guide designed to simplify the often overwhelming process of moving into a first apartment. This project emerged from recognizing the challenges and uncertainties that young adults face when navigating housing independence for the first time.",
-  challenge: "First-time movers face numerous challenges: understanding lease agreements, budgeting for moving expenses, knowing what essential items to purchase, and navigating roommate dynamics. Traditional resources are often scattered, overwhelming, or fail to address the emotional aspects of this significant life transition.",
+  color: "#a67c52",
+  overview: "Roomie is a digital guide that simplifies the first apartment experience for young adults. It provides structured guidance through every stage of the moving process with practical tools and emotional support.",
+  challenge: "First-time movers face several key challenges:",
+  challengePoints: [
+    "Understanding complex lease agreements with unfamiliar legal terminology",
+    "Budgeting accurately for moving expenses and ongoing costs",
+    "Determining essential items to purchase within budget constraints",
+    "Navigating roommate dynamics and establishing clear boundaries",
+    "Managing the emotional aspects of this significant life transition"
+  ],
   solution: "We designed Roomie with a user-centric workflow that guides users through each stage of the moving process. The interface combines practical checklists with supportive content that acknowledges both the practical and emotional aspects of moving.",
   structureTree: {
     title: "Project Structure",
     image: "/lovable-uploads/map-roomie.png",
-    description: "Our project's structure was carefully planned to ensure a logical flow of information and features. The map above illustrates how different sections of the application interconnect, making the moving process more manageable for users."
+    description: "Roomie's structure follows a logical progression through the moving journey, from planning to settling in."
   },
   wireframes: {
     title: "Initial Wireframes",
     image: "/lovable-uploads/roomie-wireframe.png",
     description: "At the beginning of our process, we focused heavily on wireframing to prioritize product definition, interaction design, and user experience. These wireframes helped us establish the core functionality and user flows before moving into the visual design phase."
   },
-  process: ["Conducted extensive user research, interviewing 12 recent first-time movers about their challenges and wishes", "Synthesized insights and created user personas and journey maps to identify key pain points", "Developed multiple iterations of wireframes and prototypes for testing with potential users", "Refined the interface and features based on user feedback", "Created final designs with a warm, approachable aesthetic and calming color palette"],
-  designProcessAndAesthetics: "For Roomie, our team crafted a visual language that balances practicality with emotional support. The color palette features warm, calming tones—primarily muted blues and soft yellows—to counteract the stress typically associated with moving. This deliberate choice helps create a sense of stability amidst the chaos of relocation.\n\nTypography plays a crucial role in the interface, with the primary font family being Assistant for its excellent readability and modern feel. Headers use weightier versions of the font (600-700) to create clear visual hierarchy, while body text maintains comfortable readability at 16px minimum.\n\nThe visual components follow a consistent rounded design system—buttons, cards, and input fields all feature softly rounded corners (8px radius) that contribute to the approachable feel of the application. Interactive elements like checklists and the budget calculator use subtle shadows and state changes to provide clear feedback to users.",
-  challengesAndSolutions: "One significant challenge emerged during user testing: participants felt overwhelmed by seeing all moving tasks simultaneously. We addressed this by implementing a progressive disclosure system that reveals tasks based on timeline relevance, with a customizable view option for users who prefer seeing the complete picture. This solution required several iterations of the information architecture and careful consideration of how to balance comprehensive information with manageable cognitive load.\n\nThe roommate agreement generator presented another challenge—how to create legally sound templates while keeping them accessible to young adults with no legal background. The solution involved collaboration with a legal consultant and multiple rounds of simplification testing to strike the right balance between comprehensiveness and clarity.",
+  process: [
+    "Conducted extensive user research, interviewing 12 recent first-time movers about their challenges and wishes", 
+    "Synthesized insights and created user personas and journey maps to identify key pain points", 
+    "Developed multiple iterations of wireframes and prototypes for testing with potential users", 
+    "Refined the interface and features based on user feedback, creating final designs with a warm, approachable aesthetic"
+  ],
+  designProcessAndAesthetics: "For Roomie, our team crafted a visual language that balances practicality with emotional support. The color palette features warm, calming tones—primarily muted blues and soft yellows—to counteract the stress typically associated with moving.\n\nTypography plays a crucial role in the interface, with the primary font family being Assistant for its excellent readability and modern feel. Headers use weightier versions of the font (600-700) to create clear visual hierarchy, while body text maintains comfortable readability at 16px minimum.",
+  challengesAndSolutions: [
+    {
+      challenge: "Users felt overwhelmed by seeing all moving tasks simultaneously",
+      solution: "Implemented a progressive disclosure system that reveals tasks based on timeline relevance, with a customizable view option for users who prefer seeing the complete picture"
+    },
+    {
+      challenge: "Creating legally sound roommate agreement templates while keeping them accessible to young adults",
+      solution: "Collaborated with a legal consultant and conducted multiple rounds of simplification testing to balance comprehensiveness with clarity"
+    },
+    {
+      challenge: "Providing budget guidance that works for various cost-of-living scenarios",
+      solution: "Developed an adaptive budget calculator with regional cost adjustments and customizable expense categories"
+    }
+  ],
   designImages: [{
     title: "Color Palette",
     image: "/lovable-uploads/color-palette-roomie.png",
@@ -42,6 +68,7 @@ const projectsData = [{
     description: "Rounded components with subtle shadows and clear visual feedback"
   }],
   additionalImages: ["/lovable-uploads/roomie-4.png", "/lovable-uploads/roomie-phone.png", "/lovable-uploads/roomie-typs-img.png"],
+  outcome: "User testing showed that Roomie significantly reduced anxiety around first-time moving, with 92% of testers reporting increased confidence in their ability to navigate the process.",
   link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
 }, {
   title: "SAVE RAPUNZEL",
@@ -278,11 +305,18 @@ const ProjectDetail = () => {
               </div>
               
               <h1 
-                className="text-4xl md:text-6xl font-medium mb-6" 
+                className="text-4xl md:text-6xl font-medium mb-2" 
                 style={{ color: project.color }}
               >
                 {project.title}
               </h1>
+              
+              {/* Add subtitle for Roomie project */}
+              {project.subtitle && (
+                <h2 className="text-xl md:text-2xl mb-6 text-muted-foreground font-medium">
+                  {project.subtitle}
+                </h2>
+              )}
               
               <p className="text-lg mb-8">
                 {project.overview}
@@ -317,9 +351,24 @@ const ProjectDetail = () => {
                 transition={{ duration: 0.5 }}
               >
                 <h2 className="text-2xl font-medium mb-4">The Challenge</h2>
-                <p className="text-muted-foreground">
-                  {project.challenge}
-                </p>
+                
+                {/* Display challenge as bullet points for Roomie project */}
+                {project.slug === 'roomie' && project.challengePoints ? (
+                  <div className="space-y-2">
+                    <p className="text-muted-foreground mb-3">
+                      {project.challenge}
+                    </p>
+                    <ul className="list-disc pl-5 space-y-2 text-muted-foreground">
+                      {project.challengePoints.map((point, index) => (
+                        <li key={index}>{point}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ) : (
+                  <p className="text-muted-foreground">
+                    {project.challenge}
+                  </p>
+                )}
               </motion.div>
               
               <motion.div 
@@ -355,7 +404,7 @@ const ProjectDetail = () => {
                     transition={{ delay: index * 0.1, duration: 0.5 }}
                   >
                     <div 
-                      className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" 
+                      className="flex items-center justify-center w-8 h-8 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" 
                       style={{ backgroundColor: project.color }}
                     >
                       {index + 1}
@@ -373,605 +422,3 @@ const ProjectDetail = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.designResearch.title}</h2>
-                <div className="prose prose-lg max-w-none mb-8">
-                  {project.designResearch.description.split('\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
-                </div>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40 mt-6">
-                  <img 
-                    src={project.designResearch.image} 
-                    alt="Design Research" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Wireflow Section - For STUDIT project */}
-            {project.slug === 'studit' && project.wireflowDetails && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.wireflowDetails.title}</h2>
-                <div className="prose prose-lg max-w-none mb-8">
-                  <p className="mb-4 text-muted-foreground">{project.wireflowDetails.description}</p>
-                </div>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireflowDetails.image} 
-                    alt="Wireflow Diagram" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Wireflow Section - For BIP project */}
-            {project.slug === 'bip' && project.wireflow && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
-                <p className="text-muted-foreground mb-8">{project.wireflow.description}</p>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireflow.image} 
-                    alt="Wireflow Diagram" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Wireflow Section - For Plant Learning Module project */}
-            {project.slug === 'plant-module' && project.wireflow && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
-                <div className="prose prose-lg max-w-none mb-8">
-                  {project.wireflow.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
-                </div>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireflow.image} 
-                    alt="Wireflow Diagram" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Specification & Instructional Script - For Plant Learning Module project */}
-            {project.slug === 'plant-module' && project.specification && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.specification.title}</h2>
-                <div className="prose prose-lg max-w-none mb-8">
-                  {project.specification.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
-                </div>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.specification.image} 
-                    alt="Specification & Instructional Script" 
-                    className="w-full h-auto"
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Interactive Elements & Assessment - For Plant Learning Module project */}
-            {project.slug === 'plant-module' && project.interactiveElements && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.interactiveElements.title}</h2>
-                <div className="prose prose-lg max-w-none">
-                  {project.interactiveElements.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Reordered and merged sections for Save Rapunzel */}
-            {project.slug === 'save-rapunzel' && (
-              <>
-                {/* Content Generator Interface - MERGED */}
-                {project.editorShowcase && (
-                  <motion.div 
-                    className="mb-16" 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
-                    <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
-                    
-                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
-                      <img src={project.editorShowcase.image} alt="Content Generator Interface" className="w-full h-auto" />
-                    </div>
-                    
-                    {/* Content from contentGenerator property */}
-                    <div className="prose prose-lg max-w-none">
-                      {project.contentGenerator.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Graphic Development Section */}
-                {project.graphicDevelopment && (
-                  <motion.div 
-                    className="mb-16" 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">Graphic Development and Design Evolution</h2>
-                    <div className="prose prose-lg max-w-none">
-                      {project.graphicDevelopment.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                      ))}
-                    </div>
-                    
-                    <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
-                      <img src="/lovable-uploads/first-version-save-repunzel.png" alt="Initial Design Concept" className="w-full h-auto" />
-                    </div>
-                  </motion.div>
-                )}
-                
-                {/* Design Process & Aesthetics Section */}
-                <motion.div 
-                  className="mb-16" 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
-                  
-                  <div className="space-y-8">
-                    {project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
-                      <div key={idx} className="mb-8">
-                        <p className="mb-4 text-muted-foreground">{paragraph}</p>
-                        
-                        {/* Display relevant design image if available */}
-                        {project.designImages && idx < project.designImages.length && (
-                          <motion.div 
-                            className="mt-6 rounded-lg overflow-hidden border border-border/40" 
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2, duration: 0.5 }}
-                          >
-                            <img src={project.designImages[idx].image} alt={project.designImages[idx].title} className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} />
-                            <div className="p-4 bg-secondary/30">
-                              <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
-                              <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
-                            </div>
-                          </motion.div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-                
-                {/* Animation Features Section */}
-                {project.animationFeatures && (
-                  <motion.div 
-                    className="mb-16" 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
-                    <div className="prose prose-lg max-w-none">
-                      {project.animationFeatures.split('\n\n').map((paragraph, idx) => (
-                        <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-
-                {/* Technical & Development Challenges Section - REPLACED */}
-                <motion.div 
-                  className="mb-16" 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
-                  <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
-                  
-                  <div className="prose prose-lg max-w-none space-y-4">
-                    <p className="text-muted-foreground">
-                      Developing a flexible yet intuitive content creation system posed a significant challenge. The content editor needed to support a variety of question types while remaining simple enough for non-technical educators. Extensive card-sorting exercises with educators helped identify the most intuitive organization, leading to a template-based approach where customization options are progressively introduced as users gain familiarity.
-                    </p>
-                    
-                    <p className="text-muted-foreground">
-                      Handling Hebrew text and bidirectional interface complexities was another major technical hurdle. Displaying right-to-left text, reversing numbers, and ensuring proper alignment of English words within Hebrew sentences required a custom-built solution that significantly improved readability and usability for Hebrew-speaking users.
-                    </p>
-                    
-                    <p className="text-muted-foreground">
-                      Optimizing visual engagement without compromising educational clarity was critical. Early prototypes showed that students were sometimes distracted by animations during question-answering phases. The solution involved implementing a "focus mode" that temporarily simplified the visual environment during active question engagement while preserving interactive elements that reinforce learning progress.
-                    </p>
-                    
-                    <p className="text-muted-foreground">
-                      The development process also required robust workflow management. A structured system for file versioning, backups, and asset organization was essential to maintaining efficiency. At one stage, partial code loss occurred, but thanks to meticulous documentation and backup protocols, the team was able to recover and continue development without significant setbacks.
-                    </p>
-                    
-                    <p className="text-muted-foreground">
-                      These challenges, tackled through iterative testing, technical innovation, and structured problem-solving, ensured that the final product met both usability and pedagogical goals without compromising on flexibility or performance.
-                    </p>
-                  </div>
-                </motion.div>
-              </>
-            )}
-            
-            {/* Project Structure Section - For Roomie project */}
-            {project.slug === 'roomie' && project.structureTree && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
-                <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.structureTree.image} 
-                    alt="Project Structure" 
-                    className="w-full h-auto" 
-                  />
-                </div>
-              </motion.div>
-            )}
-
-            {/* Wireframes Section - For Roomie project */}
-            {project.slug === 'roomie' && project.wireframes && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
-                <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
-                
-                <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireframes.image} 
-                    alt="Project Wireframes" 
-                    className="w-full h-auto" 
-                  />
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
-            {project.slug !== 'save-rapunzel' && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
-                
-                <div className="space-y-8">
-                  {project.designProcessAndAesthetics && project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
-                    <div key={idx} className="mb-8">
-                      <p className="mb-4 text-muted-foreground">{paragraph}</p>
-                      
-                      {/* Display relevant design image if available */}
-                      {project.designImages && idx < project.designImages.length && (
-                        <motion.div 
-                          className="mt-6 rounded-lg overflow-hidden border border-border/40" 
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: 0.2, duration: 0.5 }}
-                        >
-                          <img 
-                            src={project.designImages[idx].image} 
-                            alt={project.designImages[idx].title} 
-                            className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} 
-                          />
-                          <div className="p-4 bg-secondary/30">
-                            <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
-                            <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
-                          </div>
-                        </motion.div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Animation Features Section - For BIP */}
-            {project.slug === 'bip' && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
-                <div className="prose prose-lg max-w-none space-y-4">
-                  <p className="text-muted-foreground">
-                    The BIP application features custom animations designed specifically for extraterrestrial perception patterns. Key interaction moments are highlighted with visual feedback that accommodates alien visual processing.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Transaction confirmations use animated spaceships and meteorite visuals to represent successful payments. Loading states feature orbital animations that maintain user engagement while processing occurs in the background.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    The interface responds to touch with immediate visual feedback, providing redundant confirmation through color shifts, size changes, and animated transitions to ensure clarity for users with different perceptual abilities.
-                  </p>
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Challenges & Solutions Section - For all projects except Save Rapunzel */}
-            {project.challengesAndSolutions && project.slug !== 'save-rapunzel' && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
-                <div className="prose prose-lg max-w-none">
-                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Technical & Development Challenges Section - For BIP */}
-            {project.slug === 'bip' && !project.challengesAndSolutions && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
-                
-                <div className="prose prose-lg max-w-none space-y-4">
-                  <p className="text-muted-foreground">
-                    Developing for extraterrestrial users presented unique technical challenges, particularly in the absence of direct user testing possibilities. The solution involved creating detailed alien personas with specific perceptual constraints and validating designs against these constraints.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Security verification posed another significant challenge. A specialized facial recognition system was designed to accommodate alien facial structures, with animated guides for proper positioning, balancing security needs with accessibility.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    The visual design required complete reimagining for alien perception. Color schemes, typography, and spacing were adapted to address the specific visual needs of extraterrestrial users while maintaining the functional elements expected in a money transfer application.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Balancing innovation with usability was perhaps the greatest challenge. The solution involved maintaining recognizable patterns from human financial applications while introducing novel interaction methods tailored to alien cognitive patterns.
-                  </p>
-                </div>
-              </motion.div>
-            )}
-          </div>
-        </div>
-      </section>
-      
-      {/* Images Section */}
-      <section className="py-20 bg-secondary/50">
-        <div className="container">
-          <motion.h2 
-            className="text-2xl font-medium mb-8 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-          >
-            Project Gallery
-          </motion.h2>
-          
-          {/* Updated gallery grid - with different layout for BIP and new images added */}
-          {project.slug === 'bip' ? (
-            // BIP gallery - 4 images in one row
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {project.additionalImages && project.additionalImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                >
-                  <img
-                    src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    className="w-full h-auto aspect-[9/19] object-cover"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            // For other projects - 2-column grid
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.additionalImages && project.additionalImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                >
-                  <img
-                    src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-              ))}
-              
-              {/* Add roomie-expenses to ROOMIE gallery */}
-              {project.slug === 'roomie' && (
-                <motion.div
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                >
-                  <img
-                    src="/lovable-uploads/roomie-expenses.png"
-                    alt="ROOMIE - Expense Tracking Interface"
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-              )}
-              
-              {/* Add save-repunzel-my-games-add to SAVE RAPUNZEL gallery */}
-              {project.slug === 'save-rapunzel' && (
-                <motion.div
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                >
-                  <img
-                    src="/lovable-uploads/save-repunzel-my-games-add.png"
-                    alt="SAVE RAPUNZEL - Add New Game Interface"
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-              )}
-            </div>
-          )}
-        </div>
-      </section>
-      
-      {/* Check It Out section */}
-      <section className="py-16 bg-gradient-to-b from-secondary/30 to-transparent">
-        <div className="container">
-          <motion.div
-            className="max-w-md mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-          >
-            <h3 className="text-2xl font-medium mb-4">
-              Ready to see it in action?
-            </h3>
-            <p className="text-muted-foreground mb-8">
-              Check out the full {project.title} project to explore all the features and interactions.
-            </p>
-            
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <ProjectLink 
-                href={project.link} 
-                className="px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
-              >
-                View Full Project
-              </ProjectLink>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-      
-      {/* Next Project - Updated with image and title */}
-      <section className="py-20 bg-background border-t border-border/30">
-        <div className="container">
-          <div className="max-w-4xl mx-auto">
-            <motion.div 
-              className="text-center mb-8" 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
-              <p className="text-muted-foreground mb-2">Next Project</p>
-              <h3 className="text-2xl font-medium mb-6" style={{ color: nextProject.color }}>
-                {nextProject.title}
-              </h3>
-              
-              <div className="mb-8 max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src={nextProject.image} 
-                  alt={nextProject.title} 
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-              
-              <a 
-                href={`/projects/${nextProject.slug}`} 
-                className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
-              >
-                View Next Project
-              </a>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-  );
-};
-
-export default ProjectDetail;
