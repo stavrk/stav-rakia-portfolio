@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -171,31 +170,56 @@ const projectsData = [{
   link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
 }, {
   title: "PLANT LEARNING MODULE",
-  description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
-  image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop",
-  tags: ["Instructional Design"],
+  description: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
+  image: "/lovable-uploads/plant-first-page.png",
+  tags: ["Instructional Design", "Educational"],
   slug: "plant-module",
   color: "#22C55E",
-  overview: "The Plant Learning Module was developed for 'Mishak 50', a company experiencing declining houseplant sales. The primary goal was to increase sales by educating customers and boosting their confidence in plant care through an interactive learning experience.",
-  challenge: "Many potential plant buyers lack confidence in their ability to care for houseplants, resulting in hesitation to purchase. The challenge was to create an educational solution that would effectively build this confidence through clear, accessible information and interactive learning experiences.",
-  solution: "I designed a comprehensive e-learning module focused on six key houseplants, with detailed care instructions, interactive assessments, and engaging visuals. The module employs a branching navigation model allowing users to personalize their learning journey based on their specific interests.",
-  process: ["Analyzed 'Mishak 50' sales data to identify key plants with potential for increased sales", "Conducted user research to understand common plant care misconceptions and learning preferences", "Developed the instructional framework based on plant categories and care requirements", "Created interactive elements including pre-learning assessments and knowledge checks", "Designed a clean, plant-themed aesthetic with high-quality visuals and intuitive navigation"],
-  designProcessAndAesthetics: "For the Plant Learning Module, I designed a visual experience that embodies the natural, organic feel of the subject matter. The color palette centers on various shades of green with white space for balance, creating a fresh, clean aesthetic that evokes plant life while maintaining excellent readability.\n\nTypography choices prioritize clarity and accessibility, with sans-serif fonts at appropriate sizes for comfortable reading on various devices. Headings use a slightly bolder weight of the same font family to maintain visual harmony while creating clear information hierarchy.\n\nThe interface layout employs a grid system that organizes content into digestible sections, with consistent spacing and alignment. Plant images feature prominently throughout the module, serving both instructional and aesthetic purposes. Each plant category uses subtle visual cues to help users track where they are in the learning journey.\n\nInteractive elements employ a consistent design language, with clearly indicated touch/click targets and visual feedback on user actions. Drag-and-drop activities for plant placement and animated transitions between sections enhance engagement while reinforcing learning objectives.",
-  challengesAndSolutions: "A key challenge was balancing comprehensive plant care information with an approachable, non-overwhelming user experience. Many users reported feeling intimidated by detailed care instructions in initial testing. I addressed this by implementing a layered information architecture that presents essential care details first, with the option to expand sections for more detailed information.\n\nAnother challenge was creating effective assessment activities that would genuinely measure understanding rather than simple recall. I developed application-based questions that ask users to make decisions about plant placement and care schedules based on specific scenarios. These contextual assessments proved more effective at building confidence than traditional knowledge-checking questions.\n\nThe technical implementation presented challenges regarding the integration of high-quality visuals while maintaining performance across devices. I optimized image assets and implemented progressive loading to ensure the module remained responsive and engaging even on lower-bandwidth connections.",
+  overview: "This e-learning module teaches users how to successfully care for houseplants through engaging, interactive content. The module focuses on six common houseplants, providing detailed care requirements and practical guidance in a user-friendly format.",
+  challenge: "Many potential plant owners lack confidence in their ability to properly care for houseplants. This hesitation stems from uncertainty about watering needs, light requirements, and general maintenance. The challenge was to create a learning solution that would effectively build confidence through clear, accessible information and interactive learning experiences.",
+  solution: "I designed a comprehensive e-learning module focused on six key houseplants, with detailed care instructions, interactive assessments, and engaging visuals. The module employs a branching navigation model allowing users to personalize their learning journey based on their specific interests. This approach enables learners to focus on plants that match their home environment and lifestyle.",
+  wireflow: {
+    title: "Wireflow",
+    image: "/lovable-uploads/plant-wireflow.png",
+    description: "The wireflow demonstrates the module's branching structure, allowing users to navigate through content based on their specific interests. The design includes:\n\nAn introduction section explaining the importance of houseplants\n\nCategory-based navigation allowing users to explore specific plant types\n\nInteractive elements for learning assessment\n\nPractical applications section for real-world implementation"
+  },
+  specification: {
+    title: "Specification & Instructional Script",
+    image: "/lovable-uploads/plant-prototyping.png",
+    description: "Before entering the design phase, I developed a comprehensive specification document and detailed instructional script. The specification established the pedagogical foundation by defining the behavioral, knowledge, and skill objectives for learners. I conducted a thorough analysis of the target audience, identifying knowledge gaps and learning preferences to inform content organization.\n\nThe instructional script translated these objectives into structured content, using a category-based approach organized around six houseplants. For each plant, I crafted detailed descriptions, care instructions, and contextual scenarios to promote knowledge application. The script incorporated multimodal learning strategies through varied assessment methods, including interactive elements like drag-and-drop activities and scenario-based questions. This instructional planning ensured the learning experience would effectively bridge knowledge gaps while maintaining engagement through thoughtfully paced content progression."
+  },
+  process: [
+    "Analyzing the target audience needs and potential knowledge gaps",
+    "Establishing clear learning objectives for each module section",
+    "Structuring content in logical categories based on plant types and care requirements",
+    "Developing instructional strategies that incorporate interactive elements",
+    "Creating opportunities for practical application and knowledge assessment"
+  ],
+  designProcessAndAesthetics: "For the Plant Learning Module, I designed a visual experience that embodies the natural, organic feel of the subject matter. The color palette centers on various shades of green with earth tones for balance, creating a fresh, clean aesthetic that evokes plant life while maintaining excellent readability.\n\nTypography choices prioritize clarity and accessibility, with the Assistant font family at appropriate sizes for comfortable reading on various devices. Headings use SemiBold weight to maintain visual harmony while creating clear information hierarchy.\n\nThe interface layout employs a grid system that organizes content into digestible sections, with consistent spacing and alignment. Plant images feature prominently throughout the module, serving both instructional and aesthetic purposes. Each plant category uses subtle visual cues to help users track where they are in the learning journey.",
   designImages: [{
     title: "Color Palette",
-    image: "https://images.unsplash.com/photo-1447753072255-ca9a2c22afe7?q=80&w=2076&auto=format&fit=crop",
-    description: "Various shades of green with white space for a fresh, plant-inspired aesthetic"
+    image: "/lovable-uploads/plant-colors.png",
+    description: "Various shades of green with earth tones for a fresh, natural aesthetic"
   }, {
-    title: "Typography & Layout",
-    image: "https://images.unsplash.com/photo-1582640299692-63b2d1e1a2e3?q=80&w=2069&auto=format&fit=crop",
-    description: "Clean, accessible typography with consistent spacing and alignment"
+    title: "Typography",
+    image: "/lovable-uploads/plant-typography.png",
+    description: "Assistant font family with clear hierarchy and readability"
   }, {
-    title: "Interactive Elements",
-    image: "https://images.unsplash.com/photo-1581022294576-c6d2an29d9af?q=80&w=2070&auto=format&fit=crop",
-    description: "Engaging interactive elements with clear visual feedback"
+    title: "Interface Elements",
+    image: "/lovable-uploads/plant-interface.png",
+    description: "Grid-based layout with consistent spacing and visual cues"
   }],
-  additionalImages: ["https://images.unsplash.com/photo-1545165311-508ed0c91361?q=80&w=2070&auto=format&fit=crop", "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=2074&auto=format&fit=crop", "https://images.unsplash.com/photo-1467043198406-dc953a3defa0?q=80&w=2070&auto=format&fit=crop"],
+  interactiveElements: {
+    title: "Interactive Elements & Assessment",
+    description: "The module includes several interactive elements designed to engage learners and reinforce key concepts:\n\nDrag-and-drop activities for matching plants to their ideal light conditions\n\nInteractive quizzes testing knowledge about watering requirements\n\nVisual simulations showing plant responses to different care conditions\n\nProgress tracking to help learners monitor their advancement\n\nThese assessment components go beyond simple recall, requiring users to apply their knowledge in practical scenarios that simulate real-world plant care decisions."
+  },
+  challengesAndSolutions: "A key challenge was balancing comprehensive plant care information with an approachable, non-overwhelming user experience. Initial feedback indicated that detailed care instructions could intimidate novice plant owners. I addressed this by:\n\nImplementing a layered information architecture that presents essential care details first, with options to expand sections for more detailed information\n\nUsing visual indicators to clearly mark beginner-friendly plants\n\nIncluding reassuring messaging about common plant care mistakes and recovery techniques\n\nAnother challenge was creating effective assessment activities that would genuinely measure understanding rather than simple recall. I developed application-based questions asking users to make decisions about plant placement and care schedules based on specific scenarios, which proved more effective at building confidence than traditional knowledge-checking questions.\n\nThis project demonstrated my ability to transform complex instructional content into an engaging, user-friendly learning experience while addressing specific user needs and learning objectives.",
+  additionalImages: [
+    "/lovable-uploads/plant-1.png",
+    "/lovable-uploads/plant-2.png",
+    "/lovable-uploads/plant-3.png",
+    "/lovable-uploads/plant-4.png"
+  ],
   link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
 }];
 
@@ -410,6 +434,76 @@ const ProjectDetail = () => {
                     alt="Wireflow Diagram" 
                     className="w-full h-auto"
                   />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Wireflow Section - For Plant Learning Module project */}
+            {project.slug === 'plant-module' && project.wireflow && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.wireflow.description.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflow.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Specification & Instructional Script - For Plant Learning Module project */}
+            {project.slug === 'plant-module' && project.specification && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.specification.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.specification.description.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.specification.image} 
+                    alt="Specification & Instructional Script" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Interactive Elements & Assessment - For Plant Learning Module project */}
+            {project.slug === 'plant-module' && project.interactiveElements && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.interactiveElements.title}</h2>
+                <div className="prose prose-lg max-w-none">
+                  {project.interactiveElements.description.split('\n\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
                 </div>
               </motion.div>
             )}

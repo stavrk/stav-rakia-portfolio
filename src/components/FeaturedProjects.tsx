@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
 
@@ -37,6 +36,15 @@ const projectsData = [
     tags: ["UX/UI Design", "Educational"],
     slug: "studit",
     color: "#F59E0B",
+    comingSoon: false
+  },
+  {
+    title: "PLANT LEARNING MODULE",
+    description: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
+    image: "/lovable-uploads/plant-first-page.png",
+    tags: ["Instructional Design", "Educational"],
+    slug: "plant-module",
+    color: "#22C55E",
     comingSoon: false
   }
 ];

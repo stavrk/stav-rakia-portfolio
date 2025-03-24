@@ -52,12 +52,12 @@ const projectsData = [
   },
   {
     title: "PLANT LEARNING MODULE",
-    description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
-    image: "https://images.unsplash.com/photo-1463936575829-25148e1db1b8?q=80&w=2090&auto=format&fit=crop",
+    description: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
+    image: "/lovable-uploads/plant-first-page.png",
     tags: ["Instructional Design", "Educational"],
     slug: "plant-module",
     color: "#22C55E",
-    case: "Our team developed a comprehensive e-learning module to educate customers on proper plant care, featuring interactive elements and assessment activities to boost confidence in houseplant selection and maintenance.",
+    case: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
     comingSoon: false,
     link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   },
