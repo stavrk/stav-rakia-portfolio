@@ -66,15 +66,17 @@ const ProjectCard = ({
         <p className="text-muted-foreground mb-6 flex-grow">{description}</p>
         
         <div className="mb-6 relative overflow-hidden rounded-lg aspect-video">
-          <img 
-            src={image} 
-            alt={title} 
-            className={cn(
-              "w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105", 
-              comingSoon && "opacity-80"
-            )}
-          />
-          <div className="absolute inset-0 border border-border/20 rounded-lg" />
+          <a href={comingSoon ? "#" : `/projects/${slug}`} className="block w-full h-full">
+            <img 
+              src={image} 
+              alt={title} 
+              className={cn(
+                "w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105", 
+                comingSoon && "opacity-80"
+              )}
+            />
+            <div className="absolute inset-0 border border-border/20 rounded-lg" />
+          </a>
         </div>
         
         <div className="flex justify-between items-center">
@@ -85,7 +87,7 @@ const ProjectCard = ({
               "transition-all duration-300 hover:gap-3 hover:text-primary"
             )}
             whileHover={{ x: 5 }}
-            style={{ color }}
+            style={{ color: title === "ROOMIE" ? "#a67c52" : color }}
           >
             {comingSoon ? "Learn More" : "View Project"} <ArrowRight className="h-4 w-4" />
           </motion.a>

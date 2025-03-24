@@ -8,7 +8,7 @@ const projectsData = [
     image: "/lovable-uploads/roomie-home-page.png",
     tags: ["UX/UI Design", "Instructional Design"],
     slug: "roomie",
-    color: "#F4DB8B",
+    color: "#a67c52",
     comingSoon: false
   },
   {

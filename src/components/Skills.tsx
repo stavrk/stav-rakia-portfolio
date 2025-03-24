@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 
 const skillsCategories = [
@@ -48,6 +49,22 @@ const skillsCategories = [
     skills: [
       "Cross-Functional Teamwork",
       "Leadership & Communication"
+    ]
+  },
+  {
+    title: "AI Tools",
+    skills: [
+      "ChatGPT", 
+      "MidJourney", 
+      "Firefly (Adobe)", 
+      "Google Gemini",
+      "Leonardo AI", 
+      "Perplexity AI", 
+      "Lovable", 
+      "Bolt",
+      "Claude",
+      "DALL·E",
+      "Playground AI"
     ]
   }
 ];
