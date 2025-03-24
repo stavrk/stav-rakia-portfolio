@@ -14,7 +14,7 @@ const projectsData = [
   },
   {
     title: "SAVE RAPUNZEL",
-    description: "Save Rapunzel is a dual-purpose educational platform that combines an interactive game for students with a content creation tool for educators. Built around the Rapunzel fairy tale, it transforms traditional learning into engaging experiences.",
+    description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
     image: "/lovable-uploads/save-repunzel-editor.png",
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",

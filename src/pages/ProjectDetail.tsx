@@ -72,32 +72,26 @@ const projectsData = [{
   link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
 }, {
   title: "SAVE RAPUNZEL",
-  description: "Save Rapunzel is a dual-purpose educational platform that combines an interactive game for students with a content creation tool for educators. Built around the Rapunzel fairy tale, it transforms traditional learning into engaging experiences.",
+  description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
   image: "/lovable-uploads/save-repunzel.png",
   tags: ["Game Design", "Educational"],
   slug: "save-rapunzel",
   color: "#10B981",
-  overview: "Save Rapunzel is a dual-purpose educational platform that combines an interactive game for students with a content creation tool for educators. Built around the Rapunzel fairy tale, it transforms traditional learning into engaging experiences.",
-  challenge: "Traditional educational materials often fail to engage students, especially for challenging subjects. Educators need simple content creation tools without technical knowledge, while students need learning that's both educational and fun.",
-  solution: "A dual-purpose platform featuring an interactive game where answering questions correctly helps the prince climb Rapunzel's hair, combined with a content system allowing educators to create custom question sets without coding knowledge.",
-  graphicDevelopment: "The project evolved from a storybook concept to an interactive animation where Rapunzel walks to the window as the story unfolds, significantly improving student engagement.",
-  technicalChallenges: "Main challenges included creating an intuitive content system for non-technical educators and handling Hebrew bidirectional text complexities. We developed a template approach with progressive customization options and built custom RTL text handling.",
-  contentGenerator: "The intuitive content generator allows educators to create educational content without technical knowledge, featuring an easy-to-use interface with built-in validation.\n\nThe system includes a progressive approval workflow requiring at least 10 quality questions before publishing, with a maximum of 30 questions per game. These specifications came directly from teacher research.",
-  animationFeatures: "Key animations include the prince climbing higher on Rapunzel's hair with correct answers, providing immediate visual progress feedback. The opening sequence shows Rapunzel walking through the tower with a zoom to the window.",
+  overview: "Save Rapunzel is a dual-purpose educational platform consisting of an interactive educational game for students and a content creation tool for educators. The platform transforms traditional learning material into engaging game experiences built around the classic fairy tale of Rapunzel.",
+  challenge: "Traditional educational materials often fail to capture students' attention, particularly for challenging subjects. Educators need tools to create engaging content without extensive technical knowledge, while students need learning experiences that are both educational and entertaining.",
+  solution: "A dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge.",
+  graphicDevelopment: "The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.\n\nThe project began with a traditional storybook concept, but after user research and consultations, the approach pivoted toward an interactive animation where Rapunzel walks to the window as the story unfolds. This change significantly deepened the user experience and resulted in greater student engagement.",
+  technicalChallenges: "One significant challenge was creating a system that allowed both simple interaction for students and flexibility for teachers in content creation. The solution was an intuitive content generator that enables teachers with no technical background to create customized questions, incorporate images, and define parameters such as time per question.\n\nAnother challenge involved displaying Hebrew text and navigating a bidirectional interface, which required developing a unique solution for reversing numbers and English words in mixed text, significantly enhancing the user experience for Hebrew speakers.",
+  contentGenerator: "The generator represents a revolutionary approach to creating educational content. Unlike traditional systems, the interface balances simplicity with power, featuring built-in protection mechanisms that prevent the publication of invalid games and provide teachers with immediate feedback.\n\nThe generator includes a progressive approval system that encourages users to create at least 10 quality questions before publishing the game, with a maximum allowance of 30 questions per game. These specifications were established after extensive user research with teachers and education professionals.",
+  animationFeatures: "Unique animations enhance the user experience without distracting from the learning process. For instance, when a student answers correctly, the prince climbs higher on Rapunzel's hair, providing immediate visual feedback on progress and strengthening the emotional connection to the story.\n\nThe opening animation sequence shows Rapunzel walking through the tower, with a gradual zoom to the window when she reaches it—a substantial change from the original storybook concept that significantly improved student engagement.",
   collaborativeDevelopment: "The project was characterized by close teamwork, with each team member bringing their skills and strengths to the table. An efficient workflow for file and version management was developed, including systematic backups, change documentation, and meticulous organization of graphic assets.\n\nDespite technical challenges, such as partial code loss at one stage, the system allowed for continued efficient work, resulting in a final product that precisely meets user needs.",
   editorShowcase: {
     title: "Content Generator Interface",
     image: "/lovable-uploads/save-repunzel-editor.png",
     description: "The intuitive content generator allows educators to create customized educational content without technical knowledge, featuring an easy-to-use interface with built-in validation and guidance."
   },
-  process: [
-    "Conducted research on educators' content needs and student engagement methods", 
-    "Developed user personas for both audience segments (educators and students)", 
-    "Created concept, wireframes and interactive prototypes", 
-    "Tested with both educators and students to refine the experience", 
-    "Designed fairy tale visuals for game and professional interface for educators"
-  ],
-  designProcessAndAesthetics: "Save Rapunzel uses a dual-interface design system. The game features vibrant fairy tale colors (purples, reds, golds) for young learners, while maintaining professional aesthetics in the educator dashboard.",
+  process: ["Conducted parallel research streams on educators' content creation needs and how children engage with educational games", "Developed user personas for both audience segments (educators and students)", "Created initial concept, wireframes and interactive prototypes", "Conducted testing sessions with both educators and students to refine the user experience", "Designed vibrant fairy tale-inspired visuals for game interface and professional aesthetic for educator interface"],
+  designProcessAndAesthetics: "For Save Rapunzel, a dual-interface design system serves both young learners and their educators. The game interface employs a vibrant, fairy tale-inspired color scheme dominated by purples, reds, and golds that evoke a sense of fantasy while maintaining sufficient contrast for readability.\n\nTypography choices differ between the student and educator interfaces. The game side uses the rounded, playful Fredoka font (minimum 18px) to engage younger users, while the educator dashboard employs the same font family with clear weight distinctions to create a visual hierarchy in the content management system.\n\nThe visual elements were carefully designed to create an engaging yet focused learning environment. Game elements like buttons, answer cards, and progress indicators feature rounded edges and vibrant colors that appeal to younger users. Background elements like the tower and clouds incorporate subtle animations to create a living world without distracting from the educational content.\n\nInteractive elements employ consistent visual cues—correct answers trigger animations of the prince climbing higher on Rapunzel's hair, providing immediate visual feedback that reinforces learning progress. The editor interface uses drag-and-drop functionality and inline editing to make content creation intuitive for educators with varying levels of technical expertise.",
   challengesAndSolutions: "A significant challenge in the development process was designing a content editor flexible enough to accommodate various question types while remaining simple for non-technical educators. The solution involved extensive card-sorting exercises with educators to determine the most intuitive organization of functions, resulting in a template-based approach with customization options revealed progressively as users become more comfortable with the system.\n\nAdditionally, optimizing the balance between engaging visual elements and educational clarity required careful consideration. This was addressed through multiple testing iterations with both educators and students to ensure the final product maintained educational effectiveness while providing an engaging user experience.",
   designImages: [{
     title: "Color Palette",
@@ -106,15 +100,14 @@ const projectsData = [{
   }, {
     title: "Typography",
     image: "/lovable-uploads/save-repunzel-font.png",
-    description: "The student interface uses rounded Fredoka font (minimum 18px) for young users, while the educator dashboard uses the same font with weight variations for visual hierarchy."
+    description: "Rounded, playful Fredoka font with consistent sizing for optimal readability"
   }, {
     title: "Visual Elements",
     image: "/lovable-uploads/save-repunzel-interface.png",
     description: "Rounded, vibrant interface elements with consistent visual language"
   }],
   additionalImages: ["/lovable-uploads/save-repunzel-third.png", "/lovable-uploads/save-repunzel-my-games.png", "/lovable-uploads/save-repunzel-sec.png"],
-  link: "https://saverapunzel.telem-hit.net/GamesList",
-  callToAction: "Explore the full Save Rapunzel project to see how we balanced educational value with engaging gameplay across both student and educator interfaces."
+  link: "https://saverapunzel.telem-hit.net/GamesList"
 }, {
   title: "BIP",
   description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
@@ -429,36 +422,3 @@ const ProjectDetail = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Design Research</h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <p className="text-muted-foreground mb-4">{project.designResearch.description}</p>
-                  </div>
-                  <div>
-                    <img 
-                      src={project.designResearch.image} 
-                      alt={project.designResearch.title} 
-                      className="rounded-xl shadow-md" 
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            )}
-            
-            {/* Graphic Development Section - For Save Rapunzel project */}
-            {project.slug === 'save-rapunzel' && project.graphicDevelopment && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
-                <h2 className="text-2xl font-medium mb-6">Graphic Development</h2>
-                <p className="text-muted-foreground">{project.graphicDevelopment}</p>
-              </motion.div>
-            )}
-            
-            {/* Technical Challenges Section - For Save Rapunzel project */}
