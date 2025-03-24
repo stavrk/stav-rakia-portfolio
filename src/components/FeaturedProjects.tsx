@@ -32,11 +32,20 @@ const projectsData = [
   },
   {
     title: "STUDIT",
-    description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
+    description: "An AI-powered study companion for Israeli Psychometric Entrance Test and matriculation (bagrut) exams preparation with personalized study plans.",
     image: "/lovable-uploads/studit-home-page.png",
     tags: ["UX/UI Design", "Educational"],
     slug: "studit",
     color: "#F59E0B",
+    comingSoon: false
+  },
+  {
+    title: "PLANT LEARNING MODULE",
+    description: "An interactive educational module designed to boost customer confidence in selecting and caring for houseplants.",
+    image: "/lovable-uploads/plant-first-page.png",
+    tags: ["Instructional Design"],
+    slug: "plant-module",
+    color: "#22C55E",
     comingSoon: false
   }
 ];
