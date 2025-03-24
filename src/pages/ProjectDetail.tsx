@@ -1,9 +1,9 @@
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
-import Layout from "@/components/Layout";
+import Layout from "../components/Layout";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink } from 'lucide-react';
-import ProjectLink from '@/components/ProjectLink';
+import ProjectLink from '../components/ProjectLink';
 
 const projectsData = [{
   title: "ROOMIE",
@@ -422,3 +422,4 @@ const ProjectDetail = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration
