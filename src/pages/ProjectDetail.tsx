@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -462,3 +463,26 @@ const ProjectDetail = () => {
             )}
             
             {/* Technical Challenges Section - For Save Rapunzel project */}
+            {project.slug === 'save-rapunzel' && project.technicalChallenges && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Technical Challenges</h2>
+                <p className="text-muted-foreground">{project.technicalChallenges}</p>
+              </motion.div>
+            )}
+            
+            {/* Add remaining sections and project details here */}
+            {/* Add proper closing tags for all elements */}
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
