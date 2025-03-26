@@ -10,7 +10,8 @@ const projectsData = [
     tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#a67c52",
-    comingSoon: false
+    comingSoon: false,
+    link: undefined
   },
   {
     title: "SAVE RAPUNZEL",
@@ -20,6 +21,7 @@ const projectsData = [
     slug: "save-rapunzel",
     color: "#10B981",
     comingSoon: false,
+    link: "https://saverapunzel.telem-hit.net/GamesList",
     designDescription: "Save Rapunzel features a dual-interface design that supports both young learners and their educators. The student-facing interface uses a colorful, fairy tale-inspired palette that balances a sense of wonder with clear readability.",
     colorPalette: "Earthy, storybook-inspired color palette with deep blue, moss green, golden yellow, warm copper, and brick red.",
     animationDescription: "Strategic animations support the learning experience without causing distraction. The introductory sequence - showing Rapunzel walking through the tower with a gradual zoom to the window - replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.",
@@ -53,7 +55,8 @@ const projectsData = [
     tags: ["UX UI Design", "Speculative Design"],
     slug: "bip",
     color: "#8B5CF6",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
   },
   {
     title: "STUDIT",
@@ -62,7 +65,8 @@ const projectsData = [
     tags: ["UX UI Design", "Instructional Design"],
     slug: "studit",
     color: "#F59E0B",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
   },
   {
     title: "PLANT LEARNING MODULE",
@@ -71,7 +75,8 @@ const projectsData = [
     tags: ["Instructional Design"],
     slug: "plant-module",
     color: "#22C55E",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   }
 ];
 
