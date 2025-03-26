@@ -1,7 +1,8 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { motion } from "framer-motion";
-import { ArrowLeft, Leaf, Map, Puzzle, CheckSquare, Activity, LineChart } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -377,10 +378,7 @@ const ProjectDetail = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="flex items-center mb-6">
-                  <Map className="h-6 w-6 mr-2" style={{ color: project.color }} />
-                  <h2 className="text-2xl font-medium">Wireflow</h2>
-                </div>
+                <h2 className="text-2xl font-medium mb-6">Wireflow</h2>
                 
                 <div className="bg-secondary/30 p-6 rounded-xl mb-8 border border-border/30">
                   <p className="text-muted-foreground mb-6">
@@ -393,48 +391,36 @@ const ProjectDetail = () => {
                     <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex items-start mb-2">
-                          <div className="flex items-center justify-center rounded-full w-8 h-8 bg-primary/10 mr-3">
-                            <Leaf className="h-4 w-4" style={{ color: project.color }} />
-                          </div>
                           <h4 className="font-medium">Introduction screen</h4>
                         </div>
-                        <p className="text-muted-foreground ml-11">Highlights the value of houseplants.</p>
+                        <p className="text-muted-foreground">Highlights the value of houseplants.</p>
                       </CardContent>
                     </Card>
                     
                     <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex items-start mb-2">
-                          <div className="flex items-center justify-center rounded-full w-8 h-8 bg-primary/10 mr-3">
-                            <Map className="h-4 w-4" style={{ color: project.color }} />
-                          </div>
                           <h4 className="font-medium">Category navigation</h4>
                         </div>
-                        <p className="text-muted-foreground ml-11">Lets users explore plant types by interest or home conditions.</p>
+                        <p className="text-muted-foreground">Lets users explore plant types by interest or home conditions.</p>
                       </CardContent>
                     </Card>
                     
                     <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex items-start mb-2">
-                          <div className="flex items-center justify-center rounded-full w-8 h-8 bg-primary/10 mr-3">
-                            <CheckSquare className="h-4 w-4" style={{ color: project.color }} />
-                          </div>
                           <h4 className="font-medium">Interactive checkpoints</h4>
                         </div>
-                        <p className="text-muted-foreground ml-11">Built-in assessments to test understanding.</p>
+                        <p className="text-muted-foreground">Built-in assessments to test understanding.</p>
                       </CardContent>
                     </Card>
                     
                     <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex items-start mb-2">
-                          <div className="flex items-center justify-center rounded-full w-8 h-8 bg-primary/10 mr-3">
-                            <Activity className="h-4 w-4" style={{ color: project.color }} />
-                          </div>
                           <h4 className="font-medium">Practical application</h4>
                         </div>
-                        <p className="text-muted-foreground ml-11">Scenarios where users apply what they've learned.</p>
+                        <p className="text-muted-foreground">Scenarios where users apply what they've learned.</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -459,10 +445,7 @@ const ProjectDetail = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
               >
-                <div className="flex items-center mb-6">
-                  <Puzzle className="h-6 w-6 mr-2" style={{ color: project.color }} />
-                  <h2 className="text-2xl font-medium">Interactive Elements & Assessment</h2>
-                </div>
+                <h2 className="text-2xl font-medium mb-6">Interactive Elements & Assessment</h2>
                 
                 <div className="bg-secondary/30 p-6 rounded-xl mb-8 border border-border/30">
                   <p className="text-muted-foreground mb-6">
@@ -531,9 +514,6 @@ const ProjectDetail = () => {
                 </div>
               </motion.div>
             )}
-            
-            {/* Other sections would continue here... */}
-            
           </div>
         </div>
       </section>
