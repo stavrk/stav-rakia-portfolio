@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
 
 const projectsData = [
@@ -230,7 +230,6 @@ const ProjectDetail = () => {
   const navigate = useNavigate();
   const project = projectsData.find(p => p.slug === slug);
   
-  // Find next project data for the navigation section
   const nextProjectIndex = (projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length;
   const nextProject = projectsData[nextProjectIndex];
   
@@ -246,7 +245,6 @@ const ProjectDetail = () => {
   
   return (
     <Layout>
-      {/* Hero Section */}
       <section className="pt-20 pb-32 relative" style={{
         backgroundColor: `${project.color}10`
       }}>
@@ -307,7 +305,6 @@ const ProjectDetail = () => {
         </div>
       </section>
       
-      {/* Challenge & Solution Section */}
       <section className="py-20">
         <div className="container">
           <div className="max-w-4xl mx-auto">
@@ -337,7 +334,6 @@ const ProjectDetail = () => {
               </motion.div>
             </div>
             
-            {/* Design Process Section */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }} 
               whileInView={{ opacity: 1, y: 0 }} 
@@ -368,7 +364,6 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Design Research Section - For STUDIT project */}
             {project.slug === 'studit' && project.designResearch && (
               <motion.div 
                 className="mb-16" 
@@ -394,7 +389,6 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Wireflow Section - For STUDIT project */}
             {project.slug === 'studit' && project.wireflowDetails && (
               <motion.div 
                 className="mb-16" 
@@ -418,7 +412,6 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Wireflow Section */}
             {project.wireflow && (
               <motion.div 
                 className="mb-16" 
@@ -442,7 +435,6 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Specification Section */}
             {project.specification && (
               <motion.div 
                 className="mb-16" 
@@ -468,7 +460,6 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Interactive Elements Section */}
             {project.interactiveElements && (
               <motion.div 
                 className="mb-16" 
@@ -496,7 +487,6 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Design Process & Aesthetics Section */}
             <motion.div 
               className="mb-16" 
               initial={{ opacity: 0, y: 20 }}
@@ -533,7 +523,6 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Challenges & Solutions Section */}
             <motion.div 
               className="mb-16" 
               initial={{ opacity: 0, y: 20 }}
@@ -549,7 +538,6 @@ const ProjectDetail = () => {
               </div>
             </motion.div>
             
-            {/* Gallery Section */}
             {project.additionalImages && project.additionalImages.length > 0 && (
               <motion.div 
                 className="mb-16" 
@@ -576,7 +564,6 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Project Link Section */}
             {project.link && (
               <motion.div 
                 className="flex justify-center mb-20" 
@@ -589,7 +576,6 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Next Project Section */}
             <motion.div 
               className="border-t border-border/40 pt-12" 
               initial={{ opacity: 0, y: 20 }}
