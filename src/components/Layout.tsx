@@ -12,9 +12,12 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
   
-  // Scroll to top on route change
+  // Smooth scroll to top on route change
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }, [location.pathname]);
 
   const pageVariants = {
@@ -46,7 +49,7 @@ const Layout = ({ children }: LayoutProps) => {
       <AnimatePresence mode="wait">
         <motion.main
           key={location.pathname}
-          className="flex-grow pt-20"
+          className="flex-grow pt-16 md:pt-20"
           initial="initial"
           animate="animate"
           exit="exit"

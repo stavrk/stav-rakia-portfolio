@@ -55,15 +55,15 @@ const Navbar = () => {
   return (
     <motion.header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-4 transition-all duration-200",
-        scrolled ? "backdrop-blur-lg bg-background/80 border-b border-border/40" : ""
+        "fixed top-0 left-0 right-0 z-50 py-3 md:py-4 transition-all duration-200",
+        scrolled ? "backdrop-blur-lg bg-background/80 border-b border-border/40 shadow-sm" : ""
       )}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.5 }}
     >
       <div className="container flex items-center justify-between">
-        <Link to="/" className="font-display text-xl font-medium">
+        <Link to="/" className="font-display text-xl font-medium px-2 py-1 rounded-md hover:bg-secondary/60 transition-colors">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -73,7 +73,7 @@ const Navbar = () => {
           </motion.span>
         </Link>
 
-        <nav className="flex items-center space-x-1">
+        <nav className="flex items-center space-x-1 md:space-x-2">
           <NavLink href="/" isActive={location.pathname === "/"}>
             Home
           </NavLink>

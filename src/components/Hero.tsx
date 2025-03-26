@@ -4,7 +4,7 @@ import { ArrowDown } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="min-h-[90vh] flex flex-col justify-center items-center text-center px-4 relative">
+    <section className="min-h-[90vh] flex flex-col justify-center items-center text-center px-4 pt-8 md:pt-12 relative">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -17,7 +17,7 @@ const Hero = () => {
         </h1>
         
         <motion.p 
-          className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance"
+          className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}

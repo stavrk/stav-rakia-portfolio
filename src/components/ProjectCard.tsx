@@ -27,9 +27,9 @@ const ProjectCard = ({
   comingSoon = false,
   link
 }: ProjectCardProps) => {
-  // Special case for ROOMIE project to use yellow background
+  // Special case for ROOMIE project to use a lighter yellow background
   const isRoomie = title === "ROOMIE";
-  const cardBackgroundColor = isRoomie ? "#FEF7CD" : "transparent";
+  const cardBackgroundColor = isRoomie ? "#FFF8E1" : "transparent";
   const textColor = isRoomie ? "#a67c52" : color;
 
   return (

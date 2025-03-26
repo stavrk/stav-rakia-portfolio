@@ -52,10 +52,10 @@ const projectsData = [
 
 const FeaturedProjects = () => {
   return (
-    <section id="featured-projects" className="py-20">
+    <section id="featured-projects" className="py-20 md:py-24">
       <div className="container">
         <motion.div 
-          className="mb-12 text-center"
+          className="mb-12 md:mb-16 text-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
