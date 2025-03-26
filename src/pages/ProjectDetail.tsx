@@ -1,4 +1,3 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -176,18 +175,18 @@ const projectsData = [{
   tags: ["Instructional Design", "Educational"],
   slug: "plant-module",
   color: "#22C55E",
-  overview: "This e-learning module teaches users how to successfully care for houseplants through engaging, interactive content. The module focuses on six common houseplants, providing detailed care requirements and practical guidance in a user-friendly format.",
+  overview: "This e-learning module builds confidence in plant care through engaging, interactive content. Focusing on six common houseplants, it provides essential care guidance in a user-friendly format that addresses the hesitation many feel when considering houseplant ownership.",
   challenge: "Many potential plant owners lack confidence in their ability to properly care for houseplants. This hesitation stems from uncertainty about watering needs, light requirements, and general maintenance. The challenge was to create a learning solution that would effectively build confidence through clear, accessible information and interactive learning experiences.",
   solution: "I designed a comprehensive e-learning module focused on six key houseplants, with detailed care instructions, interactive assessments, and engaging visuals. The module employs a branching navigation model allowing users to personalize their learning journey based on their specific interests. This approach enables learners to focus on plants that match their home environment and lifestyle.",
   wireflow: {
     title: "Wireflow",
     image: "/lovable-uploads/plant-wireflow.png",
-    description: "The wireflow demonstrates the module's branching structure, allowing users to navigate through content based on their specific interests. The design includes:\n\nAn introduction section explaining the importance of houseplants\n\nCategory-based navigation allowing users to explore specific plant types\n\nInteractive elements for learning assessment\n\nPractical applications section for real-world implementation"
+    description: "The wireflow outlines the app's structure and user journey, focusing on personalized content and intuitive branching paths.\n\nKey flows include:\n\nIntroduction screen highlighting the value of houseplants\n\nCategory navigation for exploring plant types\n\nInteractive checkpoints to assess user understanding\n\nPractical module for applying knowledge in real-life scenarios"
   },
   specification: {
     title: "Specification & Instructional Script",
     image: "/lovable-uploads/plant-prototyping.png",
-    description: "Before entering the design phase, I developed a comprehensive specification document and detailed instructional script. The specification established the pedagogical foundation by defining the behavioral, knowledge, and skill objectives for learners. I conducted a thorough analysis of the target audience, identifying knowledge gaps and learning preferences to inform content organization.\n\nThe instructional script translated these objectives into structured content, using a category-based approach organized around six houseplants. For each plant, I crafted detailed descriptions, care instructions, and contextual scenarios to promote knowledge application. The script incorporated multimodal learning strategies through varied assessment methods, including interactive elements like drag-and-drop activities and scenario-based questions. This instructional planning ensured the learning experience would effectively bridge knowledge gaps while maintaining engagement through thoughtfully paced content progression."
+    description: "Before design, I created a detailed specification and instructional script to guide the learning experience. The spec outlined learning goals - behavioral, knowledge-based, and skill-oriented - and included audience analysis to identify gaps and preferences.\n\nThe script organized content around six houseplants, with descriptions, care tips, and real-life scenarios. It applied multimodal strategies using interactive assessments (e.g., drag-and-drop, scenario questions) to bridge knowledge gaps and keep learners engaged."
   },
   process: [
     "Analyzing the target audience needs and potential knowledge gaps",
@@ -208,13 +207,13 @@ const projectsData = [{
   }, {
     title: "Interface Elements",
     image: "/lovable-uploads/plant-interface.png",
-    description: "Grid-based layout with consistent spacing and visual cues"
+    description: "Visuals like icons, colors, and illustrations clarify care tips and create a friendly tone."
   }],
   interactiveElements: {
     title: "Interactive Elements & Assessment",
-    description: "The module includes several interactive elements designed to engage learners and reinforce key concepts:\n\nDrag-and-drop activities for matching plants to their ideal light conditions\n\nInteractive quizzes testing knowledge about watering requirements\n\nVisual simulations showing plant responses to different care conditions\n\nProgress tracking to help learners monitor their advancement\n\nThese assessment components go beyond simple recall, requiring users to apply their knowledge in practical scenarios that simulate real-world plant care decisions."
+    description: "The module features engaging learning interactions:\n- Drag-and-drop activities matching plants to ideal light conditions\n- Interactive quizzes on watering requirements\n- Visual simulations showing plant responses to care conditions\n- Progress tracking for motivation and advancement\nThese assessments require users to apply knowledge in practical scenarios, simulating real-world plant care decisions."
   },
-  challengesAndSolutions: "A key challenge was balancing comprehensive plant care information with an approachable, non-overwhelming user experience. Initial feedback indicated that detailed care instructions could intimidate novice plant owners. I addressed this by:\n\nImplementing a layered information architecture that presents essential care details first, with options to expand sections for more detailed information\n\nUsing visual indicators to clearly mark beginner-friendly plants\n\nIncluding reassuring messaging about common plant care mistakes and recovery techniques\n\nAnother challenge was creating effective assessment activities that would genuinely measure understanding rather than simple recall. I developed application-based questions asking users to make decisions about plant placement and care schedules based on specific scenarios, which proved more effective at building confidence than traditional knowledge-checking questions.\n\nThis project demonstrated my ability to transform complex instructional content into an engaging, user-friendly learning experience while addressing specific user needs and learning objectives.",
+  challengesAndSolutions: "We addressed two primary challenges:\n\nBalancing Rich Content with User Approachability:\nInitial feedback showed that detailed care instructions could overwhelm novice plant owners. To solve this, we:\n\nDesigned a layered information system that starts with essentials and allows users to expand for more detail\n\nMarked beginner-friendly plants with visual cues\n\nIncluded calming, supportive messaging about common mistakes and how to recover from them\n\nCreating Meaningful Assessments:\nRather than using simple recall questions, we designed scenario-based activities—like choosing the best location or watering schedule for a plant—that built real-world decision-making skills and increased user confidence.\n\nThis project highlights my ability to turn complex instructional material into an engaging, approachable experience tailored to users' needs and learning goals.",
   additionalImages: [
     "/lovable-uploads/plant-1.png",
     "/lovable-uploads/plant-2.png",
@@ -808,6 +807,29 @@ const ProjectDetail = () => {
                         <p className="text-muted-foreground">We turned loading screens into moments of encouragement with animations and motivational cues. Color customization added a sense of ownership and personalization.</p>
                       </div>
                     </div>
+                  </div>
+                ) : project.slug === 'plant-module' ? (
+                  <div className="prose prose-lg max-w-none space-y-4">
+                    <p className="text-muted-foreground">We addressed two primary challenges:</p>
+                    
+                    <div className="ml-6 space-y-6">
+                      <div>
+                        <p className="font-medium mb-2">Balancing Rich Content with User Approachability:</p>
+                        <p className="text-muted-foreground">Initial feedback showed that detailed care instructions could overwhelm novice plant owners. To solve this, we:</p>
+                        <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                          <li>Designed a layered information system that starts with essentials and allows users to expand for more detail</li>
+                          <li>Marked beginner-friendly plants with visual cues</li>
+                          <li>Included calming, supportive messaging about common mistakes and how to recover from them</li>
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <p className="font-medium mb-2">Creating Meaningful Assessments:</p>
+                        <p className="text-muted-foreground">Rather than using simple recall questions, we designed scenario-based activities—like choosing the best location or watering schedule for a plant—that built real-world decision-making skills and increased user confidence.</p>
+                      </div>
+                    </div>
+                    
+                    <p className="text-muted-foreground">This project highlights my ability to turn complex instructional material into an engaging, approachable experience tailored to users' needs and learning goals.</p>
                   </div>
                 ) : (
                   <div className="prose prose-lg max-w-none">
