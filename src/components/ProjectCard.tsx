@@ -29,20 +29,20 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   // Special case for ROOMIE project to use a lighter yellow background
   const isRoomie = title === "ROOMIE";
-  const cardBackgroundColor = isRoomie ? "#FFF8E1" : "transparent";
+  const cardBackgroundColor = isRoomie ? "#FFF9E6" : "transparent"; // Lighter yellow that blends better
   const textColor = isRoomie ? "#a67c52" : color;
 
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-xl"
+      className="group relative overflow-hidden rounded-xl will-change-transform"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
-      whileHover={{ y: -5 }}
+      transition={{ delay: Math.min(index * 0.1, 0.3) + 0.2, duration: 0.4 }}
+      whileHover={{ y: -5, transition: { duration: 0.2 } }}
       style={{ backgroundColor: cardBackgroundColor }}
     >
       <div 
-        className="absolute inset-0 opacity-10 z-0 transition-opacity duration-500 group-hover:opacity-20" 
+        className="absolute inset-0 opacity-10 z-0 transition-opacity duration-300 group-hover:opacity-20" 
         style={{ backgroundColor: color }}
       />
       
@@ -75,9 +75,10 @@ const ProjectCard = ({
           <a href={comingSoon ? "#" : `/projects/${slug}`} className="block w-full h-full">
             <img 
               src={image} 
-              alt={title} 
+              alt={title}
+              loading="lazy" 
               className={cn(
-                "w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105", 
+                "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105", 
                 comingSoon && "opacity-80"
               )}
             />
@@ -90,7 +91,7 @@ const ProjectCard = ({
             href={comingSoon ? "#" : `/projects/${slug}`}
             className={cn(
               "inline-flex items-center gap-2 text-sm font-medium", 
-              "transition-all duration-300 hover:gap-3 hover:text-primary"
+              "transition-all duration-200 hover:gap-3 hover:text-primary"
             )}
             whileHover={{ x: 5 }}
             style={{ color: textColor }}

@@ -8,7 +8,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
+        transition={{ delay: 0.2, duration: 0.6 }}
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 tracking-tight">
@@ -20,7 +20,7 @@ const Hero = () => {
           className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance leading-relaxed"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.4, duration: 0.8 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
         >
           I'm Stav Rakia, a UX UI Designer focused on creating 
           intuitive, functional, and user-centered digital experiences.
@@ -30,7 +30,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-4 justify-center"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.8 }}
+          transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a 
             href="/projects" 
@@ -48,15 +48,15 @@ const Hero = () => {
       </motion.div>
       
       <motion.div 
-        className="absolute bottom-10"
+        className="absolute bottom-10 will-change-transform"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ 
-          delay: 1, 
-          duration: 0.8,
+          delay: 0.8, 
+          duration: 0.6,
           repeat: Infinity,
           repeatType: "reverse",
-          repeatDelay: 0.5
+          repeatDelay: 1
         }}
       >
         <a 

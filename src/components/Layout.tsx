@@ -12,12 +12,9 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
   
-  // Smooth scroll to top on route change
+  // Smooth scroll to top on route change - modified to be less resource-intensive
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const pageVariants = {
@@ -29,7 +26,7 @@ const Layout = ({ children }: LayoutProps) => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
         ease: [0.22, 1, 0.36, 1],
       },
     },
@@ -37,7 +34,7 @@ const Layout = ({ children }: LayoutProps) => {
       opacity: 0,
       y: -10,
       transition: {
-        duration: 0.3,
+        duration: 0.2,
         ease: [0.22, 1, 0.36, 1],
       },
     },
@@ -49,7 +46,7 @@ const Layout = ({ children }: LayoutProps) => {
       <AnimatePresence mode="wait">
         <motion.main
           key={location.pathname}
-          className="flex-grow pt-16 md:pt-20"
+          className="flex-grow pt-16 md:pt-20 will-change-transform"
           initial="initial"
           animate="animate"
           exit="exit"
