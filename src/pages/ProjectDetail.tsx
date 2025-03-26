@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import Layout from "@/components/Layout";
@@ -445,3 +446,15 @@ const ProjectDetail = () => {
                   </motion.div>
                 ))}
               </div>
+            </motion.div>
+            
+            {/* Additional sections would go here... */}
+            
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
