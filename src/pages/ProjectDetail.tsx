@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -416,4 +417,320 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Wire
+            {/* Wire Structure Tree - For ROOMIE project */}
+            {project.slug === 'roomie' && project.structureTree && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.structureTree.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  <p className="mb-4 text-muted-foreground">{project.structureTree.description}</p>
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.structureTree.image} 
+                    alt="Project Structure" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Wireframes - For ROOMIE project */}
+            {project.slug === 'roomie' && project.wireframes && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  <p className="mb-4 text-muted-foreground">{project.wireframes.description}</p>
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireframes.image} 
+                    alt="Initial Wireframes" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Design Evolution - For Save Rapunzel project */}
+            {project.slug === 'save-rapunzel' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Design Evolution</h2>
+                <p className="mb-4 text-muted-foreground">
+                  The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.
+                </p>
+              </motion.div>
+            )}
+            
+            {/* Specification & Instructional Script - For Plant Module */}
+            {project.slug === 'plant-module' && project.specification && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.specification.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.specification.description.split('\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.specification.image} 
+                    alt="Specification & Instructional Script" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Wireflow - For Plant Module or BIP project */}
+            {(project.slug === 'plant-module' || project.slug === 'bip') && project.wireflow && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.wireflow.description.split('\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.wireflow.image} 
+                    alt="Wireflow Diagram" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Editor Showcase - For Save Rapunzel project */}
+            {project.slug === 'save-rapunzel' && project.editorShowcase && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  <p className="mb-4 text-muted-foreground">{project.editorShowcase.description}</p>
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40">
+                  <img 
+                    src={project.editorShowcase.image} 
+                    alt="Content Generator Interface" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Design & Aesthetics */}
+            {project.designProcessAndAesthetics && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">
+                  {project.slug === 'save-rapunzel' ? 'Design System' : 'Design & Aesthetics'}
+                </h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.designProcessAndAesthetics.split('\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Design Images Gallery */}
+            {project.designImages && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {project.designImages.map((image, i) => (
+                    <div key={i} className="space-y-4">
+                      <h3 className="text-xl font-medium">{image.title}</h3>
+                      <div className="rounded-xl overflow-hidden border border-border/40 aspect-[3/2]">
+                        <img 
+                          src={image.image} 
+                          alt={image.title} 
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <p className="text-sm text-muted-foreground">{image.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Challenges & Solutions */}
+            {project.challengesAndSolutions && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">
+                  {project.slug === 'save-rapunzel' ? 'Technical Challenges & Solutions' : 'Challenges & Solutions'}
+                </h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.slug === 'save-rapunzel' ? (
+                    <>
+                      <p className="mb-4 text-muted-foreground">We overcame several key challenges:</p>
+                      <ul className="space-y-4 mb-6">
+                        <li className="flex items-start">
+                          <div className="font-semibold mr-2">Content Creation System:</div>
+                          <div>Designed an intuitive editor for non-technical educators through card-sorting exercises that informed a template-based approach with progressive customization.</div>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="font-semibold mr-2">Hebrew Interface Complexities:</div>
+                          <div>Built a custom solution for right-to-left text, number reversal, and alignment of English within Hebrew sentences—greatly improving usability.</div>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="font-semibold mr-2">Balancing Engagement with Focus:</div>
+                          <div>After early prototypes showed students were distracted by animations, we added a "focus mode" that simplifies visuals during active learning moments.</div>
+                        </li>
+                        <li className="flex items-start">
+                          <div className="font-semibold mr-2">Workflow Management:</div>
+                          <div>Established robust file versioning and backup protocols. These proved essential when partial code loss occurred, enabling full recovery without delays.</div>
+                        </li>
+                      </ul>
+                      <p className="text-muted-foreground">Through iterative testing and structured problem-solving, we delivered a product that meets educational goals and usability standards.</p>
+                    </>
+                  ) : (
+                    project.challengesAndSolutions.split('\n').map((paragraph, idx) => (
+                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                    ))
+                  )}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Interactive Elements & Assessment - For Plant Module */}
+            {project.slug === 'plant-module' && project.interactiveElements && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">{project.interactiveElements.title}</h2>
+                <div className="prose prose-lg max-w-none mb-8">
+                  {project.interactiveElements.description.split('\n').map((paragraph, idx) => (
+                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Key Animations - For Save Rapunzel */}
+            {project.slug === 'save-rapunzel' && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Key Animations</h2>
+                <p className="mb-4 text-muted-foreground">
+                  Strategic animations support the learning experience without causing distraction. The introductory sequence—showing Rapunzel walking through the tower with a gradual zoom to the window—replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.
+                </p>
+              </motion.div>
+            )}
+            
+            {/* Additional Images Gallery */}
+            {project.additionalImages && project.additionalImages.length > 0 && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2 className="text-2xl font-medium mb-6">Gallery</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {project.additionalImages.map((image, i) => (
+                    <div key={i} className="rounded-xl overflow-hidden border border-border/40">
+                      <img 
+                        src={image} 
+                        alt={`${project.title} - Gallery Image ${i+1}`} 
+                        className="w-full h-auto"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Next Project Section */}
+            <motion.div 
+              className="border-t border-border/40 pt-16"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.5 }}
+            >
+              <p className="text-muted-foreground text-sm mb-4">Next Project</p>
+              <h3 className="text-2xl font-medium mb-4">{nextProject.title}</h3>
+              <p className="mb-8">{nextProject.description}</p>
+              <button 
+                onClick={() => navigate(`/projects/${nextProject.slug}`)} 
+                className="text-foreground hover:text-primary transition-colors flex items-center"
+              >
+                View Project
+                <ArrowLeft className="h-4 w-4 ml-2 rotate-180" />
+              </button>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
