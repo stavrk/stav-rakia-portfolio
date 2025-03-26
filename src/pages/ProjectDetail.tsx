@@ -786,12 +786,36 @@ const ProjectDetail = () => {
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.5 }}
               >
-                <h2 className="text-2xl font-medium mb-6">Challenges & Solutions</h2>
-                <div className="prose prose-lg max-w-none">
-                  {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
-                </div>
+                <h2 className="text-2xl font-medium mb-6">Key Challenges & Solutions</h2>
+                
+                {project.slug === 'studit' ? (
+                  <div className="prose prose-lg max-w-none space-y-4">
+                    <p className="text-muted-foreground">We overcame several key challenges:</p>
+                    
+                    <div className="ml-6 space-y-6">
+                      <div>
+                        <p className="font-medium mb-2">Balancing Interactivity with Academic Rigor:</p>
+                        <p className="text-muted-foreground">Multiple-choice felt flat, while full gamification risked losing credibility. We created custom interactions - like drag-and-drop and interactive maps - that kept users engaged without compromising learning goals.</p>
+                      </div>
+                      
+                      <div>
+                        <p className="font-medium mb-2">Building Trust in Scheduling:</p>
+                        <p className="text-muted-foreground">Users were skeptical of automated schedules. We made the process transparent and adjustable, refining it through five iterations to balance control with guidance.</p>
+                      </div>
+                      
+                      <div>
+                        <p className="font-medium mb-2">Reducing Wait-Time Frustration:</p>
+                        <p className="text-muted-foreground">We turned loading screens into moments of encouragement with animations and motivational cues. Color customization added a sense of ownership and personalization.</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="prose prose-lg max-w-none">
+                    {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
+                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             )}
             
