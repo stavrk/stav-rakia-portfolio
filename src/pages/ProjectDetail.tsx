@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -186,41 +187,22 @@ const ProjectDetail = () => {
             
             {project.slug === 'save-rapunzel' && (
               <>
-                {project.editorShowcase && (
-                  <motion.div 
-                    className="mb-16" 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">{project.editorShowcase.title}</h2>
-                    <p className="text-muted-foreground mb-8">{project.editorShowcase.description}</p>
-                    
-                    <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
-                      <img src={project.editorShowcase.image} alt="Content Generator Interface" className="w-full h-auto" />
-                    </div>
-                  </motion.div>
-                )}
-
-                {project.graphicDevelopment && (
-                  <motion.div 
-                    className="mb-16" 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    <h2 className="text-2xl font-medium mb-6">Design Evolution</h2>
-                    <div className="prose prose-lg max-w-none">
-                      <p className="mb-4 text-muted-foreground">The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.</p>
-                    </div>
-                    
-                    <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
-                      <img src="/lovable-uploads/first-version-save-repunzel.png" alt="Initial Design Concept" className="w-full h-auto" />
-                    </div>
-                  </motion.div>
-                )}
+                <motion.div 
+                  className="mb-16" 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h2 className="text-2xl font-medium mb-6">Design Evolution</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="mb-4 text-muted-foreground">The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.</p>
+                  </div>
+                  
+                  <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+                    <img src="/lovable-uploads/first-version-save-repunzel.png" alt="Initial Design Concept" className="w-full h-auto" />
+                  </div>
+                </motion.div>
                 
                 <motion.div 
                   className="mb-16" 
@@ -229,7 +211,7 @@ const ProjectDetail = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.5 }}
                 >
-                  <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+                  <h2 className="text-2xl font-medium mb-6">Design System</h2>
                   
                   <div className="space-y-8">
                     <div className="mb-8">
@@ -243,14 +225,61 @@ const ProjectDetail = () => {
                           viewport={{ once: true }}
                           transition={{ delay: 0.2, duration: 0.5 }}
                         >
-                          <img src={project.designImages[0].image} alt={project.designImages[0].title} className="w-full object-cover h-64" />
+                          <img src="/lovable-uploads/save-repunzel-color-palette.png" alt="Color Palette" className="w-full object-cover h-64" />
                           <div className="p-4 bg-secondary/30">
-                            <h4 className="text-lg font-medium mb-1">{project.designImages[0].title}</h4>
-                            <p className="text-sm text-muted-foreground">{project.designImages[0].description}</p>
+                            <h4 className="text-lg font-medium mb-1">Color Palette</h4>
+                            <p className="text-sm text-muted-foreground">Earthy, storybook-inspired color palette with deep blue, moss green, golden yellow, warm copper, and brick red.</p>
                           </div>
                         </motion.div>
                       )}
                     </div>
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="mb-16" 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h2 className="text-2xl font-medium mb-6">Typography</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="mb-4 text-muted-foreground">The game uses playful Fredoka font (18px+) for young users, while the educator dashboard maintains the same font family with strategic weight variations to establish clear information hierarchy.</p>
+                  </div>
+                  
+                  <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+                    <img src="/lovable-uploads/save-repunzel-font.png" alt="Typography System" className="w-full h-auto" />
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="mb-16" 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h2 className="text-2xl font-medium mb-6">Visual Elements</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="mb-4 text-muted-foreground">Game components feature rounded edges and vibrant colors appealing to young users, while background elements incorporate subtle animations that create an immersive environment without distracting from learning objectives.</p>
+                  </div>
+                  
+                  <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+                    <img src="/lovable-uploads/save-repunzel-interface.png" alt="Interface Components" className="w-full h-auto" />
+                  </div>
+                </motion.div>
+                
+                <motion.div 
+                  className="mb-16" 
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <h2 className="text-2xl font-medium mb-6">Interactive Features</h2>
+                  <div className="prose prose-lg max-w-none">
+                    <p className="mb-4 text-muted-foreground">Consistent visual cues reinforce learning—correct answers animate the prince climbing Rapunzel's hair, providing immediate feedback on progress. The editor uses intuitive drag-and-drop and inline editing, making content creation accessible regardless of technical expertise.</p>
                   </div>
                 </motion.div>
                 
@@ -303,13 +332,64 @@ const ProjectDetail = () => {
               </>
             )}
             
-            {/* Rest of the existing code remains the same */}
+            {/* Remaining sections and component logic */}
             
           </div>
         </div>
       </section>
       
-      {/* Remaining sections of the component */}
+      {/* Next project section */}
+      <section className="py-20 bg-secondary/40">
+        <div className="container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-medium mb-2">Next Project</h2>
+            <p className="text-muted-foreground">Continue exploring my work</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <motion.div 
+              className="aspect-video rounded-xl overflow-hidden relative" 
+              initial={{ opacity: 0, scale: 0.9 }} 
+              whileInView={{ opacity: 1, scale: 1 }} 
+              viewport={{ once: true }} 
+              whileHover={{ y: -5 }} 
+              transition={{ duration: 0.5 }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent z-10" />
+              <img src={nextProject.image} alt={nextProject.title} className="w-full h-full object-cover" />
+              <div className="absolute bottom-0 left-0 p-6 z-20">
+                <h3 className="text-2xl font-medium text-white mb-2">{nextProject.title}</h3>
+                <p className="text-white/80 mb-4 line-clamp-2">{nextProject.description}</p>
+                <a 
+                  href={`/projects/${nextProject.slug}`} 
+                  className="inline-flex items-center text-white hover:text-primary transition-colors"
+                >
+                  View Project <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="flex flex-col justify-center"
+              initial={{ opacity: 0, x: 20 }} 
+              whileInView={{ opacity: 1, x: 0 }} 
+              viewport={{ once: true }} 
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              <h3 className="text-2xl font-medium mb-4">{nextProject.title}</h3>
+              <p className="text-muted-foreground mb-6">{nextProject.description}</p>
+              <div>
+                <a 
+                  href={`/projects/${nextProject.slug}`} 
+                  className="inline-flex items-center justify-center h-10 px-6 py-2 rounded-full bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                >
+                  View Case Study
+                </a>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </Layout>
   );
 };
