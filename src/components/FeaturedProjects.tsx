@@ -36,7 +36,7 @@ const projectsData = [
       },
       {
         title: "Balancing Engagement with Focus",
-        description: "After early prototypes showed students were distracted by animations, we added a "focus mode" that simplifies visuals during active learning moments.",
+        description: "After early prototypes showed students were distracted by animations, we added a \"focus mode\" that simplifies visuals during active learning moments.",
         icon: "Eye"
       },
       {
