@@ -70,7 +70,7 @@ const projectsData = [{
   designImages: [{
     title: "Color Palette",
     image: "/lovable-uploads/save-repunzel-color-palette.png",
-    description: "Vibrant, fairy tale-inspired color scheme with purples, reds, and golds"
+    description: "Earthy, storybook-inspired color palette with deep blue, moss green, golden yellow, warm copper, and brick red."
   }, {
     title: "Typography",
     image: "/lovable-uploads/save-repunzel-font.png",
@@ -575,7 +575,7 @@ const ProjectDetail = () => {
                         <img src="/lovable-uploads/save-repunzel-color-palette.png" alt="Color Palette" className="w-full object-cover h-64" />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">Color Palette</h4>
-                          <p className="text-sm text-muted-foreground">Vibrant, fairy tale-inspired color scheme with purples, reds, and golds</p>
+                          <p className="text-sm text-muted-foreground">Earthy, storybook-inspired color palette with deep blue, moss green, golden yellow, warm copper, and brick red.</p>
                         </div>
                       </motion.div>
                     </div>
@@ -618,7 +618,7 @@ const ProjectDetail = () => {
                   </div>
                 </motion.div>
                 
-                {/* Key Animations Section - UPDATED TITLE AND CONTENT HERE */}
+                {/* Key Animations Section - UPDATED TEXT HERE WITH HYPHENS */}
                 <motion.div 
                   className="mb-16" 
                   initial={{ opacity: 0, y: 20 }}
@@ -628,7 +628,7 @@ const ProjectDetail = () => {
                 >
                   <h2 className="text-2xl font-medium mb-6">Key Animations</h2>
                   <div className="prose prose-lg max-w-none">
-                    <p className="mb-4 text-muted-foreground">Strategic animations support the learning experience without causing distraction. The introductory sequence—showing Rapunzel walking through the tower with a gradual zoom to the window—replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.</p>
+                    <p className="mb-4 text-muted-foreground">Strategic animations support the learning experience without causing distraction. The introductory sequence - showing Rapunzel walking through the tower with a gradual zoom to the window - replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.</p>
                   </div>
                 </motion.div>
 
