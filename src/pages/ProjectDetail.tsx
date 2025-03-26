@@ -121,7 +121,7 @@ const projectsData = [{
     "/lovable-uploads/bip-transfer-details.png"
   ],
   process: ["Established alien user personas based on specified perceptual constraints", "Studied existing financial apps and adapted their core functionality to the alien context", "Created wireframes that emphasized visual communication", "Refined the interface through multiple iterations to balance alien-centered design with transaction security", "Designed custom animations for key moments in the user journey for clear feedback"],
-  designProcessAndAesthetics: "The Bip money transfer app required a complete reimagining of financial interface conventions for extraterrestrial users. The color palette features high-contrast, vibrant combinations with bold blues and bright yellows against deep space-themed backgrounds. This choice directly addresses the perceptual constraints of the alien users, who struggle with gray tones and low-contrast interfaces.\n\nTypography was a critical consideration—all text elements are significantly larger than human-centered applications, with a minimum size of 14px for secondary information and 18-24px for primary interface elements. Font selection prioritized circular, open letterforms with substantial weight to enhance legibility for alien visual systems.\n\nThe interface employs a consistent rounded design language with substantial padding around interactive elements to accommodate potential differences in alien motor control precision. All buttons feature both color and icon changes in their active states to provide redundant feedback cues. The space-themed iconography replaces traditional financial symbols, creating culturally appropriate visual metaphors for the target users.\n\nInteractive animations play a crucial role in communicating process status, particularly during transaction verification and confirmation. I designed custom animations using principles of anticipation and follow-through to signal the beginning and completion of processes, helping users understand system status without relying on text.",
+  designProcessAndAesthetics: "BIP reimagines financial interfaces for extraterrestrial users, featuring high-contrast, vibrant colors that address alien perceptual constraints—specifically their difficulty with gray tones and subtle contrasts. The space-themed interface uses bold blues and yellows against deep cosmic backgrounds to ensure maximum visibility.\n\nTypography & Readability\nAll text elements exceed standard human application sizes (14px minimum for secondary text, 18-24px for primary elements) to accommodate alien visual systems. We selected fonts with circular, open letterforms and substantial weight to maximize legibility.\n\nInterface Elements\nThe consistently rounded design includes generous padding around interactive elements to accommodate alien motor control differences. Buttons provide redundant feedback through both color and icon changes. Space-themed iconography replaces traditional financial symbols, creating culturally relevant visual metaphors.\n\nCustom animations communicate process status without relying on text. Using principles of anticipation and follow-through, these animations clearly signal the beginning and completion of processes, particularly during critical transaction moments.",
   case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
   comingSoon: false,
   link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
@@ -771,15 +771,7 @@ const ProjectDetail = () => {
                 <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
                 <div className="prose prose-lg max-w-none space-y-4">
                   <p className="text-muted-foreground">
-                    The BIP application features custom animations designed specifically for extraterrestrial perception patterns. Key interaction moments are highlighted with visual feedback that accommodates alien visual processing.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Transaction confirmations use animated spaceships and meteorite visuals to represent successful payments. Loading states feature orbital animations that maintain user engagement while processing occurs in the background.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    The interface responds to touch with immediate visual feedback, providing redundant confirmation through color shifts, size changes, and animated transitions to ensure clarity for users with different perceptual abilities.
+                    BIP's animation system is tailored to extraterrestrial perception patterns. Successful payments are represented through animated spaceships and meteorites, while loading states use orbital animations to maintain engagement. The interface provides immediate, redundant feedback through color shifts, size changes, and animated transitions—ensuring clarity across different alien perceptual abilities.
                   </p>
                 </div>
               </motion.div>
@@ -816,20 +808,30 @@ const ProjectDetail = () => {
                 
                 <div className="prose prose-lg max-w-none space-y-4">
                   <p className="text-muted-foreground">
-                    Developing for extraterrestrial users presented unique technical challenges, particularly in the absence of direct user testing possibilities. The solution involved creating detailed alien personas with specific perceptual constraints and validating designs against these constraints.
+                    We overcame several unique challenges:
                   </p>
                   
-                  <p className="text-muted-foreground">
-                    Security verification posed another significant challenge. A specialized facial recognition system was designed to accommodate alien facial structures, with animated guides for proper positioning, balancing security needs with accessibility.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    The visual design required complete reimagining for alien perception. Color schemes, typography, and spacing were adapted to address the specific visual needs of extraterrestrial users while maintaining the functional elements expected in a money transfer application.
-                  </p>
-                  
-                  <p className="text-muted-foreground">
-                    Balancing innovation with usability was perhaps the greatest challenge. The solution involved maintaining recognizable patterns from human financial applications while introducing novel interaction methods tailored to alien cognitive patterns.
-                  </p>
+                  <div className="ml-6 space-y-6">
+                    <div>
+                      <p className="font-medium mb-2">User Testing Limitations:</p>
+                      <p className="text-muted-foreground">In the absence of direct alien testing, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters.</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-medium mb-2">Security Verification:</p>
+                      <p className="text-muted-foreground">We developed a specialized facial recognition system for alien morphologies, using animated positioning guides that balance security with accessibility.</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-medium mb-2">Visual Adaptation:</p>
+                      <p className="text-muted-foreground">The interface required complete reimagining for alien perception while maintaining essential financial functionality.</p>
+                    </div>
+                    
+                    <div>
+                      <p className="font-medium mb-2">Usability Balance:</p>
+                      <p className="text-muted-foreground">We preserved recognizable patterns from human financial apps while introducing novel interactions tailored to alien cognitive processes.</p>
+                    </div>
+                  </div>
                 </div>
               </motion.div>
             )}
