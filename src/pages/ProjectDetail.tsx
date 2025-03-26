@@ -403,4 +403,4 @@ const ProjectDetail = () => {
                     <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex items-start mb-2">
-                          <div className="flex items-center justify-center rounded-full w-
+                          <div className="flex items-center justify-center rounded-
