@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, Leaf, Map, Puzzle, CheckSquare, Activity, LineChart } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
 import { Card, CardContent } from "@/components/ui/card";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const projectsData = [{
   title: "ROOMIE",
@@ -403,4 +405,140 @@ const ProjectDetail = () => {
                     <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
                       <CardContent className="p-4">
                         <div className="flex items-start mb-2">
-                          <div className="flex items-center justify-center rounded-
+                          <div className="flex items-center justify-center rounded-full w-8 h-8 bg-primary/10 mr-3">
+                            <Map className="h-4 w-4" style={{ color: project.color }} />
+                          </div>
+                          <h4 className="font-medium">Category navigation</h4>
+                        </div>
+                        <p className="text-muted-foreground ml-11">Lets users explore plant types by interest or home conditions.</p>
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
+                      <CardContent className="p-4">
+                        <div className="flex items-start mb-2">
+                          <div className="flex items-center justify-center rounded-full w-8 h-8 bg-primary/10 mr-3">
+                            <CheckSquare className="h-4 w-4" style={{ color: project.color }} />
+                          </div>
+                          <h4 className="font-medium">Interactive checkpoints</h4>
+                        </div>
+                        <p className="text-muted-foreground ml-11">Built-in assessments to test understanding.</p>
+                      </CardContent>
+                    </Card>
+                    
+                    <Card className="bg-background/80 shadow-sm hover:shadow transition-shadow">
+                      <CardContent className="p-4">
+                        <div className="flex items-start mb-2">
+                          <div className="flex items-center justify-center rounded-full w-8 h-8 bg-primary/10 mr-3">
+                            <Activity className="h-4 w-4" style={{ color: project.color }} />
+                          </div>
+                          <h4 className="font-medium">Practical application</h4>
+                        </div>
+                        <p className="text-muted-foreground ml-11">Scenarios where users apply what they've learned.</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  
+                  <div className="mt-8">
+                    <img 
+                      src={project.wireflow.image} 
+                      alt="Wireflow Diagram" 
+                      className="w-full h-auto rounded-lg border border-border/50 shadow-sm"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Interactive Elements & Assessment Section - For Plant Learning Module */}
+            {project.slug === 'plant-module' && project.interactiveElements && (
+              <motion.div 
+                className="mb-16" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="flex items-center mb-6">
+                  <Puzzle className="h-6 w-6 mr-2" style={{ color: project.color }} />
+                  <h2 className="text-2xl font-medium">Interactive Elements & Assessment</h2>
+                </div>
+                
+                <div className="bg-secondary/30 p-6 rounded-xl mb-8 border border-border/30">
+                  <p className="text-muted-foreground mb-6">
+                    The module includes engaging, hands-on learning activities designed to promote active learning and knowledge application:
+                  </p>
+                  
+                  <div className="space-y-5">
+                    <div className="flex items-start">
+                      <div className="p-1 mr-3">
+                        <Checkbox id="drag-drop" checked={true} className="mt-1" style={{
+                          borderColor: project.color,
+                          backgroundColor: project.color
+                        }} />
+                      </div>
+                      <div>
+                        <label htmlFor="drag-drop" className="font-medium block mb-1">Drag-and-drop activities</label>
+                        <p className="text-muted-foreground">Match plants to their ideal light conditions.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="p-1 mr-3">
+                        <Checkbox id="quizzes" checked={true} className="mt-1" style={{
+                          borderColor: project.color,
+                          backgroundColor: project.color
+                        }} />
+                      </div>
+                      <div>
+                        <label htmlFor="quizzes" className="font-medium block mb-1">Quizzes</label>
+                        <p className="text-muted-foreground">Test users on watering requirements and plant care decisions.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="p-1 mr-3">
+                        <Checkbox id="simulations" checked={true} className="mt-1" style={{
+                          borderColor: project.color,
+                          backgroundColor: project.color
+                        }} />
+                      </div>
+                      <div>
+                        <label htmlFor="simulations" className="font-medium block mb-1">Visual simulations</label>
+                        <p className="text-muted-foreground">Show how plants react to different care routines.</p>
+                      </div>
+                    </div>
+                    
+                    <div className="flex items-start">
+                      <div className="p-1 mr-3">
+                        <Checkbox id="progress" checked={true} className="mt-1" style={{
+                          borderColor: project.color,
+                          backgroundColor: project.color
+                        }} />
+                      </div>
+                      <div>
+                        <label htmlFor="progress" className="font-medium block mb-1">Progress tracking</label>
+                        <p className="text-muted-foreground">Lets users monitor their learning journey.</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 p-4 bg-background rounded-lg border border-border/50">
+                    <p className="italic">
+                      These tools go beyond basic memorization — they help users make real-world plant care decisions based on what they've learned.
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Other sections would continue here... */}
+            
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default ProjectDetail;
