@@ -4,7 +4,6 @@ import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
 import { ExternalLink, Download } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-
 const About = () => {
   const artistsData = [{
     name: "Jorja Smith",
@@ -25,7 +24,6 @@ const About = () => {
     name: "Olivia Dean",
     image: "/lovable-uploads/20433a57-43ed-4175-902d-8df5cd8bb366.png"
   }];
-  
   const hobbiesData = [{
     name: "Jewelry making",
     image: "/lovable-uploads/21415086-1df6-4acf-ab75-7268709814b3.png"
@@ -45,7 +43,6 @@ const About = () => {
     name: "Traveling",
     image: "/lovable-uploads/40563f20-2012-49e7-949e-bd6c06d55c21.png"
   }];
-  
   const experienceData = [{
     role: "Military Service (Reserve Duty)",
     company: "Israeli Air Force (IAF)",
@@ -67,7 +64,6 @@ const About = () => {
     period: "2019 - 2021",
     description: "\"Mekusharim\" - tactical training of the air force fighter planes."
   }];
-  
   return <Layout>
       <section className="py-20">
         <div className="container">
@@ -218,7 +214,7 @@ const About = () => {
               <h3 className="text-xl font-medium mb-1">B.Sc in Instructional Technologies</h3>
               <div className="flex justify-between items-center mb-3">
                 <p className="text-muted-foreground">Holon Institute of Technology</p>
-                <p className="text-sm text-muted-foreground">2020 - 2024</p>
+                <p className="text-sm text-muted-foreground">2022 - 2025</p>
               </div>
               <p className="flex-grow overflow-y-auto text-sm">
                 Dean's List Honoree – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design.
@@ -300,39 +296,25 @@ const About = () => {
               <h3 className="text-xl font-medium mb-6 text-center">My Kind of Music</h3>
               
               <div className="grid grid-cols-2 gap-4">
-                {artistsData.map((artist, i) => (
-                  <motion.div 
-                    key={i} 
-                    className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" 
-                    initial={{
-                      opacity: 0,
-                      x: -10
-                    }} 
-                    whileInView={{
-                      opacity: 1,
-                      x: 0
-                    }} 
-                    viewport={{
-                      once: true
-                    }} 
-                    transition={{
-                      delay: i * 0.05,
-                      duration: 0.3
-                    }}
-                  >
+                {artistsData.map((artist, i) => <motion.div key={i} className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" initial={{
+                opacity: 0,
+                x: -10
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                delay: i * 0.05,
+                duration: 0.3
+              }}>
                     <div className="w-20 h-20 mb-3 rounded-full overflow-hidden">
-                      <AspectRatio ratio={1/1} className="bg-muted">
-                        <img 
-                          src={artist.image} 
-                          alt={artist.name} 
-                          className="w-full h-full object-cover rounded-full" 
-                          loading="lazy"
-                        />
+                      <AspectRatio ratio={1 / 1} className="bg-muted">
+                        <img src={artist.image} alt={artist.name} className="w-full h-full object-cover rounded-full" loading="lazy" />
                       </AspectRatio>
                     </div>
                     <span className="text-sm font-medium">{artist.name}</span>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </motion.div>
             
@@ -354,39 +336,25 @@ const About = () => {
               </h3>
               
               <div className="grid grid-cols-2 gap-4">
-                {hobbiesData.map((hobby, i) => (
-                  <motion.div 
-                    key={i} 
-                    className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" 
-                    initial={{
-                      opacity: 0,
-                      x: -10
-                    }} 
-                    whileInView={{
-                      opacity: 1,
-                      x: 0
-                    }} 
-                    viewport={{
-                      once: true
-                    }} 
-                    transition={{
-                      delay: i * 0.05,
-                      duration: 0.3
-                    }}
-                  >
+                {hobbiesData.map((hobby, i) => <motion.div key={i} className="flex flex-col items-center p-3 rounded-lg bg-secondary text-secondary-foreground" initial={{
+                opacity: 0,
+                x: -10
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                delay: i * 0.05,
+                duration: 0.3
+              }}>
                     <div className="w-20 h-20 mb-3 rounded-full overflow-hidden">
-                      <AspectRatio ratio={1/1} className="bg-muted">
-                        <img 
-                          src={hobby.image} 
-                          alt={hobby.name} 
-                          className="w-full h-full object-cover rounded-full" 
-                          loading="lazy"
-                        />
+                      <AspectRatio ratio={1 / 1} className="bg-muted">
+                        <img src={hobby.image} alt={hobby.name} className="w-full h-full object-cover rounded-full" loading="lazy" />
                       </AspectRatio>
                     </div>
                     <span className="text-sm font-medium text-center">{hobby.name}</span>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </motion.div>
           </div>
@@ -396,5 +364,4 @@ const About = () => {
       <Contact />
     </Layout>;
 };
-
 export default About;
