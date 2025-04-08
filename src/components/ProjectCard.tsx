@@ -51,32 +51,26 @@ const ProjectCard = ({
       </div>
       
       <div className="p-6 flex flex-col h-full">
-        <div className="mb-3 flex flex-wrap">
-          {tags.map((tag, i) => (
-            <span 
-              key={i} 
-              className="inline-block text-xs font-medium px-2.5 py-1 rounded-full mr-2 mb-2 bg-primary/10 text-primary"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-        
         <h3 className="text-xl md:text-2xl font-medium mb-2">{title}</h3>
         
         <p className="text-muted-foreground mb-6 flex-grow">{description}</p>
         
         <div className="flex justify-between items-center">
-          <motion.a
-            href={comingSoon ? "#" : `/projects/${slug}`}
-            className={cn(
-              "inline-flex items-center gap-2 text-sm font-medium text-primary", 
-              "transition-all duration-200 hover:gap-3"
-            )}
-            whileHover={{ x: 5 }}
-          >
-            {comingSoon ? "Learn More" : "View Project"} <ArrowRight className="h-4 w-4" />
-          </motion.a>
+          {comingSoon ? (
+            <motion.span
+              className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary font-medium"
+              whileHover={{ x: 5 }}
+            >
+              Coming Soon
+            </motion.span>
+          ) : (
+            <a 
+              href={`/projects/${slug}`} 
+              className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-md"
+            >
+              View Case Study
+            </a>
+          )}
           
           {!comingSoon && link && (
             <ProjectLink href={link} />

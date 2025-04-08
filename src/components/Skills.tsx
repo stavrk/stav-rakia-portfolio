@@ -90,7 +90,7 @@ const Skills = () => {
           {skillsCategories.map((category, index) => (
             <motion.div 
               key={index}
-              className="p-6 rounded-xl bg-background border border-border/40"
+              className="p-6 rounded-xl bg-primary/10 border border-primary/20"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -101,7 +101,7 @@ const Skills = () => {
                 {category.skills.map((skill, i) => (
                   <motion.span 
                     key={i}
-                    className="px-3 py-1 text-sm bg-secondary text-secondary-foreground rounded-full"
+                    className="px-3 py-1 text-sm bg-primary/20 text-primary rounded-full"
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}

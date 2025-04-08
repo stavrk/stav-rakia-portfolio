@@ -44,13 +44,13 @@ const Hero = () => {
         >
           <a 
             href="/projects" 
-            className="inline-block px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
+            className="inline-block w-40 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
           >
             View Projects
           </a>
           <a 
             href="/about" 
-            className="inline-block px-6 py-3 rounded-full bg-primary/20 text-primary font-medium transition-all hover:bg-primary/30 hover:translate-y-[-2px]"
+            className="inline-block w-40 px-6 py-3 rounded-full bg-primary/20 text-primary font-medium transition-all hover:bg-primary/30 hover:translate-y-[-2px]"
           >
             About Me
           </a>

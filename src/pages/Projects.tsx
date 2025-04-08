@@ -8,7 +8,7 @@ import ProjectLink from '@/components/ProjectLink';
 const projectsData = [
   {
     title: "ROOMIE",
-    description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
+    description: "Interactive guide for simplified apartment moving for young adults.",
     image: "/lovable-uploads/roomie-home-page.png",
     tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
@@ -19,7 +19,7 @@ const projectsData = [
   },
   {
     title: "SAVE RAPUNZEL",
-    description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
+    description: "Interactive game and content tool that turns lessons into Rapunzel-themed learning experiences.",
     image: "/lovable-uploads/save-repunzel-editor.png",
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
@@ -30,7 +30,7 @@ const projectsData = [
   },
   {
     title: "BIP",
-    description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
+    description: "Money transfer app designed for extraterrestrial users with unique needs.",
     image: "/lovable-uploads/bip-lots-of-iphones.png",
     tags: ["UX UI Design", "Speculative Design"],
     slug: "bip",
@@ -41,7 +41,7 @@ const projectsData = [
   },
   {
     title: "STUDIT",
-    description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
+    description: "AI-powered study companion for personalized test preparation.",
     image: "/lovable-uploads/studit-home-page.png",
     tags: ["UX UI Design", "Instructional Design"],
     slug: "studit",
@@ -52,7 +52,7 @@ const projectsData = [
   },
   {
     title: "PLANT LEARNING MODULE",
-    description: "An interactive experience designed to build confidence in houseplant care by providing clear, accessible information.",
+    description: "Interactive experience to build confidence in houseplant care.",
     image: "/lovable-uploads/plant-first-page.png",
     tags: ["Instructional Design"],
     slug: "plant-module",
@@ -110,7 +110,7 @@ const Projects = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === category 
                     ? "bg-primary text-primary-foreground" 
-                    : "bg-secondary text-secondary-foreground hover:bg-secondary/70"
+                    : "bg-primary/10 text-primary hover:bg-primary/20"
                 }`}
                 onClick={() => setSelectedCategory(category)}
                 initial={{ opacity: 0, y: 10 }}
@@ -173,8 +173,7 @@ const Projects = () => {
                   <p className="text-muted-foreground mb-4">{project.case || project.description}</p>
                   {project.comingSoon ? (
                     <span 
-                      className="inline-block px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium cursor-default opacity-75"
-                      style={{ borderColor: project.color }}
+                      className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary font-medium cursor-default opacity-75"
                     >
                       In Development
                     </span>
@@ -182,8 +181,7 @@ const Projects = () => {
                     <div className="flex flex-wrap gap-3">
                       <a 
                         href={`/projects/${project.slug}`} 
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:bg-primary hover:text-primary-foreground hover:scale-105 hover:shadow-md"
-                        style={{ borderColor: project.color }}
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-md"
                       >
                         View Case Study
                       </a>
