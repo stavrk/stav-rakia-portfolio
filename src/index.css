@@ -90,6 +90,30 @@
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all;
   }
+  
+  .challenge-item {
+    @apply flex items-start gap-4 mb-6;
+  }
+  
+  .challenge-icon {
+    @apply flex-shrink-0 p-2 rounded-full bg-primary/10 text-primary;
+  }
+  
+  .challenge-content {
+    @apply flex-grow;
+  }
+  
+  .process-circle {
+    @apply flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 text-primary font-medium text-lg min-w-[3rem] min-h-[3rem];
+  }
+  
+  .project-image-container {
+    @apply overflow-hidden rounded-lg my-6 w-full;
+  }
+  
+  .project-image {
+    @apply w-full h-auto object-cover object-center;
+  }
 }
 
 .noise-bg {
@@ -152,4 +176,19 @@ a {
 /* Improved accessibility focus states */
 button, a, input, textarea, select {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 640px) {
+  .project-process-step {
+    @apply flex flex-col items-start;
+  }
+  
+  .project-image-container {
+    @apply mx-auto max-w-full;
+  }
+  
+  .challenge-item {
+    @apply gap-3;
+  }
 }
