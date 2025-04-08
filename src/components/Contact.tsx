@@ -128,10 +128,10 @@ const Contact = () => {
                   />
                 </div>
                 
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col sm:flex-row justify-between items-center">
                   <a 
                     href="mailto:stavsim282@gmail.com" 
-                    className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="flex items-center text-sm text-muted-foreground hover:text-foreground transition-colors mb-4 sm:mb-0"
                   >
                     <Mail className="h-4 w-4 mr-2" />
                     stavsim282@gmail.com
@@ -140,7 +140,7 @@ const Contact = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center justify-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/80 hover:scale-105 hover:shadow-md disabled:opacity-70 disabled:hover:scale-100 disabled:hover:shadow-none"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/80 hover:scale-105 hover:shadow-md disabled:opacity-70 disabled:hover:scale-100 disabled:hover:shadow-none"
                   >
                     {isSubmitting ? (
                       <>

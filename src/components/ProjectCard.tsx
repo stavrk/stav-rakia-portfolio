@@ -39,7 +39,7 @@ const ProjectCard = ({
               alt={title}
               loading="lazy" 
               className={cn(
-                "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105", 
+                "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105 max-h-[350px]", 
                 comingSoon && "opacity-80"
               )}
             />
