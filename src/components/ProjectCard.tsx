@@ -21,12 +21,11 @@ const ProjectCard = ({
   tags, 
   slug, 
   index,
-  comingSoon = false,
-  link
+  comingSoon = false
 }: ProjectCardProps) => {
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-md will-change-transform h-full flex flex-col"
+      className="group relative overflow-hidden rounded-xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-md will-change-transform"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: Math.min(index * 0.1, 0.3) + 0.2, duration: 0.4 }}
@@ -34,12 +33,7 @@ const ProjectCard = ({
     >      
       <div className="relative">
         <div className="overflow-hidden rounded-t-xl aspect-video">
-          <a 
-            href={comingSoon ? "#" : link || `/projects/${slug}`} 
-            className="block w-full h-full"
-            target={link ? "_blank" : undefined}
-            rel={link ? "noopener noreferrer" : undefined}
-          >
+          <a href={comingSoon ? "#" : `/projects/${slug}`} className="block w-full h-full">
             <img 
               src={image} 
               alt={title}
@@ -53,7 +47,7 @@ const ProjectCard = ({
         </div>
       </div>
       
-      <div className="p-4 flex-grow flex flex-col">
+      <div className="p-4">
         <h3 className="text-xl md:text-2xl font-medium mb-2">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
       </div>

@@ -58,7 +58,7 @@ const Process = () => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
             >
-              <div className="p-4 rounded-full bg-primary/10 text-primary mb-4 min-w-[60px] min-h-[60px] flex items-center justify-center">
+              <div className="p-4 rounded-full bg-primary/10 text-primary mb-4">
                 {step.icon}
               </div>
               <h3 className="text-xl font-medium mb-2">{step.title}</h3>
