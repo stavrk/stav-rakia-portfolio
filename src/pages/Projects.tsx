@@ -13,7 +13,7 @@ const projectsData = [
     tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#F4DB8B",
-    case: "We designed a comprehensive digital guide to simplify the overwhelming process of moving into a first apartment. Our team created user-centric workflow with interactive timeline, budget calculator, roommate agreement generator, and virtual room planner.",
+    case: "Interactive guide for simplified apartment moving for young adults.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
   },
@@ -24,7 +24,7 @@ const projectsData = [
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
     color: "#10B981",
-    case: "We designed a dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge.",
+    case: "Interactive game and content tool that turns lessons into Rapunzel-themed learning experiences.",
     comingSoon: false,
     link: "https://saverapunzel.telem-hit.net/GamesList"
   },
@@ -35,7 +35,7 @@ const projectsData = [
     tags: ["UX UI Design", "Speculative Design"],
     slug: "bip",
     color: "#8B5CF6",
-    case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
+    case: "Money transfer app designed for extraterrestrial users with unique needs.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
   },
@@ -46,7 +46,7 @@ const projectsData = [
     tags: ["UX UI Design", "Instructional Design"],
     slug: "studit",
     color: "#F59E0B",
-    case: "We designed an interactive, adaptive learning platform that makes preparing for the Israeli Psychometric Entrance Test less overwhelming and more engaging, with personalized study schedules and interactive practice questions.",
+    case: "AI-powered study companion for personalized test preparation.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
   },
@@ -57,7 +57,7 @@ const projectsData = [
     tags: ["Instructional Design"],
     slug: "plant-module",
     color: "#22C55E",
-    case: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
+    case: "Interactive experience to build confidence in houseplant care.",
     comingSoon: false,
     link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   },
@@ -67,7 +67,7 @@ const projectsData = [
     image: "/lovable-uploads/playtika-home.jpg",
     tags: ["Instructional Design"],
     color: "#D946EF",
-    case: "We're creating an interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process. Our custom e-learning solution will equip managers with the tools, knowledge, and resources to effectively introduce team members to company policies, systems, and culture in an engaging and efficient manner.",
+    case: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
     comingSoon: true
   }
 ];
@@ -107,10 +107,10 @@ const Projects = () => {
             {categories.map((category, index) => (
               <motion.button
                 key={category}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all border ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === category 
                     ? "bg-primary text-primary-foreground border-primary" 
-                    : "bg-white text-primary border-primary/40 hover:border-primary/80"
+                    : "bg-white text-primary border border-primary hover:bg-primary/5"
                 }`}
                 onClick={() => setSelectedCategory(category)}
                 initial={{ opacity: 0, y: 10 }}
@@ -170,7 +170,7 @@ const Projects = () => {
                 </div>
                 
                 <div className="p-6">
-                  <p className="text-muted-foreground mb-4">{project.case || project.description}</p>
+                  <p className="text-muted-foreground mb-4">{project.description}</p>
                   {project.comingSoon ? (
                     <span 
                       className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary font-medium cursor-default opacity-75"

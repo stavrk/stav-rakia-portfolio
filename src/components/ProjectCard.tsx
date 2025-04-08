@@ -53,9 +53,9 @@ const ProjectCard = ({
       <div className="p-6 flex flex-col h-full">
         <h3 className="text-xl md:text-2xl font-medium mb-2">{title}</h3>
         
-        <p className="text-muted-foreground mb-6 flex-grow">{description}</p>
+        <p className="text-muted-foreground mb-4">{description}</p>
         
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mt-auto">
           {comingSoon ? (
             <motion.span
               className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary font-medium"

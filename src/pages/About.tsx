@@ -128,7 +128,7 @@ const About = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-secondary/50">
         <div className="container">
           <motion.div 
             className="mb-12 text-center" 
@@ -172,7 +172,7 @@ const About = () => {
       
       <Skills />
       
-      <section className="py-20 bg-secondary">
+      <section className="py-20 bg-secondary/50">
         <div className="container">
           <motion.div 
             className="mb-12 text-center" 
@@ -243,7 +243,7 @@ const About = () => {
         </div>
       </section>
       
-      <section className="py-20">
+      <section className="py-20 bg-secondary/50">
         <div className="container">
           <motion.div 
             className="mb-12 text-center" 
@@ -260,7 +260,7 @@ const About = () => {
           
           <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
             <motion.div 
-              className="p-6 rounded-xl bg-white border border-primary/20" 
+              className="p-6 rounded-xl bg-background border border-primary/20" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -272,7 +272,7 @@ const About = () => {
                 {artistsData.map((artist, i) => (
                   <motion.div 
                     key={i} 
-                    className="flex flex-col items-center p-3 rounded-lg bg-primary/10 text-foreground border border-primary/20" 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary/70 text-foreground border border-secondary" 
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -290,7 +290,7 @@ const About = () => {
             </motion.div>
             
             <motion.div 
-              className="p-6 rounded-xl bg-white border border-primary/20" 
+              className="p-6 rounded-xl bg-background border border-primary/20" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -304,7 +304,7 @@ const About = () => {
                 {hobbiesData.map((hobby, i) => (
                   <motion.div 
                     key={i} 
-                    className="flex flex-col items-center p-3 rounded-lg bg-primary/10 text-foreground border border-primary/20" 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary/70 text-foreground border border-secondary" 
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}

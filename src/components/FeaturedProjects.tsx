@@ -10,7 +10,8 @@ const projectsData = [
     tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
     color: "#a67c52",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
   },
   {
     title: "SAVE RAPUNZEL",
@@ -19,7 +20,8 @@ const projectsData = [
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
     color: "#10B981",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://saverapunzel.telem-hit.net/GamesList"
   },
   {
     title: "BIP",
@@ -28,7 +30,8 @@ const projectsData = [
     tags: ["UX UI Design", "Speculative Design"],
     slug: "bip",
     color: "#8B5CF6",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
   },
   {
     title: "STUDIT",
@@ -37,7 +40,8 @@ const projectsData = [
     tags: ["UX UI Design", "Instructional Design"],
     slug: "studit",
     color: "#F59E0B",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
   },
   {
     title: "PLANT LEARNING MODULE",
@@ -46,7 +50,8 @@ const projectsData = [
     tags: ["Instructional Design"],
     slug: "plant-module",
     color: "#22C55E",
-    comingSoon: false
+    comingSoon: false,
+    link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
   }
 ];
 
@@ -73,11 +78,12 @@ const FeaturedProjects = () => {
               title={project.title}
               description={project.description}
               image={project.image}
-              tags={project.tags}
+              tags={[]}
               slug={project.slug}
               color={project.color}
               index={index}
               comingSoon={project.comingSoon}
+              link={project.link}
             />
           ))}
         </div>

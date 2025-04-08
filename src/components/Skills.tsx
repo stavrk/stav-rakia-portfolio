@@ -90,7 +90,7 @@ const Skills = () => {
           {skillsCategories.map((category, index) => (
             <motion.div 
               key={index}
-              className="p-6 rounded-xl bg-primary/5 border border-primary/20"
+              className="p-6 rounded-xl bg-secondary border border-border"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
