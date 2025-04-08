@@ -19,12 +19,12 @@ const projectsData = [
   },
   {
     title: "SAVE RAPUNZEL",
-    description: "Interactive game and content tool that turns lessons into Rapunzel-themed learning experiences.",
+    description: "Interactive game and content tool that turns lessons into learning experiences.",
     image: "/lovable-uploads/save-repunzel-editor.png",
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
     color: "#10B981",
-    case: "Interactive game and content tool that turns lessons into Rapunzel-themed learning experiences.",
+    case: "Interactive game and content tool that turns lessons into learning experiences.",
     comingSoon: false,
     link: "https://saverapunzel.telem-hit.net/GamesList"
   },
@@ -173,7 +173,7 @@ const Projects = () => {
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   {project.comingSoon ? (
                     <span 
-                      className="inline-block px-5 py-2 rounded-full bg-white text-primary font-medium cursor-default border-2 border-primary"
+                      className="inline-block px-5 py-2 rounded-full bg-primary text-white font-medium cursor-default"
                     >
                       In Development
                     </span>
@@ -181,7 +181,7 @@ const Projects = () => {
                     <div className="flex flex-wrap gap-3">
                       <a 
                         href={`/projects/${project.slug}`} 
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px]"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px]"
                       >
                         View Case Study
                       </a>

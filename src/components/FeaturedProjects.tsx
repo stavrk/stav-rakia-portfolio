@@ -15,7 +15,7 @@ const projectsData = [
   },
   {
     title: "SAVE RAPUNZEL",
-    description: "Interactive game and content tool that turns lessons into Rapunzel-themed learning experiences.",
+    description: "Interactive game and content tool that turns lessons into learning experiences.",
     image: "/lovable-uploads/save-repunzel-editor.png",
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
@@ -84,6 +84,7 @@ const FeaturedProjects = () => {
               index={index}
               comingSoon={project.comingSoon}
               link={project.link}
+              showButtons={false}
             />
           ))}
         </div>

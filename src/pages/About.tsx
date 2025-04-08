@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -106,7 +107,7 @@ const About = () => {
                   href="https://www.linkedin.com/in/stav-rakia/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center px-6 py-3 rounded-full bg-white text-primary font-medium transition-all hover:translate-y-[-2px] hover:bg-primary/5 border-2 border-primary"
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px]"
                 >
                   <span className="mr-2">LinkedIn</span>
                   <ExternalLink className="h-4 w-4" />
@@ -128,7 +129,7 @@ const About = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-secondary/50">
+      <section className="py-20 bg-secondary/20">
         <div className="container">
           <motion.div 
             className="mb-12 text-center" 
@@ -172,7 +173,7 @@ const About = () => {
       
       <Skills />
       
-      <section className="py-20 bg-secondary/50">
+      <section className="py-20 bg-secondary/20">
         <div className="container">
           <motion.div 
             className="mb-12 text-center" 
@@ -189,7 +190,7 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <motion.div 
-              className="p-6 rounded-xl bg-background border border-primary/20 aspect-square flex flex-col" 
+              className="p-6 rounded-xl bg-background border border-primary/20" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -215,7 +216,7 @@ const About = () => {
             </motion.div>
             
             <motion.div 
-              className="p-6 rounded-xl bg-background border border-primary/20 aspect-square flex flex-col" 
+              className="p-6 rounded-xl bg-background border border-primary/20" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
@@ -243,7 +244,7 @@ const About = () => {
         </div>
       </section>
       
-      <section className="py-20">
+      <section className="py-20 bg-secondary/20">
         <div className="container">
           <motion.div 
             className="mb-12 text-center" 
@@ -272,7 +273,7 @@ const About = () => {
                 {artistsData.map((artist, i) => (
                   <motion.div 
                     key={i} 
-                    className="flex flex-col items-center p-3 rounded-lg bg-secondary/70 text-foreground border border-secondary" 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary/40 text-foreground border border-secondary/60" 
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
@@ -304,7 +305,7 @@ const About = () => {
                 {hobbiesData.map((hobby, i) => (
                   <motion.div 
                     key={i} 
-                    className="flex flex-col items-center p-3 rounded-lg bg-secondary/70 text-foreground border border-secondary" 
+                    className="flex flex-col items-center p-3 rounded-lg bg-secondary/40 text-foreground border border-secondary/60" 
                     initial={{ opacity: 0, x: -10 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}

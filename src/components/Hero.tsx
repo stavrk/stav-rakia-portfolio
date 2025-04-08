@@ -44,7 +44,7 @@ const Hero = () => {
         >
           <a 
             href="/projects" 
-            className="inline-block w-40 px-6 py-3 rounded-full bg-white text-primary font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg border-2 border-primary"
+            className="inline-block w-40 px-6 py-3 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] hover:shadow-lg"
           >
             View Projects
           </a>
