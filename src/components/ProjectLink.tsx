@@ -1,14 +1,46 @@
 
 import { ExternalLink } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 interface ProjectLinkProps {
-  href: string;
+  href?: string;
   className?: string;
   children?: React.ReactNode;
+  title?: string;
+  slug?: string;
+  image?: string;
 }
 
-const ProjectLink = ({ href, className, children }: ProjectLinkProps) => {
+const ProjectLink = ({ href, className, children, title, slug, image }: ProjectLinkProps) => {
+  // If slug is provided, use it to create a link to the project
+  if (slug) {
+    return (
+      <Link 
+        to={`/projects/${slug}`}
+        className="block"
+      >
+        <div className="group overflow-hidden rounded-lg border border-border/40 transition-all hover:translate-y-[-5px]">
+          {image && (
+            <div className="aspect-video overflow-hidden">
+              <img 
+                src={image} 
+                alt={title || ''} 
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+          )}
+          {title && (
+            <div className="p-4">
+              <h3 className="font-medium text-lg">{title}</h3>
+            </div>
+          )}
+        </div>
+      </Link>
+    );
+  }
+
+  // Default external link behavior
   return (
     <a
       href={href}

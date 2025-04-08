@@ -187,8 +187,8 @@ const ProjectDetail = () => {
                       .map((relatedProject, index) => (
                         <ProjectLink 
                           key={index}
-                          title={relatedProject.title}
                           slug={relatedProject.slug}
+                          title={relatedProject.title}
                           image={relatedProject.image}
                         />
                       ))}
