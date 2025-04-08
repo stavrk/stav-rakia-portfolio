@@ -107,10 +107,10 @@ const Projects = () => {
             {categories.map((category, index) => (
               <motion.button
                 key={category}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all border ${
                   selectedCategory === category 
-                    ? "bg-primary text-primary-foreground" 
-                    : "bg-primary/10 text-primary hover:bg-primary/20"
+                    ? "bg-primary text-primary-foreground border-primary" 
+                    : "bg-white text-primary border-primary/40 hover:border-primary/80"
                 }`}
                 onClick={() => setSelectedCategory(category)}
                 initial={{ opacity: 0, y: 10 }}
