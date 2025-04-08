@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowLeft, ChevronDown, Alien, Bug, FlaskConical, Code, Lightbulb } from 'lucide-react';
+import { ArrowLeft, ChevronDown, Bug, FlaskConical, Code, Lightbulb } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
 
 const projectsData = [{
@@ -880,7 +880,7 @@ const ProjectDetail = () => {
                   <div className="ml-6 space-y-6">
                     <div className="flex items-start gap-4">
                       <div className="flex-shrink-0 mt-1">
-                        <Alien className="h-6 w-6" style={{ color: project.color }} />
+                        <Bug className="h-6 w-6" style={{ color: project.color }} />
                       </div>
                       <div>
                         <p className="font-medium mb-2">User Testing Limitations:</p>
