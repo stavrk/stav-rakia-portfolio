@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowLeft, ChevronDown, Bug, FlaskConical, Code, Lightbulb } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
 
 const projectsData = [{
@@ -631,7 +631,7 @@ const ProjectDetail = () => {
                   </div>
                 </motion.div>
 
-                {/* Technical & Development Challenges Section - UPDATED WITH ICONS */}
+                {/* Technical & Development Challenges Section - UPDATED LIST FORMAT */}
                 <motion.div 
                   className="mb-16" 
                   initial={{ opacity: 0, y: 20 }}
@@ -645,44 +645,24 @@ const ProjectDetail = () => {
                     <p className="text-muted-foreground">We overcame several key challenges:</p>
                     
                     <div className="ml-6 space-y-6">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 mt-1">
-                          <Code className="h-6 w-6" style={{ color: project.color }} />
-                        </div>
-                        <div>
-                          <p className="font-medium mb-2">Content Creation System:</p>
-                          <p className="text-muted-foreground">Designed an intuitive editor for non-technical educators through card-sorting exercises that informed a template-based approach with progressive customization.</p>
-                        </div>
+                      <div>
+                        <p className="font-medium mb-2">Content Creation System:</p>
+                        <p className="text-muted-foreground">Designed an intuitive editor for non-technical educators through card-sorting exercises that informed a template-based approach with progressive customization.</p>
                       </div>
                       
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 mt-1">
-                          <Bug className="h-6 w-6" style={{ color: project.color }} />
-                        </div>
-                        <div>
-                          <p className="font-medium mb-2">Hebrew Interface Complexities:</p>
-                          <p className="text-muted-foreground">Built a custom solution for right-to-left text, number reversal, and alignment of English within Hebrew sentences—greatly improving usability.</p>
-                        </div>
+                      <div>
+                        <p className="font-medium mb-2">Hebrew Interface Complexities:</p>
+                        <p className="text-muted-foreground">Built a custom solution for right-to-left text, number reversal, and alignment of English within Hebrew sentences—greatly improving usability.</p>
                       </div>
                       
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 mt-1">
-                          <Lightbulb className="h-6 w-6" style={{ color: project.color }} />
-                        </div>
-                        <div>
-                          <p className="font-medium mb-2">Balancing Engagement with Focus:</p>
-                          <p className="text-muted-foreground">After early prototypes showed students were distracted by animations, we added a "focus mode" that simplifies visuals during active learning moments.</p>
-                        </div>
+                      <div>
+                        <p className="font-medium mb-2">Balancing Engagement with Focus:</p>
+                        <p className="text-muted-foreground">After early prototypes showed students were distracted by animations, we added a "focus mode" that simplifies visuals during active learning moments.</p>
                       </div>
                       
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0 mt-1">
-                          <FlaskConical className="h-6 w-6" style={{ color: project.color }} />
-                        </div>
-                        <div>
-                          <p className="font-medium mb-2">Workflow Management:</p>
-                          <p className="text-muted-foreground">Established robust file versioning and backup protocols. These proved essential when partial code loss occurred, enabling full recovery without delays.</p>
-                        </div>
+                      <div>
+                        <p className="font-medium mb-2">Workflow Management:</p>
+                        <p className="text-muted-foreground">Established robust file versioning and backup protocols. These proved essential when partial code loss occurred, enabling full recovery without delays.</p>
                       </div>
                     </div>
                     
@@ -861,7 +841,7 @@ const ProjectDetail = () => {
               </motion.div>
             )}
             
-            {/* Technical & Development Challenges Section - For BIP - UPDATED WITH ICONS */}
+            {/* Technical & Development Challenges Section - For BIP */}
             {project.slug === 'bip' && !project.challengesAndSolutions && (
               <motion.div 
                 className="mb-16" 
@@ -878,44 +858,24 @@ const ProjectDetail = () => {
                   </p>
                   
                   <div className="ml-6 space-y-6">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <Bug className="h-6 w-6" style={{ color: project.color }} />
-                      </div>
-                      <div>
-                        <p className="font-medium mb-2">User Testing Limitations:</p>
-                        <p className="text-muted-foreground">In the absence of direct alien testing, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters.</p>
-                      </div>
+                    <div>
+                      <p className="font-medium mb-2">User Testing Limitations:</p>
+                      <p className="text-muted-foreground">In the absence of direct alien testing, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters.</p>
                     </div>
                     
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <FlaskConical className="h-6 w-6" style={{ color: project.color }} />
-                      </div>
-                      <div>
-                        <p className="font-medium mb-2">Security Verification:</p>
-                        <p className="text-muted-foreground">We developed a specialized facial recognition system for alien morphologies, using animated positioning guides that balance security with accessibility.</p>
-                      </div>
+                    <div>
+                      <p className="font-medium mb-2">Security Verification:</p>
+                      <p className="text-muted-foreground">We developed a specialized facial recognition system for alien morphologies, using animated positioning guides that balance security with accessibility.</p>
                     </div>
                     
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <Lightbulb className="h-6 w-6" style={{ color: project.color }} />
-                      </div>
-                      <div>
-                        <p className="font-medium mb-2">Visual Adaptation:</p>
-                        <p className="text-muted-foreground">The interface required complete reimagining for alien perception while maintaining essential financial functionality.</p>
-                      </div>
+                    <div>
+                      <p className="font-medium mb-2">Visual Adaptation:</p>
+                      <p className="text-muted-foreground">The interface required complete reimagining for alien perception while maintaining essential financial functionality.</p>
                     </div>
                     
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0 mt-1">
-                        <Code className="h-6 w-6" style={{ color: project.color }} />
-                      </div>
-                      <div>
-                        <p className="font-medium mb-2">Usability Balance:</p>
-                        <p className="text-muted-foreground">We preserved recognizable patterns from human financial apps while introducing novel interactions tailored to alien cognitive processes.</p>
-                      </div>
+                    <div>
+                      <p className="font-medium mb-2">Usability Balance:</p>
+                      <p className="text-muted-foreground">We preserved recognizable patterns from human financial apps while introducing novel interactions tailored to alien cognitive processes.</p>
                     </div>
                   </div>
                 </div>
