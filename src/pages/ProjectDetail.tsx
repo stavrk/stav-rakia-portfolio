@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -413,4 +414,27 @@ const ProjectDetail = () => {
                 transition={{ duration: 0.5 }}
               >
                 <h2 className="text-2xl font-medium mb-6">{project.wireflowDetails.title}</h2>
-                <div className="prose prose-
+                <div className="prose prose-lg max-w-none mb-8">
+                  <p className="text-muted-foreground">{project.wireflowDetails.description}</p>
+                </div>
+                
+                <div className="rounded-xl overflow-hidden border border-border/40 mt-6">
+                  <img 
+                    src={project.wireflowDetails.image} 
+                    alt="Wireflow" 
+                    className="w-full h-auto"
+                  />
+                </div>
+              </motion.div>
+            )}
+            
+            {/* Additional content sections would go here */}
+            
+          </div>
+        </div>
+      </section>
+    </Layout>
+  );
+};
+
+export default ProjectDetail;
