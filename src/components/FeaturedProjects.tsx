@@ -5,7 +5,7 @@ import ProjectCard from './ProjectCard';
 const projectsData = [
   {
     title: "ROOMIE",
-    description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
+    description: "Interactive guide for simplified apartment moving for young adults.",
     image: "/lovable-uploads/roomie-home-page.png",
     tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
@@ -14,7 +14,7 @@ const projectsData = [
   },
   {
     title: "SAVE RAPUNZEL",
-    description: "An educational platform with a game for students and a content creation tool for educators built around the classic fairy tale.",
+    description: "Educational platform combining storytelling and game-based learning for students.",
     image: "/lovable-uploads/save-repunzel-editor.png",
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
@@ -23,7 +23,7 @@ const projectsData = [
   },
   {
     title: "BIP",
-    description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
+    description: "Money transfer app designed for extraterrestrial users with unique needs.",
     image: "/lovable-uploads/bip-lots-of-iphones.png",
     tags: ["UX UI Design", "Speculative Design"],
     slug: "bip",
@@ -32,7 +32,7 @@ const projectsData = [
   },
   {
     title: "STUDIT",
-    description: "An AI-powered study companion for Israeli Psychometric Entrance Test preparation with personalized study plans.",
+    description: "AI-powered study companion for personalized test preparation.",
     image: "/lovable-uploads/studit-home-page.png",
     tags: ["UX UI Design", "Instructional Design"],
     slug: "studit",
@@ -41,7 +41,7 @@ const projectsData = [
   },
   {
     title: "PLANT LEARNING MODULE",
-    description: "An interactive experience designed to build confidence in houseplant care by providing clear, accessible information.",
+    description: "Interactive experience to build confidence in houseplant care.",
     image: "/lovable-uploads/plant-first-page.png",
     tags: ["Instructional Design"],
     slug: "plant-module",

@@ -70,7 +70,9 @@
 
 @layer components {
   .hero-text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-500;
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #8B5CF6, #6E44FF, #A380FF, #8B5CF6);
+    background-size: 200% 100%;
   }
   
   .glass-panel {

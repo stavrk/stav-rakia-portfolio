@@ -22,17 +22,17 @@ const Footer = () => {
             <h3 className="text-lg font-medium mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link to="/projects" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   About
                 </Link>
               </li>
@@ -44,7 +44,7 @@ const Footer = () => {
             <div className="flex space-x-4">
               <motion.a 
                 href="mailto:stavsim282@gmail.com" 
-                className="p-2 rounded-full hover:bg-secondary transition-colors"
+                className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Email"
@@ -55,7 +55,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/in/stav-rakia/" 
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2 rounded-full hover:bg-secondary transition-colors"
+                className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="LinkedIn"
@@ -72,7 +72,7 @@ const Footer = () => {
           </p>
           <Link 
             to="/about" 
-            className="text-xs text-muted-foreground hover:text-foreground flex items-center gap-1 transition-colors"
+            className="text-xs text-primary hover:text-primary/80 flex items-center gap-1 transition-colors"
           >
             Get in touch <ExternalLink className="h-3 w-3" />
           </Link>

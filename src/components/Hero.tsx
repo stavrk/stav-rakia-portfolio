@@ -12,7 +12,17 @@ const Hero = () => {
         className="max-w-4xl mx-auto"
       >
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-medium mb-6 tracking-tight">
-          <span className="hero-text-gradient">Stav Rakia</span>
+          <motion.span 
+            className="hero-text-gradient"
+            initial={{ backgroundPosition: "0%" }}
+            animate={{ backgroundPosition: ["0%", "100%", "0%"] }}
+            transition={{ 
+              duration: 10, 
+              repeat: Infinity, 
+              repeatType: "loop", 
+              ease: "linear"
+            }}
+          >Stav Rakia</motion.span>
           <br /> UX UI Designer
         </h1>
         
@@ -40,7 +50,7 @@ const Hero = () => {
           </a>
           <a 
             href="/about" 
-            className="inline-block px-6 py-3 rounded-full bg-secondary text-secondary-foreground font-medium transition-all hover:translate-y-[-2px]"
+            className="inline-block px-6 py-3 rounded-full bg-primary/20 text-primary font-medium transition-all hover:bg-primary/30 hover:translate-y-[-2px]"
           >
             About Me
           </a>
@@ -61,7 +71,7 @@ const Hero = () => {
       >
         <a 
           href="#featured-projects" 
-          className="inline-flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors"
+          className="inline-flex flex-col items-center text-primary hover:text-primary/80 transition-colors"
         >
           <span className="text-sm mb-2">Scroll to explore</span>
           <ArrowDown className="h-4 w-4" />
