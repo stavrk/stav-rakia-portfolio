@@ -44,13 +44,13 @@ const Hero = () => {
         >
           <a 
             href="/projects" 
-            className="inline-block w-40 px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
+            className="inline-block w-40 px-6 py-3 rounded-full bg-white text-primary font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg border-2 border-primary"
           >
             View Projects
           </a>
           <a 
             href="/about" 
-            className="inline-block w-40 px-6 py-3 rounded-full bg-primary/20 text-primary font-medium transition-all hover:bg-primary/30 hover:translate-y-[-2px]"
+            className="inline-block w-40 px-6 py-3 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px]"
           >
             About Me
           </a>
@@ -71,7 +71,7 @@ const Hero = () => {
       >
         <a 
           href="#featured-projects" 
-          className="inline-flex flex-col items-center text-primary hover:text-primary/80 transition-colors"
+          className="inline-flex flex-col items-center text-muted-foreground hover:text-muted-foreground/80 transition-colors"
         >
           <span className="text-sm mb-2">Scroll to explore</span>
           <ArrowDown className="h-4 w-4" />

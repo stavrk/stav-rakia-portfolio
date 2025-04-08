@@ -110,7 +110,7 @@ const Projects = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === category 
                     ? "bg-primary text-primary-foreground border-primary" 
-                    : "bg-white text-primary border border-primary hover:bg-primary/5"
+                    : "bg-white text-primary border-2 border-primary hover:bg-primary/5"
                 }`}
                 onClick={() => setSelectedCategory(category)}
                 initial={{ opacity: 0, y: 10 }}
@@ -173,7 +173,7 @@ const Projects = () => {
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   {project.comingSoon ? (
                     <span 
-                      className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary font-medium cursor-default opacity-75"
+                      className="inline-block px-5 py-2 rounded-full bg-white text-primary font-medium cursor-default border-2 border-primary"
                     >
                       In Development
                     </span>
@@ -181,7 +181,7 @@ const Projects = () => {
                     <div className="flex flex-wrap gap-3">
                       <a 
                         href={`/projects/${project.slug}`} 
-                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-md"
+                        className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px]"
                       >
                         View Case Study
                       </a>

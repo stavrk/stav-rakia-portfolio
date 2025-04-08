@@ -106,7 +106,7 @@ const About = () => {
                   href="https://www.linkedin.com/in/stav-rakia/" 
                   target="_blank" 
                   rel="noopener noreferrer" 
-                  className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 text-primary font-medium transition-all hover:translate-y-[-2px] hover:bg-primary/20"
+                  className="inline-flex items-center px-6 py-3 rounded-full bg-white text-primary font-medium transition-all hover:translate-y-[-2px] hover:bg-primary/5 border-2 border-primary"
                 >
                   <span className="mr-2">LinkedIn</span>
                   <ExternalLink className="h-4 w-4" />
@@ -243,7 +243,7 @@ const About = () => {
         </div>
       </section>
       
-      <section className="py-20 bg-secondary/50">
+      <section className="py-20">
         <div className="container">
           <motion.div 
             className="mb-12 text-center" 

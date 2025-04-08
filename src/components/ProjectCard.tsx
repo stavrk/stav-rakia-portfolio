@@ -50,15 +50,15 @@ const ProjectCard = ({
         </div>
       </div>
       
-      <div className="p-6 flex flex-col h-full">
+      <div className="p-6 flex flex-col">
         <h3 className="text-xl md:text-2xl font-medium mb-2">{title}</h3>
         
         <p className="text-muted-foreground mb-4">{description}</p>
         
-        <div className="flex justify-between items-center mt-auto">
+        <div className="flex justify-between items-center">
           {comingSoon ? (
             <motion.span
-              className="inline-block px-5 py-2 rounded-full bg-primary/10 text-primary font-medium"
+              className="inline-block px-5 py-2 rounded-full bg-white text-primary font-medium border-2 border-primary"
               whileHover={{ x: 5 }}
             >
               Coming Soon
@@ -66,7 +66,7 @@ const ProjectCard = ({
           ) : (
             <a 
               href={`/projects/${slug}`} 
-              className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:bg-primary/90 hover:scale-105 hover:shadow-md"
+              className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px]"
             >
               View Case Study
             </a>
