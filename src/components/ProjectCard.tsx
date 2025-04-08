@@ -12,7 +12,6 @@ interface ProjectCardProps {
   index: number;
   comingSoon?: boolean;
   link?: string;
-  showButtons?: boolean;
 }
 
 const ProjectCard = ({ 

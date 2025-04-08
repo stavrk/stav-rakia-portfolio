@@ -15,7 +15,7 @@ const projectsData = [
   },
   {
     title: "SAVE RAPUNZEL",
-    description: "Interactive game and content tool that turns lessons into learning experiences.",
+    description: "Interactive game and tool turning lessons into experiences.",
     image: "/lovable-uploads/save-repunzel-editor.png",
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",

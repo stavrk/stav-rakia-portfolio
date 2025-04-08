@@ -17,12 +17,12 @@ const projectsData = [
   },
   {
     title: "SAVE RAPUNZEL",
-    description: "Interactive game and content tool that turns lessons into learning experiences.",
+    description: "Interactive game and tool turning lessons into experiences.",
     image: "/lovable-uploads/save-repunzel-editor.png",
     tags: ["Instructional Design", "Game Design"],
     slug: "save-rapunzel",
     color: "#10B981",
-    case: "Interactive game and content tool that turns lessons into learning experiences.",
+    case: "Interactive game and tool turning lessons into experiences.",
     comingSoon: false,
     link: "https://saverapunzel.telem-hit.net/GamesList"
   },
@@ -152,16 +152,6 @@ const Projects = () => {
                       className={`w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 ${project.comingSoon ? 'opacity-80' : ''}`}
                     />
                     <div className="absolute bottom-0 left-0 z-20 p-6 w-full">
-                      <div className="flex flex-wrap gap-2 mb-2">
-                        {project.tags.map((tag, i) => (
-                          <span 
-                            key={i} 
-                            className="text-xs font-medium px-2.5 py-1 rounded-full bg-black/30 text-white backdrop-blur-sm"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
                       <h3 className="text-2xl font-medium text-white mb-1">{project.title}</h3>
                     </div>
                   </a>
