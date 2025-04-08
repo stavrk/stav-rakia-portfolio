@@ -83,8 +83,6 @@ const FeaturedProjects = () => {
               color={project.color}
               index={index}
               comingSoon={project.comingSoon}
-              link={project.link}
-              showButtons={false}
             />
           ))}
         </div>

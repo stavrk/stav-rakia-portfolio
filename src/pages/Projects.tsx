@@ -1,9 +1,7 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
-import ProjectLink from '@/components/ProjectLink';
 
 const projectsData = [
   {
@@ -110,7 +108,7 @@ const Projects = () => {
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
                   selectedCategory === category 
                     ? "bg-primary text-primary-foreground border-primary" 
-                    : "bg-white text-primary border-2 border-primary hover:bg-primary/5"
+                    : "bg-white text-primary border border-primary hover:bg-primary/5"
                 }`}
                 onClick={() => setSelectedCategory(category)}
                 initial={{ opacity: 0, y: 10 }}
@@ -173,7 +171,7 @@ const Projects = () => {
                   <p className="text-muted-foreground mb-4">{project.description}</p>
                   {project.comingSoon ? (
                     <span 
-                      className="inline-block px-5 py-2 rounded-full bg-primary text-white font-medium cursor-default"
+                      className="inline-block px-5 py-2 rounded-full bg-gray-200 text-gray-500 font-medium cursor-default"
                     >
                       In Development
                     </span>
@@ -185,9 +183,6 @@ const Projects = () => {
                       >
                         View Case Study
                       </a>
-                      {project.link && (
-                        <ProjectLink href={project.link} />
-                      )}
                     </div>
                   )}
                 </div>

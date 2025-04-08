@@ -1,7 +1,6 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import ProjectLink from './ProjectLink';
 
 interface ProjectCardProps {
   title: string;
@@ -23,9 +22,7 @@ const ProjectCard = ({
   tags, 
   slug, 
   index,
-  comingSoon = false,
-  link,
-  showButtons = true
+  comingSoon = false
 }: ProjectCardProps) => {
   return (
     <motion.div
@@ -51,34 +48,9 @@ const ProjectCard = ({
         </div>
       </div>
       
-      <div className="p-6 flex flex-col">
+      <div className="p-4">
         <h3 className="text-xl md:text-2xl font-medium mb-2">{title}</h3>
-        
-        <p className="text-muted-foreground mb-4">{description}</p>
-        
-        {showButtons && (
-          <div className="flex justify-between items-center">
-            {comingSoon ? (
-              <motion.span
-                className="inline-block px-5 py-2 rounded-full bg-primary text-white font-medium"
-                whileHover={{ x: 5 }}
-              >
-                Coming Soon
-              </motion.span>
-            ) : (
-              <a 
-                href={`/projects/${slug}`} 
-                className="inline-flex items-center justify-center px-5 py-2 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px]"
-              >
-                View Case Study
-              </a>
-            )}
-            
-            {!comingSoon && link && (
-              <ProjectLink href={link} />
-            )}
-          </div>
-        )}
+        <p className="text-muted-foreground">{description}</p>
       </div>
     </motion.div>
   );
