@@ -1,8 +1,9 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink, Lightbulb, Palette, Puzzle, Brain, Code, LineChart, Clock, LayoutPanelLeft, BarChart4, Sliders, Scale, SlidersHorizontal, Gauge, BrainCircuit, FlaskConical } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
 
 const projectsData = [{
@@ -571,7 +572,7 @@ const ProjectDetail = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                       >
-                        <img src="/lovable-uploads/save-repunzel-color-palette.png" alt="Color Palette" className="w-full object-cover h-64" />
+                        <img src="/lovable-uploads/save-repunzel-color-palette.png" alt="Color Palette" className="w-full object-cover h-64 md:h-64" />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">Color Palette</h4>
                           <p className="text-sm text-muted-foreground">Earthy, storybook-inspired color palette with deep blue, moss green, golden yellow, warm copper, and brick red.</p>
@@ -589,7 +590,7 @@ const ProjectDetail = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                       >
-                        <img src="/lovable-uploads/save-repunzel-font.png" alt="Typography" className="w-full object-cover h-64" />
+                        <img src="/lovable-uploads/save-repunzel-font.png" alt="Typography" className="w-full object-cover h-64 md:h-64" />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">Typography</h4>
                           <p className="text-sm text-muted-foreground">Rounded, playful Fredoka font with consistent sizing for optimal readability</p>
@@ -607,7 +608,7 @@ const ProjectDetail = () => {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2, duration: 0.5 }}
                       >
-                        <img src="/lovable-uploads/save-repunzel-interface.png" alt="Interface Elements" className="w-full object-cover h-[600px]" />
+                        <img src="/lovable-uploads/save-repunzel-interface.png" alt="Interface Elements" className="w-full object-cover h-[600px] md:h-[600px]" />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">Visual Elements</h4>
                           <p className="text-sm text-muted-foreground">Rounded, vibrant interface elements with consistent visual language</p>
@@ -645,24 +646,36 @@ const ProjectDetail = () => {
                     <p className="text-muted-foreground">We overcame several key challenges:</p>
                     
                     <div className="ml-6 space-y-6">
-                      <div>
-                        <p className="font-medium mb-2">Content Creation System:</p>
-                        <p className="text-muted-foreground">Designed an intuitive editor for non-technical educators through card-sorting exercises that informed a template-based approach with progressive customization.</p>
+                      <div className="flex items-start">
+                        <Code className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Content Creation System:</p>
+                          <p className="text-muted-foreground">Designed an intuitive editor for non-technical educators through card-sorting exercises that informed a template-based approach with progressive customization.</p>
+                        </div>
                       </div>
                       
-                      <div>
-                        <p className="font-medium mb-2">Hebrew Interface Complexities:</p>
-                        <p className="text-muted-foreground">Built a custom solution for right-to-left text, number reversal, and alignment of English within Hebrew sentences—greatly improving usability.</p>
+                      <div className="flex items-start">
+                        <LayoutPanelLeft className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Hebrew Interface Complexities:</p>
+                          <p className="text-muted-foreground">Built a custom solution for right-to-left text, number reversal, and alignment of English within Hebrew sentences—greatly improving usability.</p>
+                        </div>
                       </div>
                       
-                      <div>
-                        <p className="font-medium mb-2">Balancing Engagement with Focus:</p>
-                        <p className="text-muted-foreground">After early prototypes showed students were distracted by animations, we added a "focus mode" that simplifies visuals during active learning moments.</p>
+                      <div className="flex items-start">
+                        <Brain className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Balancing Engagement with Focus:</p>
+                          <p className="text-muted-foreground">After early prototypes showed students were distracted by animations, we added a "focus mode" that simplifies visuals during active learning moments.</p>
+                        </div>
                       </div>
                       
-                      <div>
-                        <p className="font-medium mb-2">Workflow Management:</p>
-                        <p className="text-muted-foreground">Established robust file versioning and backup protocols. These proved essential when partial code loss occurred, enabling full recovery without delays.</p>
+                      <div className="flex items-start">
+                        <LineChart className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Workflow Management:</p>
+                          <p className="text-muted-foreground">Established robust file versioning and backup protocols. These proved essential when partial code loss occurred, enabling full recovery without delays.</p>
+                        </div>
                       </div>
                     </div>
                     
@@ -744,7 +757,7 @@ const ProjectDetail = () => {
                           <img 
                             src={project.designImages[idx].image} 
                             alt={project.designImages[idx].title} 
-                            className={`w-full object-cover ${idx === 2 ? "h-[600px]" : "h-64"}`} 
+                            className={`w-full object-cover ${idx === 2 ? "h-[600px] md:h-[600px]" : "h-64 md:h-64"}`} 
                           />
                           <div className="p-4 bg-secondary/30">
                             <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
@@ -792,19 +805,28 @@ const ProjectDetail = () => {
                     <p className="text-muted-foreground">We overcame several key challenges:</p>
                     
                     <div className="ml-6 space-y-6">
-                      <div>
-                        <p className="font-medium mb-2">Balancing Interactivity with Academic Rigor:</p>
-                        <p className="text-muted-foreground">Multiple-choice felt flat, while full gamification risked losing credibility. We created custom interactions - like drag-and-drop and interactive maps - that kept users engaged without compromising learning goals.</p>
+                      <div className="flex items-start">
+                        <Puzzle className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Balancing Interactivity with Academic Rigor:</p>
+                          <p className="text-muted-foreground">Multiple-choice felt flat, while full gamification risked losing credibility. We created custom interactions - like drag-and-drop and interactive maps - that kept users engaged without compromising learning goals.</p>
+                        </div>
                       </div>
                       
-                      <div>
-                        <p className="font-medium mb-2">Building Trust in Scheduling:</p>
-                        <p className="text-muted-foreground">Users were skeptical of automated schedules. We made the process transparent and adjustable, refining it through five iterations to balance control with guidance.</p>
+                      <div className="flex items-start">
+                        <Scale className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Building Trust in Scheduling:</p>
+                          <p className="text-muted-foreground">Users were skeptical of automated schedules. We made the process transparent and adjustable, refining it through five iterations to balance control with guidance.</p>
+                        </div>
                       </div>
                       
-                      <div>
-                        <p className="font-medium mb-2">Reducing Wait-Time Frustration:</p>
-                        <p className="text-muted-foreground">We turned loading screens into moments of encouragement with animations and motivational cues. Color customization added a sense of ownership and personalization.</p>
+                      <div className="flex items-start">
+                        <Clock className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Reducing Wait-Time Frustration:</p>
+                          <p className="text-muted-foreground">We turned loading screens into moments of encouragement with animations and motivational cues. Color customization added a sense of ownership and personalization.</p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -813,23 +835,89 @@ const ProjectDetail = () => {
                     <p className="text-muted-foreground">We addressed two primary challenges:</p>
                     
                     <div className="ml-6 space-y-6">
-                      <div>
-                        <p className="font-medium mb-2">Balancing Rich Content with User Approachability:</p>
-                        <p className="text-muted-foreground">Initial feedback showed that detailed care instructions could overwhelm novice plant owners. To solve this, we:</p>
-                        <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
-                          <li>Designed a layered information system that starts with essentials and allows users to expand for more detail</li>
-                          <li>Marked beginner-friendly plants with visual cues</li>
-                          <li>Included calming, supportive messaging about common mistakes and how to recover from them</li>
-                        </ul>
+                      <div className="flex items-start">
+                        <SlidersHorizontal className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Balancing Rich Content with User Approachability:</p>
+                          <p className="text-muted-foreground">Initial feedback showed that detailed care instructions could overwhelm novice plant owners. To solve this, we:</p>
+                          <ul className="list-disc pl-6 space-y-2 text-muted-foreground">
+                            <li>Designed a layered information system that starts with essentials and allows users to expand for more detail</li>
+                            <li>Marked beginner-friendly plants with visual cues</li>
+                            <li>Included calming, supportive messaging about common mistakes and how to recover from them</li>
+                          </ul>
+                        </div>
                       </div>
                       
-                      <div>
-                        <p className="font-medium mb-2">Creating Meaningful Assessments:</p>
-                        <p className="text-muted-foreground">Rather than using simple recall questions, we designed scenario-based activities—like choosing the best location or watering schedule for a plant—that built real-world decision-making skills and increased user confidence.</p>
+                      <div className="flex items-start">
+                        <BarChart4 className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Creating Meaningful Assessments:</p>
+                          <p className="text-muted-foreground">Rather than using simple recall questions, we designed scenario-based activities—like choosing the best location or watering schedule for a plant—that built real-world decision-making skills and increased user confidence.</p>
+                        </div>
                       </div>
                     </div>
                     
                     <p className="text-muted-foreground">This project highlights my ability to turn complex instructional material into an engaging, approachable experience tailored to users' needs and learning goals.</p>
+                  </div>
+                ) : project.slug === 'roomie' ? (
+                  <div className="prose prose-lg max-w-none space-y-4">
+                    <p className="text-muted-foreground">We faced several significant challenges:</p>
+                    
+                    <div className="ml-6 space-y-6">
+                      <div className="flex items-start">
+                        <Palette className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Visual Design for Emotional Support:</p>
+                          <p className="text-muted-foreground">Creating a visual language that balanced practicality with emotional support was challenging. We developed a warm, calming color palette and rounded design system that provides a sense of stability during a chaotic transition.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <BrainCircuit className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Progressive Information Disclosure:</p>
+                          <p className="text-muted-foreground">Users felt overwhelmed seeing all moving tasks simultaneously. We implemented a progressive disclosure system that reveals tasks based on timeline relevance, with a customizable view option for those who prefer seeing the complete picture.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <Lightbulb className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Legal Documentation Accessibility:</p>
+                          <p className="text-muted-foreground">The roommate agreement generator needed to create legally sound templates while remaining accessible to young adults with no legal background. We collaborated with legal consultants and conducted simplification testing for clarity.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ) : project.slug === 'bip' ? (
+                  <div className="prose prose-lg max-w-none space-y-4">
+                    <p className="text-muted-foreground">We tackled several unique challenges:</p>
+                    
+                    <div className="ml-6 space-y-6">
+                      <div className="flex items-start">
+                        <FlaskConical className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Alien Perception Adaptation:</p>
+                          <p className="text-muted-foreground">Standard design principles needed radical adaptation for non-human visual processing. We developed high-contrast interfaces with redundant feedback mechanisms tailored to extraterrestrial perception.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <Gauge className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Balancing Familiarity and Innovation:</p>
+                          <p className="text-muted-foreground">We needed to maintain some recognizable patterns from human financial apps while introducing novel interactions suited to alien cognitive processes—a delicate balance of familiarity and specialized design.</p>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start">
+                        <Sliders className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <div>
+                          <p className="font-medium mb-2">Testing Limitations:</p>
+                          <p className="text-muted-foreground">Without direct alien testers, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters through simulated testing scenarios.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 ) : (
                   <div className="prose prose-lg max-w-none">
@@ -858,24 +946,36 @@ const ProjectDetail = () => {
                   </p>
                   
                   <div className="ml-6 space-y-6">
-                    <div>
-                      <p className="font-medium mb-2">User Testing Limitations:</p>
-                      <p className="text-muted-foreground">In the absence of direct alien testing, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters.</p>
+                    <div className="flex items-start">
+                      <LineChart className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-medium mb-2">User Testing Limitations:</p>
+                        <p className="text-muted-foreground">In the absence of direct alien testing, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters.</p>
+                      </div>
                     </div>
                     
-                    <div>
-                      <p className="font-medium mb-2">Security Verification:</p>
-                      <p className="text-muted-foreground">We developed a specialized facial recognition system for alien morphologies, using animated positioning guides that balance security with accessibility.</p>
+                    <div className="flex items-start">
+                      <Code className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-medium mb-2">Security Verification:</p>
+                        <p className="text-muted-foreground">We developed a specialized facial recognition system for alien morphologies, using animated positioning guides that balance security with accessibility.</p>
+                      </div>
                     </div>
                     
-                    <div>
-                      <p className="font-medium mb-2">Visual Adaptation:</p>
-                      <p className="text-muted-foreground">The interface required complete reimagining for alien perception while maintaining essential financial functionality.</p>
+                    <div className="flex items-start">
+                      <Palette className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-medium mb-2">Visual Adaptation:</p>
+                        <p className="text-muted-foreground">The interface required complete reimagining for alien perception while maintaining essential financial functionality.</p>
+                      </div>
                     </div>
                     
-                    <div>
-                      <p className="font-medium mb-2">Usability Balance:</p>
-                      <p className="text-muted-foreground">We preserved recognizable patterns from human financial apps while introducing novel interactions tailored to alien cognitive processes.</p>
+                    <div className="flex items-start">
+                      <Brain className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <div>
+                        <p className="font-medium mb-2">Usability Balance:</p>
+                        <p className="text-muted-foreground">We preserved recognizable patterns from human financial apps while introducing novel interactions tailored to alien cognitive processes.</p>
+                      </div>
                     </div>
                   </div>
                 </div>
