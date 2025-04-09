@@ -647,7 +647,7 @@ const ProjectDetail = () => {
                     
                     <div className="ml-6 space-y-6">
                       <div className="flex items-start">
-                        <Code className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Code className="h-5 w-5 mr-3 text-[#10B981] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Content Creation System:</p>
                           <p className="text-muted-foreground">Designed an intuitive editor for non-technical educators through card-sorting exercises that informed a template-based approach with progressive customization.</p>
@@ -655,7 +655,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <LayoutPanelLeft className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <LayoutPanelLeft className="h-5 w-5 mr-3 text-[#10B981] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Hebrew Interface Complexities:</p>
                           <p className="text-muted-foreground">Built a custom solution for right-to-left text, number reversal, and alignment of English within Hebrew sentences—greatly improving usability.</p>
@@ -663,15 +663,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <Brain className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
-                        <div>
-                          <p className="font-medium mb-2">Balancing Engagement with Focus:</p>
-                          <p className="text-muted-foreground">After early prototypes showed students were distracted by animations, we added a "focus mode" that simplifies visuals during active learning moments.</p>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start">
-                        <LineChart className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <LineChart className="h-5 w-5 mr-3 text-[#10B981] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Workflow Management:</p>
                           <p className="text-muted-foreground">Established robust file versioning and backup protocols. These proved essential when partial code loss occurred, enabling full recovery without delays.</p>
@@ -806,7 +798,7 @@ const ProjectDetail = () => {
                     
                     <div className="ml-6 space-y-6">
                       <div className="flex items-start">
-                        <Puzzle className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Puzzle className="h-5 w-5 mr-3 text-[#F59E0B] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Balancing Interactivity with Academic Rigor:</p>
                           <p className="text-muted-foreground">Multiple-choice felt flat, while full gamification risked losing credibility. We created custom interactions - like drag-and-drop and interactive maps - that kept users engaged without compromising learning goals.</p>
@@ -814,7 +806,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <Scale className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Scale className="h-5 w-5 mr-3 text-[#F59E0B] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Building Trust in Scheduling:</p>
                           <p className="text-muted-foreground">Users were skeptical of automated schedules. We made the process transparent and adjustable, refining it through five iterations to balance control with guidance.</p>
@@ -822,7 +814,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <Clock className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Clock className="h-5 w-5 mr-3 text-[#F59E0B] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Reducing Wait-Time Frustration:</p>
                           <p className="text-muted-foreground">We turned loading screens into moments of encouragement with animations and motivational cues. Color customization added a sense of ownership and personalization.</p>
@@ -836,7 +828,7 @@ const ProjectDetail = () => {
                     
                     <div className="ml-6 space-y-6">
                       <div className="flex items-start">
-                        <SlidersHorizontal className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <SlidersHorizontal className="h-5 w-5 mr-3 text-[#22C55E] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Balancing Rich Content with User Approachability:</p>
                           <p className="text-muted-foreground">Initial feedback showed that detailed care instructions could overwhelm novice plant owners. To solve this, we:</p>
@@ -849,7 +841,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <BarChart4 className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <BarChart4 className="h-5 w-5 mr-3 text-[#22C55E] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Creating Meaningful Assessments:</p>
                           <p className="text-muted-foreground">Rather than using simple recall questions, we designed scenario-based activities—like choosing the best location or watering schedule for a plant—that built real-world decision-making skills and increased user confidence.</p>
@@ -865,7 +857,7 @@ const ProjectDetail = () => {
                     
                     <div className="ml-6 space-y-6">
                       <div className="flex items-start">
-                        <Palette className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Palette className="h-5 w-5 mr-3 text-[#F4DB8B] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Visual Design for Emotional Support:</p>
                           <p className="text-muted-foreground">Creating a visual language that balanced practicality with emotional support was challenging. We developed a warm, calming color palette and rounded design system that provides a sense of stability during a chaotic transition.</p>
@@ -873,7 +865,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <BrainCircuit className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <BrainCircuit className="h-5 w-5 mr-3 text-[#F4DB8B] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Progressive Information Disclosure:</p>
                           <p className="text-muted-foreground">Users felt overwhelmed seeing all moving tasks simultaneously. We implemented a progressive disclosure system that reveals tasks based on timeline relevance, with a customizable view option for those who prefer seeing the complete picture.</p>
@@ -881,10 +873,10 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <Lightbulb className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Lightbulb className="h-5 w-5 mr-3 text-[#F4DB8B] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Legal Documentation Accessibility:</p>
-                          <p className="text-muted-foreground">The roommate agreement generator needed to create legally sound templates while remaining accessible to young adults with no legal background. We collaborated with legal consultants and conducted simplification testing for clarity.</p>
+                          <p className="text-muted-foreground">The roommate agreement generator needed to create legally sound templates while remaining accessible to young adults with no legal background.</p>
                         </div>
                       </div>
                     </div>
@@ -895,7 +887,7 @@ const ProjectDetail = () => {
                     
                     <div className="ml-6 space-y-6">
                       <div className="flex items-start">
-                        <FlaskConical className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <FlaskConical className="h-5 w-5 mr-3 text-[#8B5CF6] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Alien Perception Adaptation:</p>
                           <p className="text-muted-foreground">Standard design principles needed radical adaptation for non-human visual processing. We developed high-contrast interfaces with redundant feedback mechanisms tailored to extraterrestrial perception.</p>
@@ -903,7 +895,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <Gauge className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Gauge className="h-5 w-5 mr-3 text-[#8B5CF6] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Balancing Familiarity and Innovation:</p>
                           <p className="text-muted-foreground">We needed to maintain some recognizable patterns from human financial apps while introducing novel interactions suited to alien cognitive processes—a delicate balance of familiarity and specialized design.</p>
@@ -911,7 +903,7 @@ const ProjectDetail = () => {
                       </div>
                       
                       <div className="flex items-start">
-                        <Sliders className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                        <Sliders className="h-5 w-5 mr-3 text-[#8B5CF6] flex-shrink-0 mt-1" />
                         <div>
                           <p className="font-medium mb-2">Testing Limitations:</p>
                           <p className="text-muted-foreground">Without direct alien testers, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters through simulated testing scenarios.</p>
@@ -947,7 +939,7 @@ const ProjectDetail = () => {
                   
                   <div className="ml-6 space-y-6">
                     <div className="flex items-start">
-                      <LineChart className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <LineChart className="h-5 w-5 mr-3 text-[#8B5CF6] flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-medium mb-2">User Testing Limitations:</p>
                         <p className="text-muted-foreground">In the absence of direct alien testing, we created detailed extraterrestrial personas with specific perceptual constraints and validated designs against these parameters.</p>
@@ -955,7 +947,7 @@ const ProjectDetail = () => {
                     </div>
                     
                     <div className="flex items-start">
-                      <Code className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <Code className="h-5 w-5 mr-3 text-[#8B5CF6] flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-medium mb-2">Security Verification:</p>
                         <p className="text-muted-foreground">We developed a specialized facial recognition system for alien morphologies, using animated positioning guides that balance security with accessibility.</p>
@@ -963,7 +955,7 @@ const ProjectDetail = () => {
                     </div>
                     
                     <div className="flex items-start">
-                      <Palette className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <Palette className="h-5 w-5 mr-3 text-[#8B5CF6] flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-medium mb-2">Visual Adaptation:</p>
                         <p className="text-muted-foreground">The interface required complete reimagining for alien perception while maintaining essential financial functionality.</p>
@@ -971,7 +963,7 @@ const ProjectDetail = () => {
                     </div>
                     
                     <div className="flex items-start">
-                      <Brain className="h-5 w-5 mr-3 text-primary flex-shrink-0 mt-1" />
+                      <Brain className="h-5 w-5 mr-3 text-[#8B5CF6] flex-shrink-0 mt-1" />
                       <div>
                         <p className="font-medium mb-2">Usability Balance:</p>
                         <p className="text-muted-foreground">We preserved recognizable patterns from human financial apps while introducing novel interactions tailored to alien cognitive processes.</p>
@@ -1149,3 +1141,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+
