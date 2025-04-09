@@ -40,7 +40,7 @@ const ProjectCard = ({
               alt={title}
               loading="lazy" 
               className={cn(
-                "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105 max-h-[350px]", 
+                "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105", 
                 comingSoon && "opacity-80"
               )}
             />
@@ -49,8 +49,8 @@ const ProjectCard = ({
       </div>
       
       <div className="p-4">
-        <h3 className="text-gradient-title text-xl md:text-2xl font-medium mb-2">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
+        <h3 className="text-gradient-title text-xl md:text-2xl font-medium mb-2 leading-tight">{title}</h3>
+        <p className="text-muted-foreground text-sm sm:text-base">{description}</p>
       </div>
     </motion.div>
   );

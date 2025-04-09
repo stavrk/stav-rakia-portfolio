@@ -96,7 +96,7 @@ const Projects = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 className="section-title-gradient text-4xl md:text-5xl font-medium mb-4">My Projects</h1>
+            <h1 className="section-title-gradient text-4xl md:text-5xl font-medium mb-4 leading-tight md:leading-snug">My Projects</h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               A collection of my UX UI and Instructional design work.
             </p>
