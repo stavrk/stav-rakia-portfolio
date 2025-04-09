@@ -20,6 +20,7 @@ const ProjectCard = ({
   image, 
   tags, 
   slug, 
+  color = "#9b87f5", // Default to primary purple if no color is provided
   index,
   comingSoon = false
 }: ProjectCardProps) => {
