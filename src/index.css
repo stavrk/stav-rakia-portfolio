@@ -75,6 +75,18 @@
     background-size: 200% 100%;
   }
   
+  .text-gradient-title {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, rgba(0,0,0,0.8), rgba(0,0,0,1), rgba(0,0,0,0.8));
+    background-size: 200% 100%;
+  }
+  
+  .section-title-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(90deg, #6E44FF, #9b87f5, #6E44FF);
+    background-size: 200% 100%;
+  }
+  
   .glass-panel {
     @apply bg-white/80 backdrop-blur-lg border border-white/20 shadow-sm;
   }
@@ -152,4 +164,12 @@ a {
 /* Improved accessibility focus states */
 button, a, input, textarea, select {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
+}
+
+/* Responsive fixes */
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

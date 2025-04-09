@@ -41,12 +41,12 @@ const Layout = ({ children }: LayoutProps) => {
   };
 
   return (
-    <div className="relative min-h-screen flex flex-col noise-bg">
+    <div className="relative min-h-screen flex flex-col noise-bg overflow-hidden">
       <Navbar />
       <AnimatePresence mode="wait">
         <motion.main
           key={location.pathname}
-          className="flex-grow pt-16 md:pt-20 will-change-transform"
+          className="flex-grow pt-16 md:pt-20 will-change-transform w-full overflow-x-hidden"
           initial="initial"
           animate="animate"
           exit="exit"

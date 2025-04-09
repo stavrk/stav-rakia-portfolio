@@ -49,7 +49,7 @@ const ProjectCard = ({
       </div>
       
       <div className="p-4">
-        <h3 className="text-xl md:text-2xl font-medium mb-2">{title}</h3>
+        <h3 className="text-gradient-title text-xl md:text-2xl font-medium mb-2">{title}</h3>
         <p className="text-muted-foreground">{description}</p>
       </div>
     </motion.div>

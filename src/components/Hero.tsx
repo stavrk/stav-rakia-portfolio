@@ -37,20 +37,20 @@ const Hero = () => {
         </motion.p>
         
         <motion.div 
-          className="flex flex-col sm:flex-row gap-4 justify-center sm:justify-center items-start sm:items-center mx-auto"
+          className="flex flex-row gap-4 justify-center items-center mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <a 
             href="/projects" 
-            className="inline-block w-auto px-6 py-3 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] hover:shadow-lg self-start sm:self-auto"
+            className="inline-block px-5 py-2.5 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] hover:shadow-lg text-sm sm:text-base sm:px-6 sm:py-3"
           >
             View Projects
           </a>
           <a 
             href="/about" 
-            className="inline-block w-auto px-6 py-3 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px] self-start sm:self-auto"
+            className="inline-block px-5 py-2.5 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px] text-sm sm:text-base sm:px-6 sm:py-3"
           >
             About Me
           </a>
