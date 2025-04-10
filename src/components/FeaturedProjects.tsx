@@ -67,7 +67,7 @@ const FeaturedProjects = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
-          {projectsData.map((project, index) => (
+          {projectsData.slice(0, 4).map((project, index) => (
             <ProjectCard 
               key={project.slug}
               title={project.title}
@@ -80,6 +80,25 @@ const FeaturedProjects = () => {
               comingSoon={project.comingSoon}
             />
           ))}
+        </div>
+        
+        {/* Center the fifth project */}
+        <div className="mt-6 md:mt-8 flex justify-center">
+          <div className="w-full md:w-1/2 mx-auto">
+            {projectsData.slice(4, 5).map((project, index) => (
+              <ProjectCard 
+                key={project.slug}
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                slug={project.slug}
+                color={project.color}
+                index={index + 4}
+                comingSoon={project.comingSoon}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
