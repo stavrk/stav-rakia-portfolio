@@ -26,9 +26,6 @@ const ProjectCard = ({
   comingSoon = false,
   link
 }: ProjectCardProps) => {
-  // Determine the correct link to use
-  const projectLink = comingSoon ? "#" : (link || `/projects/${slug}`);
-  
   return (
     <motion.div
       className="group relative overflow-hidden rounded-xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-md will-change-transform cursor-pointer"
@@ -37,14 +34,8 @@ const ProjectCard = ({
       transition={{ delay: Math.min(index * 0.1, 0.3) + 0.2, duration: 0.4 }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
       onClick={() => {
-        if (projectLink !== "#") {
-          // If it's an external link
-          if (link && link.startsWith('http')) {
-            window.open(projectLink, '_blank');
-          } else {
-            // For internal links, let the Link component handle it
-            window.location.href = projectLink;
-          }
+        if (!comingSoon) {
+          window.location.href = `/projects/${slug}`;
         }
       }}
     >      
