@@ -78,11 +78,12 @@ const FeaturedProjects = () => {
               title={project.title}
               description={project.description}
               image={project.image}
-              tags={[]}
+              tags={project.tags}
               slug={project.slug}
               color={project.color}
               index={index}
               comingSoon={project.comingSoon}
+              link={project.link}
             />
           ))}
         </div>

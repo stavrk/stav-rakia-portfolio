@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
   title: string;
@@ -22,29 +23,42 @@ const ProjectCard = ({
   slug, 
   color = "#9b87f5", // Default to primary purple if no color is provided
   index,
-  comingSoon = false
+  comingSoon = false,
+  link
 }: ProjectCardProps) => {
+  // Determine the correct link to use
+  const projectLink = comingSoon ? "#" : (link || `/projects/${slug}`);
+  
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-md will-change-transform"
+      className="group relative overflow-hidden rounded-xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-md will-change-transform cursor-pointer"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: Math.min(index * 0.1, 0.3) + 0.2, duration: 0.4 }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
+      onClick={() => {
+        if (projectLink !== "#") {
+          // If it's an external link
+          if (link && link.startsWith('http')) {
+            window.open(projectLink, '_blank');
+          } else {
+            // For internal links, let the Link component handle it
+            window.location.href = projectLink;
+          }
+        }
+      }}
     >      
       <div className="relative">
         <div className="overflow-hidden rounded-t-xl aspect-video">
-          <a href={comingSoon ? "#" : `/projects/${slug}`} className="block w-full h-full">
-            <img 
-              src={image} 
-              alt={title}
-              loading="lazy" 
-              className={cn(
-                "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105", 
-                comingSoon && "opacity-80"
-              )}
-            />
-          </a>
+          <img 
+            src={image} 
+            alt={title}
+            loading="lazy" 
+            className={cn(
+              "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105", 
+              comingSoon && "opacity-80"
+            )}
+          />
         </div>
       </div>
       
