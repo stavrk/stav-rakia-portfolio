@@ -10,8 +10,45 @@ hideTagsStyle.textContent = `
   .project-detail-page .project-tags,
   .project-detail-page .tags-container,
   .project-page-header .badge,
-  .project-detail-header .badge {
+  .project-detail-header .badge,
+  /* Target any tag elements in project pages */
+  [class*="project"] .badge,
+  [class*="project-detail"] .badge,
+  /* Additional specific selectors */
+  .badge-container,
+  .tag-container,
+  .project-tags,
+  .tags,
+  /* Target by content */
+  [class*="tag"],
+  /* Hide UX UI and Instructional Design labels specifically */
+  .badge:contains("UX UI Design"),
+  .badge:contains("Instructional Design"),
+  /* Target any element that seems to be a tag */
+  div:has(> span:contains("UX/UI Design")),
+  div:has(> span:contains("Instructional Design")),
+  /* Target any paragraph or span that contains these texts */
+  p:contains("UX/UI Design"), 
+  span:contains("UX/UI Design"),
+  p:contains("Instructional Design"),
+  span:contains("Instructional Design"),
+  /* Add specific selectors that apply to project detail structure */
+  .project-detail-page [class*="tags"],
+  .project-detail-page [class*="badge"],
+  .project-detail-page [class*="tag"],
+  .project-detail-page div:has(> span:contains("UX/UI")),
+  .project-detail-page div:has(> span:contains("Instructional"))
+  {
     display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute !important;
+    pointer-events: none !important;
+    clip: rect(0, 0, 0, 0) !important;
+    overflow: hidden !important;
   }
 `;
 document.head.appendChild(hideTagsStyle);
