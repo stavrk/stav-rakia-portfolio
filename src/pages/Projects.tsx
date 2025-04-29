@@ -1,8 +1,7 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Clock } from "lucide-react";
+import { Clock, ArrowDown } from "lucide-react";
 
 // Add CSS to hide tag elements on project detail pages
 const hideTagsStyle = document.createElement('style');
@@ -205,6 +204,25 @@ const Projects = () => {
               </motion.div>
             ))}
           </div>
+          
+          {/* Scroll indicator */}
+          <motion.div 
+            className="flex justify-center mt-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ 
+              delay: 0.8, 
+              duration: 0.6,
+              repeat: Infinity,
+              repeatType: "reverse",
+              repeatDelay: 1
+            }}
+          >
+            <div className="inline-flex flex-col items-center text-muted-foreground hover:text-muted-foreground/80 transition-colors">
+              <span className="text-sm mb-2">Scroll to explore</span>
+              <ArrowDown className="h-4 w-4" />
+            </div>
+          </motion.div>
         </div>
       </section>
     </Layout>
