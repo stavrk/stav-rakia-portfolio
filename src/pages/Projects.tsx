@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -71,16 +70,9 @@ const projectsData = [
   }
 ];
 
-const categories = ["All", "UX UI Design", "Instructional Design", "Game Design", "Speculative Design"];
-
 const Projects = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  
-  const filteredProjects = selectedCategory === "All" 
-    ? projectsData 
-    : projectsData.filter(project => project.tags.includes(selectedCategory));
-  
-  const sortedProjects = [...filteredProjects].sort((a, b) => {
+  // Projects are now always displayed without filtering
+  const sortedProjects = [...projectsData].sort((a, b) => {
     if (a.comingSoon && !b.comingSoon) return 1;
     if (!a.comingSoon && b.comingSoon) return -1;
     return 0;
@@ -102,24 +94,7 @@ const Projects = () => {
             </p>
           </motion.div>
           
-          <div className="flex flex-wrap justify-center gap-2 mb-10 md:mb-12 px-2">
-            {categories.map((category, index) => (
-              <motion.button
-                key={category}
-                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium transition-all ${
-                  selectedCategory === category 
-                    ? "bg-primary text-primary-foreground border-primary" 
-                    : "bg-white text-primary border border-primary hover:bg-primary/5"
-                }`}
-                onClick={() => setSelectedCategory(category)}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.05 + 0.2, duration: 0.3 }}
-              >
-                {category}
-              </motion.button>
-            ))}
-          </div>
+          {/* Filter categories have been removed */}
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {sortedProjects.map((project, index) => (
