@@ -6,7 +6,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   image: string;
-  tags: string[]; // We'll keep this in the interface for compatibility but won't display them
+  tags: string[]; // We keep this in the interface for compatibility but won't display them
   slug: string;
   color?: string;
   index: number;

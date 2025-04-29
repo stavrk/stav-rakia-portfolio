@@ -1,7 +1,20 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { Clock } from "lucide-react";
+
+// Add CSS to hide tag elements on project detail pages
+const hideTagsStyle = document.createElement('style');
+hideTagsStyle.textContent = `
+  .project-detail-page .project-tags,
+  .project-detail-page .tags-container,
+  .project-page-header .badge,
+  .project-detail-header .badge {
+    display: none !important;
+  }
+`;
+document.head.appendChild(hideTagsStyle);
 
 const projectsData = [
   {
