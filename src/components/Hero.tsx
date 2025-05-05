@@ -26,14 +26,14 @@ const Hero = () => {
           <br /> UX UI Designer
         </h1>
         
-        <motion.p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-balance leading-relaxed" initial={{
+        <motion.p initial={{
         opacity: 0
       }} animate={{
         opacity: 1
       }} transition={{
         delay: 0.3,
         duration: 0.6
-      }}>I create intuitive, user-friendly interfaces — so people curse less and smile more</motion.p>
+      }} className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl text-balance leading-relaxed mx-0 px-0">I create intuitive, user-friendly interfaces - so people curse less and smile more</motion.p>
         
         <motion.div className="flex flex-row gap-4 justify-center items-center mx-auto" initial={{
         opacity: 0
