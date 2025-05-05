@@ -43,14 +43,25 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Removed the tags container that was here */}
-            
             <h1 
               className="text-3xl md:text-4xl lg:text-6xl font-medium mb-4 md:mb-6" 
               style={{ color: project.color }}
             >
               {project.title}
             </h1>
+            
+            <div className="lg:hidden mb-6">
+              <motion.div 
+                className="relative" 
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
+                <div className="rounded-xl overflow-hidden shadow-xl border-4 border-white">
+                  <img src={project.image} alt={project.title} className="w-full h-auto object-contain" />
+                </div>
+              </motion.div>
+            </div>
             
             <p className="text-base md:text-lg mb-6 md:mb-8">
               {project.overview}
@@ -60,7 +71,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
           </motion.div>
           
           <motion.div 
-            className="relative mt-4 md:mt-0" 
+            className="relative mt-4 md:mt-0 hidden lg:block" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}

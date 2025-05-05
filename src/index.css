@@ -101,6 +101,11 @@
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all;
   }
+  
+  /* Standardize paragraph text across the site */
+  p, .prose p, .text-content p {
+    @apply text-base leading-relaxed text-muted-foreground;
+  }
 }
 
 .noise-bg {
@@ -179,13 +184,15 @@ a {
   }
   
   .project-content p, 
-  .project-content li {
+  .project-content li,
+  p, .prose p, li {
     font-size: 0.9375rem !important;
     line-height: 1.6 !important;
   }
   
   /* Ensure project images stay within container */
-  .project-content img {
+  .project-content img,
+  img {
     max-width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
@@ -194,8 +201,8 @@ a {
   /* Fix design process number display */
   .process-number {
     aspect-ratio: 1 !important;
-    min-height: auto !important;
-    min-width: auto !important;
+    min-height: 2rem !important;
+    min-width: 2rem !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;

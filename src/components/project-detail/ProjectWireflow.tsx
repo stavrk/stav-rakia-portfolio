@@ -34,7 +34,7 @@ export const ProjectWireflow = ({ wireflow, isPlantModule = false }: ProjectWire
       
       <div className="prose prose-lg max-w-none">
         {wireflow.description.split('\n\n').map((paragraph, idx) => (
-          <p key={idx} className="mb-4 text-muted-foreground">
+          <p key={idx} className="mb-4 text-muted-foreground text-base">
             {paragraph}
           </p>
         ))}

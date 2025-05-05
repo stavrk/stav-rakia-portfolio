@@ -33,7 +33,7 @@ export const ImageLightbox = ({ src, alt, className = "" }: ImageLightboxProps) 
         />
       </AlertDialogTrigger>
       <AlertDialogContent className="max-w-[100vw] p-0 m-0 bg-transparent border-none">
-        <div className="relative">
+        <div className="relative w-full h-full">
           <button 
             onClick={() => setIsOpen(false)}
             className="absolute top-2 right-2 p-2 bg-black/50 rounded-full text-white z-10"
@@ -41,11 +41,17 @@ export const ImageLightbox = ({ src, alt, className = "" }: ImageLightboxProps) 
           >
             <X className="h-6 w-6" />
           </button>
-          <img 
-            src={src} 
-            alt={alt} 
-            className="w-full h-auto max-h-[90vh] object-contain" 
-          />
+          <div 
+            className="w-full h-full"
+            onClick={() => setIsOpen(false)}
+          >
+            <img 
+              src={src} 
+              alt={alt} 
+              className="w-full h-auto max-h-[90vh] object-contain" 
+              onClick={(e) => e.stopPropagation()}
+            />
+          </div>
         </div>
       </AlertDialogContent>
     </AlertDialog>
