@@ -1,6 +1,8 @@
 
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface ProjectCardProps {
   title: string;
@@ -55,6 +57,27 @@ const ProjectCard = ({
       <div className="p-4">
         <h3 className="text-gradient-title text-xl md:text-2xl font-medium mb-2 leading-tight">{title}</h3>
         <p className="text-muted-foreground text-sm sm:text-base">{description}</p>
+        
+        {/* Horizontal divider line */}
+        <div className="h-px w-full bg-[#f4efff] my-4"></div>
+        
+        {/* View Case Study button */}
+        {!comingSoon && (
+          <Link 
+            to={`/projects/${slug}`}
+            className="inline-flex items-center text-black hover:text-[#8247E5] transition-colors duration-200 font-medium text-sm"
+            onClick={(e) => e.stopPropagation()} // Prevent triggering the parent div's onClick
+          >
+            View Case Study
+            <ArrowRight className="ml-1 h-4 w-4 transition-colors duration-200" />
+          </Link>
+        )}
+        
+        {comingSoon && (
+          <span className="inline-block text-sm text-muted-foreground font-medium">
+            Coming Soon
+          </span>
+        )}
       </div>
     </motion.div>
   );

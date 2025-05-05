@@ -1,5 +1,9 @@
+
 import { motion } from 'framer-motion';
 import ProjectCard from './ProjectCard';
+import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
 const projectsData = [{
   title: "ROOMIE",
   description: "Interactive guide for simplified apartment moving for young adults.",
@@ -41,6 +45,7 @@ const projectsData = [{
   color: "#22C55E",
   comingSoon: false
 }];
+
 const FeaturedProjects = () => {
   return <section id="featured-projects" className="py-20 md:py-24">
       <div className="container">
@@ -70,4 +75,5 @@ const FeaturedProjects = () => {
       </div>
     </section>;
 };
+
 export default FeaturedProjects;

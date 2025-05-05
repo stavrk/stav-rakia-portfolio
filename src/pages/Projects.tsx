@@ -1,8 +1,7 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Clock } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 
 // Add CSS to hide tag elements on project detail pages
 const hideTagsStyle = document.createElement('style');
@@ -185,21 +184,24 @@ const Projects = () => {
                 
                 <div className="p-4 sm:p-6">
                   <p className="text-muted-foreground mb-4">{project.description}</p>
+                  
+                  {/* Horizontal divider line */}
+                  <div className="h-px w-full bg-[#f4efff] mb-4"></div>
+                  
                   {project.comingSoon ? (
                     <span 
-                      className="inline-block px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-gray-200 text-gray-500 font-medium cursor-default text-sm"
+                      className="inline-block text-gray-500 font-medium text-sm"
                     >
-                      In Development
+                      Coming Soon
                     </span>
                   ) : (
-                    <div className="flex flex-wrap gap-3">
-                      <a 
-                        href={`/projects/${project.slug}`} 
-                        className="inline-flex items-center justify-center px-4 py-1.5 sm:px-5 sm:py-2 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] text-sm"
-                      >
-                        View Case Study
-                      </a>
-                    </div>
+                    <a 
+                      href={`/projects/${project.slug}`} 
+                      className="inline-flex items-center text-black hover:text-[#8247E5] transition-colors duration-200 font-medium text-sm"
+                    >
+                      View Case Study
+                      <ArrowRight className="ml-1 h-4 w-4 transition-colors duration-200" />
+                    </a>
                   )}
                 </div>
               </motion.div>
