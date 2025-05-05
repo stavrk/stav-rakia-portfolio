@@ -1,11 +1,9 @@
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Lightbulb, Palette, Puzzle, Brain, Code, LineChart, Clock, LayoutPanelLeft, BarChart4, Sliders, Scale, SlidersHorizontal, Gauge, BrainCircuit, FlaskConical } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
-
 const projectsData = [{
   title: "ROOMIE",
   description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
@@ -97,29 +95,20 @@ const projectsData = [{
     image: "/lovable-uploads/bip-wireflow.png",
     description: "The wireflow diagram illustrates the navigation paths and interaction flows for extraterrestrial users, with special attention to non-linear thinking patterns and multiple sensory feedback loops throughout the transaction process."
   },
-  designImages: [
-    {
-      title: "Color Palette",
-      image: "/lovable-uploads/bip-colors.png",
-      description: "High-contrast, vibrant colors with bold blues and bright yellows"
-    },
-    {
-      title: "Typography & Layout",
-      image: "/lovable-uploads/bip-typography.png",
-      description: "Large text elements with circular, open letterforms and substantial weight"
-    },
-    {
-      title: "Interface Elements",
-      image: "/lovable-uploads/bip-intarface.png",
-      description: "Rounded design language with substantial padding and redundant feedback cues"
-    }
-  ],
-  additionalImages: [
-    "/lovable-uploads/bip-group-page.png",
-    "/lovable-uploads/bip-home-page.png",
-    "/lovable-uploads/bip-loading-page.png",
-    "/lovable-uploads/bip-transfer-details.png"
-  ],
+  designImages: [{
+    title: "Color Palette",
+    image: "/lovable-uploads/bip-colors.png",
+    description: "High-contrast, vibrant colors with bold blues and bright yellows"
+  }, {
+    title: "Typography & Layout",
+    image: "/lovable-uploads/bip-typography.png",
+    description: "Large text elements with circular, open letterforms and substantial weight"
+  }, {
+    title: "Interface Elements",
+    image: "/lovable-uploads/bip-intarface.png",
+    description: "Rounded design language with substantial padding and redundant feedback cues"
+  }],
+  additionalImages: ["/lovable-uploads/bip-group-page.png", "/lovable-uploads/bip-home-page.png", "/lovable-uploads/bip-loading-page.png", "/lovable-uploads/bip-transfer-details.png"],
   process: ["Established alien user personas based on specified perceptual constraints", "Studied existing financial apps and adapted their core functionality to the alien context", "Created wireframes that emphasized visual communication", "Refined the interface through multiple iterations to balance alien-centered design with transaction security", "Designed custom animations for key moments in the user journey for clear feedback"],
   designProcessAndAesthetics: "BIP reimagines financial interfaces for extraterrestrial users, featuring high-contrast, vibrant colors that address alien perceptual constraints—specifically their difficulty with gray tones and subtle contrasts. The space-themed interface uses bold blues and yellows against deep cosmic backgrounds to ensure maximum visibility.\n\nTypography & Readability\nAll text elements exceed standard human application sizes (14px minimum for secondary text, 18-24px for primary elements) to accommodate alien visual systems. We selected fonts with circular, open letterforms and substantial weight to maximize legibility.\n\nInterface Elements\nThe consistently rounded design includes generous padding around interactive elements to accommodate alien motor control differences. Buttons provide redundant feedback through both color and icon changes. Space-themed iconography replaces traditional financial symbols, creating culturally relevant visual metaphors.\n\nCustom animations communicate process status without relying on text. Using principles of anticipation and follow-through, these animations clearly signal the beginning and completion of processes, particularly during critical transaction moments.",
   case: "Our team reimagined a conventional money transfer app interface through an alien-centered design lens, developing new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception.",
@@ -145,13 +134,7 @@ const projectsData = [{
     image: "/lovable-uploads/studit-design-research.png",
     description: "Research of leading Israeli test prep platforms (Yoel Geva, Kidum, Niv Revach) revealed critical opportunities for innovation. I strategically adapted Kidum's clear subject emphasis, Yoel Geva's interactive mapping, and Wordwall's drag-and-drop functionality to enhance Studit's user experience.\n\nMarket analysis identified three key gaps: visually uninspiring materials, lack of meaningful interaction, and absence of personalization. Users frequently reported confusion about their location in the preparation process.\n\nThese findings directly shaped Studit's core features: a guided step-by-step journey with clear progress indicators, interactive question formats instead of static multiple-choice, and a professional aesthetic that balances educational credibility with visual engagement."
   },
-  process: [
-    "Conducted extensive research into student pain points during exam preparation", 
-    "Analyzed existing educational platforms like Yoel Geva, Kidum, and Niv Revach to identify strengths and weaknesses", 
-    "Developed wireframes and user flows that addressed key pain points while introducing interactive elements", 
-    "Conducted multiple rounds of user testing to refine the interface", 
-    "Created a clean, modern aesthetic with a warm color palette for a calm, focused studying environment"
-  ],
+  process: ["Conducted extensive research into student pain points during exam preparation", "Analyzed existing educational platforms like Yoel Geva, Kidum, and Niv Revach to identify strengths and weaknesses", "Developed wireframes and user flows that addressed key pain points while introducing interactive elements", "Conducted multiple rounds of user testing to refine the interface", "Created a clean, modern aesthetic with a warm color palette for a calm, focused studying environment"],
   designProcessAndAesthetics: "For Studit, we developed a visual language that balances academic seriousness with engaging interactivity. The color palette features warm neutrals (beiges and soft browns) as a base, accented with muted blues and occasional touches of yellow to create focus points without overwhelming the learning content. This restrained approach creates a calm environment conducive to focused study while providing enough visual interest to maintain engagement.\n\nTypography choices were critical for supporting extended reading periods. We selected Assistant as the primary font for its excellent readability and comprehensive Hebrew character support, with Indie Flower as an accent font for highlighting important elements. Text hierarchy uses weight variation rather than dramatic size differences, with a minimum body text size of 16px to ensure comfortable reading during study sessions.\n\nThe layout employs generous white space and a consistent grid system to organize complex information clearly. Cards with subtle shadows and rounded corners (4px radius) contain related information groups, while interactive elements use slightly more pronounced shadows and state changes to indicate their functionality.\n\nUser flow considerations were paramount, with the interface guiding users through a logical progression from homepage through exam/date selection, location selection, diagnostic assessment and personalized scheduling. Each stage features animated transitions that provide both functional feedback and moments of delight in what could otherwise be a stressful process.",
   challengesAndSolutions: "Key Challenges & Solutions\n\n1. Balancing Interactivity with Academic Rigor\nChallenge: Traditional multiple-choice formats felt disengaging, while overly gamified approaches risked undermining educational credibility.\nSolution: We developed question-specific interaction patterns -drag-and-drop completions for verbal reasoning and interactive maps for location selection - that enhance engagement while maintaining academic focus.\n\n2. Creating Trustworthy Scheduling\nChallenge: User testing revealed skepticism about automated scheduling systems.\nSolution: We designed a transparent process showing the factors influencing schedule creation while allowing parameter adjustments. After five iterations, we achieved the optimal balance between guidance and user control.\n\n3. Transforming Waiting Periods\nSolution: Loading screens became micro-moments of encouragement with progress animations and motivational messages, significantly reducing perceived waiting time in user tests. We added schedule color customization to enhance personalization and ownership.",
   designImages: [{
@@ -189,13 +172,7 @@ const projectsData = [{
     image: "/lovable-uploads/plant-prototyping.png",
     description: "Before design, I created a detailed specification and instructional script to guide the learning experience. The spec outlined learning goals - behavioral, knowledge-based, and skill-oriented - and included audience analysis to identify gaps and preferences.\n\nThe script organized content around six houseplants, with descriptions, care tips, and real-life scenarios. It applied multimodal strategies using interactive assessments (e.g., drag-and-drop, scenario questions) to bridge knowledge gaps and keep learners engaged."
   },
-  process: [
-    "Analyzing the target audience needs and potential knowledge gaps",
-    "Establishing clear learning objectives for each module section",
-    "Structuring content in logical categories based on plant types and care requirements",
-    "Developing instructional strategies that incorporate interactive elements",
-    "Creating opportunities for practical application and knowledge assessment"
-  ],
+  process: ["Analyzing the target audience needs and potential knowledge gaps", "Establishing clear learning objectives for each module section", "Structuring content in logical categories based on plant types and care requirements", "Developing instructional strategies that incorporate interactive elements", "Creating opportunities for practical application and knowledge assessment"],
   designProcessAndAesthetics: "For the Plant Learning Module, I designed a visual experience that embodies the natural, organic feel of the subject matter. The color palette centers on various shades of green with earth tones for balance, creating a fresh, clean aesthetic that evokes plant life while maintaining excellent readability.\n\nTypography choices prioritize clarity and accessibility, with the Assistant font family at appropriate sizes for comfortable reading on various devices. Headings use SemiBold weight to maintain visual harmony while creating clear information hierarchy.\n\nThe interface layout employs a grid system that organizes content into digestible sections, with consistent spacing and alignment. Plant images feature prominently throughout the module, serving both instructional and aesthetic purposes. Each plant category uses subtle visual cues to help users track where they are in the learning journey.",
   designImages: [{
     title: "Color Palette",
@@ -215,73 +192,63 @@ const projectsData = [{
     description: "The module features engaging learning interactions:\n- Drag-and-drop activities matching plants to ideal light conditions\n- Interactive quizzes on watering requirements\n- Visual simulations showing plant responses to care conditions\n- Progress tracking for motivation and advancement\nThese assessments require users to apply knowledge in practical scenarios, simulating real-world plant care decisions."
   },
   challengesAndSolutions: "We addressed two primary challenges:\n\nBalancing Rich Content with User Approachability:\nInitial feedback showed that detailed care instructions could overwhelm novice plant owners. To solve this, we:\n\nDesigned a layered information system that starts with essentials and allows users to expand for more detail\n\nMarked beginner-friendly plants with visual cues\n\nIncluded calming, supportive messaging about common mistakes and how to recover from them\n\nCreating Meaningful Assessments:\nRather than using simple recall questions, we designed scenario-based activities—like choosing the best location or watering schedule for a plant—that built real-world decision-making skills and increased user confidence.\n\nThis project highlights my ability to turn complex instructional material into an engaging, approachable experience tailored to users' needs and learning goals.",
-  additionalImages: [
-    "/lovable-uploads/plant-1.png",
-    "/lovable-uploads/plant-2.png",
-    "/lovable-uploads/plant-3.png",
-    "/lovable-uploads/plant-4.png"
-  ],
+  additionalImages: ["/lovable-uploads/plant-1.png", "/lovable-uploads/plant-2.png", "/lovable-uploads/plant-3.png", "/lovable-uploads/plant-4.png"],
   link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
 }];
-
 const ProjectDetail = () => {
-  const { slug } = useParams();
+  const {
+    slug
+  } = useParams();
   const navigate = useNavigate();
   const project = projectsData.find(p => p.slug === slug);
-  
+
   // Find next project data for the navigation section
   const nextProjectIndex = (projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length;
   const nextProject = projectsData[nextProjectIndex];
-  
   useEffect(() => {
     if (!project) {
       navigate('/projects');
     }
   }, [project, navigate]);
-  
   if (!project) {
     return null;
   }
-  
-  return (
-    <Layout>
+  return <Layout>
       {/* Hero Section */}
       <section className="pt-20 pb-32 relative" style={{
-        backgroundColor: `${project.color}10`
-      }}>
+      backgroundColor: `${project.color}10`
+    }}>
         <div className="container">
-          <motion.button 
-            onClick={() => navigate('/projects')} 
-            className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" 
-            initial={{ opacity: 0, x: -20 }} 
-            animate={{ opacity: 1, x: 0 }} 
-            transition={{ duration: 0.5 }}
-          >
+          <motion.button onClick={() => navigate('/projects')} className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors" initial={{
+          opacity: 0,
+          x: -20
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.5
+        }}>
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Projects
           </motion.button>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.5 }}
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 0.5
+          }}>
               <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, i) => (
-                  <span 
-                    key={i} 
-                    className="inline-block text-xs font-medium px-2.5 py-1 rounded-full bg-background text-foreground"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                {project.tags.map((tag, i) => {})}
               </div>
               
-              <h1 
-                className="text-4xl md:text-6xl font-medium mb-6" 
-                style={{ color: project.color }}
-              >
+              <h1 className="text-4xl md:text-6xl font-medium mb-6" style={{
+              color: project.color
+            }}>
                 {project.title}
               </h1>
               
@@ -292,12 +259,16 @@ const ProjectDetail = () => {
               {project.link && <ProjectLink href={project.link} />}
             </motion.div>
             
-            <motion.div 
-              className="relative" 
-              initial={{ opacity: 0, scale: 0.9 }} 
-              animate={{ opacity: 1, scale: 1 }} 
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
+            <motion.div className="relative" initial={{
+            opacity: 0,
+            scale: 0.9
+          }} animate={{
+            opacity: 1,
+            scale: 1
+          }} transition={{
+            delay: 0.2,
+            duration: 0.5
+          }}>
               <div className="rounded-xl overflow-hidden shadow-xl border-4 border-white">
                 <img src={project.image} alt={project.title} className="w-full h-auto" />
               </div>
@@ -311,24 +282,37 @@ const ProjectDetail = () => {
         <div className="container">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true, margin: "-100px" }} 
-                transition={{ duration: 0.5 }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
                 <h2 className="text-2xl font-medium mb-4">The Challenge</h2>
                 <p className="text-muted-foreground">
                   {project.challenge}
                 </p>
               </motion.div>
               
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }} 
-                whileInView={{ opacity: 1, y: 0 }} 
-                viewport={{ once: true, margin: "-100px" }} 
-                transition={{ delay: 0.2, duration: 0.5 }}
-              >
+              <motion.div initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              delay: 0.2,
+              duration: 0.5
+            }}>
                 <h2 className="text-2xl font-medium mb-4">The Solution</h2>
                 <p className="text-muted-foreground">
                   {project.solution}
@@ -337,189 +321,189 @@ const ProjectDetail = () => {
             </div>
             
             {/* Design Process Section */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              whileInView={{ opacity: 1, y: 0 }} 
-              viewport={{ once: true, margin: "-100px" }} 
-              transition={{ duration: 0.5 }} 
-              className="mb-16"
-            >
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }} className="mb-16">
               <h2 className="text-2xl font-medium mb-6">Design Process</h2>
               <div className="space-y-4 mb-8">
-                {project.process && project.process.map((step, index) => (
-                  <motion.div 
-                    key={index} 
-                    className="flex items-start" 
-                    initial={{ opacity: 0, x: -20 }} 
-                    whileInView={{ opacity: 1, x: 0 }} 
-                    viewport={{ once: true }} 
-                    transition={{ delay: index * 0.1, duration: 0.5 }}
-                  >
-                    <div 
-                      className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" 
-                      style={{ backgroundColor: project.color }}
-                    >
+                {project.process && project.process.map((step, index) => <motion.div key={index} className="flex items-start" initial={{
+                opacity: 0,
+                x: -20
+              }} whileInView={{
+                opacity: 1,
+                x: 0
+              }} viewport={{
+                once: true
+              }} transition={{
+                delay: index * 0.1,
+                duration: 0.5
+              }}>
+                    <div className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" style={{
+                  backgroundColor: project.color
+                }}>
                       {index + 1}
                     </div>
                     <p>{step}</p>
-                  </motion.div>
-                ))}
+                  </motion.div>)}
               </div>
             </motion.div>
             
             {/* Design Research Section - For STUDIT project */}
-            {project.slug === 'studit' && project.designResearch && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'studit' && project.designResearch && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.designResearch.title}</h2>
                 <div className="prose prose-lg max-w-none mb-8">
-                  {project.designResearch.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
+                  {project.designResearch.description.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
                 </div>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40 mt-6">
-                  <img 
-                    src={project.designResearch.image} 
-                    alt="Design Research" 
-                    className="w-full h-auto"
-                  />
+                  <img src={project.designResearch.image} alt="Design Research" className="w-full h-auto" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Wireflow Section - For STUDIT project */}
-            {project.slug === 'studit' && project.wireflowDetails && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'studit' && project.wireflowDetails && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.wireflowDetails.title}</h2>
                 <div className="prose prose-lg max-w-none mb-8">
                   <p className="mb-4 text-muted-foreground">{project.wireflowDetails.description}</p>
                 </div>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireflowDetails.image} 
-                    alt="Wireflow Diagram" 
-                    className="w-full h-auto"
-                  />
+                  <img src={project.wireflowDetails.image} alt="Wireflow Diagram" className="w-full h-auto" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Wireflow Section - For BIP project */}
-            {project.slug === 'bip' && project.wireflow && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'bip' && project.wireflow && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
                 <p className="text-muted-foreground mb-8">{project.wireflow.description}</p>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireflow.image} 
-                    alt="Wireflow Diagram" 
-                    className="w-full h-auto"
-                  />
+                  <img src={project.wireflow.image} alt="Wireflow Diagram" className="w-full h-auto" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Wireflow Section - For Plant Learning Module project */}
-            {project.slug === 'plant-module' && project.wireflow && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'plant-module' && project.wireflow && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.wireflow.title}</h2>
                 <div className="prose prose-lg max-w-none mb-8">
-                  {project.wireflow.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
+                  {project.wireflow.description.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
                 </div>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireflow.image} 
-                    alt="Wireflow Diagram" 
-                    className="w-full h-auto"
-                  />
+                  <img src={project.wireflow.image} alt="Wireflow Diagram" className="w-full h-auto" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Specification & Instructional Script - For Plant Learning Module project */}
-            {project.slug === 'plant-module' && project.specification && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'plant-module' && project.specification && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.specification.title}</h2>
                 <div className="prose prose-lg max-w-none mb-8">
-                  {project.specification.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
+                  {project.specification.description.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
                 </div>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.specification.image} 
-                    alt="Specification & Instructional Script" 
-                    className="w-full h-auto"
-                  />
+                  <img src={project.specification.image} alt="Specification & Instructional Script" className="w-full h-auto" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Interactive Elements & Assessment - For Plant Learning Module project */}
-            {project.slug === 'plant-module' && project.interactiveElements && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'plant-module' && project.interactiveElements && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.interactiveElements.title}</h2>
                 <div className="prose prose-lg max-w-none">
-                  {project.interactiveElements.description.split('\n\n').map((paragraph, idx) => (
-                    <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                  ))}
+                  {project.interactiveElements.description.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Reordered and merged sections for Save Rapunzel */}
-            {project.slug === 'save-rapunzel' && (
-              <>
+            {project.slug === 'save-rapunzel' && <>
                 {/* Content Generator Interface */}
-                <motion.div 
-                  className="mb-16" 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
+                <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
                   <h2 className="text-2xl font-medium mb-6">Content Generator Interface</h2>
                   <p className="text-muted-foreground mb-8">The intuitive content generator allows educators to create customized educational content without technical knowledge, featuring an easy-to-use interface with built-in validation and guidance.</p>
                   
@@ -534,13 +518,18 @@ const ProjectDetail = () => {
                 </motion.div>
 
                 {/* Graphic Development Section */}
-                <motion.div 
-                  className="mb-16" 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
+                <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
                   <h2 className="text-2xl font-medium mb-6">Graphic Development and Design Evolution</h2>
                   <div className="prose prose-lg max-w-none">
                     <p className="mb-4 text-muted-foreground">The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.</p>
@@ -552,26 +541,36 @@ const ProjectDetail = () => {
                 </motion.div>
                 
                 {/* Design Process & Aesthetics Section - UPDATED TEXT HERE */}
-                <motion.div 
-                  className="mb-16" 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
+                <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
                   <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
                   
                   <div className="space-y-8">
                     <div className="mb-8">
                       <p className="mb-4 text-muted-foreground">Save Rapunzel features a dual-interface design that supports both young learners and their educators. The student-facing interface uses a colorful, fairy tale-inspired palette that balances a sense of wonder with clear readability.</p>
                       
-                      <motion.div 
-                        className="mt-6 rounded-lg overflow-hidden border border-border/40" 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                      >
+                      <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
+                    opacity: 0,
+                    y: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    delay: 0.2,
+                    duration: 0.5
+                  }}>
                         <img src="/lovable-uploads/save-repunzel-color-palette.png" alt="Color Palette" className="w-full object-cover h-64 md:h-64" />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">Color Palette</h4>
@@ -583,13 +582,18 @@ const ProjectDetail = () => {
                     <div className="mb-8">
                       <p className="mb-4 text-muted-foreground">Typography choices differ between the student and educator interfaces. The game side uses the rounded, playful Fredoka font (minimum 18px) to engage younger users, while the educator dashboard employs the same font family with clear weight distinctions to create a visual hierarchy in the content management system.</p>
                       
-                      <motion.div 
-                        className="mt-6 rounded-lg overflow-hidden border border-border/40" 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                      >
+                      <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
+                    opacity: 0,
+                    y: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    delay: 0.2,
+                    duration: 0.5
+                  }}>
                         <img src="/lovable-uploads/save-repunzel-font.png" alt="Typography" className="w-full object-cover h-64 md:h-64" />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">Typography</h4>
@@ -601,13 +605,18 @@ const ProjectDetail = () => {
                     <div className="mb-8">
                       <p className="mb-4 text-muted-foreground">The visual elements were carefully designed to create an engaging yet focused learning environment. Game elements like buttons, answer cards, and progress indicators feature rounded edges and vibrant colors that appeal to younger users. Background elements like the tower and clouds incorporate subtle animations to create a living world without distracting from the educational content.</p>
                       
-                      <motion.div 
-                        className="mt-6 rounded-lg overflow-hidden border border-border/40" 
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2, duration: 0.5 }}
-                      >
+                      <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
+                    opacity: 0,
+                    y: 20
+                  }} whileInView={{
+                    opacity: 1,
+                    y: 0
+                  }} viewport={{
+                    once: true
+                  }} transition={{
+                    delay: 0.2,
+                    duration: 0.5
+                  }}>
                         <img src="/lovable-uploads/save-repunzel-interface.png" alt="Interface Elements" className="w-full object-cover h-[600px] md:h-[600px]" />
                         <div className="p-4 bg-secondary/30">
                           <h4 className="text-lg font-medium mb-1">Visual Elements</h4>
@@ -619,13 +628,18 @@ const ProjectDetail = () => {
                 </motion.div>
                 
                 {/* Key Animations Section - UPDATED TEXT HERE WITH HYPHENS */}
-                <motion.div 
-                  className="mb-16" 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
+                <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
                   <h2 className="text-2xl font-medium mb-6">Key Animations</h2>
                   <div className="prose prose-lg max-w-none">
                     <p className="mb-4 text-muted-foreground">Strategic animations support the learning experience without causing distraction. The introductory sequence - showing Rapunzel walking through the tower with a gradual zoom to the window - replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.</p>
@@ -633,13 +647,18 @@ const ProjectDetail = () => {
                 </motion.div>
 
                 {/* Technical & Development Challenges Section - UPDATED LIST FORMAT */}
-                <motion.div 
-                  className="mb-16" 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.5 }}
-                >
+                <motion.div className="mb-16" initial={{
+              opacity: 0,
+              y: 20
+            }} whileInView={{
+              opacity: 1,
+              y: 0
+            }} viewport={{
+              once: true,
+              margin: "-100px"
+            }} transition={{
+              duration: 0.5
+            }}>
                   <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
                   
                   <div className="prose prose-lg max-w-none space-y-4">
@@ -674,126 +693,129 @@ const ProjectDetail = () => {
                     <p className="text-muted-foreground">Through iterative testing and structured problem-solving, we delivered a product that meets educational goals and usability standards.</p>
                   </div>
                 </motion.div>
-              </>
-            )}
+              </>}
             
             {/* Project Structure Section - For Roomie project */}
-            {project.slug === 'roomie' && project.structureTree && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'roomie' && project.structureTree && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.structureTree.title || "Project Structure"}</h2>
                 <p className="text-muted-foreground mb-8">{project.structureTree.description}</p>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.structureTree.image} 
-                    alt="Project Structure" 
-                    className="w-full h-auto" 
-                  />
+                  <img src={project.structureTree.image} alt="Project Structure" className="w-full h-auto" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
 
             {/* Wireframes Section - For Roomie project */}
-            {project.slug === 'roomie' && project.wireframes && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'roomie' && project.wireframes && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">{project.wireframes.title}</h2>
                 <p className="text-muted-foreground mb-8">{project.wireframes.description}</p>
                 
                 <div className="rounded-xl overflow-hidden border border-border/40">
-                  <img 
-                    src={project.wireframes.image} 
-                    alt="Project Wireframes" 
-                    className="w-full h-auto" 
-                  />
+                  <img src={project.wireframes.image} alt="Project Wireframes" className="w-full h-auto" />
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
-            {project.slug !== 'save-rapunzel' && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
                 
                 <div className="space-y-8">
-                  {project.designProcessAndAesthetics && project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
-                    <div key={idx} className="mb-8">
+                  {project.designProcessAndAesthetics && project.designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => <div key={idx} className="mb-8">
                       <p className="mb-4 text-muted-foreground">{paragraph}</p>
                       
                       {/* Display relevant design image if available */}
-                      {project.designImages && idx < project.designImages.length && (
-                        <motion.div 
-                          className="mt-6 rounded-lg overflow-hidden border border-border/40" 
-                          initial={{ opacity: 0, y: 20 }}
-                          whileInView={{ opacity: 1, y: 0 }}
-                          viewport={{ once: true }}
-                          transition={{ delay: 0.2, duration: 0.5 }}
-                        >
-                          <img 
-                            src={project.designImages[idx].image} 
-                            alt={project.designImages[idx].title} 
-                            className={`w-full object-cover ${idx === 2 ? "h-[600px] md:h-[600px]" : "h-64 md:h-64"}`} 
-                          />
+                      {project.designImages && idx < project.designImages.length && <motion.div className="mt-6 rounded-lg overflow-hidden border border-border/40" initial={{
+                  opacity: 0,
+                  y: 20
+                }} whileInView={{
+                  opacity: 1,
+                  y: 0
+                }} viewport={{
+                  once: true
+                }} transition={{
+                  delay: 0.2,
+                  duration: 0.5
+                }}>
+                          <img src={project.designImages[idx].image} alt={project.designImages[idx].title} className={`w-full object-cover ${idx === 2 ? "h-[600px] md:h-[600px]" : "h-64 md:h-64"}`} />
                           <div className="p-4 bg-secondary/30">
                             <h4 className="text-lg font-medium mb-1">{project.designImages[idx].title}</h4>
                             <p className="text-sm text-muted-foreground">{project.designImages[idx].description}</p>
                           </div>
-                        </motion.div>
-                      )}
-                    </div>
-                  ))}
+                        </motion.div>}
+                    </div>)}
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Animation Features Section - For BIP */}
-            {project.slug === 'bip' && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'bip' && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">Animation and Interaction Features</h2>
                 <div className="prose prose-lg max-w-none space-y-4">
                   <p className="text-muted-foreground">
                     BIP's animation system is tailored to extraterrestrial perception patterns. Successful payments are represented through animated spaceships and meteorites, while loading states use orbital animations to maintain engagement. The interface provides immediate, redundant feedback through color shifts, size changes, and animated transitions—ensuring clarity across different alien perceptual abilities.
                   </p>
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
             
             {/* Challenges & Solutions Section - For all projects except Save Rapunzel */}
-            {project.challengesAndSolutions && project.slug !== 'save-rapunzel' && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.challengesAndSolutions && project.slug !== 'save-rapunzel' && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">Key Challenges & Solutions</h2>
                 
-                {project.slug === 'studit' ? (
-                  <div className="prose prose-lg max-w-none space-y-4">
+                {project.slug === 'studit' ? <div className="prose prose-lg max-w-none space-y-4">
                     <p className="text-muted-foreground">We overcame several key challenges:</p>
                     
                     <div className="ml-6 space-y-6">
@@ -821,9 +843,7 @@ const ProjectDetail = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                ) : project.slug === 'plant-module' ? (
-                  <div className="prose prose-lg max-w-none space-y-4">
+                  </div> : project.slug === 'plant-module' ? <div className="prose prose-lg max-w-none space-y-4">
                     <p className="text-muted-foreground">We addressed two primary challenges:</p>
                     
                     <div className="ml-6 space-y-6">
@@ -850,9 +870,7 @@ const ProjectDetail = () => {
                     </div>
                     
                     <p className="text-muted-foreground">This project highlights my ability to turn complex instructional material into an engaging, approachable experience tailored to users' needs and learning goals.</p>
-                  </div>
-                ) : project.slug === 'roomie' ? (
-                  <div className="prose prose-lg max-w-none space-y-4">
+                  </div> : project.slug === 'roomie' ? <div className="prose prose-lg max-w-none space-y-4">
                     <p className="text-muted-foreground">We faced several significant challenges:</p>
                     
                     <div className="ml-6 space-y-6">
@@ -880,9 +898,7 @@ const ProjectDetail = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                ) : project.slug === 'bip' ? (
-                  <div className="prose prose-lg max-w-none space-y-4">
+                  </div> : project.slug === 'bip' ? <div className="prose prose-lg max-w-none space-y-4">
                     <p className="text-muted-foreground">We tackled several unique challenges:</p>
                     
                     <div className="ml-6 space-y-6">
@@ -910,26 +926,24 @@ const ProjectDetail = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                ) : (
-                  <div className="prose prose-lg max-w-none">
-                    {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => (
-                      <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-                    ))}
-                  </div>
-                )}
-              </motion.div>
-            )}
+                  </div> : <div className="prose prose-lg max-w-none">
+                    {project.challengesAndSolutions.split('\n\n').map((paragraph, idx) => <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>)}
+                  </div>}
+              </motion.div>}
             
             {/* Technical & Development Challenges Section - For BIP */}
-            {project.slug === 'bip' && !project.challengesAndSolutions && (
-              <motion.div 
-                className="mb-16" 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5 }}
-              >
+            {project.slug === 'bip' && !project.challengesAndSolutions && <motion.div className="mb-16" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            duration: 0.5
+          }}>
                 <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
                 
                 <div className="prose prose-lg max-w-none space-y-4">
@@ -971,8 +985,7 @@ const ProjectDetail = () => {
                     </div>
                   </div>
                 </div>
-              </motion.div>
-            )}
+              </motion.div>}
           </div>
         </div>
       </section>
@@ -980,105 +993,111 @@ const ProjectDetail = () => {
       {/* Images Section */}
       <section className="py-20 bg-secondary/50">
         <div className="container">
-          <motion.h2 
-            className="text-2xl font-medium mb-8 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.h2 className="text-2xl font-medium mb-8 text-center" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true,
+          margin: "-100px"
+        }} transition={{
+          duration: 0.5
+        }}>
             Project Gallery
           </motion.h2>
           
           {/* Updated gallery grid - with different layout for BIP and new images added */}
-          {project.slug === 'bip' ? (
-            // BIP gallery - 4 images in one row
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
-              {project.additionalImages && project.additionalImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                >
-                  <img
-                    src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    className="w-full h-auto aspect-[9/19] object-cover"
-                  />
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            // For other projects - 2-column grid
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {project.additionalImages && project.additionalImages.map((image, index) => (
-                <motion.div
-                  key={index}
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                >
-                  <img
-                    src={image}
-                    alt={`${project.title} - Image ${index + 1}`}
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-              ))}
+          {project.slug === 'bip' ?
+        // BIP gallery - 4 images in one row
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+              {project.additionalImages && project.additionalImages.map((image, index) => <motion.div key={index} className="rounded-xl overflow-hidden shadow-lg" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            delay: index * 0.1,
+            duration: 0.5
+          }}>
+                  <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-auto aspect-[9/19] object-cover" />
+                </motion.div>)}
+            </div> :
+        // For other projects - 2-column grid
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {project.additionalImages && project.additionalImages.map((image, index) => <motion.div key={index} className="rounded-xl overflow-hidden shadow-lg" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            delay: index * 0.1,
+            duration: 0.5
+          }}>
+                  <img src={image} alt={`${project.title} - Image ${index + 1}`} className="w-full h-auto" />
+                </motion.div>)}
               
               {/* Add roomie-expenses to ROOMIE gallery */}
-              {project.slug === 'roomie' && (
-                <motion.div
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                >
-                  <img
-                    src="/lovable-uploads/roomie-expenses.png"
-                    alt="ROOMIE - Expense Tracking Interface"
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-              )}
+              {project.slug === 'roomie' && <motion.div className="rounded-xl overflow-hidden shadow-lg" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            delay: 0.3,
+            duration: 0.5
+          }}>
+                  <img src="/lovable-uploads/roomie-expenses.png" alt="ROOMIE - Expense Tracking Interface" className="w-full h-auto" />
+                </motion.div>}
               
               {/* Add save-repunzel-my-games-add to SAVE RAPUNZEL gallery */}
-              {project.slug === 'save-rapunzel' && (
-                <motion.div
-                  className="rounded-xl overflow-hidden shadow-lg"
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                >
-                  <img
-                    src="/lovable-uploads/save-repunzel-my-games-add.png"
-                    alt="SAVE RAPUNZEL - Add New Game Interface"
-                    className="w-full h-auto"
-                  />
-                </motion.div>
-              )}
-            </div>
-          )}
+              {project.slug === 'save-rapunzel' && <motion.div className="rounded-xl overflow-hidden shadow-lg" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            delay: 0.3,
+            duration: 0.5
+          }}>
+                  <img src="/lovable-uploads/save-repunzel-my-games-add.png" alt="SAVE RAPUNZEL - Add New Game Interface" className="w-full h-auto" />
+                </motion.div>}
+            </div>}
         </div>
       </section>
       
       {/* Check It Out section */}
       <section className="py-16 bg-gradient-to-b from-secondary/30 to-transparent">
         <div className="container">
-          <motion.div
-            className="max-w-md mx-auto text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.5 }}
-          >
+          <motion.div className="max-w-md mx-auto text-center" initial={{
+          opacity: 0,
+          y: 20
+        }} whileInView={{
+          opacity: 1,
+          y: 0
+        }} viewport={{
+          once: true,
+          margin: "-100px"
+        }} transition={{
+          duration: 0.5
+        }}>
             <h3 className="text-2xl font-medium mb-4">
               Ready to see it in action?
             </h3>
@@ -1086,15 +1105,16 @@ const ProjectDetail = () => {
               Check out the full {project.title} project to explore all the features and interactions.
             </p>
             
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-            >
-              <ProjectLink 
-                href={project.link} 
-                className="px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg"
-              >
+            <motion.div whileHover={{
+            scale: 1.05
+          }} whileTap={{
+            scale: 0.98
+          }} transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 17
+          }}>
+              <ProjectLink href={project.link} className="px-8 py-4 bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg">
                 View Full Project
               </ProjectLink>
             </motion.div>
@@ -1106,39 +1126,37 @@ const ProjectDetail = () => {
       <section className="py-20 bg-background border-t border-border/30">
         <div className="container">
           <div className="max-w-4xl mx-auto">
-            <motion.div 
-              className="text-center mb-8" 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ delay: 0.2, duration: 0.5 }}
-            >
+            <motion.div className="text-center mb-8" initial={{
+            opacity: 0,
+            y: 20
+          }} whileInView={{
+            opacity: 1,
+            y: 0
+          }} viewport={{
+            once: true,
+            margin: "-100px"
+          }} transition={{
+            delay: 0.2,
+            duration: 0.5
+          }}>
               <p className="text-muted-foreground mb-2">Next Project</p>
-              <h3 className="text-2xl font-medium mb-6" style={{ color: nextProject.color }}>
+              <h3 className="text-2xl font-medium mb-6" style={{
+              color: nextProject.color
+            }}>
                 {nextProject.title}
               </h3>
               
               <div className="mb-8 max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
-                <img 
-                  src={nextProject.image} 
-                  alt={nextProject.title} 
-                  className="w-full h-auto object-cover"
-                />
+                <img src={nextProject.image} alt={nextProject.title} className="w-full h-auto object-cover" />
               </div>
               
-              <a 
-                href={`/projects/${nextProject.slug}`} 
-                className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
-              >
+              <a href={`/projects/${nextProject.slug}`} className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg">
                 View Next Project
               </a>
             </motion.div>
           </div>
         </div>
       </section>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default ProjectDetail;
-
