@@ -61,6 +61,19 @@ const ProjectLink = ({
     className
   );
 
+  // Handle navigation and transitions
+  const handleClick = (e: React.MouseEvent) => {
+    if (isExternal) return; // Let external links behave normally
+    
+    // For internal links, we want to ensure smooth transitions
+    e.preventDefault();
+    
+    // Create a small delay to allow exit animations to complete
+    setTimeout(() => {
+      window.location.href = href;
+    }, 100);
+  };
+
   // Render external link or React Router link based on isExternal prop
   if (isExternal) {
     return (
@@ -76,7 +89,11 @@ const ProjectLink = ({
   }
 
   return (
-    <Link to={href} className={linkClasses}>
+    <Link 
+      to={href} 
+      className={linkClasses}
+      onClick={handleClick}
+    >
       {linkContent}
     </Link>
   );

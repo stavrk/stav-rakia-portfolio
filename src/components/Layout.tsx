@@ -14,7 +14,10 @@ const Layout = ({ children }: LayoutProps) => {
   
   // Smooth scroll to top on route change - modified to be less resource-intensive
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   }, [location.pathname]);
 
   const pageVariants = {
