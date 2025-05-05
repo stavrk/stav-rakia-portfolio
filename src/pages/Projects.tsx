@@ -1,12 +1,13 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
 
-// Add CSS to hide tag elements on project detail pages
+// Style overrides to hide tag elements
+// This is kept as-is to maintain the current functionality
 const hideTagsStyle = document.createElement('style');
 hideTagsStyle.textContent = `
+  /* Hide tag elements on project detail pages */
   .project-detail-page .project-tags,
   .project-detail-page .tags-container,
   .project-page-header .badge,
@@ -64,6 +65,7 @@ hideTagsStyle.textContent = `
 `;
 document.head.appendChild(hideTagsStyle);
 
+// Project data structure - keeping it exactly the same for compatibility
 const projectsData = [
   {
     title: "ROOMIE",
@@ -132,7 +134,7 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  // Projects are now always displayed without filtering
+  // Sort projects to show "Coming Soon" projects at the end
   const sortedProjects = [...projectsData].sort((a, b) => {
     if (a.comingSoon && !b.comingSoon) return 1;
     if (!a.comingSoon && b.comingSoon) return -1;
@@ -143,6 +145,7 @@ const Projects = () => {
     <Layout>
       <section className="py-16 md:py-20">
         <div className="container px-4 sm:px-6">
+          {/* Page Header */}
           <motion.div 
             className="mb-10 md:mb-12 text-center"
             initial={{ opacity: 0, y: 20 }}
@@ -155,6 +158,7 @@ const Projects = () => {
             </p>
           </motion.div>
           
+          {/* Project Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {sortedProjects.map((project, index) => (
               <ProjectCard 

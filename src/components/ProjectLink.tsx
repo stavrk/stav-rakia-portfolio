@@ -11,7 +11,7 @@ interface ProjectLinkProps {
   slug?: string;
   image?: string;
   isExternal?: boolean;
-  hideOnProjectDetail?: boolean; // New prop to control visibility on project detail pages
+  hideOnProjectDetail?: boolean; // Controls visibility on project detail pages
 }
 
 const ProjectLink = ({ 
@@ -22,24 +22,27 @@ const ProjectLink = ({
   slug, 
   image, 
   isExternal = true,
-  hideOnProjectDetail = false // Default to false for backward compatibility
+  hideOnProjectDetail = false 
 }: ProjectLinkProps) => {
-  // Get the current path to determine if we're on a project detail page
+  // Determine if we're on a project detail page
   const currentPath = window.location.pathname;
   const isProjectDetailPage = currentPath.includes('/projects/');
 
-  // Hide the link if it should be hidden on project detail pages and we're on a project detail page
-  // Also hide if we're on a project detail page and there's no text content (just the icon)
+  // Hide link if:
+  // 1. We are explicitly told to hide it on project detail pages and we're on a project detail page, OR
+  // 2. We're on a project detail page and there's no text content (just an icon)
   if ((hideOnProjectDetail && isProjectDetailPage) || (isProjectDetailPage && !children && !title)) {
     return null;
   }
 
-  // On project detail pages, always show the text passed via children prop or title
-  // Never show "Try it yourself" on project detail pages
+  // Determine what text to display:
+  // - On project detail pages: use children or title
+  // - On other pages: use children, title, or default to "Try it yourself"
   const displayText = isProjectDetailPage 
     ? (children || title)
     : (children || title || "Try it yourself");
 
+  // Link content with icon
   const linkContent = (
     <>
       <span className="flex items-center justify-center mr-2">
@@ -49,6 +52,7 @@ const ProjectLink = ({
     </>
   );
 
+  // Common classes for both link types
   const linkClasses = cn(
     "inline-flex items-center justify-center px-6 py-3 rounded-full",
     "bg-white text-primary hover:bg-primary/5",
@@ -57,6 +61,7 @@ const ProjectLink = ({
     className
   );
 
+  // Render external link or React Router link based on isExternal prop
   if (isExternal) {
     return (
       <a
