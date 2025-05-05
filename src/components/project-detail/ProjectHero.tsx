@@ -11,9 +11,19 @@ interface ProjectHeroProps {
 export const ProjectHero = ({ project }: ProjectHeroProps) => {
   const navigate = useNavigate();
   
+  // Calculate a lighter shade for the background
+  const getBgShade = (color: string) => {
+    // For the Roomie project with #DC665C, use a softer background
+    if (color === "#DC665C") {
+      return `${color}15`; // 15% opacity for #DC665C
+    }
+    // Default for other projects
+    return `${color}10`; // 10% opacity for other colors
+  };
+  
   return (
     <section className="pt-20 pb-32 relative" style={{
-      backgroundColor: `${project.color}10`
+      backgroundColor: getBgShade(project.color)
     }}>
       <div className="container">
         <motion.button 
@@ -38,7 +48,10 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                 <span 
                   key={i} 
                   className="px-3 py-1 rounded-full text-xs font-medium"
-                  style={{ backgroundColor: `${project.color}20`, color: project.color }}
+                  style={{ 
+                    backgroundColor: `${project.color}20`, 
+                    color: project.color 
+                  }}
                 >
                   {tag}
                 </span>

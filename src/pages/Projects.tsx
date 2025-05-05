@@ -65,7 +65,7 @@ hideTagsStyle.textContent = `
 `;
 document.head.appendChild(hideTagsStyle);
 
-// Project data structure - keeping it exactly the same for compatibility
+// Project data structure - updating the color for ROOMIE
 const projectsData = [
   {
     title: "ROOMIE",
@@ -73,7 +73,7 @@ const projectsData = [
     image: "/lovable-uploads/roomie-home-page.png",
     tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
-    color: "#F4DB8B",
+    color: "#DC665C", // Updated from #F4DB8B to #DC665C
     case: "Interactive guide for simplified apartment moving for young adults.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
