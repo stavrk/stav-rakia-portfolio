@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -110,11 +111,11 @@ const projectsData = [
   },
   {
     title: "Playtika Manager Onboarding Guide",
-    description: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
+    description: "Interactive onboarding module for Playtika managers guiding new employees.",
     image: "/lovable-uploads/playtika-home.jpg",
     tags: ["Instructional Design"],
     color: "#D946EF",
-    case: "An interactive learning module specifically designed for Playtika managers who need to guide new employees through the onboarding process.",
+    case: "Interactive onboarding module for Playtika managers guiding new employees.",
     comingSoon: true
   }
 ];

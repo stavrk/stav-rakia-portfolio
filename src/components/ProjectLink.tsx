@@ -32,10 +32,7 @@ const ProjectLink = ({
   );
 
   const linkClasses = cn(
-    "inline-flex items-center justify-center px-6 py-3 rounded-full",
-    "bg-white text-primary hover:bg-primary/5",
-    "font-medium transition-all duration-300",
-    "border-2 border-primary hover:shadow-md hover:translate-y-[-2px]",
+    "inline-flex items-center text-black hover:text-[#8247E5] transition-colors duration-200 font-medium text-sm",
     className
   );
 
