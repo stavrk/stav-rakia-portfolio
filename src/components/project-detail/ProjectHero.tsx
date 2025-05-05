@@ -43,20 +43,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="mb-4 flex flex-wrap gap-2">
-              {project.tags && project.tags.map((tag: string, i: number) => (
-                <span 
-                  key={i} 
-                  className="px-3 py-1 rounded-full text-xs font-medium"
-                  style={{ 
-                    backgroundColor: `${project.color}20`, 
-                    color: project.color 
-                  }}
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
+            {/* Removed the tags container that was here */}
             
             <h1 
               className="text-4xl md:text-6xl font-medium mb-6" 
