@@ -11,6 +11,7 @@ interface ProjectLinkProps {
   slug?: string;
   image?: string;
   isExternal?: boolean;
+  hideOnProjectDetail?: boolean; // New prop to control visibility on project detail pages
 }
 
 const ProjectLink = ({ 
@@ -20,8 +21,19 @@ const ProjectLink = ({
   title, 
   slug, 
   image, 
-  isExternal = true 
+  isExternal = true,
+  hideOnProjectDetail = false // Default to false for backward compatibility
 }: ProjectLinkProps) => {
+  // If this link should be hidden on project detail pages and we're on a project detail page
+  // Get the current path to determine if we're on a project detail page
+  const currentPath = window.location.pathname;
+  const isProjectDetailPage = currentPath.includes('/projects/');
+
+  // Hide the link if it should be hidden on project detail pages and we're on a project detail page
+  if (hideOnProjectDetail && isProjectDetailPage) {
+    return null;
+  }
+
   const linkContent = (
     <>
       <span className="flex items-center justify-center mr-2">
