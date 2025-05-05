@@ -1,21 +1,22 @@
 
 import { motion } from "framer-motion";
+import { ImageLightbox } from "@/components/ImageLightbox";
 
-interface WireflowData {
+interface WireflowProps {
   title: string;
-  description: string;
   image: string;
+  description: string;
 }
 
 interface ProjectWireflowProps {
-  wireflow: WireflowData;
+  wireflow: WireflowProps;
   isPlantModule?: boolean;
 }
 
 export const ProjectWireflow = ({ wireflow, isPlantModule = false }: ProjectWireflowProps) => {
   return (
     <motion.div 
-      className="mb-16" 
+      className={`mb-16 ${isPlantModule ? "" : ""}`} 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -23,18 +24,20 @@ export const ProjectWireflow = ({ wireflow, isPlantModule = false }: ProjectWire
     >
       <h2 className="text-2xl font-medium mb-6">{wireflow.title}</h2>
       
-      {isPlantModule ? (
-        <div className="prose prose-lg max-w-none mb-8">
-          {wireflow.description.split('\n\n').map((paragraph, idx) => (
-            <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
-          ))}
-        </div>
-      ) : (
-        <p className="text-muted-foreground mb-8">{wireflow.description}</p>
-      )}
+      <div className="rounded-xl overflow-hidden border border-border/40 shadow-sm mb-8">
+        <ImageLightbox 
+          src={wireflow.image} 
+          alt={wireflow.title} 
+          className="w-full h-auto"
+        />
+      </div>
       
-      <div className="rounded-xl overflow-hidden border border-border/40">
-        <img src={wireflow.image} alt="Wireflow Diagram" className="w-full h-auto" />
+      <div className="prose prose-lg max-w-none">
+        {wireflow.description.split('\n\n').map((paragraph, idx) => (
+          <p key={idx} className="mb-4 text-muted-foreground">
+            {paragraph}
+          </p>
+        ))}
       </div>
     </motion.div>
   );

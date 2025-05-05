@@ -22,13 +22,13 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
   };
   
   return (
-    <section className="pt-20 pb-32 relative" style={{
+    <section className="pt-12 md:pt-20 pb-20 md:pb-32 relative" style={{
       backgroundColor: getBgShade(project.color)
     }}>
       <div className="container">
         <motion.button 
           onClick={() => navigate('/projects')} 
-          className="flex items-center mb-8 text-muted-foreground hover:text-foreground transition-colors"
+          className="flex items-center mb-6 md:mb-8 text-muted-foreground hover:text-foreground transition-colors"
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -37,7 +37,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
           Back to Projects
         </motion.button>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,13 +46,13 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             {/* Removed the tags container that was here */}
             
             <h1 
-              className="text-4xl md:text-6xl font-medium mb-6" 
+              className="text-3xl md:text-4xl lg:text-6xl font-medium mb-4 md:mb-6" 
               style={{ color: project.color }}
             >
               {project.title}
             </h1>
             
-            <p className="text-lg mb-8">
+            <p className="text-base md:text-lg mb-6 md:mb-8">
               {project.overview}
             </p>
             
@@ -60,7 +60,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
           </motion.div>
           
           <motion.div 
-            className="relative" 
+            className="relative mt-4 md:mt-0" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
