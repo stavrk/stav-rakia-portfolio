@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -154,7 +155,18 @@ const About = () => {
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ delay: index * 0.1, duration: 0.5 }}
                 >
-                  <div className="absolute -left-10 top-1.5 h-4 w-4 rounded-full bg-primary" />
+                  <motion.div 
+                    className="absolute -left-10 top-1.5 h-4 w-4 rounded-full bg-primary"
+                    initial={{ opacity: 0, scale: 0 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ 
+                      delay: index * 0.1 + 0.2, 
+                      duration: 0.4,
+                      type: "spring",
+                      stiffness: 200
+                    }}
+                  />
                   <div className="p-6 rounded-xl bg-background border border-primary/20">
                     <h3 className="text-xl font-medium mb-1">{experience.role}</h3>
                     <div className="flex justify-between items-center mb-3">
