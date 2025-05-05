@@ -22,6 +22,13 @@ const NavLink = ({
       )}
     >
       {children}
+      {isActive && (
+        <motion.div
+          layoutId="navbar-indicator"
+          className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary rounded-full"
+          transition={{ type: "spring", stiffness: 500, damping: 30 }}
+        />
+      )}
     </Link>
   );
 };
@@ -58,16 +65,6 @@ const Navbar = () => {
     };
   }, [scrolled]);
 
-  // Store the position of the active link for the indicator animation
-  const navItems = [
-    { path: '/', label: 'Home' },
-    { path: '/projects', label: 'Projects' },
-    { path: '/about', label: 'About' }
-  ];
-  
-  // Find the active item index for animation
-  const activeIndex = navItems.findIndex(item => item.path === activePath);
-
   return (
     <motion.header
       className={cn(
@@ -89,31 +86,16 @@ const Navbar = () => {
           </motion.span>
         </Link>
 
-        <nav className="flex items-center space-x-1 md:space-x-2 relative">
-          {navItems.map((item, index) => (
-            <NavLink 
-              key={item.path}
-              href={item.path} 
-              isActive={item.path === activePath}
-            >
-              {item.label}
-            </NavLink>
-          ))}
-          
-          {/* Animated underline indicator */}
-          <motion.div
-            className="absolute bottom-0 h-0.5 bg-primary rounded-full"
-            initial={false}
-            animate={{
-              left: `calc(${activeIndex * 100}% + ${activeIndex * 0.25}rem + 0.75rem)`,
-              right: `calc(${(navItems.length - 1 - activeIndex) * 100}% + ${(navItems.length - 1 - activeIndex) * 0.25}rem + 0.75rem)`
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 500,
-              damping: 30
-            }}
-          />
+        <nav className="flex items-center space-x-1 md:space-x-2">
+          <NavLink href="/" isActive={activePath === "/"}>
+            Home
+          </NavLink>
+          <NavLink href="/projects" isActive={activePath === "/projects"}>
+            Projects
+          </NavLink>
+          <NavLink href="/about" isActive={activePath === "/about"}>
+            About
+          </NavLink>
         </nav>
       </div>
     </motion.header>
