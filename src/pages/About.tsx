@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
@@ -10,52 +9,52 @@ import { Button } from "@/components/ui/button";
 const About = () => {
   const artistsData = [{
     name: "Jorja Smith",
-    image: "/lovable-uploads/fdad82f9-6c24-47ab-b496-96d3c673187d.png",
+    image: "/lovable-uploads/jorja-smith",
     className: "object-cover object-center"
   }, {
     name: "Adele",
-    image: "/lovable-uploads/ec7eabd6-87e2-4a7b-88bc-d777974d2a73.png",
+    image: "/lovable-uploads/adele",
     className: "object-cover object-center"
   }, {
     name: "Alicia Keys",
-    image: "/lovable-uploads/70ba0890-cb07-4991-a37c-4c732986b66c.png",
+    image: "/lovable-uploads/alicia-keys",
     className: "object-cover object-center"
   }, {
     name: "Ninet Tayeb",
-    image: "/lovable-uploads/abfa4116-755c-410b-9269-ef3511af7850.png",
-    className: "object-cover object-center" // Updated to properly center the image
+    image: "/lovable-uploads/ninet_t",
+    className: "object-cover object-center" 
   }, {
     name: "Red Band",
-    image: "/lovable-uploads/e3af1756-a5c4-407b-966d-82200f13fbd7.png",
+    image: "/lovable-uploads/red-band",
     className: "object-cover object-center"
   }, {
     name: "Olivia Dean",
-    image: "/lovable-uploads/0eca68f6-7db9-4f72-aa03-979ced580280.png",
-    className: "object-cover object-center" // Updated to properly center the image
+    image: "/lovable-uploads/olivia-dean",
+    className: "object-cover object-center" 
   }];
   const hobbiesData = [{
     name: "Jewelry making",
-    image: "/lovable-uploads/e5218831-c4a7-4372-9729-b606739584d1.png",
+    image: "/lovable-uploads/jewelry_making",
     className: "object-cover object-center"
   }, {
     name: "Pilates reformer",
-    image: "/lovable-uploads/d248eb51-ddf9-41ed-ae99-f5e37afa0c60.png",
+    image: "/lovable-uploads/pilates_reformer",
     className: "object-cover object-center"
   }, {
     name: "Volunteers with dogs",
-    image: "/lovable-uploads/da03da86-9304-4447-8d92-838b9bf49970.png",
+    image: "/lovable-uploads/volunteering_with_dogs",
     className: "object-cover object-center"
   }, {
     name: "Ceramic Art",
-    image: "/lovable-uploads/abfa4116-755c-410b-9269-ef3511af7850.png",
+    image: "/lovable-uploads/ceramic_art",
     className: "object-cover object-center"
   }, {
     name: "Friends",
-    image: "/lovable-uploads/23ee1d68-9bb7-4f7a-81f5-6df6c309574d.png",
+    image: "/lovable-uploads/friends",
     className: "object-cover object-center"
   }, {
     name: "Traveling",
-    image: "/lovable-uploads/0fc6fe86-189a-4804-acb3-328837caa092.png",
+    image: "/lovable-uploads/traveling",
     className: "object-cover object-center"
   }];
   const experienceData = [{
@@ -124,7 +123,7 @@ const About = () => {
           }}>
               <div className="aspect-square w-full max-w-md mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
                 <img 
-                  src="/lovable-uploads/a7654f20-060a-479e-8a23-1a2201664694.png" 
+                  src="/lovable-uploads/stav_rakia" 
                   alt="Stav Rakia" 
                   className="w-full h-full object-cover object-center" 
                 />
