@@ -5,6 +5,7 @@ import FeaturedProjects from "@/components/FeaturedProjects";
 import Process from "@/components/Process";
 import Contact from "@/components/Contact";
 import { motion } from "framer-motion";
+import { Toaster } from "@/components/ui/toaster";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <FeaturedProjects />
         <Process />
         <Contact />
+        <Toaster />
       </motion.div>
     </Layout>
   );

@@ -2,8 +2,11 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Send } from 'lucide-react';
+import emailjs from 'emailjs-com';
+import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
+  const { toast } = useToast();
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -20,13 +23,27 @@ const Contact = () => {
     });
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Form will be sent to stavsim282@gmail.com
-    // This is a simulation of form submission
-    setTimeout(() => {
+    try {
+      // Initialize EmailJS with your user ID
+      emailjs.init("YOUR_USER_ID"); // You'll need to replace this with your actual EmailJS user ID
+      
+      const templateParams = {
+        to_email: 'stavsim282@gmail.com',
+        from_name: formState.name,
+        from_email: formState.email,
+        message: formState.message,
+      };
+      
+      await emailjs.send(
+        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        templateParams
+      );
+      
       setIsSubmitting(false);
       setIsSubmitted(true);
       setFormState({
@@ -35,11 +52,25 @@ const Contact = () => {
         message: ''
       });
       
+      toast({
+        title: "Message sent!",
+        description: "Your message has been sent successfully.",
+      });
+      
       // Reset success message after 5 seconds
       setTimeout(() => {
         setIsSubmitted(false);
       }, 5000);
-    }, 1500);
+    } catch (error) {
+      console.error('Error sending email:', error);
+      setIsSubmitting(false);
+      
+      toast({
+        title: "Error",
+        description: "Failed to send your message. Please try again.",
+        variant: "destructive",
+      });
+    }
   };
   
   return (
