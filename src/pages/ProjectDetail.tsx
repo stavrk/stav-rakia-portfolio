@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import { ArrowLeft, ExternalLink, Lightbulb, Palette, Puzzle, Brain, Code, LineChart, Clock, LayoutPanelLeft, BarChart4, Sliders, Scale, SlidersHorizontal, Gauge, BrainCircuit, FlaskConical } from 'lucide-react';
 import ProjectLink from '@/components/ProjectLink';
+
 const projectsData = [{
   title: "ROOMIE",
   description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
@@ -195,6 +196,7 @@ const projectsData = [{
   additionalImages: ["/lovable-uploads/plant-1.png", "/lovable-uploads/plant-2.png", "/lovable-uploads/plant-3.png", "/lovable-uploads/plant-4.png"],
   link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
 }];
+
 const ProjectDetail = () => {
   const {
     slug
@@ -243,7 +245,15 @@ const ProjectDetail = () => {
             duration: 0.5
           }}>
               <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, i) => {})}
+                {project.tags && project.tags.map((tag, i) => (
+                  <span 
+                    key={i} 
+                    className="px-3 py-1 rounded-full text-xs font-medium"
+                    style={{ backgroundColor: `${project.color}20`, color: project.color }}
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
               
               <h1 className="text-4xl md:text-6xl font-medium mb-6" style={{
@@ -1159,4 +1169,5 @@ const ProjectDetail = () => {
       </section>
     </Layout>;
 };
+
 export default ProjectDetail;
