@@ -111,11 +111,11 @@ const projectsData = [
   },
   {
     title: "Playtika Manager Onboarding Guide",
-    description: "Interactive onboarding module for Playtika managers guiding new employees.",
+    description: "Interactive onboarding module for managers guiding new employees.",
     image: "/lovable-uploads/playtika-home.jpg",
     tags: ["Instructional Design"],
     color: "#D946EF",
-    case: "Interactive onboarding module for Playtika managers guiding new employees.",
+    case: "Interactive onboarding module for managers guiding new employees.",
     comingSoon: true
   }
 ];
