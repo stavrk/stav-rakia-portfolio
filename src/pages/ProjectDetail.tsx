@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Layout from "@/components/Layout";
@@ -243,7 +244,18 @@ const ProjectDetail = () => {
             duration: 0.5
           }}>
               <div className="mb-4 flex flex-wrap gap-2">
-                {project.tags.map((tag, i) => {})}
+                {project.tags.map((tag, i) => (
+                  <span 
+                    key={i}
+                    className="px-3 py-1 text-sm rounded-full"
+                    style={{
+                      backgroundColor: `${project.color}20`,
+                      color: project.color
+                    }}
+                  >
+                    {tag}
+                  </span>
+                ))}
               </div>
               
               <h1 className="text-4xl md:text-6xl font-medium mb-6" style={{
