@@ -1,12 +1,5 @@
 
-import React, { useState } from 'react';
-import { X } from 'lucide-react';
-import { 
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { useIsMobile } from '@/hooks/use-mobile';
+import React from 'react';
 
 interface ImageLightboxProps {
   src: string;
@@ -15,45 +8,6 @@ interface ImageLightboxProps {
 }
 
 export const ImageLightbox = ({ src, alt, className = "" }: ImageLightboxProps) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const isMobile = useIsMobile();
-  
-  // For desktop devices, just render the image normally without lightbox functionality
-  if (!isMobile) {
-    return <img src={src} alt={alt} className={className} />;
-  }
-  
-  return (
-    <AlertDialog open={isOpen} onOpenChange={setIsOpen}>
-      <AlertDialogTrigger asChild>
-        <img 
-          src={src} 
-          alt={alt} 
-          className={`${className} cursor-pointer`} 
-        />
-      </AlertDialogTrigger>
-      <AlertDialogContent className="max-w-[100vw] p-0 m-0 bg-transparent border-none">
-        <div className="relative w-full h-full">
-          <button 
-            onClick={() => setIsOpen(false)}
-            className="absolute top-2 right-2 p-2 bg-black/50 rounded-full text-white z-10"
-            aria-label="Close lightbox"
-          >
-            <X className="h-6 w-6" />
-          </button>
-          <div 
-            className="w-full h-full"
-            onClick={() => setIsOpen(false)}
-          >
-            <img 
-              src={src} 
-              alt={alt} 
-              className="w-full h-auto max-h-[90vh] object-contain" 
-              onClick={(e) => e.stopPropagation()}
-            />
-          </div>
-        </div>
-      </AlertDialogContent>
-    </AlertDialog>
-  );
+  // Simply render the image without any lightbox functionality
+  return <img src={src} alt={alt} className={className} />;
 };

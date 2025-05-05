@@ -19,13 +19,15 @@ const About = () => {
     image: "/lovable-uploads/dbff0825-df43-4301-b818-fd007d961677.png"
   }, {
     name: "Ninet Tayeb",
-    image: "/lovable-uploads/ac268743-104c-47b7-a397-070001c6d649.png"
+    image: "/lovable-uploads/ac268743-104c-47b7-a397-070001c6d649.png",
+    className: "object-cover object-center" // Added proper centering class
   }, {
     name: "Red Band",
     image: "/lovable-uploads/2b04e738-4994-4b70-a947-7ba58241a2b8.png"
   }, {
     name: "Olivia Dean",
-    image: "/lovable-uploads/20433a57-43ed-4175-902d-8df5cd8bb366.png"
+    image: "/lovable-uploads/20433a57-43ed-4175-902d-8df5cd8bb366.png",
+    className: "object-cover object-center scale-110" // Added proper centering and slight scale for better fit
   }];
   const hobbiesData = [{
     name: "Jewelry making",
@@ -99,7 +101,7 @@ const About = () => {
               </p>
             </motion.div>
             
-            <motion.div className="relative w-full max-w-lg mx-auto flex flex-col items-center" initial={{
+            <motion.div className="relative w-full max-w-lg mx-auto flex flex-col items-center justify-center" initial={{
             opacity: 0,
             x: 20
           }} animate={{
@@ -110,10 +112,14 @@ const About = () => {
             duration: 0.5
           }}>
               <div className="aspect-square w-full max-w-md mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl mb-6">
-                <img src="/lovable-uploads/6eca0a82-eae5-4159-9730-9a7a3a3eb109.png" alt="Stav Rakia" className="w-full h-full object-cover" />
+                <img 
+                  src="/lovable-uploads/6eca0a82-eae5-4159-9730-9a7a3a3eb109.png" 
+                  alt="Stav Rakia" 
+                  className="w-full h-full object-cover object-center object-[50%_40%]" 
+                />
               </div>
               
-              <Button asChild size="sm" className="inline-flex items-center px-5 py-2 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px]">
+              <Button asChild size="sm" className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] w-auto">
                 <a href="https://www.linkedin.com/in/stav-rakia/" target="_blank" rel="noopener noreferrer">
                   <span className="mr-2">LinkedIn</span>
                   <ExternalLink className="h-4 w-4" />
@@ -325,7 +331,12 @@ const About = () => {
               }}>
                     <div className="w-20 h-20 mb-3 rounded-full overflow-hidden">
                       <AspectRatio ratio={1 / 1} className="bg-muted">
-                        <img src={artist.image} alt={artist.name} className="w-full h-full object-cover rounded-full" loading="lazy" />
+                        <img 
+                          src={artist.image} 
+                          alt={artist.name} 
+                          className={`w-full h-full object-cover rounded-full ${artist.className || ''}`} 
+                          loading="lazy" 
+                        />
                       </AspectRatio>
                     </div>
                     <span className="text-sm font-medium">{artist.name}</span>
