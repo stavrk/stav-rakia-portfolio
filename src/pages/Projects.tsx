@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -37,7 +36,10 @@ hideTagsStyle.textContent = `
   .project-detail-page [class*="badge"],
   .project-detail-page [class*="tag"],
   .project-detail-page div:has(> span:contains("UX/UI")),
-  .project-detail-page div:has(> span:contains("Instructional"))
+  .project-detail-page div:has(> span:contains("Instructional")),
+  /* Hide "Try it yourself" buttons on project detail pages */
+  .project-detail-page a:contains("Try it yourself"),
+  .project-detail-page button:contains("Try it yourself")
   {
     display: none !important;
     visibility: hidden !important;

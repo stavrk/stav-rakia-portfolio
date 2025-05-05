@@ -34,10 +34,16 @@ const ProjectLink = ({
     return null;
   }
 
+  // On project detail pages, always show the text passed via children prop or title
+  // Never show "Try it yourself" on project detail pages
+  const displayText = isProjectDetailPage 
+    ? (children || title)
+    : (children || title || "Try it yourself");
+
   const linkContent = (
     <>
       <span className="flex items-center justify-center mr-2">
-        {children || title || "Try it yourself"}
+        {displayText}
       </span>
       <ExternalLink className="h-4 w-4" />
     </>
