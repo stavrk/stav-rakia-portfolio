@@ -13,9 +13,9 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
   
   // Calculate a lighter shade for the background
   const getBgShade = (color: string) => {
-    // For the Roomie project with #DC665C, use a softer background
-    if (color === "#DC665C") {
-      return `${color}15`; // 15% opacity for #DC665C
+    // For the Roomie project with #2A4359, use a softer background
+    if (color === "#2A4359") {
+      return `${color}15`; // 15% opacity for #2A4359
     }
     // Default for other projects
     return `${color}10`; // 10% opacity for other colors

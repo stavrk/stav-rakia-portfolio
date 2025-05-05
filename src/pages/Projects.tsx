@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -73,7 +74,7 @@ const projectsData = [
     image: "/lovable-uploads/roomie-home-page.png",
     tags: ["UX UI Design", "Instructional Design"],
     slug: "roomie",
-    color: "#DC665C", // Updated from #F4DB8B to #DC665C
+    color: "#2A4359", // Updated from #DC665C to #2A4359
     case: "Interactive guide for simplified apartment moving for young adults.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
