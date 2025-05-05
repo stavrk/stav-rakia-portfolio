@@ -11,7 +11,7 @@ interface ProjectLinkProps {
   slug?: string;
   image?: string;
   isExternal?: boolean;
-  hideOnProjectDetail?: boolean; // New prop to control visibility on project detail pages
+  hideOnProjectDetail?: boolean; 
 }
 
 const ProjectLink = ({ 
@@ -22,7 +22,7 @@ const ProjectLink = ({
   slug, 
   image, 
   isExternal = true,
-  hideOnProjectDetail = false // Default to false for backward compatibility
+  hideOnProjectDetail = false
 }: ProjectLinkProps) => {
   // Get the current path to determine if we're on a project detail page
   const currentPath = window.location.pathname;
@@ -49,13 +49,16 @@ const ProjectLink = ({
     </>
   );
 
-  const linkClasses = cn(
-    "inline-flex items-center justify-center px-6 py-3 rounded-full",
-    "bg-white text-primary hover:bg-primary/5",
-    "font-medium transition-all duration-300",
-    "border-2 border-primary hover:shadow-md hover:translate-y-[-2px]",
-    className
-  );
+  // Common styles for both internal and external links
+  const commonLinkClasses = isProjectDetailPage && !isExternal
+    ? "inline-flex items-center text-black hover:text-[#8247E5] transition-colors duration-200 font-medium text-sm"
+    : cn(
+        "inline-flex items-center justify-center px-6 py-3 rounded-full",
+        "bg-white text-primary hover:bg-primary/5",
+        "font-medium transition-all duration-300",
+        "border-2 border-primary hover:shadow-md hover:translate-y-[-2px]",
+        className
+      );
 
   if (isExternal) {
     return (
@@ -63,7 +66,7 @@ const ProjectLink = ({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        className={linkClasses}
+        className={commonLinkClasses}
       >
         {linkContent}
       </a>
@@ -71,7 +74,7 @@ const ProjectLink = ({
   }
 
   return (
-    <Link to={href} className={linkClasses}>
+    <Link to={href} className={commonLinkClasses}>
       {linkContent}
     </Link>
   );
