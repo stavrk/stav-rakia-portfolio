@@ -12,11 +12,14 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   const location = useLocation();
   
-  // Smooth scroll to top on route change - modified to be less resource-intensive
+  // Smooth scroll to top on route change - without affecting the navbar position
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+    // Use requestAnimationFrame to ensure this happens after render
+    requestAnimationFrame(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   }, [location.pathname]);
 
@@ -45,7 +48,9 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="relative min-h-screen flex flex-col noise-bg overflow-hidden">
+      {/* Navbar is outside AnimatePresence to remain stable during transitions */}
       <Navbar />
+      
       <AnimatePresence mode="wait">
         <motion.main
           key={location.pathname}
@@ -58,6 +63,7 @@ const Layout = ({ children }: LayoutProps) => {
           {children}
         </motion.main>
       </AnimatePresence>
+      
       <Footer />
     </div>
   );
