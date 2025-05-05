@@ -10,3 +10,4 @@ export * from './ProjectAesthetics';
 export * from './ProjectGallery';
 export * from './ProjectCallToAction';
 export * from './ProjectNextProject';
+export * from './ChallengesSection';

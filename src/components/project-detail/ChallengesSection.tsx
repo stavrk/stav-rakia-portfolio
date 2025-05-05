@@ -213,4 +213,4 @@ export const ChallengesSection = ({ project }: ChallengesSectionProps) => {
   );
 };
 
-export { ChallengesSection };
+// Removed the duplicate export here
