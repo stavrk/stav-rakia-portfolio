@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -39,7 +40,15 @@ hideTagsStyle.textContent = `
   .project-detail-page div:has(> span:contains("Instructional")),
   /* Hide "Try it yourself" buttons on project detail pages */
   .project-detail-page a:contains("Try it yourself"),
-  .project-detail-page button:contains("Try it yourself")
+  .project-detail-page button:contains("Try it yourself"),
+  /* Hide icon-only buttons/links on project detail pages */
+  .project-detail-page a:not(:has(span:not(:empty))),
+  .project-detail-page a:has(> svg:only-child),
+  .project-detail-page button:has(> svg:only-child),
+  .project-detail-page .icon-only-link,
+  /* Target buttons with only the external link icon in project detail */
+  .project-detail-page a:has(> span:empty + svg),
+  .project-detail-page a:has(> svg.lucide-external-link:only-child)
   {
     display: none !important;
     visibility: hidden !important;

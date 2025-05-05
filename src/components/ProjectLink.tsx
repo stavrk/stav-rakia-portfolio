@@ -24,13 +24,13 @@ const ProjectLink = ({
   isExternal = true,
   hideOnProjectDetail = false // Default to false for backward compatibility
 }: ProjectLinkProps) => {
-  // If this link should be hidden on project detail pages and we're on a project detail page
   // Get the current path to determine if we're on a project detail page
   const currentPath = window.location.pathname;
   const isProjectDetailPage = currentPath.includes('/projects/');
 
   // Hide the link if it should be hidden on project detail pages and we're on a project detail page
-  if (hideOnProjectDetail && isProjectDetailPage) {
+  // Also hide if we're on a project detail page and there's no text content (just the icon)
+  if ((hideOnProjectDetail && isProjectDetailPage) || (isProjectDetailPage && !children && !title)) {
     return null;
   }
 
