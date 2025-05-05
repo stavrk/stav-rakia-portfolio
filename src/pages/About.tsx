@@ -1,52 +1,62 @@
+
 import Layout from "@/components/Layout";
 import Contact from "@/components/Contact";
 import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 
 const About = () => {
   const artistsData = [{
     name: "Jorja Smith",
-    image: "/lovable-uploads/8254fdaf-e168-45d1-804b-feffed551b76.png"
+    image: "/lovable-uploads/fdad82f9-6c24-47ab-b496-96d3c673187d.png",
+    className: "object-cover object-center"
   }, {
     name: "Adele",
-    image: "/lovable-uploads/db9d63a5-a1df-4b2c-8020-f40b8ff96d67.png"
+    image: "/lovable-uploads/ec7eabd6-87e2-4a7b-88bc-d777974d2a73.png",
+    className: "object-cover object-center"
   }, {
     name: "Alicia Keys",
-    image: "/lovable-uploads/dbff0825-df43-4301-b818-fd007d961677.png"
+    image: "/lovable-uploads/70ba0890-cb07-4991-a37c-4c732986b66c.png",
+    className: "object-cover object-center"
   }, {
     name: "Ninet Tayeb",
-    image: "/lovable-uploads/ac268743-104c-47b7-a397-070001c6d649.png",
-    className: "object-cover object-center" // Added proper centering class
+    image: "/lovable-uploads/abfa4116-755c-410b-9269-ef3511af7850.png",
+    className: "object-cover object-center" // Updated to properly center the image
   }, {
     name: "Red Band",
-    image: "/lovable-uploads/2b04e738-4994-4b70-a947-7ba58241a2b8.png"
+    image: "/lovable-uploads/e3af1756-a5c4-407b-966d-82200f13fbd7.png",
+    className: "object-cover object-center"
   }, {
     name: "Olivia Dean",
-    image: "/lovable-uploads/20433a57-43ed-4175-902d-8df5cd8bb366.png",
-    className: "object-cover object-center scale-110" // Added proper centering and slight scale for better fit
+    image: "/lovable-uploads/0eca68f6-7db9-4f72-aa03-979ced580280.png",
+    className: "object-cover object-center" // Updated to properly center the image
   }];
   const hobbiesData = [{
     name: "Jewelry making",
-    image: "/lovable-uploads/21415086-1df6-4acf-ab75-7268709814b3.png"
+    image: "/lovable-uploads/e5218831-c4a7-4372-9729-b606739584d1.png",
+    className: "object-cover object-center"
   }, {
     name: "Pilates reformer",
-    image: "/lovable-uploads/21a9e39f-fdaf-4593-8535-65abbb7e36b3.png"
+    image: "/lovable-uploads/d248eb51-ddf9-41ed-ae99-f5e37afa0c60.png",
+    className: "object-cover object-center"
   }, {
     name: "Volunteers with dogs",
-    image: "/lovable-uploads/26705183-2a3e-4509-baa3-037b884f3117.png"
+    image: "/lovable-uploads/da03da86-9304-4447-8d92-838b9bf49970.png",
+    className: "object-cover object-center"
   }, {
     name: "Ceramic Art",
-    image: "/lovable-uploads/370e0139-e3a2-4963-8719-9ad27d3fb570.png"
+    image: "/lovable-uploads/abfa4116-755c-410b-9269-ef3511af7850.png",
+    className: "object-cover object-center"
   }, {
     name: "Friends",
-    image: "/lovable-uploads/b9c95a06-8869-4dfb-b425-1994f710ca1c.png"
+    image: "/lovable-uploads/23ee1d68-9bb7-4f7a-81f5-6df6c309574d.png",
+    className: "object-cover object-center"
   }, {
     name: "Traveling",
-    image: "/lovable-uploads/40563f20-2012-49e7-949e-bd6c06d55c21.png"
+    image: "/lovable-uploads/0fc6fe86-189a-4804-acb3-328837caa092.png",
+    className: "object-cover object-center"
   }];
   const experienceData = [{
     role: "Military Service (Reserve Duty)",
@@ -69,6 +79,7 @@ const About = () => {
     period: "2019 - 2021",
     description: "\"Mekusharim\" - tactical training of the air force fighter planes."
   }];
+  
   return <Layout>
       <section className="py-16">
         <div className="container">
@@ -101,7 +112,7 @@ const About = () => {
               </p>
             </motion.div>
             
-            <motion.div className="relative w-full max-w-lg mx-auto flex flex-col items-center justify-center" initial={{
+            <motion.div className="relative w-full max-w-lg mx-auto" initial={{
             opacity: 0,
             x: 20
           }} animate={{
@@ -111,20 +122,22 @@ const About = () => {
             delay: 0.2,
             duration: 0.5
           }}>
-              <div className="aspect-square w-full max-w-md mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl mb-6">
+              <div className="aspect-square w-full max-w-md mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
                 <img 
-                  src="/lovable-uploads/6eca0a82-eae5-4159-9730-9a7a3a3eb109.png" 
+                  src="/lovable-uploads/a7654f20-060a-479e-8a23-1a2201664694.png" 
                   alt="Stav Rakia" 
-                  className="w-full h-full object-cover object-center object-[50%_40%]" 
+                  className="w-full h-full object-cover object-center" 
                 />
               </div>
               
-              <Button asChild size="sm" className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] w-auto">
-                <a href="https://www.linkedin.com/in/stav-rakia/" target="_blank" rel="noopener noreferrer">
-                  <span className="mr-2">LinkedIn</span>
-                  <ExternalLink className="h-4 w-4" />
-                </a>
-              </Button>
+              <div className="flex justify-center mt-6">
+                <Button asChild size="sm" className="inline-flex items-center px-4 py-1.5 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] w-auto">
+                  <a href="https://www.linkedin.com/in/stav-rakia/" target="_blank" rel="noopener noreferrer">
+                    <span className="mr-2">LinkedIn</span>
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
+                </Button>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -334,7 +347,7 @@ const About = () => {
                         <img 
                           src={artist.image} 
                           alt={artist.name} 
-                          className={`w-full h-full object-cover rounded-full ${artist.className || ''}`} 
+                          className={`w-full h-full rounded-full ${artist.className || ''}`} 
                           loading="lazy" 
                         />
                       </AspectRatio>
@@ -376,7 +389,12 @@ const About = () => {
               }}>
                     <div className="w-20 h-20 mb-3 rounded-full overflow-hidden">
                       <AspectRatio ratio={1 / 1} className="bg-muted">
-                        <img src={hobby.image} alt={hobby.name} className="w-full h-full object-cover rounded-full" loading="lazy" />
+                        <img 
+                          src={hobby.image} 
+                          alt={hobby.name}
+                          className={`w-full h-full rounded-full ${hobby.className || ''}`}
+                          loading="lazy"
+                        />
                       </AspectRatio>
                     </div>
                     <span className="text-sm font-medium text-center">{hobby.name}</span>
