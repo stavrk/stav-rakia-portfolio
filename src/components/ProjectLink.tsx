@@ -51,7 +51,7 @@ const ProjectLink = ({
 
   const linkClasses = cn(
     "inline-flex items-center justify-center px-6 py-3 rounded-full",
-    "bg-white text-primary hover:text-[#8247E5]", // Updated hover color to #8247E5
+    "bg-white text-primary hover:bg-primary/5",
     "font-medium transition-all duration-300",
     "border-2 border-primary hover:shadow-md hover:translate-y-[-2px]",
     className
