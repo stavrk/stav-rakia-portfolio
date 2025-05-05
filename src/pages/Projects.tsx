@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
-import { Clock, ArrowRight } from "lucide-react";
+import ProjectCard from "@/components/ProjectCard";
 
 // Add CSS to hide tag elements on project detail pages
 const hideTagsStyle = document.createElement('style');
@@ -143,68 +143,20 @@ const Projects = () => {
             </p>
           </motion.div>
           
-          {/* Filter categories have been removed */}
-          
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {sortedProjects.map((project, index) => (
-              <motion.div 
+              <ProjectCard 
                 key={project.slug || index}
-                className="group overflow-hidden rounded-xl border border-border/40"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 + 0.2, duration: 0.5 }}
-                whileHover={{ y: -5 }}
-              >
-                <div className="relative aspect-video overflow-hidden">
-                  {project.comingSoon && (
-                    <div className="absolute top-4 right-4 z-30">
-                      <div className="flex items-center bg-black/30 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
-                        <Clock className="h-3 w-3 mr-1" />
-                        <span>Coming Soon</span>
-                      </div>
-                    </div>
-                  )}
-                  <a 
-                    href={project.comingSoon ? "#" : `/projects/${project.slug}`}
-                    className="block relative w-full h-full"
-                  >
-                    <div 
-                      className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"
-                    />
-                    <img 
-                      src={project.image} 
-                      alt={project.title} 
-                      className={`w-full h-full object-cover object-center transition-transform duration-500 group-hover:scale-105 ${project.comingSoon ? 'opacity-80' : ''}`}
-                    />
-                    <div className="absolute bottom-0 left-0 z-20 p-4 sm:p-6 w-full">
-                      <h3 className="text-xl sm:text-2xl font-medium text-white mb-1">{project.title}</h3>
-                    </div>
-                  </a>
-                </div>
-                
-                <div className="p-4 sm:p-6">
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  
-                  {/* Horizontal divider line */}
-                  <div className="h-px w-full bg-[#f4efff] mb-4"></div>
-                  
-                  {project.comingSoon ? (
-                    <span 
-                      className="inline-block text-gray-500 font-medium text-sm"
-                    >
-                      Coming Soon
-                    </span>
-                  ) : (
-                    <a 
-                      href={`/projects/${project.slug}`} 
-                      className="inline-flex items-center text-black hover:text-[#8247E5] transition-colors duration-200 font-medium text-sm"
-                    >
-                      View Case Study
-                      <ArrowRight className="ml-1 h-4 w-4 transition-colors duration-200" />
-                    </a>
-                  )}
-                </div>
-              </motion.div>
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                tags={project.tags}
+                slug={project.slug || ''}
+                color={project.color}
+                index={index}
+                comingSoon={project.comingSoon || false}
+                link={project.link}
+              />
             ))}
           </div>
         </div>

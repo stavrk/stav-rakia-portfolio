@@ -34,8 +34,9 @@ const ProjectCard = ({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: Math.min(index * 0.1, 0.3) + 0.2, duration: 0.4 }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      onClick={() => {
-        if (!comingSoon) {
+      onClick={(e) => {
+        // Only navigate when clicking on the card (not on the link)
+        if (!comingSoon && !e.defaultPrevented) {
           window.location.href = `/projects/${slug}`;
         }
       }}
@@ -51,6 +52,11 @@ const ProjectCard = ({
               comingSoon && "opacity-80"
             )}
           />
+          {comingSoon && (
+            <div className="absolute top-4 right-4 z-10 bg-black/30 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm flex items-center">
+              <span className="mr-1">Coming Soon</span>
+            </div>
+          )}
         </div>
       </div>
       
