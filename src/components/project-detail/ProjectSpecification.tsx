@@ -27,7 +27,7 @@ export const ProjectSpecification = ({ specification }: ProjectSpecificationProp
         <ImageLightbox 
           src={specification.image} 
           alt={specification.title} 
-          className="w-full h-auto"
+          className="w-full h-auto object-contain"
         />
       </div>
       

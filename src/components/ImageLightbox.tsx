@@ -32,11 +32,11 @@ export const ImageLightbox = ({ src, alt, className = "" }: ImageLightboxProps) 
           className={`${className} cursor-pointer`} 
         />
       </AlertDialogTrigger>
-      <AlertDialogContent className="max-w-[95vw] p-2 bg-black/95 border-none">
+      <AlertDialogContent className="max-w-[100vw] p-0 m-0 bg-transparent border-none">
         <div className="relative">
           <button 
             onClick={() => setIsOpen(false)}
-            className="absolute top-0 right-0 p-2 bg-black/50 rounded-full text-white z-10"
+            className="absolute top-2 right-2 p-2 bg-black/50 rounded-full text-white z-10"
             aria-label="Close lightbox"
           >
             <X className="h-6 w-6" />

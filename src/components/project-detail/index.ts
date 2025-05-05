@@ -12,3 +12,4 @@ export * from './ProjectCallToAction';
 export * from './ProjectNextProject';
 export * from './ChallengesSection';
 export * from './ProjectDetailContent';
+export * from './ProcessStep';

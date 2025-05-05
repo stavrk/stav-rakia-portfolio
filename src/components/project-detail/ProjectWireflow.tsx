@@ -28,7 +28,7 @@ export const ProjectWireflow = ({ wireflow, isPlantModule = false }: ProjectWire
         <ImageLightbox 
           src={wireflow.image} 
           alt={wireflow.title} 
-          className="w-full h-auto"
+          className="w-full h-auto object-contain"
         />
       </div>
       

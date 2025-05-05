@@ -45,11 +45,11 @@ export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages }: 
             <ImageLightbox 
               src={designImage.image}
               alt={designImage.title}
-              className="w-full object-cover h-48 md:h-64"
+              className="w-full object-contain h-auto max-h-64"
             />
             <div className="p-4 bg-secondary/30">
-              <h4 className="text-lg font-medium mb-1">{designImage.title}</h4>
-              <p className="text-sm text-muted-foreground">{designImage.description}</p>
+              <h4 className="text-base sm:text-lg font-medium mb-1">{designImage.title}</h4>
+              <p className="text-xs sm:text-sm text-muted-foreground">{designImage.description}</p>
             </div>
           </motion.div>
         ))}

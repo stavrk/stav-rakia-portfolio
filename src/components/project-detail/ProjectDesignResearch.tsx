@@ -27,7 +27,7 @@ export const ProjectDesignResearch = ({ designResearch }: ProjectDesignResearchP
         <ImageLightbox 
           src={designResearch.image} 
           alt={designResearch.title} 
-          className="w-full h-auto"
+          className="w-full h-auto object-contain"
         />
       </div>
       

@@ -35,7 +35,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
               <ImageLightbox 
                 src={image} 
                 alt={`${project.title} - Additional Image ${index + 1}`} 
-                className="w-full h-auto object-cover aspect-[16/9]" 
+                className="w-full h-auto object-contain" 
               />
             </motion.div>
           ))}

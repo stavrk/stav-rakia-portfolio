@@ -76,7 +76,7 @@ const Navbar = () => {
       transition={{ duration: 0.2 }}
     >
       <div className="container flex items-center justify-between">
-        <Link to="/" className="font-display text-xl font-medium px-2 py-1 rounded-md hover:bg-secondary/60 transition-colors">
+        <Link to="/" className="font-display text-sm sm:text-lg md:text-xl font-medium px-1 sm:px-2 py-1 rounded-md hover:bg-secondary/60 transition-colors whitespace-nowrap">
           <motion.span
             initial={false} // Prevent initial animation
             animate={{ opacity: 1 }}
