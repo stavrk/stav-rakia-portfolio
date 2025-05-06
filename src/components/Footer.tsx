@@ -18,52 +18,50 @@ const Footer = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-1 gap-6">
-            <div>
-              <h3 className="text-lg font-medium mb-4">Links</h3>
-              <ul className="space-y-2">
-                <li>
-                  <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    Projects
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    About
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-medium mb-4">Connect</h3>
-              <div className="flex space-x-4">
-                <motion.a 
-                  href="mailto:stavsim282@gmail.com" 
-                  className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label="Email"
-                >
-                  <Mail className="h-5 w-5" />
-                </motion.a>
-                <motion.a 
-                  href="https://www.linkedin.com/in/stav-rakia/" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
-                  aria-label="LinkedIn"
-                >
-                  <Linkedin className="h-5 w-5" />
-                </motion.a>
-              </div>
+          <div>
+            <h3 className="text-lg font-medium mb-4">Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/projects" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  About
+                </Link>
+              </li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-medium mb-4">Connect</h3>
+            <div className="flex space-x-4">
+              <motion.a 
+                href="mailto:stavsim282@gmail.com" 
+                className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Email"
+              >
+                <Mail className="h-5 w-5" />
+              </motion.a>
+              <motion.a 
+                href="https://www.linkedin.com/in/stav-rakia/" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="h-5 w-5" />
+              </motion.a>
             </div>
           </div>
         </div>

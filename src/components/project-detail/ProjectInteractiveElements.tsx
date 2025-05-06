@@ -22,7 +22,7 @@ export const ProjectInteractiveElements = ({ interactiveElements }: ProjectInter
       <h2 className="text-2xl font-medium mb-6">{interactiveElements.title}</h2>
       <div className="prose prose-lg max-w-none">
         {interactiveElements.description.split('\n\n').map((paragraph, idx) => (
-          <p key={idx} className="mb-4 text-muted-foreground text-base">{paragraph}</p>
+          <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
         ))}
       </div>
     </motion.div>

@@ -1,15 +1,14 @@
 
 import { motion } from "framer-motion";
-import { ImageLightbox } from "@/components/ImageLightbox";
 
-interface SpecificationProps {
+interface SpecificationData {
   title: string;
-  image: string;
   description: string;
+  image: string;
 }
 
 interface ProjectSpecificationProps {
-  specification: SpecificationProps;
+  specification: SpecificationData;
 }
 
 export const ProjectSpecification = ({ specification }: ProjectSpecificationProps) => {
@@ -22,21 +21,14 @@ export const ProjectSpecification = ({ specification }: ProjectSpecificationProp
       transition={{ duration: 0.5 }}
     >
       <h2 className="text-2xl font-medium mb-6">{specification.title}</h2>
-      
-      <div className="rounded-xl overflow-hidden border border-border/40 shadow-sm mb-8">
-        <ImageLightbox 
-          src={specification.image} 
-          alt={specification.title} 
-          className="w-full h-auto object-contain"
-        />
+      <div className="prose prose-lg max-w-none mb-8">
+        {specification.description.split('\n\n').map((paragraph, idx) => (
+          <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+        ))}
       </div>
       
-      <div className="prose prose-lg max-w-none">
-        {specification.description.split('\n\n').map((paragraph, idx) => (
-          <p key={idx} className="mb-4 text-muted-foreground text-base">
-            {paragraph}
-          </p>
-        ))}
+      <div className="rounded-xl overflow-hidden border border-border/40">
+        <img src={specification.image} alt="Specification & Instructional Script" className="w-full h-auto" />
       </div>
     </motion.div>
   );

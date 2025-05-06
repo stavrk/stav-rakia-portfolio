@@ -1,8 +1,7 @@
 
 import { motion } from "framer-motion";
-import { ImageLightbox } from "@/components/ImageLightbox";
 
-interface DesignImage {
+interface DesignImageData {
   title: string;
   image: string;
   description: string;
@@ -10,7 +9,7 @@ interface DesignImage {
 
 interface ProjectAestheticsProps {
   designProcessAndAesthetics: string;
-  designImages: DesignImage[];
+  designImages: DesignImageData[];
 }
 
 export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages }: ProjectAestheticsProps) => {
@@ -24,34 +23,32 @@ export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages }: 
     >
       <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        {designImages.map((designImage, index) => (
-          <motion.div 
-            key={index} 
-            className="rounded-lg overflow-hidden border border-border/40"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.1, duration: 0.5 }}
-          >
-            <ImageLightbox 
-              src={designImage.image}
-              alt={designImage.title}
-              className="w-full object-contain h-auto"
-            />
-            <div className="p-4 bg-secondary/30">
-              <h4 className="text-base sm:text-lg font-medium mb-1">{designImage.title}</h4>
-              <p className="text-xs sm:text-sm text-muted-foreground">{designImage.description}</p>
-            </div>
-          </motion.div>
-        ))}
-      </div>
-      
-      <div className="prose prose-lg max-w-none">
-        {designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
-          <p key={idx} className="mb-4 text-muted-foreground text-base">
-            {paragraph}
-          </p>
+      <div className="space-y-8">
+        {designProcessAndAesthetics && designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
+          <div key={idx} className="mb-8">
+            <p className="mb-4 text-muted-foreground">{paragraph}</p>
+            
+            {/* Display relevant design image if available */}
+            {designImages && idx < designImages.length && (
+              <motion.div 
+                className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.2, duration: 0.5 }}
+              >
+                <img 
+                  src={designImages[idx].image} 
+                  alt={designImages[idx].title} 
+                  className={`w-full object-cover ${idx === 2 ? "h-[600px] md:h-[600px]" : "h-64 md:h-64"}`} 
+                />
+                <div className="p-4 bg-secondary/30">
+                  <h4 className="text-lg font-medium mb-1">{designImages[idx].title}</h4>
+                  <p className="text-sm text-muted-foreground">{designImages[idx].description}</p>
+                </div>
+              </motion.div>
+            )}
+          </div>
         ))}
       </div>
     </motion.div>

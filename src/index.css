@@ -101,11 +101,6 @@
   .focus-ring {
     @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all;
   }
-  
-  /* Standardize paragraph text across the site */
-  p, .prose p, .text-content p {
-    @apply text-base leading-relaxed text-muted-foreground;
-  }
 }
 
 .noise-bg {
@@ -184,15 +179,13 @@ a {
   }
   
   .project-content p, 
-  .project-content li,
-  p, .prose p, li {
+  .project-content li {
     font-size: 0.9375rem !important;
     line-height: 1.6 !important;
   }
   
   /* Ensure project images stay within container */
-  .project-content img,
-  img {
+  .project-content img {
     max-width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
@@ -201,8 +194,8 @@ a {
   /* Fix design process number display */
   .process-number {
     aspect-ratio: 1 !important;
-    min-height: 2rem !important;
-    min-width: 2rem !important;
+    min-height: auto !important;
+    min-width: auto !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -213,65 +206,9 @@ a {
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  
-  /* Additional mobile-specific styling */
-  .prose p {
-    font-size: 0.9375rem !important;
-    line-height: 1.6 !important;
-    margin-bottom: 0.75rem !important; 
-  }
-  
-  /* Reduce padding on sections for mobile */
-  section {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-  
-  /* Add more spacing between grid items on mobile */
-  .grid {
-    gap: 1.25rem !important;
-  }
 }
 
 /* Enhanced accessibility focus states */
 button, a, input, textarea, select {
   @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/70 focus-visible:ring-offset-2 focus-visible:ring-offset-background;
-}
-
-/* Add styles for the lightbox modal */
-.lightbox-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 50;
-}
-
-.lightbox-content {
-  position: relative;
-  max-width: 95vw;
-  max-height: 90vh;
-}
-
-.lightbox-image {
-  max-width: 100%;
-  max-height: 90vh;
-  object-fit: contain;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  border-radius: 50%;
-  padding: 0.5rem;
-  cursor: pointer;
-  z-index: 51;
 }
