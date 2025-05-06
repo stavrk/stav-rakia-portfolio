@@ -90,7 +90,7 @@ const About = () => {
   
   return (
     <Layout>
-      <div className="max-w-[1000px] mx-auto px-6 sm:px-8">
+      <div className="max-w-[900px] mx-auto px-6 sm:px-8 lg:px-10">
         <section className="py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <motion.div 
@@ -146,8 +146,8 @@ const About = () => {
           </div>
         </section>
         
-        <section className="py-20 bg-secondary/30 -mx-6 sm:-mx-8 px-6 sm:px-8">
-          <div className="max-w-[1000px] mx-auto">
+        <section className="py-20 bg-secondary/30 -mx-6 sm:-mx-8 lg:-mx-10 px-6 sm:px-8 lg:px-10">
+          <div className="max-w-[900px] mx-auto">
             <motion.div 
               className="mb-12 text-center"
               initial={{ opacity: 0, y: 20 }}
@@ -201,8 +201,8 @@ const About = () => {
         
         <Skills />
         
-        <section className="py-20 bg-secondary/30 -mx-6 sm:-mx-8 px-6 sm:px-8">
-          <div className="max-w-[1000px] mx-auto">
+        <section className="py-20 bg-secondary/30 -mx-6 sm:-mx-8 lg:-mx-10 px-6 sm:px-8 lg:px-10">
+          <div className="max-w-[900px] mx-auto">
             <motion.div 
               className="mb-12 text-center"
               initial={{ opacity: 0, y: 20 }}
@@ -276,8 +276,8 @@ const About = () => {
           </div>
         </section>
         
-        <section className="py-20 bg-secondary/30 -mx-6 sm:-mx-8 px-6 sm:px-8">
-          <div className="max-w-[1000px] mx-auto">
+        <section className="py-20 bg-secondary/30 -mx-6 sm:-mx-8 lg:-mx-10 px-6 sm:px-8 lg:px-10">
+          <div className="max-w-[900px] mx-auto">
             <motion.div 
               className="mb-12 text-center"
               initial={{ opacity: 0, y: 20 }}
