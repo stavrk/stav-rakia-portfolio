@@ -7,41 +7,41 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const About = () => {
   const artistsData = [{
     name: "Jorja Smith",
-    image: "/lovable-uploads/8254fdaf-e168-45d1-804b-feffed551b76.png"
+    image: "/lovable-uploads/jorja-smith.jpeg"
   }, {
     name: "Adele",
-    image: "/lovable-uploads/db9d63a5-a1df-4b2c-8020-f40b8ff96d67.png"
+    image: "/lovable-uploads/adele.jpg"
   }, {
     name: "Alicia Keys",
-    image: "/lovable-uploads/dbff0825-df43-4301-b818-fd007d961677.png"
+    image: "/lovable-uploads/alicia-keys.jpg"
   }, {
     name: "Ninet Tayeb",
-    image: "/lovable-uploads/ac268743-104c-47b7-a397-070001c6d649.png"
+    image: "/lovable-uploads/ninet_t.png"
   }, {
     name: "Red Band",
-    image: "/lovable-uploads/2b04e738-4994-4b70-a947-7ba58241a2b8.png"
+    image: "/lovable-uploads/red-band.jpg"
   }, {
     name: "Olivia Dean",
-    image: "/lovable-uploads/20433a57-43ed-4175-902d-8df5cd8bb366.png"
+    image: "/lovable-uploads/olivia-dean.jpg"
   }];
   const hobbiesData = [{
     name: "Jewelry making",
-    image: "/lovable-uploads/21415086-1df6-4acf-ab75-7268709814b3.png"
+    image: "/lovable-uploads/jewelry_making.jpg"
   }, {
     name: "Pilates reformer",
-    image: "/lovable-uploads/21a9e39f-fdaf-4593-8535-65abbb7e36b3.png"
+    image: "/lovable-uploads/pilates_reformer.jpg"
   }, {
     name: "Volunteers with dogs",
-    image: "/lovable-uploads/26705183-2a3e-4509-baa3-037b884f3117.png"
+    image: "/lovable-uploads/volunteering_with_dogs.jpg"
   }, {
     name: "Ceramic Art",
-    image: "/lovable-uploads/370e0139-e3a2-4963-8719-9ad27d3fb570.png"
+    image: "/lovable-uploads/ceramic_art.jpg"
   }, {
     name: "Friends",
-    image: "/lovable-uploads/b9c95a06-8869-4dfb-b425-1994f710ca1c.png"
+    image: "/lovable-uploads/friends.jpg"
   }, {
     name: "Traveling",
-    image: "/lovable-uploads/40563f20-2012-49e7-949e-bd6c06d55c21.png"
+    image: "/lovable-uploads/traveling.jpg"
   }];
   const experienceData = [{
     role: "Military Service (Reserve Duty)",
@@ -114,7 +114,7 @@ const About = () => {
             duration: 0.5
           }}>
               <div className="aspect-square w-full mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
-                <img src="/lovable-uploads/6eca0a82-eae5-4159-9730-9a7a3a3eb109.png" alt="Stav Rakia" className="w-full h-full object-cover" />
+                <img src="/lovable-uploads/stav_rakia.jpg" alt="Stav Rakia" className="w-full h-full object-cover" />
               </div>
             </motion.div>
           </div>
