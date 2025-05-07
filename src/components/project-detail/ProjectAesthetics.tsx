@@ -10,9 +10,10 @@ interface DesignImageData {
 interface ProjectAestheticsProps {
   designProcessAndAesthetics: string;
   designImages: DesignImageData[];
+  color?: string;
 }
 
-export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages }: ProjectAestheticsProps) => {
+export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages, color = '#10B981' }: ProjectAestheticsProps) => {
   return (
     <motion.div 
       className="mb-16" 
@@ -21,7 +22,7 @@ export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages }: 
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
+      <h2 className="text-3xl font-bold mb-6" style={{ color }}>Design Process & Aesthetics</h2>
       
       <div className="space-y-8">
         {designProcessAndAesthetics && designProcessAndAesthetics.split('\n\n').map((paragraph, idx) => (
@@ -31,7 +32,7 @@ export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages }: 
             {/* Display relevant design image if available */}
             {designImages && idx < designImages.length && (
               <motion.div 
-                className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+                className="mt-6 rounded-lg overflow-hidden" 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

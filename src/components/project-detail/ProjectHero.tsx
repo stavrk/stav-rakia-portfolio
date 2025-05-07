@@ -38,14 +38,15 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
           Back to Projects
         </motion.button>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           <motion.div 
+            className="lg:col-span-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
             <h1 
-              className="text-4xl md:text-6xl font-medium mb-6" 
+              className="section-title-gradient text-4xl md:text-6xl font-bold mb-6 animate-fade-in" 
               style={{ color: project.color }}
             >
               {project.title}
@@ -59,12 +60,12 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
           </motion.div>
           
           <motion.div 
-            className="relative" 
+            className="lg:col-span-8 relative" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div className="rounded-xl overflow-hidden shadow-xl border-4 border-white">
+            <div className="rounded-xl overflow-hidden">
               <img src={project.image} alt={project.title} className="w-full h-auto" />
             </div>
           </motion.div>

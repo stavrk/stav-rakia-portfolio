@@ -14,10 +14,10 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
   return (
     <>
       {/* Content Generator Interface */}
-      <ProjectSection title="Content Generator Interface">
+      <ProjectSection title="Content Generator Interface" color={project.color}>
         <p className="text-muted-foreground mb-8">The intuitive content generator allows educators to create customized educational content without technical knowledge, featuring an easy-to-use interface with built-in validation and guidance.</p>
         
-        <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
+        <div className="rounded-xl overflow-hidden mb-8">
           <img src="/lovable-uploads/save-repunzel-editor.png" alt="Content Generator Interface" className="w-full h-auto" />
         </div>
         
@@ -28,24 +28,24 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
       </ProjectSection>
 
       {/* Graphic Development Section */}
-      <ProjectSection title="Graphic Development and Design Evolution">
+      <ProjectSection title="Graphic Development and Design Evolution" color={project.color}>
         <div className="prose prose-lg max-w-none">
           <p className="mb-4 text-muted-foreground">The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.</p>
         </div>
         
-        <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
+        <div className="mt-8 rounded-xl overflow-hidden">
           <img src="/lovable-uploads/first-version-save-repunzel.png" alt="Initial Design Concept" className="w-full h-auto" />
         </div>
       </ProjectSection>
       
       {/* Design Process & Aesthetics Section */}
-      <ProjectSection title="Design Process & Aesthetics">
+      <ProjectSection title="Design Process & Aesthetics" color={project.color}>
         <div className="space-y-8">
           <div className="mb-8">
             <p className="mb-4 text-muted-foreground">Save Rapunzel features a dual-interface design that supports both young learners and their educators. The student-facing interface uses a colorful, fairy tale-inspired palette that balances a sense of wonder with clear readability.</p>
             
             <motion.div 
-              className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+              className="mt-6 rounded-lg overflow-hidden" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -63,7 +63,7 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
             <p className="mb-4 text-muted-foreground">Typography choices differ between the student and educator interfaces. The game side uses the rounded, playful Fredoka font (minimum 18px) to engage younger users, while the educator dashboard employs the same font family with clear weight distinctions to create a visual hierarchy in the content management system.</p>
             
             <motion.div 
-              className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+              className="mt-6 rounded-lg overflow-hidden" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -81,7 +81,7 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
             <p className="mb-4 text-muted-foreground">The visual elements were carefully designed to create an engaging yet focused learning environment. Game elements like buttons, answer cards, and progress indicators feature rounded edges and vibrant colors that appeal to younger users. Background elements like the tower and clouds incorporate subtle animations to create a living world without distracting from the educational content.</p>
             
             <motion.div 
-              className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+              className="mt-6 rounded-lg overflow-hidden" 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -98,14 +98,14 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
       </ProjectSection>
       
       {/* Key Animations Section */}
-      <ProjectSection title="Key Animations">
+      <ProjectSection title="Key Animations" color={project.color}>
         <div className="prose prose-lg max-w-none">
           <p className="mb-4 text-muted-foreground">Strategic animations support the learning experience without causing distraction. The introductory sequence - showing Rapunzel walking through the tower with a gradual zoom to the window - replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.</p>
         </div>
       </ProjectSection>
 
       {/* Technical & Development Challenges Section */}
-      <ProjectSection title="Technical &amp; Development Challenges">
+      <ProjectSection title="Technical &amp; Development Challenges" color={project.color}>
         <div className="prose prose-lg max-w-none space-y-4">
           <p className="text-muted-foreground">We overcame several key challenges:</p>
           

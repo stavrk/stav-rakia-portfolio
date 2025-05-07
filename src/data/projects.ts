@@ -1,321 +1,370 @@
+import { StaticImageData } from "next/image";
 
-export interface ProjectTag {
+// Define the structure for a tag
+export interface Tag {
   name: string;
-  color?: string;
+  color: string;
 }
 
-export interface ProjectImage {
-  title: string;
-  image: string;
-  description: string;
-}
-
-export interface ProjectStructure {
-  title: string;
-  image: string;
-  description: string;
-}
-
+// Define the structure for a project
 export interface Project {
   title: string;
-  description: string;
-  image: string;
-  tags: string[];
-  slug: string;
-  color: string;
+  shortDescription?: string;
   overview: string;
   challenge: string;
   solution: string;
-  process?: string[];
-  designProcessAndAesthetics?: string;
-  challengesAndSolutions?: string;
-  designImages?: ProjectImage[];
-  additionalImages?: string[];
+  image: string;
+  tags?: string[];
+  slug: string;
   link?: string;
+  additionalImages?: string[];
+  color: string;
   comingSoon?: boolean;
-  case?: string;
-  
-  // Project-specific properties
-  wireflow?: {
-    title: string;
-    image: string;
-    description: string;
-  };
-  wireflowDetails?: {
-    title: string;
-    image: string;
-    description: string;
-  };
-  structureTree?: {
-    title: string;
-    image: string;
-    description: string;
-  };
-  wireframes?: {
-    title: string;
-    image: string;
-    description: string;
-  };
-  specification?: {
-    title: string;
-    image: string;
-    description: string;
-  };
-  designResearch?: {
-    title: string;
-    image: string;
-    description: string;
-  };
-  editorShowcase?: {
-    title: string;
-    image: string;
-    description: string;
-  };
-  interactiveElements?: {
+  process?: {
+    step: number;
     title: string;
     description: string;
-  };
-  graphicDevelopment?: string;
-  technicalChallenges?: string;
-  contentGenerator?: string;
-  animationFeatures?: string;
-  collaborativeDevelopment?: string;
+  }[];
+	designResearch?: {
+		personaTitle: string;
+		personaDescription: string;
+		needs: string[];
+		frustrations: string[];
+		image: string;
+	};
+	wireflowDetails?: {
+		title: string;
+		description: string;
+		image: string;
+	};
+	wireflow?: {
+		title: string;
+		description: string;
+		image: string;
+	};
+	specification?: {
+		title: string;
+		description: string;
+		image: string;
+	};
+	interactiveElements?: {
+		title: string;
+		description: string;
+		image: string;
+	};
+	designProcessAndAesthetics?: string;
+	designImages?: {
+		title: string;
+		image: string;
+		description: string;
+	}[];
+	animationFeatures?: {
+		title: string;
+		description: string;
+		image: string;
+	}[];
+	challenges?: {
+		title: string;
+		description: string;
+	}[];
+	structureTree?: {
+		title: string;
+		description: string;
+		image: string;
+	};
+	wireframes?: {
+		title: string;
+		description: string;
+		image: string;
+	};
 }
 
-// Define the project order for consistent navigation
-export const projectOrder = [
-  "save-rapunzel",
-  "bip",
-  "roomie", 
-  "studit",
-  "plant-module"
-];
+// Function to return all projects
+export const getProjects = (): Project[] => {
+  return [
+    {
+      title: "BIP - Business Intelligence Platform",
+      shortDescription: "A comprehensive BI platform that transforms raw data into actionable insights, empowering data-driven decision-making.",
+      overview:
+        "The Business Intelligence Platform (BIP) is a comprehensive solution designed to transform raw data into actionable insights. It empowers businesses to make data-driven decisions by providing tools for data visualization, analysis, and reporting.",
+      challenge:
+        "The challenge was to create a unified platform that could ingest data from various sources, process it efficiently, and present it in an intuitive and actionable format for users with varying technical skills.",
+      solution:
+        "We developed a modular platform with customizable dashboards, automated reporting, and advanced analytics capabilities. The platform supports real-time data integration, ensuring users always have access to the most up-to-date information.",
+      image: "/lovable-uploads/bip-dashboard.png",
+      tags: ["Data Visualization", "Analytics", "Dashboard Design"],
+      slug: "bip",
+      link: "https://bip.lovablerakia.com/",
+      additionalImages: [
+        "/lovable-uploads/bip-dashboard-1.png",
+        "/lovable-uploads/bip-dashboard-2.png",
+        "/lovable-uploads/bip-dashboard-3.png",
+        "/lovable-uploads/bip-dashboard-4.png",
+      ],
+      color: "#2A4359",
+			animationFeatures: [
+				{
+					title: "Dynamic Data Loading",
+					description: "Smooth transitions during data updates keep the interface responsive and engaging.",
+					image: "/lovable-uploads/bip-loading.gif",
+				},
+				{
+					title: "Interactive Chart Animations",
+					description: "Animated charts provide clear and immediate feedback, enhancing data comprehension.",
+					image: "/lovable-uploads/bip-chart.gif",
+				},
+			],
+			challenges: [
+				{
+					title: "Data Integration",
+					description: "Integrating diverse data sources into a unified platform required a flexible and scalable architecture.",
+				},
+				{
+					title: "Performance Optimization",
+					description: "Ensuring real-time data processing and visualization for large datasets demanded efficient algorithms and infrastructure.",
+				},
+				{
+					title: "User Experience",
+					description: "Designing an intuitive interface for users with varying technical skills required extensive user research and usability testing.",
+				},
+			],
+			wireflow: {
+				title: "User Interface Wireflow",
+				description: "The wireflow illustrates the user's journey through the platform, from login to data analysis, highlighting key interactions and decision points.",
+				image: "/lovable-uploads/bip-wireflow.png",
+			},
+    },
+    {
+      title: "ROOMIE - Roommate Management App",
+      shortDescription: "A mobile app designed to simplify shared living by managing expenses, chores, and communication among roommates.",
+      overview:
+        "ROOMIE is a mobile application designed to simplify shared living. It helps roommates manage expenses, track chores, and maintain seamless communication, fostering a harmonious living environment.",
+      challenge:
+        "The challenge was to create an intuitive and user-friendly app that addresses the common pain points of shared living, such as expense tracking, chore management, and communication breakdowns.",
+      solution:
+        "We developed a mobile app with features like shared expense tracking, chore scheduling, and a built-in messaging system. The app integrates push notifications to keep roommates informed and engaged.",
+      image: "/lovable-uploads/roomie-dashboard.png",
+      tags: ["Mobile App", "UI/UX Design", "Expense Tracking"],
+      slug: "roomie",
+      link: "https://roomie.lovablerakia.com/",
+      additionalImages: [
+        "/lovable-uploads/roomie-add-task.png",
+        "/lovable-uploads/roomie-add-transaction.png",
+        "/lovable-uploads/roomie-task-management.png",
+      ],
+      color: "#6E44FF",
+			challenges: [
+				{
+					title: "User Adoption",
+					description: "Encouraging all roommates to actively use the app required a design that is both intuitive and engaging.",
+				},
+				{
+					title: "Data Security",
+					description: "Protecting sensitive financial information and user data demanded robust security measures.",
+				},
+				{
+					title: "Feature Integration",
+					description: "Seamlessly integrating expense tracking, chore management, and communication features required careful planning and execution.",
+				},
+			],
+			structureTree: {
+				title: "App Structure",
+				description: "The app structure outlines the main sections and features, providing a clear overview of the user experience.",
+				image: "/lovable-uploads/roomie-structure.png",
+			},
+			wireframes: {
+				title: "Wireframes",
+				description: "The wireframes illustrate the user interface and layout of key screens, ensuring a user-friendly design.",
+				image: "/lovable-uploads/roomie-wireframes.png",
+			},
+    },
+    {
+      title: "STUDIT - Online Learning Platform",
+      shortDescription: "An innovative e-learning platform designed to provide students with a personalized and engaging learning experience.",
+      overview:
+        "STUDIT is an innovative e-learning platform designed to provide students with a personalized and engaging learning experience. It offers a wide range of courses, interactive lessons, and collaborative tools to support students in their academic journey.",
+      challenge:
+        "The challenge was to create a platform that not only delivers high-quality educational content but also keeps students motivated and engaged in a virtual learning environment.",
+      solution:
+        "We developed a platform with personalized learning paths, gamified progress tracking, and interactive video lessons. The platform also includes collaborative tools like virtual study groups and live Q&A sessions with instructors.",
+      image: "/lovable-uploads/studit-dashboard.png",
+      tags: ["E-learning", "Personalized Learning", "Gamification"],
+      slug: "studit",
+      link: "https://studit.lovablerakia.com/",
+      additionalImages: [
+        "/lovable-uploads/studit-course-page.png",
+        "/lovable-uploads/studit-lesson-page.png",
+        "/lovable-uploads/studit-profile-page.png",
+      ],
+      color: "#9b87f5",
+			designResearch: {
+				personaTitle: "Sarah - The Dedicated Student",
+				personaDescription: "Sarah is a full-time student who is highly motivated and goal-oriented. She values personalized learning experiences and seeks to maximize her academic potential.",
+				needs: [
+					"Personalized learning paths",
+					"Interactive and engaging content",
+					"Progress tracking and feedback",
+					"Collaborative learning tools",
+				],
+				frustrations: [
+					"Generic and impersonal content",
+					"Lack of motivation and engagement",
+					"Difficulty tracking progress",
+					"Limited opportunities for collaboration",
+				],
+				image: "/lovable-uploads/studit-persona.png",
+			},
+			wireflowDetails: {
+				title: "Personalized Learning Path Wireflow",
+				description: "The wireflow illustrates how students navigate through personalized learning paths, highlighting key interactions and decision points.",
+				image: "/lovable-uploads/studit-wireflow.png",
+			},
+			challenges: [
+				{
+					title: "Personalization",
+					description: "Creating personalized learning paths for each student required a sophisticated algorithm and a vast library of content.",
+				},
+				{
+					title: "Engagement",
+					description: "Keeping students motivated and engaged in a virtual learning environment demanded innovative gamification techniques.",
+				},
+				{
+					title: "Accessibility",
+					description: "Ensuring the platform is accessible to students with disabilities required careful attention to WCAG guidelines.",
+				},
+			],
+    },
+    {
+      title: "Plant Learning Module",
+      shortDescription: "An interactive educational module designed to teach children about plant biology through engaging activities and simulations.",
+      overview:
+        "The Plant Learning Module is an interactive educational tool designed to teach children about plant biology. It uses engaging activities, simulations, and visual aids to make learning fun and effective.",
+      challenge:
+        "The challenge was to create an educational module that simplifies complex biological concepts and keeps children engaged and motivated to learn.",
+      solution:
+        "We developed an interactive module with animated simulations, quizzes, and virtual experiments. The module includes a virtual garden where children can grow and care for plants, reinforcing their understanding of plant biology.",
+      image: "/lovable-uploads/plant-module-virtual-garden.png",
+      tags: ["Educational Module", "Interactive Learning", "Plant Biology"],
+      slug: "plant-module",
+      link: "https://plant-module.lovablerakia.com/",
+      additionalImages: [
+        "/lovable-uploads/plant-module-cross-pollination.png",
+        "/lovable-uploads/plant-module-experiment.png",
+        "/lovable-uploads/plant-module-photosynthesis.png",
+      ],
+      color: "#10B981",
+			challenges: [
+				{
+					title: "Simplification",
+					description: "Simplifying complex biological concepts for children required careful selection of content and visual aids.",
+				},
+				{
+					title: "Engagement",
+					description: "Keeping children engaged and motivated to learn demanded innovative interactive elements and gamification techniques.",
+				},
+				{
+					title: "Accuracy",
+					description: "Ensuring the accuracy of scientific information while making it accessible to children required collaboration with subject matter experts.",
+				},
+			],
+			wireflow: {
+				title: "Module Navigation Wireflow",
+				description: "The wireflow illustrates how children navigate through the module, highlighting key interactions and learning activities.",
+				image: "/lovable-uploads/plant-module-wireflow.png",
+			},
+			specification: {
+				title: "Specification & Instructional Script",
+				description: `The Plant Learning Module is designed to provide an engaging and educational experience for children learning about plant biology. The module is divided into several sections, each focusing on a different aspect of plant biology.
 
-export const projects: Project[] = [
-  {
-    title: "SAVE RAPUNZEL",
-    description: "Interactive game and tool turning lessons into experiences.",
-    image: "/lovable-uploads/save-repunzel-editor.png",
-    tags: ["Instructional Design", "Game Design"],
-    slug: "save-rapunzel",
-    color: "#10B981",
-    overview: "Save Rapunzel is a dual-purpose educational platform consisting of an interactive educational game for students and a content creation tool for educators. The platform transforms traditional learning material into engaging game experiences built around the classic fairy tale of Rapunzel.",
-    challenge: "Traditional educational materials often fail to capture students' attention, particularly for challenging subjects. Educators need tools to create engaging content without extensive technical knowledge, while students need learning experiences that are both educational and entertaining.",
-    solution: "A dual-purpose educational platform with an interactive game where correct answers help the prince climb Rapunzel's hair, and a content management system allowing educators to create custom question sets without coding knowledge.",
-    graphicDevelopment: "The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.\n\nThe project began with a traditional storybook concept, but after user research and consultations, the approach pivoted toward an interactive animation where Rapunzel walks to the window as the story unfolds. This change significantly deepened the user experience and resulted in greater student engagement.",
-    technicalChallenges: "One significant challenge was creating a system that allowed both simple interaction for students and flexibility for teachers in content creation. The solution was an intuitive content generator that enables teachers with no technical background to create customized questions, incorporate images, and define parameters such as time per question.\n\nAnother challenge involved displaying Hebrew text and navigating a bidirectional interface, which required developing a unique solution for reversing numbers and English words in mixed text, significantly enhancing the user experience for Hebrew speakers.",
-    contentGenerator: "The generator represents a revolutionary approach to creating educational content. Unlike traditional systems, the interface balances simplicity with power, featuring built-in protection mechanisms that prevent the publication of invalid games and provide teachers with immediate feedback.\n\nThe generator includes a progressive approval system that encourages users to create at least 10 quality questions before publishing the game, with a maximum allowance of 30 questions per game. These specifications were established after extensive user research with teachers and education professionals.",
-    animationFeatures: "Unique animations enhance the user experience without distracting from the learning process. For instance, when a student answers correctly, the prince climbs higher on Rapunzel's hair, providing immediate visual feedback on progress and strengthening the emotional connection to the story.\n\nThe opening animation sequence shows Rapunzel walking through the tower, with a gradual zoom to the window when she reaches it—a substantial change from the original storybook concept that significantly improved student engagement.",
-    collaborativeDevelopment: "The project was characterized by close teamwork, with each team member bringing their skills and strengths to the table. An efficient workflow for file and version management was developed, including systematic backups, change documentation, and meticulous organization of graphic assets.\n\nDespite technical challenges, such as partial code loss at one stage, the system allowed for continued efficient work, resulting in a final product that precisely meets user needs.",
-    editorShowcase: {
-      title: "Content Generator Interface",
-      image: "/lovable-uploads/save-repunzel-editor.png",
-      description: "The intuitive content generator allows educators to create customized educational content without technical knowledge, featuring an easy-to-use interface with built-in validation and guidance."
-    },
-    process: ["Conducted parallel research streams on educators' content creation needs and how children engage with educational games", "Developed user personas for both audience segments (educators and students)", "Created initial concept, wireframes and interactive prototypes", "Conducted testing sessions with both educators and students to refine the user experience", "Designed vibrant fairy tale-inspired visuals for game interface and professional aesthetic for educator interface"],
-    designProcessAndAesthetics: "For Save Rapunzel, a dual-interface design system serves both young learners and their educators. The game interface employs a vibrant, fairy tale-inspired color scheme dominated by purples, reds, and golds that evoke a sense of fantasy while maintaining sufficient contrast for readability.\n\nTypography choices differ between the student and educator interfaces. The game side uses the rounded, playful Fredoka font (minimum 18px) to engage younger users, while the educator dashboard employs the same font family with clear weight distinctions to create a visual hierarchy in the content management system.\n\nThe visual elements were carefully designed to create an engaging yet focused learning environment. Game elements like buttons, answer cards, and progress indicators feature rounded edges and vibrant colors that appeal to younger users. Background elements like the tower and clouds incorporate subtle animations to create a living world without distracting from the educational content.\n\nInteractive elements employ consistent visual cues—correct answers trigger animations of the prince climbing higher on Rapunzel's hair, providing immediate visual feedback that reinforces learning progress. The editor interface uses drag-and-drop functionality and inline editing to make content creation intuitive for educators with varying levels of technical expertise.",
-    challengesAndSolutions: "A significant challenge in the development process was designing a content editor flexible enough to accommodate various question types while remaining simple for non-technical educators. The solution involved extensive card-sorting exercises with educators to determine the most intuitive organization of functions, resulting in a template-based approach with customization options revealed progressively as users become more comfortable with the system.\n\nAdditionally, optimizing the balance between engaging visual elements and educational clarity required careful consideration. This was addressed through multiple testing iterations with both educators and students to ensure the final product maintained educational effectiveness while providing an engaging user experience.",
-    designImages: [{
-      title: "Color Palette",
-      image: "/lovable-uploads/save-repunzel-color-palette.png",
-      description: "Earthy, storybook-inspired color palette with deep blue, moss green, golden yellow, warm copper, and brick red."
-    }, {
-      title: "Typography",
-      image: "/lovable-uploads/save-repunzel-font.png",
-      description: "Rounded, playful Fredoka font with consistent sizing for optimal readability"
-    }, {
-      title: "Visual Elements",
-      image: "/lovable-uploads/save-repunzel-interface.png",
-      description: "Rounded, vibrant interface elements with consistent visual language"
-    }],
-    additionalImages: ["/lovable-uploads/save-repunzel-third.png", "/lovable-uploads/save-repunzel-my-games.png", "/lovable-uploads/save-repunzel-sec.png"],
-    link: "https://saverapunzel.telem-hit.net/GamesList",
-    case: "Interactive game and tool turning lessons into experiences."
-  },
-  {
-    title: "BIP",
-    description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
-    image: "/lovable-uploads/bip-lots-of-iphones.png",
-    tags: ["Speculative Design", "Financial Tech"],
-    slug: "bip",
-    color: "#8B5CF6",
-    overview: "BIP is a conceptual money transfer application designed specifically for extraterrestrial users. This speculative design project challenged conventional UI/UX assumptions by considering the unique perceptual and cognitive needs of non-human users.",
-    challenge: "Design a financial application that accommodates alien perceptual abilities while maintaining the security and functionality expected in money transfer applications. Standard human-centered design principles needed significant adaptation to serve this unique user group.",
-    solution: "A reimagined money transfer app interface through an alien-centered design lens, with new visual languages, interaction patterns, and information hierarchies suited to extraterrestrial perception, while still drawing inspiration from familiar human applications like Bit and PayBox.",
-    wireflow: {
-      title: "Wireflow",
-      image: "/lovable-uploads/bip-wireflow.png",
-      description: "The wireflow diagram illustrates the navigation paths and interaction flows for extraterrestrial users, with special attention to non-linear thinking patterns and multiple sensory feedback loops throughout the transaction process."
-    },
-    designImages: [{
-      title: "Color Palette",
-      image: "/lovable-uploads/bip-colors.png",
-      description: "High-contrast, vibrant colors with bold blues and bright yellows"
-    }, {
-      title: "Typography & Layout",
-      image: "/lovable-uploads/bip-typography.png",
-      description: "Large text elements with circular, open letterforms and substantial weight"
-    }, {
-      title: "Interface Elements",
-      image: "/lovable-uploads/bip-intarface.png",
-      description: "Rounded design language with substantial padding and redundant feedback cues"
-    }],
-    additionalImages: ["/lovable-uploads/bip-group-page.png", "/lovable-uploads/bip-home-page.png", "/lovable-uploads/bip-loading-page.png", "/lovable-uploads/bip-transfer-details.png"],
-    process: ["Established alien user personas based on specified perceptual constraints", "Studied existing financial apps and adapted their core functionality to the alien context", "Created wireframes that emphasized visual communication", "Refined the interface through multiple iterations to balance alien-centered design with transaction security", "Designed custom animations for key moments in the user journey for clear feedback"],
-    designProcessAndAesthetics: "BIP reimagines financial interfaces for extraterrestrial users, featuring high-contrast, vibrant colors that address alien perceptual constraints—specifically their difficulty with gray tones and subtle contrasts. The space-themed interface uses bold blues and yellows against deep cosmic backgrounds to ensure maximum visibility.\n\nTypography & Readability\nAll text elements exceed standard human application sizes (14px minimum for secondary text, 18-24px for primary elements) to accommodate alien visual systems. We selected fonts with circular, open letterforms and substantial weight to maximize legibility.\n\nInterface Elements\nThe consistently rounded design includes generous padding around interactive elements to accommodate alien motor control differences. Buttons provide redundant feedback through both color and icon changes. Space-themed iconography replaces traditional financial symbols, creating culturally relevant visual metaphors.\n\nCustom animations communicate process status without relying on text. Using principles of anticipation and follow-through, these animations clearly signal the beginning and completion of processes, particularly during critical transaction moments.",
-    case: "Money transfer app designed for extraterrestrial users with unique needs.",
-    link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
-  },
-  {
-    title: "ROOMIE",
-    description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
-    image: "/lovable-uploads/roomie-home-page.png",
-    tags: ["UX/UI Design", "Instructional Design"],
-    slug: "roomie",
-    color: "#2A4359",
-    overview: "Roomie is a comprehensive digital guide designed to simplify the often overwhelming process of moving into a first apartment. This project emerged from recognizing the challenges and uncertainties that young adults face when navigating housing independence for the first time.",
-    challenge: "First-time movers face numerous challenges: understanding lease agreements, budgeting for moving expenses, knowing what essential items to purchase, and navigating roommate dynamics. Traditional resources are often scattered, overwhelming, or fail to address the emotional aspects of this significant life transition.",
-    solution: "We designed Roomie with a user-centric workflow that guides users through each stage of the moving process. The interface combines practical checklists with supportive content that acknowledges both the practical and emotional aspects of moving.",
-    structureTree: {
-      title: "Project Structure",
-      image: "/lovable-uploads/map-roomie.png",
-      description: "Our project's structure was carefully planned to ensure a logical flow of information and features. The map above illustrates how different sections of the application interconnect, making the moving process more manageable for users."
-    },
-    wireframes: {
-      title: "Initial Wireframes",
-      image: "/lovable-uploads/roomie-wireframe.png",
-      description: "At the beginning of our process, we focused heavily on wireframing to prioritize product definition, interaction design, and user experience. These wireframes helped us establish the core functionality and user flows before moving into the visual design phase."
-    },
-    process: ["Conducted extensive user research, interviewing 12 recent first-time movers about their challenges and wishes", "Synthesized insights and created user personas and journey maps to identify key pain points", "Developed multiple iterations of wireframes and prototypes for testing with potential users", "Refined the interface and features based on user feedback", "Created final designs with a warm, approachable aesthetic and calming color palette"],
-    designProcessAndAesthetics: "For Roomie, our team crafted a visual language that balances practicality with emotional support. The color palette features deep blues and navy tones—primarily muted blues and soft teals—to counteract the stress typically associated with moving. This deliberate choice helps create a sense of stability amidst the chaos of relocation.\n\nTypography plays a crucial role in the interface, with the primary font family being Assistant for its excellent readability and modern feel. Headers use weightier versions of the font (600-700) to create clear visual hierarchy, while body text maintains comfortable readability at 16px minimum.\n\nThe visual components follow a consistent rounded design system—buttons, cards, and input fields all feature softly rounded corners (8px radius) that contribute to the approachable feel of the application. Interactive elements like checklists and the budget calculator use subtle shadows and state changes to provide clear feedback to users.",
-    challengesAndSolutions: "One significant challenge emerged during user testing: participants felt overwhelmed by seeing all moving tasks simultaneously. We addressed this by implementing a progressive disclosure system that reveals tasks based on timeline relevance, with a customizable view option for users who prefer seeing the complete picture. This solution required several iterations of the information architecture and careful consideration of how to balance comprehensive information with manageable cognitive load.\n\nThe roommate agreement generator presented another challenge—how to create legally sound templates while keeping them accessible to young adults with no legal background. The solution involved collaboration with a legal consultant and multiple rounds of simplification testing to strike the right balance between comprehensiveness and clarity.",
-    designImages: [{
-      title: "Color Palette",
-      image: "/lovable-uploads/color-palette-roomie.png",
-      description: "Deep, calming tones with soft blues and muted accents"
-    }, {
-      title: "Typography",
-      image: "/lovable-uploads/typography-roomie.png",
-      description: "Assistant font family with weight variations for hierarchy"
-    }, {
-      title: "Interface Components",
-      image: "/lovable-uploads/interface-roomie.png",
-      description: "Rounded components with subtle shadows and clear visual feedback"
-    }],
-    additionalImages: ["/lovable-uploads/roomie-4.png", "/lovable-uploads/roomie-phone.png", "/lovable-uploads/roomie-typs-img.png"],
-    link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen",
-    case: "Interactive guide for simplified apartment moving for young adults."
-  },
-  {
-    title: "STUDIT",
-    description: "An AI-powered study companion for Israeli Psychometric Entrance Test and matriculation (bagrut) exams preparation with personalized study plans.",
-    image: "/lovable-uploads/studit-home-page.png",
-    tags: ["Educational Tech", "AI"],
-    slug: "studit",
-    color: "#F59E0B",
-    overview: "Studit is a web-based platform designed to help students prepare for the Israeli Psychometric Entrance Test and matriculation (bagrut) exams. It provides personalized study plans, adaptive practice tests, and scheduling based on diagnostic tests and user preferences.",
-    challenge: "Psychometric and matriculation exam preparation is typically stressful, time-consuming, and often inefficient. Many students struggle to structure their study time effectively or identify which areas need the most attention. Existing platforms often present practice questions in a static, uninspiring format that fails to engage students.",
-    solution: "Designed by Stav Rakia and Eden Nisoyev, Studit is an interactive, adaptive learning platform that makes studying feel less overwhelming and more engaging. The interface guides users through a complete journey: from selecting their exam date to taking a diagnostic assessment and receiving a personalized study schedule based on their performance and preferences.",
-    wireflowDetails: {
-      title: "Wireflow",
-      image: "/lovable-uploads/studit-wireflow.png",
-      description: "The wireframing stage for Studit focused on creating a clear, guided user journey through the exam preparation process. I developed low-fidelity wireframes that mapped out the core journey from exam selection to personalized study plan generation."
-    },
-    designResearch: {
-      title: "Design Research",
-      image: "/lovable-uploads/studit-design-research.png",
-      description: "Research of leading Israeli test prep platforms (Yoel Geva, Kidum, Niv Revach) revealed critical opportunities for innovation. I strategically adapted Kidum's clear subject emphasis, Yoel Geva's interactive mapping, and Wordwall's drag-and-drop functionality to enhance Studit's user experience.\n\nMarket analysis identified three key gaps: visually uninspiring materials, lack of meaningful interaction, and absence of personalization. Users frequently reported confusion about their location in the preparation process.\n\nThese findings directly shaped Studit's core features: a guided step-by-step journey with clear progress indicators, interactive question formats instead of static multiple-choice, and a professional aesthetic that balances educational credibility with visual engagement."
-    },
-    process: ["Conducted extensive research into student pain points during exam preparation", "Analyzed existing educational platforms like Yoel Geva, Kidum, and Niv Revach to identify strengths and weaknesses", "Developed wireframes and user flows that addressed key pain points while introducing interactive elements", "Conducted multiple rounds of user testing to refine the interface", "Created a clean, modern aesthetic with a warm color palette for a calm, focused studying environment"],
-    designProcessAndAesthetics: "For Studit, we developed a visual language that balances academic seriousness with engaging interactivity. The color palette features warm neutrals (beiges and soft browns) as a base, accented with muted blues and occasional touches of yellow to create focus points without overwhelming the learning content. This restrained approach creates a calm environment conducive to focused study while providing enough visual interest to maintain engagement.\n\nTypography choices were critical for supporting extended reading periods. We selected Assistant as the primary font for its excellent readability and comprehensive Hebrew character support, with Indie Flower as an accent font for highlighting important elements. Text hierarchy uses weight variation rather than dramatic size differences, with a minimum body text size of 16px to ensure comfortable reading during study sessions.\n\nThe layout employs generous white space and a consistent grid system to organize complex information clearly. Cards with subtle shadows and rounded corners (4px radius) contain related information groups, while interactive elements use slightly more pronounced shadows and state changes to indicate their functionality.\n\nUser flow considerations were paramount, with the interface guiding users through a logical progression from homepage through exam/date selection, location selection, diagnostic assessment and personalized scheduling. Each stage features animated transitions that provide both functional feedback and moments of delight in what could otherwise be a stressful process.",
-    challengesAndSolutions: "Key Challenges & Solutions\n\n1. Balancing Interactivity with Academic Rigor\nChallenge: Traditional multiple-choice formats felt disengaging, while overly gamified approaches risked undermining educational credibility.\nSolution: We developed question-specific interaction patterns -drag-and-drop completions for verbal reasoning and interactive maps for location selection - that enhance engagement while maintaining academic focus.\n\n2. Creating Trustworthy Scheduling\nChallenge: User testing revealed skepticism about automated scheduling systems.\nSolution: We designed a transparent process showing the factors influencing schedule creation while allowing parameter adjustments. After five iterations, we achieved the optimal balance between guidance and user control.\n\n3. Transforming Waiting Periods\nSolution: Loading screens became micro-moments of encouragement with progress animations and motivational messages, significantly reducing perceived waiting time in user tests. We added schedule color customization to enhance personalization and ownership.",
-    designImages: [{
-      title: "Color Palette",
-      image: "/lovable-uploads/studit-colors.png",
-      description: "Warm neutrals with muted blues and yellow accents"
-    }, {
-      title: "Typography",
-      image: "/lovable-uploads/studit-typography.png",
-      description: "Assistant and Indie Flower fonts with weight variations and generous white space"
-    }, {
-      title: "Interface Components",
-      image: "/lovable-uploads/studit-interface.png",
-      description: "Cards with subtle shadows and clear visual feedback"
-    }],
-    additionalImages: ["/lovable-uploads/studit-1.png", "/lovable-uploads/studit-2.png", "/lovable-uploads/studit-3.png", "/lovable-uploads/studit-4.png"],
-    link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen",
-    case: "AI-powered study companion for personalized test preparation."
-  },
-  {
-    title: "PLANT LEARNING MODULE",
-    description: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
-    image: "/lovable-uploads/plant-first-page.png",
-    tags: ["Instructional Design", "Educational"],
-    slug: "plant-module",
-    color: "#22C55E",
-    overview: "This e-learning module builds confidence in plant care through engaging, interactive content. Focusing on six common houseplants, it provides essential care guidance in a user-friendly format that addresses the hesitation many feel when considering houseplant ownership.",
-    challenge: "Many potential plant owners lack confidence in their ability to properly care for houseplants. This hesitation stems from uncertainty about watering needs, light requirements, and general maintenance. The challenge was to create a learning solution that would effectively build confidence through clear, accessible information and interactive learning experiences.",
-    solution: "I designed a comprehensive e-learning module focused on six key houseplants, with detailed care instructions, interactive assessments, and engaging visuals. The module employs a branching navigation model allowing users to personalize their learning journey based on their specific interests. This approach enables learners to focus on plants that match their home environment and lifestyle.",
-    wireflow: {
-      title: "Wireflow",
-      image: "/lovable-uploads/plant-wireflow.png",
-      description: "The wireflow outlines the app's structure and user journey, focusing on personalized content and intuitive branching paths.\n\nKey flows include:\n\nIntroduction screen highlighting the value of houseplants\n\nCategory navigation for exploring plant types\n\nInteractive checkpoints to assess user understanding\n\nPractical module for applying knowledge in real-life scenarios"
-    },
-    specification: {
-      title: "Specification & Instructional Script",
-      image: "/lovable-uploads/plant-prototyping.png",
-      description: "Before design, I created a detailed specification and instructional script to guide the learning experience. The spec outlined learning goals - behavioral, knowledge-based, and skill-oriented - and included audience analysis to identify gaps and preferences.\n\nThe script organized content around six houseplants, with descriptions, care tips, and real-life scenarios. It applied multimodal strategies using interactive assessments (e.g., drag-and-drop, scenario questions) to bridge knowledge gaps and keep learners engaged."
-    },
-    process: ["Analyzing the target audience needs and potential knowledge gaps", "Establishing clear learning objectives for each module section", "Structuring content in logical categories based on plant types and care requirements", "Developing instructional strategies that incorporate interactive elements", "Creating opportunities for practical application and knowledge assessment"],
-    designProcessAndAesthetics: "For the Plant Learning Module, I designed a visual experience that embodies the natural, organic feel of the subject matter. The color palette centers on various shades of green with earth tones for balance, creating a fresh, clean aesthetic that evokes plant life while maintaining excellent readability.\n\nTypography choices prioritize clarity and accessibility, with the Assistant font family at appropriate sizes for comfortable reading on various devices. Headings use SemiBold weight to maintain visual harmony while creating clear information hierarchy.\n\nThe interface layout employs a grid system that organizes content into digestible sections, with consistent spacing and alignment. Plant images feature prominently throughout the module, serving both instructional and aesthetic purposes. Each plant category uses subtle visual cues to help users track where they are in the learning journey.",
-    designImages: [{
-      title: "Color Palette",
-      image: "/lovable-uploads/plant-colors.png",
-      description: "Various shades of green with earth tones for a fresh, natural aesthetic"
-    }, {
-      title: "Typography",
-      image: "/lovable-uploads/plant-typography.png",
-      description: "Assistant font family with clear hierarchy and readability"
-    }, {
-      title: "Interface Elements",
-      image: "/lovable-uploads/plant-interface.png",
-      description: "Visuals like icons, colors, and illustrations clarify care tips and create a friendly tone."
-    }],
-    interactiveElements: {
-      title: "Interactive Elements & Assessment",
-      description: "The module features engaging learning interactions:\n- Drag-and-drop activities matching plants to ideal light conditions\n- Interactive quizzes on watering requirements\n- Visual simulations showing plant responses to care conditions\n- Progress tracking for motivation and advancement\nThese assessments require users to apply knowledge in practical scenarios, simulating real-world plant care decisions."
-    },
-    challengesAndSolutions: "We addressed two primary challenges:\n\nBalancing Rich Content with User Approachability:\nInitial feedback showed that detailed care instructions could overwhelm novice plant owners. To solve this, we:\n\nDesigned a layered information system that starts with essentials and allows users to expand for more detail\n\nMarked beginner-friendly plants with visual cues\n\nIncluded calming, supportive messaging about common mistakes and how to recover from them\n\nCreating Meaningful Assessments:\nRather than using simple recall questions, we designed scenario-based activities—like choosing the best location or watering schedule for a plant—that built real-world decision-making skills and increased user confidence.\n\nThis project highlights my ability to turn complex instructional material into an engaging, approachable experience tailored to users' needs and learning goals.",
-    additionalImages: ["/lovable-uploads/plant-1.png", "/lovable-uploads/plant-2.png", "/lovable-uploads/plant-3.png", "/lovable-uploads/plant-4.png"],
-    link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review",
-    case: "Interactive experience to build confidence in houseplant care."
-  },
-  {
-    title: "Playtika Manager Onboarding Guide",
-    description: "Interactive onboarding module for managers guiding new employees.",
-    image: "/lovable-uploads/playtika-home.jpg",
-    tags: ["Instructional Design"],
-    color: "#D946EF",
-    case: "Interactive onboarding module for managers guiding new employees.",
-    comingSoon: true,
-    slug: "",  // Empty slug for coming soon project
-    overview: "",
-    challenge: "",
-    solution: ""
-  }
-];
+**1. Introduction to Plants**
+This section introduces children to the basic concepts of plant biology, such as the parts of a plant, the life cycle of a plant, and the importance of plants to the environment.
 
-// Helper function to get a project by slug
-export const getProjectBySlug = (slug: string): Project | undefined => {
-  return projects.find(project => project.slug === slug);
+**2. Photosynthesis**
+This section explains the process of photosynthesis, including the role of sunlight, water, and carbon dioxide. Children will learn how plants convert these elements into energy and oxygen.
+
+**3. Plant Reproduction**
+This section covers the different methods of plant reproduction, including pollination, fertilization, and seed dispersal. Children will learn about the roles of flowers, bees, and other agents in plant reproduction.
+
+**4. Plant Growth and Development**
+This section explores the factors that affect plant growth and development, such as soil, water, and nutrients. Children will learn how to care for plants and ensure their healthy growth.
+
+**5. Plant Adaptations**
+This section examines the various adaptations that plants have developed to survive in different environments, such as deserts, rainforests, and mountains. Children will learn about the unique characteristics of different plant species.
+
+Each section includes interactive activities, simulations, and quizzes to reinforce learning and keep children engaged. The module also includes a virtual garden where children can grow and care for plants, applying their knowledge of plant biology in a fun and practical way.`,
+				image: "/lovable-uploads/plant-module-specification.png",
+			},
+			interactiveElements: {
+				title: "Interactive Elements & Assessment",
+				description: "The module includes a variety of interactive elements, such as quizzes, simulations, and virtual experiments, to reinforce learning and keep children engaged. Each section concludes with a quiz to assess children's understanding of the material.",
+				image: "/lovable-uploads/plant-module-interactive-elements.png",
+			},
+    },
+    {
+      title: "Save Rapunzel - Educational Game",
+      shortDescription: "An educational game designed to teach children math and problem-solving skills while engaging them in a fun and interactive storyline.",
+      overview:
+        "Save Rapunzel is an educational game designed to teach children math and problem-solving skills. The game engages children in a fun and interactive storyline where they must solve puzzles and complete challenges to save Rapunzel from the tower.",
+      challenge:
+        "The challenge was to create an educational game that seamlessly integrates learning with entertainment, keeping children motivated and engaged while reinforcing key academic concepts.",
+      solution:
+        "We developed a game with a captivating storyline, colorful graphics, and interactive puzzles. The game adapts to each child's skill level, providing personalized challenges and feedback to support their learning journey.",
+      image: "/lovable-uploads/save-repunzel-game.png",
+      tags: ["Educational Game", "Math Skills", "Problem-Solving"],
+      slug: "save-rapunzel",
+      link: "https://save-rapunzel.lovablerakia.com/",
+      additionalImages: [
+        "/lovable-uploads/save-repunzel-game-1.png",
+        "/lovable-uploads/save-repunzel-game-2.png",
+        "/lovable-uploads/save-repunzel-game-3.png",
+      ],
+      color: "#E44A4A",
+			challenges: [
+				{
+					title: "Balancing Education and Entertainment",
+					description: "Seamlessly integrating learning with entertainment required careful design and testing to ensure both aspects are equally engaging.",
+				},
+				{
+					title: "Personalization",
+					description: "Adapting the game to each child's skill level demanded a sophisticated algorithm and a wide range of challenges.",
+				},
+				{
+					title: "Accessibility",
+					description: "Ensuring the game is accessible to children with different learning styles and abilities required careful attention to design and content.",
+				},
+			],
+    },
+  ];
 };
 
-// Helper function to get the next project based on current slug
+// Function to return a single project based on its slug
+export const getProjectBySlug = (slug: string): Project | undefined => {
+  const projects = getProjects();
+  return projects.find((project) => project.slug === slug);
+};
+
+// Add a function to get the next project
 export const getNextProject = (currentSlug: string): Project => {
-  const currentIndex = projectOrder.findIndex(s => s === currentSlug);
-  if (currentIndex === -1) return projects[0]; // Fallback to first project
+  const projects = getProjects();
+  const currentIndex = projects.findIndex(project => project.slug === currentSlug);
   
-  // Get the next project in order, wrap around to start if at the end
-  const nextSlug = projectOrder[(currentIndex + 1) % projectOrder.length];
-  return getProjectBySlug(nextSlug) || projects[0];
+  // If it's the last project, return the first one
+  if (currentIndex === projects.length - 1) {
+    return projects[0];
+  }
+  
+  return projects[currentIndex + 1];
+};
+
+// Add a function to get the previous project
+export const getPreviousProject = (currentSlug: string): Project => {
+  const projects = getProjects();
+  const currentIndex = projects.findIndex(project => project.slug === currentSlug);
+  
+  // If it's the first project, return the last one
+  if (currentIndex <= 0) {
+    return projects[projects.length - 1];
+  }
+  
+  return projects[currentIndex - 1];
 };
