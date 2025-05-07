@@ -7,7 +7,6 @@ interface ProjectSectionProps {
   children: ReactNode;
   className?: string;
   delay?: number;
-  color?: string;
 }
 
 export const ProjectSection = ({
@@ -15,7 +14,6 @@ export const ProjectSection = ({
   children,
   className = '',
   delay = 0,
-  color = '#10B981',
 }: ProjectSectionProps) => {
   return (
     <motion.div
@@ -25,11 +23,7 @@ export const ProjectSection = ({
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay }}
     >
-      {title && (
-        <h2 className="text-3xl font-bold mb-6" style={{ color }}>
-          {title}
-        </h2>
-      )}
+      {title && <h2 className="text-2xl font-medium mb-6">{title}</h2>}
       {children}
     </motion.div>
   );

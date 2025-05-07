@@ -31,11 +31,6 @@ const ProjectDetail = () => {
     }
   }, [project, navigate]);
 
-  // Scroll to top when navigating to a new project
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [slug]);
-
   if (!project) {
     return null;
   }
@@ -55,32 +50,32 @@ const ProjectDetail = () => {
           
           {/* Design Research Section - For STUDIT project */}
           {project.slug === 'studit' && project.designResearch && 
-            <ProjectDesignResearch designResearch={project.designResearch} color={project.color} />
+            <ProjectDesignResearch designResearch={project.designResearch} />
           }
           
           {/* Wireflow Section - For STUDIT project */}
           {project.slug === 'studit' && project.wireflowDetails && 
-            <ProjectWireflow wireflow={project.wireflowDetails} color={project.color} />
+            <ProjectWireflow wireflow={project.wireflowDetails} />
           }
           
           {/* Wireflow Section - For BIP project */}
           {project.slug === 'bip' && project.wireflow && 
-            <ProjectWireflow wireflow={project.wireflow} color={project.color} />
+            <ProjectWireflow wireflow={project.wireflow} />
           }
           
           {/* Wireflow Section - For Plant Learning Module project */}
           {project.slug === 'plant-module' && project.wireflow && 
-            <ProjectWireflow wireflow={project.wireflow} isPlantModule={true} color={project.color} />
+            <ProjectWireflow wireflow={project.wireflow} isPlantModule={true} />
           }
           
           {/* Specification & Instructional Script - For Plant Learning Module project */}
           {project.slug === 'plant-module' && project.specification && 
-            <ProjectSpecification specification={project.specification} color={project.color} />
+            <ProjectSpecification specification={project.specification} />
           }
           
           {/* Interactive Elements & Assessment - For Plant Learning Module project */}
           {project.slug === 'plant-module' && project.interactiveElements && 
-            <ProjectInteractiveElements interactiveElements={project.interactiveElements} color={project.color} />
+            <ProjectInteractiveElements interactiveElements={project.interactiveElements} />
           }
           
           {/* Reordered and merged sections for Save Rapunzel */}
@@ -92,20 +87,19 @@ const ProjectDetail = () => {
               title: project.structureTree.title || "Project Structure",
               description: project.structureTree.description,
               image: project.structureTree.image
-            }} color={project.color} />
+            }} />
           }
 
           {/* Wireframes Section - For Roomie project */}
           {project.slug === 'roomie' && project.wireframes && 
-            <ProjectWireflow wireflow={project.wireframes} color={project.color} />
+            <ProjectWireflow wireflow={project.wireframes} />
           }
           
           {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
           {project.slug !== 'save-rapunzel' && project.designProcessAndAesthetics && project.designImages && 
             <ProjectAesthetics 
               designProcessAndAesthetics={project.designProcessAndAesthetics} 
-              designImages={project.designImages}
-              color={project.color}
+              designImages={project.designImages} 
             />
           }
           
@@ -123,7 +117,7 @@ const ProjectDetail = () => {
       {/* Check It Out section */}
       {project.link && <ProjectCallToAction title={project.title} link={project.link} />}
       
-      {/* More Projects Section (replaces Next Project) */}
+      {/* Next Project */}
       <ProjectNextProject currentSlug={slug || ''} />
     </Layout>
   );

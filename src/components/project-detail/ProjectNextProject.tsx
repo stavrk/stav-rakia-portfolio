@@ -1,8 +1,7 @@
 
 import { motion } from "framer-motion";
-import { getNextProject, getPreviousProject } from "@/data/projects";
+import { getNextProject } from "@/data/projects";
 import type { Project } from "@/data/projects";
-import ProjectCard from "../ProjectCard";
 
 interface ProjectNextProjectProps {
   currentSlug: string;
@@ -10,45 +9,35 @@ interface ProjectNextProjectProps {
 
 export const ProjectNextProject = ({ currentSlug }: ProjectNextProjectProps) => {
   const nextProject = getNextProject(currentSlug);
-  const prevProject = getPreviousProject(currentSlug);
 
   return (
     <section className="py-20 bg-background border-t border-border/30">
       <div className="container">
         <motion.div 
-          className="text-center mb-12"
+          className="text-center mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold mb-8 section-title-gradient">More Projects</h2>
+          <p className="text-muted-foreground mb-2">Next Project</p>
+          <h3 
+            className="text-2xl font-medium mb-6" 
+            style={{ color: nextProject.color }}
+          >
+            {nextProject.title}
+          </h3>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Previous Project */}
-            <ProjectCard 
-              title={prevProject.title}
-              description={prevProject.shortDescription || prevProject.overview.substring(0, 100) + '...'}
-              image={prevProject.image}
-              tags={prevProject.tags || []}
-              slug={prevProject.slug}
-              color={prevProject.color}
-              index={0}
-              link={`/projects/${prevProject.slug}`}
-            />
-            
-            {/* Next Project */}
-            <ProjectCard 
-              title={nextProject.title}
-              description={nextProject.shortDescription || nextProject.overview.substring(0, 100) + '...'}
-              image={nextProject.image}
-              tags={nextProject.tags || []}
-              slug={nextProject.slug}
-              color={nextProject.color}
-              index={1}
-              link={`/projects/${nextProject.slug}`}
-            />
+          <div className="mb-8 max-w-md mx-auto rounded-xl overflow-hidden shadow-lg">
+            <img src={nextProject.image} alt={nextProject.title} className="w-full h-auto object-cover" />
           </div>
+          
+          <a 
+            href={`/projects/${nextProject.slug}`} 
+            className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium transition-all hover:translate-y-[-2px] hover:shadow-lg"
+          >
+            View Next Project
+          </a>
         </motion.div>
       </div>
     </section>

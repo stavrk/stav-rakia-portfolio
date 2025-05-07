@@ -12,15 +12,14 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
   }
 
   return (
-    <section id="project-gallery" className="py-20 bg-secondary/50">
+    <section className="py-20 bg-secondary/50">
       <div className="container">
         <motion.h2 
-          className="text-3xl font-bold mb-8 text-center"
+          className="text-2xl font-medium mb-8 text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          style={{ color: project.color }}
         >
           Project Gallery
         </motion.h2>
@@ -31,7 +30,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {project.additionalImages && project.additionalImages.map((image: string, index: number) => (
               <motion.div 
                 key={index} 
-                className="rounded-xl overflow-hidden"
+                className="rounded-xl overflow-hidden shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -51,7 +50,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {project.additionalImages && project.additionalImages.map((image: string, index: number) => (
               <motion.div 
                 key={index} 
-                className="rounded-xl overflow-hidden"
+                className="rounded-xl overflow-hidden shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -68,7 +67,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {/* Add roomie-expenses to ROOMIE gallery */}
             {project.slug === 'roomie' && (
               <motion.div 
-                className="rounded-xl overflow-hidden"
+                className="rounded-xl overflow-hidden shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -85,7 +84,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {/* Add save-repunzel-my-games-add to SAVE RAPUNZEL gallery */}
             {project.slug === 'save-rapunzel' && (
               <motion.div 
-                className="rounded-xl overflow-hidden"
+                className="rounded-xl overflow-hidden shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}

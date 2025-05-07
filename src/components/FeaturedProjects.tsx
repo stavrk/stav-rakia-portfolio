@@ -27,9 +27,9 @@ const FeaturedProjects = () => {
             <ProjectCard 
               key={project.slug} 
               title={project.title} 
-              description={project.shortDescription || project.overview.substring(0, 100) + '...'} 
+              description={project.description} 
               image={project.image} 
-              tags={project.tags || []} 
+              tags={project.tags} 
               slug={project.slug} 
               color={project.color} 
               index={index} 
@@ -46,9 +46,9 @@ const FeaturedProjects = () => {
               <ProjectCard 
                 key={project.slug} 
                 title={project.title} 
-                description={project.shortDescription || project.overview.substring(0, 100) + '...'} 
+                description={project.description} 
                 image={project.image} 
-                tags={project.tags || []} 
+                tags={project.tags} 
                 slug={project.slug} 
                 color={project.color} 
                 index={index + 4} 

@@ -1,14 +1,8 @@
 
 import { motion } from "framer-motion";
 
-interface ProcessStep {
-  step: number;
-  title: string;
-  description: string;
-}
-
 interface ProjectProcessProps {
-  process: ProcessStep[];
+  process: string[];
   color: string;
 }
 
@@ -36,12 +30,9 @@ export const ProjectProcess = ({ process, color }: ProjectProcessProps) => {
               className="flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white" 
               style={{ backgroundColor: color }}
             >
-              {step.step}
+              {index + 1}
             </div>
-            <div>
-              <h3 className="font-medium">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
-            </div>
+            <p>{step}</p>
           </motion.div>
         ))}
       </div>

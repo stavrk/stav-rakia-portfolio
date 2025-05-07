@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
@@ -98,9 +97,9 @@ const Projects = () => {
               <ProjectCard 
                 key={project.slug || index}
                 title={project.title}
-                description={project.shortDescription || project.overview.substring(0, 100) + '...'}
+                description={project.description}
                 image={project.image}
-                tags={project.tags || []}
+                tags={project.tags}
                 slug={project.slug}
                 color={project.color}
                 index={index}
