@@ -1,26 +1,15 @@
 
 import { motion } from "framer-motion";
-
-// Order of projects, matching our main project list
-const projectOrder = [
-  "save-rapunzel",
-  "bip",
-  "roomie",
-  "studit",
-  "plant-module"
-];
+import { getNextProject } from "@/data/projects";
+import type { Project } from "@/data/projects";
 
 interface ProjectNextProjectProps {
-  nextProject: {
-    title: string;
-    image: string;
-    slug: string;
-    color: string;
-  };
   currentSlug: string;
 }
 
-export const ProjectNextProject = ({ nextProject, currentSlug }: ProjectNextProjectProps) => {
+export const ProjectNextProject = ({ currentSlug }: ProjectNextProjectProps) => {
+  const nextProject = getNextProject(currentSlug);
+
   return (
     <section className="py-20 bg-background border-t border-border/30">
       <div className="container">

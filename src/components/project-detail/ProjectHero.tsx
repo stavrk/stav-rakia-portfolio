@@ -3,9 +3,10 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ProjectLink from "@/components/ProjectLink";
+import { Project } from "@/data/projects";
 
 interface ProjectHeroProps {
-  project: any;
+  project: Project;
 }
 
 export const ProjectHero = ({ project }: ProjectHeroProps) => {
@@ -43,8 +44,6 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            {/* Removed the tags container that was here */}
-            
             <h1 
               className="text-4xl md:text-6xl font-medium mb-6" 
               style={{ color: project.color }}

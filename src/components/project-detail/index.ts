@@ -1,4 +1,5 @@
 
+// Export all project detail components for easier imports
 export * from './ProjectHero';
 export * from './ProjectChallengeSolution';
 export * from './ProjectProcess';
@@ -11,3 +12,7 @@ export * from './ProjectGallery';
 export * from './ProjectCallToAction';
 export * from './ProjectNextProject';
 export * from './ChallengesSection';
+export * from './SaveRapunzelContent';
+export * from './AnimationFeatures';
+export * from './ProjectSection';
+export * from './ProjectSummary';

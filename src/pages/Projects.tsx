@@ -1,8 +1,8 @@
-
 import { useState } from 'react';
 import Layout from "@/components/Layout";
 import { motion } from "framer-motion";
 import ProjectCard from "@/components/ProjectCard";
+import { projects } from "@/data/projects";
 
 // Style overrides to hide tag elements
 // This is kept as-is to maintain the current functionality
@@ -66,77 +66,9 @@ hideTagsStyle.textContent = `
 `;
 document.head.appendChild(hideTagsStyle);
 
-// Project data structure with new order
-const projectsData = [
-  {
-    title: "SAVE RAPUNZEL",
-    description: "Interactive game and tool turning lessons into experiences.",
-    image: "/lovable-uploads/save-repunzel-editor.png",
-    tags: ["Instructional Design", "Game Design"],
-    slug: "save-rapunzel",
-    color: "#10B981",
-    case: "Interactive game and tool turning lessons into experiences.",
-    comingSoon: false,
-    link: "https://saverapunzel.telem-hit.net/GamesList"
-  },
-  {
-    title: "BIP",
-    description: "Money transfer app designed for extraterrestrial users with unique needs.",
-    image: "/lovable-uploads/bip-lots-of-iphones.png",
-    tags: ["UX UI Design", "Speculative Design"],
-    slug: "bip",
-    color: "#8B5CF6",
-    case: "Money transfer app designed for extraterrestrial users with unique needs.",
-    comingSoon: false,
-    link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
-  },
-  {
-    title: "ROOMIE",
-    description: "Interactive guide for simplified apartment moving for young adults.",
-    image: "/lovable-uploads/roomie-home-page.png",
-    tags: ["UX UI Design", "Instructional Design"],
-    slug: "roomie",
-    color: "#2A4359",
-    case: "Interactive guide for simplified apartment moving for young adults.",
-    comingSoon: false,
-    link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
-  },
-  {
-    title: "STUDIT",
-    description: "AI-powered study companion for personalized test preparation.",
-    image: "/lovable-uploads/studit-home-page.png",
-    tags: ["UX UI Design", "Instructional Design"],
-    slug: "studit",
-    color: "#F59E0B",
-    case: "AI-powered study companion for personalized test preparation.",
-    comingSoon: false,
-    link: "https://xd.adobe.com/view/a56c02e8-2d4f-4803-bcbb-811822907cf1-f03f/?fullscreen"
-  },
-  {
-    title: "PLANT LEARNING MODULE",
-    description: "Interactive experience to build confidence in houseplant care.",
-    image: "/lovable-uploads/plant-first-page.png",
-    tags: ["Instructional Design"],
-    slug: "plant-module",
-    color: "#22C55E",
-    case: "Interactive experience to build confidence in houseplant care.",
-    comingSoon: false,
-    link: "https://360.articulate.com/review/content/6849bc42-e11b-489d-bcc4-cad07341bdbf/review"
-  },
-  {
-    title: "Playtika Manager Onboarding Guide",
-    description: "Interactive onboarding module for managers guiding new employees.",
-    image: "/lovable-uploads/playtika-home.jpg",
-    tags: ["Instructional Design"],
-    color: "#D946EF",
-    case: "Interactive onboarding module for managers guiding new employees.",
-    comingSoon: true
-  }
-];
-
 const Projects = () => {
   // Sort projects to show "Coming Soon" projects at the end
-  const sortedProjects = [...projectsData].sort((a, b) => {
+  const sortedProjects = [...projects].sort((a, b) => {
     if (a.comingSoon && !b.comingSoon) return 1;
     if (!a.comingSoon && b.comingSoon) return -1;
     return 0;
@@ -168,10 +100,10 @@ const Projects = () => {
                 description={project.description}
                 image={project.image}
                 tags={project.tags}
-                slug={project.slug || ''}
+                slug={project.slug}
                 color={project.color}
                 index={index}
-                comingSoon={project.comingSoon || false}
+                comingSoon={project.comingSoon}
                 link={project.link}
               />
             ))}

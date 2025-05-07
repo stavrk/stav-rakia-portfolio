@@ -1,11 +1,16 @@
 
 import { motion } from "framer-motion";
+import { Project } from "@/data/projects";
 
 interface ProjectGalleryProps {
-  project: any;
+  project: Project;
 }
 
 export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
+  if (!project.additionalImages || project.additionalImages.length === 0) {
+    return null;
+  }
+
   return (
     <section className="py-20 bg-secondary/50">
       <div className="container">

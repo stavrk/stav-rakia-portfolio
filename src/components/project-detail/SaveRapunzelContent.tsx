@@ -1,9 +1,11 @@
 
 import { motion } from "framer-motion";
 import { Code, LayoutPanelLeft, LineChart } from "lucide-react";
+import { Project } from "@/data/projects";
+import { ProjectSection } from "./ProjectSection";
 
 interface SaveRapunzelContentProps {
-  project: any;
+  project: Project;
 }
 
 export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
@@ -12,14 +14,7 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
   return (
     <>
       {/* Content Generator Interface */}
-      <motion.div 
-        className="mb-16" 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-medium mb-6">Content Generator Interface</h2>
+      <ProjectSection title="Content Generator Interface">
         <p className="text-muted-foreground mb-8">The intuitive content generator allows educators to create customized educational content without technical knowledge, featuring an easy-to-use interface with built-in validation and guidance.</p>
         
         <div className="rounded-xl overflow-hidden border border-border/40 shadow-lg mb-8">
@@ -30,17 +25,10 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
           <p className="mb-4 text-muted-foreground">The generator represents a revolutionary approach to creating educational content. Unlike traditional systems, the interface balances simplicity with power, featuring built-in protection mechanisms that prevent the publication of invalid games and provide teachers with immediate feedback.</p>
           <p className="mb-4 text-muted-foreground">The generator includes a progressive approval system that encourages users to create at least 10 quality questions before publishing the game, with a maximum allowance of 30 questions per game. These specifications were established after extensive user research with teachers and education professionals.</p>
         </div>
-      </motion.div>
+      </ProjectSection>
 
       {/* Graphic Development Section */}
-      <motion.div 
-        className="mb-16" 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-medium mb-6">Graphic Development and Design Evolution</h2>
+      <ProjectSection title="Graphic Development and Design Evolution">
         <div className="prose prose-lg max-w-none">
           <p className="mb-4 text-muted-foreground">The 'Save Rapunzel' project was characterized by an iterative design process that underwent numerous changes from the initial concept to the final product. The graphics and visual elements were carefully tailored to enhance the user experience.</p>
         </div>
@@ -48,18 +36,10 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
         <div className="mt-8 rounded-xl overflow-hidden border border-border/40">
           <img src="/lovable-uploads/first-version-save-repunzel.png" alt="Initial Design Concept" className="w-full h-auto" />
         </div>
-      </motion.div>
+      </ProjectSection>
       
       {/* Design Process & Aesthetics Section */}
-      <motion.div 
-        className="mb-16" 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-medium mb-6">Design Process & Aesthetics</h2>
-        
+      <ProjectSection title="Design Process & Aesthetics">
         <div className="space-y-8">
           <div className="mb-8">
             <p className="mb-4 text-muted-foreground">Save Rapunzel features a dual-interface design that supports both young learners and their educators. The student-facing interface uses a colorful, fairy tale-inspired palette that balances a sense of wonder with clear readability.</p>
@@ -115,32 +95,17 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
             </motion.div>
           </div>
         </div>
-      </motion.div>
+      </ProjectSection>
       
       {/* Key Animations Section */}
-      <motion.div 
-        className="mb-16" 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-medium mb-6">Key Animations</h2>
+      <ProjectSection title="Key Animations">
         <div className="prose prose-lg max-w-none">
           <p className="mb-4 text-muted-foreground">Strategic animations support the learning experience without causing distraction. The introductory sequence - showing Rapunzel walking through the tower with a gradual zoom to the window - replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.</p>
         </div>
-      </motion.div>
+      </ProjectSection>
 
       {/* Technical & Development Challenges Section */}
-      <motion.div 
-        className="mb-16" 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.5 }}
-      >
-        <h2 className="text-2xl font-medium mb-6">Technical &amp; Development Challenges</h2>
-        
+      <ProjectSection title="Technical &amp; Development Challenges">
         <div className="prose prose-lg max-w-none space-y-4">
           <p className="text-muted-foreground">We overcame several key challenges:</p>
           
@@ -172,7 +137,7 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
           
           <p className="text-muted-foreground">Through iterative testing and structured problem-solving, we delivered a product that meets educational goals and usability standards.</p>
         </div>
-      </motion.div>
+      </ProjectSection>
     </>
   );
 };
