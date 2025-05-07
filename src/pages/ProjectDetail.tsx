@@ -18,6 +18,15 @@ import { ChallengesSection } from "@/components/project-detail/ChallengesSection
 import { SaveRapunzelContent } from "@/components/project-detail/SaveRapunzelContent";
 import { AnimationFeatures } from "@/components/project-detail/AnimationFeatures";
 
+// Define the project order for consistent navigation
+const projectOrder = [
+  "save-rapunzel",
+  "bip",
+  "roomie", 
+  "studit",
+  "plant-module"
+];
+
 const projectsData = [{
   title: "ROOMIE",
   description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
@@ -215,9 +224,18 @@ const ProjectDetail = () => {
   const navigate = useNavigate();
   const project = projectsData.find(p => p.slug === slug);
 
-  // Find next project data for the navigation section
-  const nextProjectIndex = (projectsData.findIndex(p => p.slug === slug) + 1) % projectsData.length;
-  const nextProject = projectsData[nextProjectIndex];
+  // Find next project based on the defined project order
+  const getNextProject = (currentSlug: string) => {
+    const currentIndex = projectOrder.findIndex(s => s === currentSlug);
+    if (currentIndex === -1) return projectsData[0]; // Fallback to first project
+    
+    // Get the next project in order, wrap around to start if at the end
+    const nextSlug = projectOrder[(currentIndex + 1) % projectOrder.length];
+    return projectsData.find(p => p.slug === nextSlug) || projectsData[0];
+  };
+
+  // Get the next project based on the current slug
+  const nextProject = slug ? getNextProject(slug) : projectsData[0];
 
   useEffect(() => {
     if (!project) {
@@ -311,8 +329,8 @@ const ProjectDetail = () => {
       {/* Check It Out section */}
       {project.link && <ProjectCallToAction title={project.title} link={project.link} />}
       
-      {/* Next Project - Updated with image and title */}
-      <ProjectNextProject nextProject={nextProject} />
+      {/* Next Project - Updated with current slug to determine the next project */}
+      <ProjectNextProject nextProject={nextProject} currentSlug={slug || ''} />
     </Layout>
   );
 };
