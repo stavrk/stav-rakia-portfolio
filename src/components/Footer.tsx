@@ -18,7 +18,7 @@ const Footer = () => {
             </p>
           </div>
           
-          <div>
+          <div className="md:pl-6 lg:pl-10">
             <h3 className="text-lg font-medium mb-4">Links</h3>
             <ul className="space-y-2">
               <li>
@@ -39,7 +39,7 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div>
+          <div className="md:pl-6 lg:pl-12">
             <h3 className="text-lg font-medium mb-4">Connect</h3>
             <div className="flex space-x-4">
               <motion.a 
