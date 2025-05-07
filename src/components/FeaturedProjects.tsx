@@ -5,14 +5,6 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const projectsData = [{
-  title: "ROOMIE",
-  description: "Interactive guide for simplified apartment moving for young adults.",
-  image: "/lovable-uploads/roomie-home-page.png",
-  tags: ["UX UI Design", "Instructional Design"],
-  slug: "roomie",
-  color: "#a67c52",
-  comingSoon: false
-}, {
   title: "SAVE RAPUNZEL",
   description: "Interactive game and tool turning lessons into experiences.",
   image: "/lovable-uploads/save-repunzel-editor.png",
@@ -27,6 +19,14 @@ const projectsData = [{
   tags: ["UX UI Design", "Speculative Design"],
   slug: "bip",
   color: "#8B5CF6",
+  comingSoon: false
+}, {
+  title: "ROOMIE",
+  description: "Interactive guide for simplified apartment moving for young adults.",
+  image: "/lovable-uploads/roomie-home-page.png",
+  tags: ["UX UI Design", "Instructional Design"],
+  slug: "roomie",
+  color: "#2A4359",
   comingSoon: false
 }, {
   title: "STUDIT",

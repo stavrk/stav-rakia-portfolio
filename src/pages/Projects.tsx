@@ -66,19 +66,8 @@ hideTagsStyle.textContent = `
 `;
 document.head.appendChild(hideTagsStyle);
 
-// Project data structure - updating the color for ROOMIE
+// Project data structure with new order
 const projectsData = [
-  {
-    title: "ROOMIE",
-    description: "Interactive guide for simplified apartment moving for young adults.",
-    image: "/lovable-uploads/roomie-home-page.png",
-    tags: ["UX UI Design", "Instructional Design"],
-    slug: "roomie",
-    color: "#2A4359", // Updated from #DC665C to #2A4359
-    case: "Interactive guide for simplified apartment moving for young adults.",
-    comingSoon: false,
-    link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
-  },
   {
     title: "SAVE RAPUNZEL",
     description: "Interactive game and tool turning lessons into experiences.",
@@ -100,6 +89,17 @@ const projectsData = [
     case: "Money transfer app designed for extraterrestrial users with unique needs.",
     comingSoon: false,
     link: "https://xd.adobe.com/view/866550b7-89fd-4901-92d2-dc087ed5fb28-d336/screen/4d7b2d99-6a21-45fb-b04b-c398d6bedc83/?fullscreen"
+  },
+  {
+    title: "ROOMIE",
+    description: "Interactive guide for simplified apartment moving for young adults.",
+    image: "/lovable-uploads/roomie-home-page.png",
+    tags: ["UX UI Design", "Instructional Design"],
+    slug: "roomie",
+    color: "#2A4359",
+    case: "Interactive guide for simplified apartment moving for young adults.",
+    comingSoon: false,
+    link: "https://xd.adobe.com/view/36102754-0760-402c-b896-3eb51e5b9a6f-6343/?fullscreen"
   },
   {
     title: "STUDIT",
