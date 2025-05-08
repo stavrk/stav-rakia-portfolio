@@ -12,7 +12,7 @@ interface SummaryItemProps {
 const SummaryItem = ({ title, children, delay = 0, color = '#10B981' }: SummaryItemProps) => {
   return (
     <div>
-      <h2 className="text-5xl font-bold mb-6" style={{ color }}>
+      <h2 className="text-4xl font-bold mb-6" style={{ color }}>
         {title}
       </h2>
       <p className="text-muted-foreground">

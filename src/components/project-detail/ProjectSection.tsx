@@ -27,7 +27,7 @@ export const ProjectSection = ({
     >
       {title && (
         <h2 
-          className="text-5xl font-bold mb-12" 
+          className="text-4xl font-bold mb-10" 
           style={{ color: color }}
         >
           {title}
