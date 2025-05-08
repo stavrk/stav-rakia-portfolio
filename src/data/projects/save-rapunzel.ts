@@ -3,7 +3,7 @@ import { Project } from '../types';
 
 export const saveRapunzel: Project = {
   title: "SAVE RAPUNZEL",
-  description: "Interactive game and tool turning lessons into experiences.",
+  description: "An educational platform that turns lessons into interactive Rapunzel-themed games for students and teachers.",
   image: "/lovable-uploads/save-repunzel-editor.png",
   tags: ["Instructional Design", "Game Design"],
   slug: "save-rapunzel",
