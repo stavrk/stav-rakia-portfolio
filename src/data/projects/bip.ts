@@ -3,7 +3,7 @@ import { Project } from '../types';
 
 export const bip: Project = {
   title: "BIP",
-  description: "A conceptual money transfer application designed specifically for extraterrestrial users with unique perceptual needs.",
+  description: "A conceptual money transfer app for extraterrestrials with unique perceptual needs.",
   image: "/lovable-uploads/bip-lots-of-iphones.png",
   tags: ["Speculative Design", "Financial Tech"],
   slug: "bip",

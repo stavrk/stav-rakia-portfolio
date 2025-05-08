@@ -3,7 +3,7 @@ import { Project } from '../types';
 
 export const studit: Project = {
   title: "STUDIT",
-  description: "An AI-powered study companion for Israeli Psychometric Entrance Test and matriculation (bagrut) exams preparation with personalized study plans.",
+  description: "An AI-powered study companion for Israeli Psychometric and matriculation exam prep.",
   image: "/lovable-uploads/studit-home-page.png",
   tags: ["Educational Tech", "AI"],
   slug: "studit",

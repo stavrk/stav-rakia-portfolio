@@ -3,7 +3,7 @@ import { Project } from '../types';
 
 export const roomie: Project = {
   title: "ROOMIE",
-  description: "An interactive guide designed to simplify the often overwhelming process of moving into a first apartment for young adults.",
+  description: "An interactive guide that simplifies the process of moving into a first apartment.",
   image: "/lovable-uploads/roomie-home-page.png",
   tags: ["UX/UI Design", "Instructional Design"],
   slug: "roomie",

@@ -3,7 +3,7 @@ import { Project } from '../types';
 
 export const plantModule: Project = {
   title: "PLANT LEARNING MODULE",
-  description: "The Plant Learning Module was developed as a learning experience for houseplant care. The primary goal was to increase confidence among potential plant owners by providing comprehensive, accessible information through an interactive learning experience.",
+  description: "An interactive module designed to boost confidence in houseplant care with accessible, hands-on learning.",
   image: "/lovable-uploads/plant-first-page.png",
   tags: ["Instructional Design", "Educational"],
   slug: "plant-module",
