@@ -1,5 +1,5 @@
 
-import { Project } from "@/data/projects";
+import { Project } from "@/data/types";
 import { ProjectSection } from "./ProjectSection";
 
 interface AnimationFeaturesProps {

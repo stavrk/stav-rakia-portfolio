@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { getPreviousProject, getNextProject } from "@/data/projects";
-import type { Project } from "@/data/projects";
+import type { Project } from "@/data/types";
 import ProjectCard from "@/components/ProjectCard";
 
 interface ProjectMoreProjectsProps {

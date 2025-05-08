@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Project } from "@/data/projects";
+import { Project } from "@/data/types";
 
 interface ProjectGalleryProps {
   project: Project;

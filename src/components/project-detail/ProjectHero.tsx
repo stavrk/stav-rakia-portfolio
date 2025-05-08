@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ProjectLink from "@/components/ProjectLink";
-import { Project } from "@/data/projects";
+import { Project } from "@/data/types";
 import { Button } from "../ui/button";
 
 interface ProjectHeroProps {

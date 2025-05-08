@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { Code, LayoutPanelLeft, LineChart } from "lucide-react";
-import { Project } from "@/data/projects";
+import { Project } from "@/data/types";
 import { ProjectSection } from "./ProjectSection";
 
 interface SaveRapunzelContentProps {

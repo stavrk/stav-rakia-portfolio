@@ -1,4 +1,3 @@
-
 import { Project } from './types';
 import { saveRapunzel } from './projects/save-rapunzel';
 import { bip } from './projects/bip';
@@ -25,6 +24,9 @@ export const projects: Project[] = [
   plantModule,
   playtika
 ];
+
+// Re-export the Project type
+export type { Project } from './types';
 
 // Helper function to get a project by slug
 export const getProjectBySlug = (slug: string): Project | undefined => {
