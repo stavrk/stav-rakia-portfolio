@@ -71,7 +71,12 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
                 variant="outline"
                 size="lg"
                 onClick={scrollToGallery}
-                className="bg-white text-primary hover:bg-primary/5 border-primary"
+                className="bg-white hover:bg-opacity-90 transition-all duration-300"
+                style={{ 
+                  color: project.color, 
+                  borderColor: project.color,
+                  boxShadow: `0 1px 2px rgba(0,0,0,0.05)`,
+                }}
               >
                 Jump to Final Design
               </Button>
