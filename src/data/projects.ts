@@ -1,3 +1,4 @@
+
 import { Project } from './types';
 import { saveRapunzel } from './projects/save-rapunzel';
 import { bip } from './projects/bip';
@@ -11,8 +12,7 @@ export const projectOrder = [
   "save-rapunzel",
   "bip",
   "roomie", 
-  "studit",
-  "plant-module"
+  "studit"
 ];
 
 // Combine all projects into a single array
@@ -25,6 +25,11 @@ export const projects: Project[] = [
   playtika
 ];
 
+// Define UX/UI projects (excluding instructional design projects)
+export const uxuiProjects: Project[] = projects.filter(
+  project => project.slug !== "plant-module" && project.slug !== "playtika"
+);
+
 // Re-export the Project type
 export type { Project } from './types';
 
@@ -34,24 +39,24 @@ export const getProjectBySlug = (slug: string): Project | undefined => {
 };
 
 // Helper function to get the previous project based on current slug
-export const getPreviousProject = (currentSlug: string): Project => {
+export const getPreviousProject = (currentSlug: string): Project | undefined => {
   const currentIndex = projectOrder.findIndex(s => s === currentSlug);
-  if (currentIndex === -1) return projects[0]; // Fallback to first project
+  if (currentIndex === -1) return undefined;
   
   // Get the previous project in order, wrap around to end if at the beginning
   const previousIndex = currentIndex === 0 ? projectOrder.length - 1 : currentIndex - 1;
   const previousSlug = projectOrder[previousIndex];
-  return getProjectBySlug(previousSlug) || projects[0];
+  return getProjectBySlug(previousSlug);
 };
 
 // Helper function to get the next project based on current slug
-export const getNextProject = (currentSlug: string): Project => {
+export const getNextProject = (currentSlug: string): Project | undefined => {
   const currentIndex = projectOrder.findIndex(s => s === currentSlug);
-  if (currentIndex === -1) return projects[0]; // Fallback to first project
+  if (currentIndex === -1) return undefined;
   
   // Get the next project in order, wrap around to start if at the end
   const nextSlug = projectOrder[(currentIndex + 1) % projectOrder.length];
-  return getProjectBySlug(nextSlug) || projects[0];
+  return getProjectBySlug(nextSlug);
 };
 
 // Export all project objects for individual access
