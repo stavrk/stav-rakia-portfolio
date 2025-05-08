@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ProjectLink from "@/components/ProjectLink";
 import { Project } from "@/data/projects";
+import { Button } from "../ui/button";
 
 interface ProjectHeroProps {
   project: Project;
@@ -20,6 +21,14 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
     }
     // Default for other projects
     return `${color}10`; // 10% opacity for other colors
+  };
+  
+  // Scroll to gallery function
+  const scrollToGallery = () => {
+    const gallerySection = document.querySelector('.project-gallery-section');
+    if (gallerySection) {
+      gallerySection.scrollIntoView({ behavior: 'smooth' });
+    }
   };
   
   return (
@@ -55,7 +64,18 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
               {project.overview}
             </p>
             
-            {project.link && <ProjectLink href={project.link} />}
+            <div className="flex flex-wrap gap-4 items-center">
+              {project.link && <ProjectLink href={project.link} />}
+              
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={scrollToGallery}
+                className="bg-white text-primary hover:bg-primary/5 border-primary"
+              >
+                Jump to Final Design
+              </Button>
+            </div>
           </motion.div>
           
           <motion.div 
