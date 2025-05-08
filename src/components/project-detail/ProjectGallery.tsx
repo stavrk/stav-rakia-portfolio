@@ -15,7 +15,8 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
     <section className="py-20 bg-secondary/50 project-gallery-section">
       <div className="container">
         <motion.h2 
-          className="text-2xl font-medium mb-8 text-center"
+          className="text-4xl font-bold mb-10 text-center"
+          style={{ color: project.color || '#10B981' }}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}

@@ -202,7 +202,10 @@ export const ChallengesSection = ({ project }: ChallengesSectionProps) => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-medium mb-6">
+      <h2 
+        className="text-4xl font-bold mb-10" 
+        style={{ color: project.color || '#10B981' }}
+      >
         {project.slug === 'bip' && !project.challengesAndSolutions 
           ? "Technical & Development Challenges" 
           : "Key Challenges & Solutions"}
@@ -212,5 +215,3 @@ export const ChallengesSection = ({ project }: ChallengesSectionProps) => {
     </motion.div>
   );
 };
-
-// Removed the duplicate export here

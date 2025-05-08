@@ -50,32 +50,32 @@ const ProjectDetail = () => {
           
           {/* Design Research Section - For STUDIT project */}
           {project.slug === 'studit' && project.designResearch && 
-            <ProjectDesignResearch designResearch={project.designResearch} />
+            <ProjectDesignResearch designResearch={project.designResearch} color={project.color} />
           }
           
           {/* Wireflow Section - For STUDIT project */}
           {project.slug === 'studit' && project.wireflowDetails && 
-            <ProjectWireflow wireflow={project.wireflowDetails} />
+            <ProjectWireflow wireflow={project.wireflowDetails} color={project.color} />
           }
           
           {/* Wireflow Section - For BIP project */}
           {project.slug === 'bip' && project.wireflow && 
-            <ProjectWireflow wireflow={project.wireflow} />
+            <ProjectWireflow wireflow={project.wireflow} color={project.color} />
           }
           
           {/* Wireflow Section - For Plant Learning Module project */}
           {project.slug === 'plant-module' && project.wireflow && 
-            <ProjectWireflow wireflow={project.wireflow} isPlantModule={true} />
+            <ProjectWireflow wireflow={project.wireflow} isPlantModule={true} color={project.color} />
           }
           
           {/* Specification & Instructional Script - For Plant Learning Module project */}
           {project.slug === 'plant-module' && project.specification && 
-            <ProjectSpecification specification={project.specification} />
+            <ProjectSpecification specification={project.specification} color={project.color} />
           }
           
           {/* Interactive Elements & Assessment - For Plant Learning Module project */}
           {project.slug === 'plant-module' && project.interactiveElements && 
-            <ProjectInteractiveElements interactiveElements={project.interactiveElements} />
+            <ProjectInteractiveElements interactiveElements={project.interactiveElements} color={project.color} />
           }
           
           {/* Reordered and merged sections for Save Rapunzel */}
@@ -83,16 +83,19 @@ const ProjectDetail = () => {
           
           {/* Project Structure Section - For Roomie project */}
           {project.slug === 'roomie' && project.structureTree && 
-            <ProjectWireflow wireflow={{
-              title: project.structureTree.title || "Project Structure",
-              description: project.structureTree.description,
-              image: project.structureTree.image
-            }} />
+            <ProjectWireflow 
+              wireflow={{
+                title: project.structureTree.title || "Project Structure",
+                description: project.structureTree.description,
+                image: project.structureTree.image
+              }} 
+              color={project.color}
+            />
           }
 
           {/* Wireframes Section - For Roomie project */}
           {project.slug === 'roomie' && project.wireframes && 
-            <ProjectWireflow wireflow={project.wireframes} />
+            <ProjectWireflow wireflow={project.wireframes} color={project.color} />
           }
           
           {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
@@ -100,6 +103,7 @@ const ProjectDetail = () => {
             <ProjectAesthetics 
               designProcessAndAesthetics={project.designProcessAndAesthetics} 
               designImages={project.designImages} 
+              color={project.color}
             />
           }
           

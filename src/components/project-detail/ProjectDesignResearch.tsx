@@ -9,9 +9,10 @@ interface DesignResearchData {
 
 interface ProjectDesignResearchProps {
   designResearch: DesignResearchData;
+  color?: string;
 }
 
-export const ProjectDesignResearch = ({ designResearch }: ProjectDesignResearchProps) => {
+export const ProjectDesignResearch = ({ designResearch, color = '#10B981' }: ProjectDesignResearchProps) => {
   return (
     <motion.div 
       className="mb-16" 
@@ -20,7 +21,9 @@ export const ProjectDesignResearch = ({ designResearch }: ProjectDesignResearchP
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-medium mb-6">{designResearch.title}</h2>
+      <h2 className="text-4xl font-bold mb-10" style={{ color }}>
+        {designResearch.title}
+      </h2>
       <div className="prose prose-lg max-w-none mb-8">
         {designResearch.description.split('\n\n').map((paragraph, idx) => (
           <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>

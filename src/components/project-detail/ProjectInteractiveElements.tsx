@@ -8,9 +8,10 @@ interface InteractiveElementsData {
 
 interface ProjectInteractiveElementsProps {
   interactiveElements: InteractiveElementsData;
+  color?: string;
 }
 
-export const ProjectInteractiveElements = ({ interactiveElements }: ProjectInteractiveElementsProps) => {
+export const ProjectInteractiveElements = ({ interactiveElements, color = '#10B981' }: ProjectInteractiveElementsProps) => {
   return (
     <motion.div 
       className="mb-16" 
@@ -19,7 +20,9 @@ export const ProjectInteractiveElements = ({ interactiveElements }: ProjectInter
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-medium mb-6">{interactiveElements.title}</h2>
+      <h2 className="text-4xl font-bold mb-10" style={{ color }}>
+        {interactiveElements.title}
+      </h2>
       <div className="prose prose-lg max-w-none">
         {interactiveElements.description.split('\n\n').map((paragraph, idx) => (
           <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>

@@ -15,7 +15,9 @@ export const ProjectProcess = ({ process, color }: ProjectProcessProps) => {
       transition={{ duration: 0.5 }}
       className="mb-16"
     >
-      <h2 className="text-2xl font-medium mb-6">Design Process</h2>
+      <h2 className="text-4xl font-bold mb-10" style={{ color }}>
+        Design Process
+      </h2>
       <div className="space-y-4 mb-8">
         {process.map((step, index) => (
           <motion.div 

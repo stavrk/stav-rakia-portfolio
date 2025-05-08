@@ -10,9 +10,10 @@ interface WireflowData {
 interface ProjectWireflowProps {
   wireflow: WireflowData;
   isPlantModule?: boolean;
+  color?: string;
 }
 
-export const ProjectWireflow = ({ wireflow, isPlantModule = false }: ProjectWireflowProps) => {
+export const ProjectWireflow = ({ wireflow, isPlantModule = false, color = '#10B981' }: ProjectWireflowProps) => {
   return (
     <motion.div 
       className="mb-16" 
@@ -21,7 +22,9 @@ export const ProjectWireflow = ({ wireflow, isPlantModule = false }: ProjectWire
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-medium mb-6">{wireflow.title}</h2>
+      <h2 className="text-4xl font-bold mb-10" style={{ color }}>
+        {wireflow.title}
+      </h2>
       
       {isPlantModule ? (
         <div className="prose prose-lg max-w-none mb-8">
