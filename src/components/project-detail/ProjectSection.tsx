@@ -23,7 +23,7 @@ export const ProjectSection = ({
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.5, delay }}
     >
-      {title && <h2 className="text-2xl font-medium mb-6">{title}</h2>}
+      {title && <h2 className="text-3xl font-semibold mb-8 text-[#10B981]">{title}</h2>}
       {children}
     </motion.div>
   );

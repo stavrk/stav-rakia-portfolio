@@ -12,7 +12,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
   }
 
   return (
-    <section className="py-20 bg-secondary/50">
+    <section className="py-20 bg-secondary/50 project-gallery-section">
       <div className="container">
         <motion.h2 
           className="text-2xl font-medium mb-8 text-center"
@@ -30,7 +30,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {project.additionalImages && project.additionalImages.map((image: string, index: number) => (
               <motion.div 
                 key={index} 
-                className="rounded-xl overflow-hidden shadow-lg"
+                className="rounded-xl overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -50,7 +50,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {project.additionalImages && project.additionalImages.map((image: string, index: number) => (
               <motion.div 
                 key={index} 
-                className="rounded-xl overflow-hidden shadow-lg"
+                className="rounded-xl overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -67,7 +67,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {/* Add roomie-expenses to ROOMIE gallery */}
             {project.slug === 'roomie' && (
               <motion.div 
-                className="rounded-xl overflow-hidden shadow-lg"
+                className="rounded-xl overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
@@ -84,7 +84,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
             {/* Add save-repunzel-my-games-add to SAVE RAPUNZEL gallery */}
             {project.slug === 'save-rapunzel' && (
               <motion.div 
-                className="rounded-xl overflow-hidden shadow-lg"
+                className="rounded-xl overflow-hidden"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
