@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
@@ -67,17 +68,17 @@
     @apply font-display font-medium tracking-tight;
   }
   
-  /* New standardized text styles */
+  /* Text content styles - Fix circular dependency by using direct color values */
   .text-content-light {
-    @apply text-content-light;
+    color: #555555;
   }
   
   .text-content {
-    @apply text-content;
+    color: #333333;
   }
   
   .text-content-dark {
-    @apply text-content-dark;
+    color: #222222;
   }
 }
 
