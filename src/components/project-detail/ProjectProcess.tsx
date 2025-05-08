@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { ProjectSection } from "./ProjectSection";
 
 interface ProjectProcessProps {
   process: string[];
@@ -8,16 +9,7 @@ interface ProjectProcessProps {
 
 export const ProjectProcess = ({ process, color }: ProjectProcessProps) => {
   return (
-    <motion.div 
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.5 }}
-      className="mb-16"
-    >
-      <h2 className="text-4xl font-bold mb-10" style={{ color }}>
-        Design Process
-      </h2>
+    <ProjectSection title="Design Process" color={color} className="mt-16">
       <div className="space-y-4 mb-8">
         {process.map((step, index) => (
           <motion.div 
@@ -38,6 +30,6 @@ export const ProjectProcess = ({ process, color }: ProjectProcessProps) => {
           </motion.div>
         ))}
       </div>
-    </motion.div>
+    </ProjectSection>
   );
 };

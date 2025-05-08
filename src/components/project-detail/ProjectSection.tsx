@@ -19,7 +19,7 @@ export const ProjectSection = ({
 }: ProjectSectionProps) => {
   return (
     <motion.div
-      className={`mb-16 ${className}`}
+      className={`mb-20 ${className}`}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -27,7 +27,7 @@ export const ProjectSection = ({
     >
       {title && (
         <h2 
-          className="text-4xl font-bold mb-10" 
+          className="text-5xl font-bold mb-12" 
           style={{ color: color }}
         >
           {title}

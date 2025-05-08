@@ -41,7 +41,7 @@ const ProjectDetail = () => {
       <ProjectHero project={project} />
       
       {/* Challenge & Solution Section */}
-      <section className="py-20">
+      <section className="py-24">
         <div className="container">
           <ProjectSummary project={project} />
           
