@@ -10,7 +10,7 @@ export * from './ProjectInteractiveElements';
 export * from './ProjectAesthetics';
 export * from './ProjectGallery';
 export * from './ProjectCallToAction';
-export * from './ProjectNextProject';
+export * from './ProjectMoreProjects';
 export * from './ChallengesSection';
 export * from './SaveRapunzelContent';
 export * from './AnimationFeatures';

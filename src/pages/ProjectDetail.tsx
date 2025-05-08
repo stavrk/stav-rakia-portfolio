@@ -15,7 +15,7 @@ import { ProjectInteractiveElements } from "@/components/project-detail/ProjectI
 import { ProjectAesthetics } from "@/components/project-detail/ProjectAesthetics";
 import { ProjectGallery } from "@/components/project-detail/ProjectGallery";
 import { ProjectCallToAction } from "@/components/project-detail/ProjectCallToAction";
-import { ProjectNextProject } from "@/components/project-detail/ProjectNextProject";
+import { ProjectMoreProjects } from "@/components/project-detail/ProjectMoreProjects";
 import { SaveRapunzelContent } from "@/components/project-detail/SaveRapunzelContent";
 import { AnimationFeatures } from "@/components/project-detail/AnimationFeatures";
 import { ChallengesSection } from "@/components/project-detail/ChallengesSection";
@@ -121,8 +121,8 @@ const ProjectDetail = () => {
       {/* Check It Out section */}
       {project.link && <ProjectCallToAction title={project.title} link={project.link} />}
       
-      {/* Next Project */}
-      <ProjectNextProject currentSlug={slug || ''} />
+      {/* More Projects - Replacing Next Project */}
+      <ProjectMoreProjects currentSlug={slug || ''} />
     </Layout>
   );
 };

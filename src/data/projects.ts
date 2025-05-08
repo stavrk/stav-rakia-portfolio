@@ -310,6 +310,17 @@ export const getProjectBySlug = (slug: string): Project | undefined => {
   return projects.find(project => project.slug === slug);
 };
 
+// Helper function to get the previous project based on current slug
+export const getPreviousProject = (currentSlug: string): Project => {
+  const currentIndex = projectOrder.findIndex(s => s === currentSlug);
+  if (currentIndex === -1) return projects[0]; // Fallback to first project
+  
+  // Get the previous project in order, wrap around to end if at the beginning
+  const previousIndex = currentIndex === 0 ? projectOrder.length - 1 : currentIndex - 1;
+  const previousSlug = projectOrder[previousIndex];
+  return getProjectBySlug(previousSlug) || projects[0];
+};
+
 // Helper function to get the next project based on current slug
 export const getNextProject = (currentSlug: string): Project => {
   const currentIndex = projectOrder.findIndex(s => s === currentSlug);
