@@ -17,7 +17,7 @@ export const ProjectInteractiveElements = ({ interactiveElements, color = '#10B9
     <ProjectSection title={interactiveElements.title} color={color}>
       <div className="prose prose-lg max-w-none">
         {interactiveElements.description.split('\n\n').map((paragraph, idx) => (
-          <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+          <p key={idx} className="mb-4 text-content">{paragraph}</p>
         ))}
       </div>
     </ProjectSection>

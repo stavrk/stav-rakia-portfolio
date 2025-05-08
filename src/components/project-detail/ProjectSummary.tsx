@@ -15,7 +15,7 @@ const SummaryItem = ({ title, children, delay = 0, color = '#10B981' }: SummaryI
       <h2 className="text-4xl font-bold mb-6" style={{ color }}>
         {title}
       </h2>
-      <p className="text-muted-foreground">
+      <p className="text-foreground opacity-80">
         {children}
       </p>
     </div>

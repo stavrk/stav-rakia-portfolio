@@ -29,11 +29,11 @@ export const ProjectWireflow = ({ wireflow, isPlantModule = false, color = '#10B
       {isPlantModule ? (
         <div className="prose prose-lg max-w-none mb-8">
           {wireflow.description.split('\n\n').map((paragraph, idx) => (
-            <p key={idx} className="mb-4 text-muted-foreground">{paragraph}</p>
+            <p key={idx} className="mb-4 text-content">{paragraph}</p>
           ))}
         </div>
       ) : (
-        <p className="text-muted-foreground mb-8">{wireflow.description}</p>
+        <p className="text-content mb-8">{wireflow.description}</p>
       )}
       
       <div className="rounded-xl overflow-hidden">

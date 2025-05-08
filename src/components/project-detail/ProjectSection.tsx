@@ -33,7 +33,9 @@ export const ProjectSection = ({
           {title}
         </h2>
       )}
-      {children}
+      <div className="text-content">
+        {children}
+      </div>
     </motion.div>
   );
 };
