@@ -47,18 +47,32 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
           Back to Projects
         </motion.button>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Content area - reduced from 6 to 4 columns (33%) */}
           <motion.div 
+            className="lg:col-span-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h1 
-              className="text-4xl md:text-6xl font-medium mb-6" 
-              style={{ color: project.color }}
+            {/* Project title with sparkle effect */}
+            <motion.h1
+              className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent"
+              style={{ 
+                backgroundImage: `linear-gradient(90deg, ${project.color}, ${project.color}CC, ${project.color})`,
+                backgroundSize: "200% 100%"
+              }}
+              animate={{ 
+                backgroundPosition: ["0% 0%", "200% 0%", "0% 0%"] 
+              }}
+              transition={{ 
+                duration: 15, 
+                repeat: Infinity, 
+                ease: "linear" 
+              }}
             >
               {project.title}
-            </h1>
+            </motion.h1>
             
             <p className="text-lg mb-8">
               {project.overview}
@@ -83,13 +97,14 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             </div>
           </motion.div>
           
+          {/* Image area - increased from 6 to 8 columns (67%) */}
           <motion.div 
-            className="relative" 
+            className="relative lg:col-span-8" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div className="rounded-xl overflow-hidden">
+            <div className="rounded-xl overflow-hidden shadow-lg">
               <img src={project.image} alt={project.title} className="w-full h-auto" />
             </div>
           </motion.div>
