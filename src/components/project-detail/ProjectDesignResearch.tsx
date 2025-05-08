@@ -27,7 +27,7 @@ export const ProjectDesignResearch = ({ designResearch }: ProjectDesignResearchP
         ))}
       </div>
       
-      <div className="rounded-xl overflow-hidden border border-border/40 mt-6">
+      <div className="rounded-xl overflow-hidden">
         <img src={designResearch.image} alt="Design Research" className="w-full h-auto" />
       </div>
     </motion.div>

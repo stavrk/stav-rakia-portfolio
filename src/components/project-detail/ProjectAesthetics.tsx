@@ -31,7 +31,7 @@ export const ProjectAesthetics = ({ designProcessAndAesthetics, designImages }: 
             {/* Display relevant design image if available */}
             {designImages && idx < designImages.length && (
               <motion.div 
-                className="mt-6 rounded-lg overflow-hidden border border-border/40" 
+                className="mt-6 rounded-lg overflow-hidden" 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}

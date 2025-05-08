@@ -33,7 +33,7 @@ export const ProjectWireflow = ({ wireflow, isPlantModule = false }: ProjectWire
         <p className="text-muted-foreground mb-8">{wireflow.description}</p>
       )}
       
-      <div className="rounded-xl overflow-hidden border border-border/40">
+      <div className="rounded-xl overflow-hidden">
         <img src={wireflow.image} alt="Wireflow Diagram" className="w-full h-auto" />
       </div>
     </motion.div>

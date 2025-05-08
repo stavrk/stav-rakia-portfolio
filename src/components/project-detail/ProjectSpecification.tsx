@@ -27,7 +27,7 @@ export const ProjectSpecification = ({ specification }: ProjectSpecificationProp
         ))}
       </div>
       
-      <div className="rounded-xl overflow-hidden border border-border/40">
+      <div className="rounded-xl overflow-hidden">
         <img src={specification.image} alt="Specification & Instructional Script" className="w-full h-auto" />
       </div>
     </motion.div>
