@@ -4,8 +4,11 @@ import ProjectCard from './ProjectCard';
 import { projects } from '@/data/projects';
 
 const FeaturedProjects = () => {
-  // Get only non-coming-soon projects for the featured section
-  const featuredProjects = projects.filter(project => !project.comingSoon).slice(0, 5);
+  // Filter only the specific projects we want to show on the homepage
+  const featuredProjectSlugs = ['save-rapunzel', 'bip', 'roomie', 'studit'];
+  const featuredProjects = projects.filter(project => 
+    featuredProjectSlugs.includes(project.slug) && !project.comingSoon
+  );
   
   return (
     <section id="featured-projects" className="py-20 md:py-24">
@@ -22,8 +25,8 @@ const FeaturedProjects = () => {
           </p>
         </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8">
-          {featuredProjects.slice(0, 4).map((project, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          {featuredProjects.map((project, index) => (
             <ProjectCard 
               key={project.slug} 
               title={project.title} 
@@ -37,26 +40,6 @@ const FeaturedProjects = () => {
               link={project.link}
             />
           ))}
-        </div>
-        
-        {/* Center the fifth project */}
-        <div className="mt-6 md:mt-8 flex justify-center">
-          <div className="w-full md:w-1/2 mx-auto">
-            {featuredProjects.slice(4, 5).map((project, index) => (
-              <ProjectCard 
-                key={project.slug} 
-                title={project.title} 
-                description={project.description} 
-                image={project.image} 
-                tags={project.tags} 
-                slug={project.slug} 
-                color={project.color} 
-                index={index + 4} 
-                comingSoon={project.comingSoon}
-                link={project.link}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
