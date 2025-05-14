@@ -1,4 +1,3 @@
-
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { ExternalLink, Mail, Linkedin } from 'lucide-react';
@@ -13,8 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-medium mb-4">Stav Rakia</h3>
             <p className="text-muted-foreground text-sm mb-4 max-w-md">
-              UX/UI Designer and Instructional Designer focused on 
-              creating intuitive and engaging digital experiences that solve real problems.
+              Junior UX/UI Designer focused on creating intuitive and engaging digital experiences that solve real problems.
             </p>
           </div>
           

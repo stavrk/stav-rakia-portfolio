@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
 const Hero = () => {
@@ -23,7 +24,7 @@ const Hero = () => {
           repeatType: "loop",
           ease: "linear"
         }}>Stav Rakia</motion.span>
-          <br /> UX UI Designer
+          <br /> Junior UX UI Designer
         </h1>
         
         <motion.p initial={{
