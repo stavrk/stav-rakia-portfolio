@@ -1,5 +1,6 @@
+
 import { motion } from "framer-motion";
-import { Users, MessageCircle, Map, Phone, Settings, Palette, AlertCircle, Target, Lightbulb, Navigation } from "lucide-react";
+import { Users, MessageCircle, Map, Phone, Settings, Palette, AlertCircle, Target, Lightbulb, Navigation, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
 import { ProjectSection } from "./ProjectSection";
 import { PersonaCard } from "./PersonaCard";
@@ -172,52 +173,57 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <div className="rounded-xl overflow-hidden">
-            <img src="/lovable-uploads/campus_onboarding1.png" alt="Onboarding Step 1" className="w-full h-auto" />
+            <img src="/lovable-uploads/campus_onboarding1.jpg" alt="Onboarding Step 1" className="w-full h-auto" />
           </div>
           <div className="rounded-xl overflow-hidden">
-            <img src="/lovable-uploads/campus_onboarding2.png" alt="Onboarding Step 2" className="w-full h-auto" />
+            <img src="/lovable-uploads/campus_onboarding2.jpg" alt="Onboarding Step 2" className="w-full h-auto" />
           </div>
           <div className="rounded-xl overflow-hidden">
-            <img src="/lovable-uploads/campus_onboarding3.png" alt="Onboarding Step 3" className="w-full h-auto" />
+            <img src="/lovable-uploads/campus_onboarding3.jpg" alt="Onboarding Step 3" className="w-full h-auto" />
           </div>
           <div className="rounded-xl overflow-hidden">
-            <img src="/lovable-uploads/campus_onboarding4.png" alt="Onboarding Step 4" className="w-full h-auto" />
+            <img src="/lovable-uploads/campus_onboarding4.jpg" alt="Onboarding Step 4" className="w-full h-auto" />
           </div>
         </div>
       </ProjectSection>
 
       {/* HITbot Core Feature */}
       <ProjectSection title="HITbot – Our Core Feature" color={project.color}>
-        <div className="mb-8">
-          <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
-            What is HITbot?
-          </h4>
-          <p className="text-muted-foreground mb-6">
-            A smart, always-available assistant that gives short, accurate answers and directs students to the right office or contact — based on their profile.
-          </p>
-          
-          <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
-            How it works:
-          </h4>
-          <div className="space-y-3 mb-8">
-            <div className="flex items-start">
-              <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>1</div>
-              <p className="text-muted-foreground">User fills out a short profile (e.g. program, age, level)</p>
-            </div>
-            <div className="flex items-start">
-              <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>2</div>
-              <p className="text-muted-foreground">HITbot adapts responses accordingly</p>
-            </div>
-            <div className="flex items-start">
-              <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>3</div>
-              <p className="text-muted-foreground">Real examples: finding a classroom, figuring out who to contact about tuition, or locating a campus office</p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
+              What is HITbot?
+            </h4>
+            <p className="text-muted-foreground mb-6">
+              A smart, always-available assistant that gives short, accurate answers and directs students to the right office or contact — based on their profile.
+            </p>
+            
+            <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
+              How it works:
+            </h4>
+            <div className="space-y-3 mb-8">
+              <div className="flex items-start">
+                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>1</div>
+                <p className="text-muted-foreground">User fills out a short profile (e.g. program, age, level)</p>
+              </div>
+              <div className="flex items-start">
+                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>2</div>
+                <p className="text-muted-foreground">HITbot adapts responses accordingly</p>
+              </div>
+              <div className="flex items-start">
+                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>3</div>
+                <p className="text-muted-foreground">Real examples: finding a classroom, figuring out who to contact about tuition, or locating a campus office</p>
+              </div>
             </div>
           </div>
           
           <div className="rounded-xl overflow-hidden bg-black/5 p-4">
             <video 
-              className="w-full rounded-lg" 
+              className="w-full rounded-lg max-w-md mx-auto" 
               controls 
+              autoPlay
+              muted
+              loop
               preload="metadata"
               poster="/lovable-uploads/campus_home_page.jpg"
             >
@@ -250,26 +256,27 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             </p>
           </div>
           
+          <div className="rounded-xl overflow-hidden mb-8">
+            <img src="/lovable-uploads/campus-ui.png" alt="UI Style System" className="w-full h-auto" />
+          </div>
+          
           <div>
             <h4 className="text-lg font-semibold mb-4">Logo Design</h4>
             <p className="text-muted-foreground mb-6">
               The Campus+ logo was designed to align with HIT's branding while standing on its own as a fresh, mobile-native product.
             </p>
             
-            <div className="flex gap-8 items-center mb-8">
+            <div className="flex gap-8 items-center justify-center mb-8">
               <div className="text-center">
-                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-16 mb-2" />
-                <p className="text-sm text-muted-foreground">Campus+</p>
-              </div>
-              <div className="text-center">
-                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-16 mb-2" />
+                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-24 mb-2 mx-auto" />
                 <p className="text-sm text-muted-foreground">HIT</p>
               </div>
+              <ArrowRight className="h-8 w-8 text-muted-foreground" />
+              <div className="text-center">
+                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-24 mb-2 mx-auto" />
+                <p className="text-sm text-muted-foreground">Campus+</p>
+              </div>
             </div>
-          </div>
-          
-          <div className="rounded-xl overflow-hidden">
-            <img src="/lovable-uploads/campus-ui.png" alt="UI Style System" className="w-full h-auto" />
           </div>
         </div>
       </ProjectSection>
@@ -324,8 +331,11 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           <h4 className="font-semibold mb-4">Full App Flow</h4>
           <div className="rounded-xl overflow-hidden bg-black/5 p-4">
             <video 
-              className="w-full rounded-lg" 
+              className="w-full rounded-lg max-w-lg mx-auto" 
               controls 
+              autoPlay
+              muted
+              loop
               preload="metadata"
               poster="/lovable-uploads/campus_home_page.jpg"
             >
