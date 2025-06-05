@@ -4,7 +4,7 @@ import ProjectCard from './ProjectCard';
 import { projects } from '@/data/projects';
 
 const FeaturedProjects = () => {
-  // Filter only the specific projects we want to show on the homepage - Campus+ now comes before BIP
+  // Filter only the specific projects we want to show on the homepage - Campus+ comes first
   const featuredProjectSlugs = ['save-rapunzel', 'campus-plus', 'bip', 'studit'];
   const featuredProjects = projects.filter(project => 
     featuredProjectSlugs.includes(project.slug) && !project.comingSoon

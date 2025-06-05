@@ -53,7 +53,7 @@ const ProjectCard = ({
             className={cn(
               "transition-transform duration-300 group-hover:scale-105 object-contain", 
               comingSoon && "opacity-80",
-              slug === 'campus-plus' ? "w-full h-full object-cover" : "w-full h-full object-cover object-center"
+              slug === 'campus-plus' ? "w-4/5 h-4/5 object-cover" : "w-full h-full object-cover object-center"
             )}
           />
           
