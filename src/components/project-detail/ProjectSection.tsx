@@ -15,7 +15,7 @@ export const ProjectSection = ({
   children,
   className = '',
   delay = 0,
-  color = '#10B981',
+  color = '#00747A', // Updated default to turquoise instead of green
 }: ProjectSectionProps) => {
   return (
     <motion.div

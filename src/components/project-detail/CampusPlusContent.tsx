@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, MessageCircle, Map, Phone, Settings, Palette, AlertCircle, Target, Lightbulb, Navigation } from "lucide-react";
 import { Project } from "@/data/types";
@@ -97,7 +96,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
   return (
     <>
       {/* My Role Section */}
-      <ProjectSection title="My Role">
+      <ProjectSection title="My Role" color={project.color}>
         <div className="mb-8">
           <h3 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
             UX/UI Research and Design
@@ -115,7 +114,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* User Research & Personas */}
-      <ProjectSection title="User Research & Personas">
+      <ProjectSection title="User Research & Personas" color={project.color}>
         <p className="text-muted-foreground mb-8">
           We interviewed over 10 students from different degrees and years of study. Based on the research, we created five detailed personas representing real user types at HIT with unique pain points and goals.
         </p>
@@ -137,7 +136,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* Main Insights */}
-      <ProjectSection title="Main Insights">
+      <ProjectSection title="Main Insights" color={project.color}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {insights.map((insight, index) => (
             <InsightCard
@@ -151,7 +150,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* Key Features */}
-      <ProjectSection title="Key Features">
+      <ProjectSection title="Key Features" color={project.color}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
             <FeatureCard
@@ -166,7 +165,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* First-Time Onboarding Experience */}
-      <ProjectSection title="First-Time Onboarding Experience">
+      <ProjectSection title="First-Time Onboarding Experience" color={project.color}>
         <p className="text-muted-foreground mb-8">
           The app opens with a short and friendly onboarding flow, introducing users to the app's key features and what they can expect to find.
         </p>
@@ -188,7 +187,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* HITbot Core Feature */}
-      <ProjectSection title="HITbot – Our Core Feature">
+      <ProjectSection title="HITbot – Our Core Feature" color={project.color}>
         <div className="mb-8">
           <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
             What is HITbot?
@@ -219,17 +218,20 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             <video 
               className="w-full rounded-lg" 
               controls 
-              poster="/lovable-uploads/campus_home_page.png"
+              preload="metadata"
+              poster="/lovable-uploads/campus_home_page.jpg"
             >
               <source src="/lovable-uploads/campus-plus-chatbot.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              <p className="text-muted-foreground text-center py-4">
+                Video not available. Please check the video file format and hosting.
+              </p>
             </video>
           </div>
         </div>
       </ProjectSection>
 
       {/* Visual Design System */}
-      <ProjectSection title="Visual Design System">
+      <ProjectSection title="Visual Design System" color={project.color}>
         <div className="space-y-8">
           <div>
             <div className="flex items-center mb-4">
@@ -273,7 +275,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* Learnings */}
-      <ProjectSection title="Learnings">
+      <ProjectSection title="Learnings" color={project.color}>
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
@@ -291,7 +293,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* Future Plans */}
-      <ProjectSection title="Future Plans">
+      <ProjectSection title="Future Plans" color={project.color}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="flex items-start">
@@ -313,7 +315,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       </ProjectSection>
 
       {/* Demo Section */}
-      <ProjectSection title="Demo">
+      <ProjectSection title="Demo" color={project.color}>
         <p className="text-muted-foreground mb-8">
           See Campus+ in action through this interactive demo showcasing the full app flow.
         </p>
@@ -324,10 +326,13 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             <video 
               className="w-full rounded-lg" 
               controls 
-              poster="/lovable-uploads/campus_home_page.png"
+              preload="metadata"
+              poster="/lovable-uploads/campus_home_page.jpg"
             >
               <source src="/lovable-uploads/campus-plus-flow.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
+              <p className="text-muted-foreground text-center py-4">
+                Video not available. Please check the video file format and hosting.
+              </p>
             </video>
           </div>
         </div>
