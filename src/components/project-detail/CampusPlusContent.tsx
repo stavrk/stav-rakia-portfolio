@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Users, MessageCircle, Map, Phone, Settings, User, Target, Lightbulb, AlertCircle, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
@@ -117,7 +118,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           </div>
         </div>
         <p className="text-sm text-muted-foreground mt-6">
-          <strong>Collaborators:</strong> Liri Katnov & Eden Nissoiev
+          <strong>Collaborators:</strong> Liri Katnov & Eden Nisuyeve
         </p>
       </ProjectSection>
 
