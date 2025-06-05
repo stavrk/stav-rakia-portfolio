@@ -1,4 +1,5 @@
 
+
 import { motion } from "framer-motion";
 import { Users, MessageCircle, Map, Phone, Settings, User, Target, Lightbulb, AlertCircle, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
@@ -264,7 +265,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           <div className="flex justify-center lg:justify-end">
             <div className="max-w-[320px] h-full">
               <video 
-                className="w-full h-full rounded-[40px] max-w-[320px] object-cover" 
+                className="w-full h-full rounded-[43px] max-w-[320px] object-cover" 
                 controls 
                 autoPlay
                 muted
@@ -308,9 +309,9 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             <img src="/lovable-uploads/campus-ui.png" alt="UI Style System" className="w-full h-auto" />
           </div>
           
-          <div>
-            <h2 className="text-3xl font-bold mb-6" style={{ color: project.color }}>And what about the Logo?</h2>
-            <p className="text-muted-foreground mb-6">
+          <div className="pt-8 pb-8">
+            <h2 className="text-3xl font-bold mb-8" style={{ color: project.color }}>And what about the Logo?</h2>
+            <p className="text-muted-foreground mb-8">
               The Campus+ logo was designed to align with HIT's branding while standing on its own as a fresh, mobile-native product.
             </p>
             
@@ -355,7 +356,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         
         <div className="max-w-[280px] mx-auto">
           <video 
-            className="w-full rounded-[30px]" 
+            className="w-full rounded-[31px]" 
             controls 
             autoPlay
             muted
@@ -373,3 +374,4 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
     </>
   );
 };
+
