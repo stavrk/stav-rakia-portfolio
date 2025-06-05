@@ -97,7 +97,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             </div>
           </motion.div>
           
-          {/* Image area - further reduced max width for Campus+ */}
+          {/* Image area - increased size for Campus+ to medium */}
           <motion.div 
             className="relative lg:col-span-8" 
             initial={{ opacity: 0, scale: 0.9 }}
@@ -105,7 +105,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <div className={`rounded-xl overflow-hidden shadow-lg mx-auto ${
-              project.slug === 'campus-plus' ? 'max-w-md' : 'max-w-lg'
+              project.slug === 'campus-plus' ? 'max-w-lg' : 'max-w-lg'
             }`}>
               <img src={project.image} alt={project.title} className="w-full h-auto" />
             </div>

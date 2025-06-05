@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, MessageCircle, Map, Phone, Settings, User, Target, Lightbulb, AlertCircle, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
@@ -165,13 +164,13 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           {insights.map((insight, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm border border-border/50 flex items-start"
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/50 flex flex-col items-center justify-center text-center"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <insight.icon className="h-6 w-6 mr-3 mt-1 flex-shrink-0" style={{ color: project.color }} />
+              <insight.icon className="h-6 w-6 mb-3 flex-shrink-0" style={{ color: project.color }} />
               <p className="text-sm text-muted-foreground">{insight.text}</p>
             </motion.div>
           ))}
@@ -262,9 +261,9 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           </div>
           
           <div className="flex justify-center lg:justify-end">
-            <div className="max-w-[200px] h-full">
+            <div className="max-w-[400px] h-full">
               <video 
-                className="w-full h-full rounded-[32px] max-w-[200px] object-cover" 
+                className="w-full h-full rounded-[48px] max-w-[400px] object-cover" 
                 controls 
                 autoPlay
                 muted
