@@ -7,11 +7,11 @@ import { studit } from './projects/studit';
 import { plantModule } from './projects/plant-module';
 import { playtika } from './projects/playtika';
 
-// Define the project order for consistent navigation
+// Define the project order for consistent navigation - Campus+ now comes before BIP
 export const projectOrder = [
   "save-rapunzel",
-  "bip",
-  "campus-plus", 
+  "campus-plus",
+  "bip", 
   "studit"
 ];
 

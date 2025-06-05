@@ -261,9 +261,9 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           </div>
           
           <div className="flex justify-center lg:justify-end">
-            <div className="max-w-[400px] h-full">
+            <div className="max-w-[320px] h-full">
               <video 
-                className="w-full h-full rounded-[48px] max-w-[400px] object-cover" 
+                className="w-full h-full rounded-[64px] max-w-[320px] object-cover" 
                 controls 
                 autoPlay
                 muted
