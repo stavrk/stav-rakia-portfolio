@@ -97,14 +97,14 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             </div>
           </motion.div>
           
-          {/* Image area - increased from 6 to 8 columns (67%) but with smaller max width */}
+          {/* Image area - reduced max width for smaller image */}
           <motion.div 
             className="relative lg:col-span-8" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div className="rounded-xl overflow-hidden shadow-lg max-w-2xl mx-auto">
+            <div className="rounded-xl overflow-hidden shadow-lg max-w-lg mx-auto">
               <img src={project.image} alt={project.title} className="w-full h-auto" />
             </div>
           </motion.div>

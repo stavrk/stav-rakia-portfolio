@@ -34,10 +34,6 @@ export const campusPlus: Project = {
     }
   ],
   additionalImages: [
-    "/lovable-uploads/campus_onboarding1.jpg",
-    "/lovable-uploads/campus_onboarding2.jpg", 
-    "/lovable-uploads/campus_onboarding3.jpg",
-    "/lovable-uploads/campus_onboarding4.jpg",
     "/lovable-uploads/chat1.jpg",
     "/lovable-uploads/campus_home_page.jpg",
     "/lovable-uploads/chat_video.jpg",

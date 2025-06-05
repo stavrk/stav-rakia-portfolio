@@ -1,11 +1,8 @@
 
 import { motion } from "framer-motion";
-import { Users, MessageCircle, Map, Phone, Settings, Palette, AlertCircle, Target, Lightbulb, Navigation, ArrowRight } from "lucide-react";
+import { Users, MessageCircle, Map, Phone, Settings, User, Target, Lightbulb, AlertCircle, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
 import { ProjectSection } from "./ProjectSection";
-import { PersonaCard } from "./PersonaCard";
-import { InsightCard } from "./InsightCard";
-import { FeatureCard } from "./FeatureCard";
 
 interface CampusPlusContentProps {
   project: Project;
@@ -19,35 +16,35 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       name: "Liron",
       age: 20,
       degree: "Visual Communication",
-      description: "Confused on campus, looking for a welcoming start",
+      quote: "I just want to know where to go and what to do on my first day",
       image: "/lovable-uploads/ceramic_art.jpg"
     },
     {
       name: "Tomer",
       age: 35,
-      degree: "Electrical Engineering MA",
-      description: "Wants everything in one place, fast and clean",
+      degree: "Electrical Engineering MA", 
+      quote: "Everything should be in one place, fast and clean",
       image: "/lovable-uploads/jewelry_making.jpg"
     },
     {
       name: "Hadar",
       age: 27,
       degree: "Medical Tech",
-      description: "Overwhelmed by unclear bureaucracy",
+      quote: "The bureaucracy is so confusing and unclear",
       image: "/lovable-uploads/pilates_reformer.jpg"
     },
     {
       name: "Or",
       age: 21,
-      degree: "Computer Science",
-      description: "Wants a virtual preview of how his first day will go",
+      degree: "Computer Science", 
+      quote: "I want to preview how my first day will actually go",
       image: "/lovable-uploads/traveling.jpg"
     },
     {
       name: "Neta",
       age: 25,
       degree: "Learning Technologies",
-      description: "Frustrated by inconsistent, outdated content",
+      quote: "The information is always outdated and inconsistent",
       image: "/lovable-uploads/volunteering_with_dogs.jpg"
     }
   ];
@@ -55,19 +52,27 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
   const insights = [
     {
       icon: AlertCircle,
-      text: "New students feel lost, unprepared, and overwhelmed"
+      text: "New students feel lost, unprepared, and overwhelmed",
+      bgColor: "#FEF3F2",
+      iconColor: "#F97316"
     },
     {
       icon: Target,
-      text: "Info is scattered across different websites and hard to trust"
+      text: "Info is scattered across different websites and hard to trust",
+      bgColor: "#F0F9FF", 
+      iconColor: "#0EA5E9"
     },
     {
       icon: Lightbulb,
-      text: "Students want short, clear, practical information in one place"
+      text: "Students want short, clear, practical information in one place",
+      bgColor: "#FEFCE8",
+      iconColor: "#EAB308"
     },
     {
       icon: MessageCircle,
-      text: "Strong need for a non-intrusive, helpful chatbot that doesn't stand alone"
+      text: "Strong need for a non-intrusive, helpful chatbot that doesn't stand alone",
+      bgColor: "#F0FDF4",
+      iconColor: "#22C55E"
     }
   ];
 
@@ -79,7 +84,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
     },
     {
       icon: Phone,
-      title: "Contact Directory",
+      title: "Contact Directory", 
       description: "Smart filters with names, roles, office hours, and locations"
     },
     {
@@ -98,20 +103,31 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
     <>
       {/* My Role Section */}
       <ProjectSection title="My Role" color={project.color}>
-        <div className="mb-8">
-          <h3 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
-            UX/UI Research and Design
-          </h3>
-          <ul className="space-y-2 text-muted-foreground mb-6">
-            <li>• User interviews and persona creation</li>
-            <li>• Wireframing and prototyping</li>
-            <li>• UX writing and microcopy</li>
-            <li>• Visual design system</li>
-          </ul>
-          <p className="text-sm text-muted-foreground">
-            <strong>Collaborators:</strong> Liri Katnov & Eden Nissoiev
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+            <User className="h-8 w-8 mb-4" style={{ color: project.color }} />
+            <h4 className="font-semibold mb-2">UX Research</h4>
+            <p className="text-sm text-muted-foreground">User interviews and persona creation</p>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+            <Settings className="h-8 w-8 mb-4" style={{ color: project.color }} />
+            <h4 className="font-semibold mb-2">Wireframing</h4>
+            <p className="text-sm text-muted-foreground">Prototyping and user flows</p>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+            <MessageCircle className="h-8 w-8 mb-4" style={{ color: project.color }} />
+            <h4 className="font-semibold mb-2">UX Writing</h4>
+            <p className="text-sm text-muted-foreground">Microcopy and content strategy</p>
+          </div>
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+            <Target className="h-8 w-8 mb-4" style={{ color: project.color }} />
+            <h4 className="font-semibold mb-2">Visual Design</h4>
+            <p className="text-sm text-muted-foreground">Design system and UI components</p>
+          </div>
         </div>
+        <p className="text-sm text-muted-foreground mt-6">
+          <strong>Collaborators:</strong> Liri Katnov & Eden Nissoiev
+        </p>
       </ProjectSection>
 
       {/* User Research & Personas */}
@@ -122,30 +138,55 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           {personas.map((persona, index) => (
-            <PersonaCard
+            <motion.div
               key={persona.name}
-              name={persona.name}
-              age={persona.age}
-              degree={persona.degree}
-              description={persona.description}
-              image={persona.image}
-              color={project.color}
-              index={index}
-            />
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/50 text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden">
+                <img 
+                  src={persona.image} 
+                  alt={persona.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <h4 className="font-semibold text-lg mb-1" style={{ color: project.color }}>
+                {persona.name}
+              </h4>
+              <p className="text-sm text-muted-foreground mb-3">
+                {persona.age}, {persona.degree}
+              </p>
+              <p className="text-sm text-muted-foreground italic">
+                "{persona.quote}"
+              </p>
+            </motion.div>
           ))}
         </div>
       </ProjectSection>
 
       {/* Main Insights */}
       <ProjectSection title="Main Insights" color={project.color}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {insights.map((insight, index) => (
-            <InsightCard
+            <motion.div
               key={index}
-              icon={insight.icon}
-              text={insight.text}
-              color={project.color}
-            />
+              className="rounded-xl p-6 border border-border/20"
+              style={{ backgroundColor: insight.bgColor }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 shadow-sm">
+                  <insight.icon className="h-5 w-5" style={{ color: insight.iconColor }} />
+                </div>
+                <p className="text-foreground font-medium">{insight.text}</p>
+              </div>
+            </motion.div>
           ))}
         </div>
       </ProjectSection>
@@ -154,13 +195,20 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       <ProjectSection title="Key Features" color={project.color}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {features.map((feature, index) => (
-            <FeatureCard
+            <motion.div
               key={index}
-              icon={feature.icon}
-              title={feature.title}
-              description={feature.description}
-              color={project.color}
-            />
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <div className="flex items-center mb-3">
+                <feature.icon className="h-6 w-6 mr-3" style={{ color: project.color }} />
+                <h4 className="font-semibold">{feature.title}</h4>
+              </div>
+              <p className="text-muted-foreground text-sm">{feature.description}</p>
+            </motion.div>
           ))}
         </div>
       </ProjectSection>
@@ -172,16 +220,16 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="rounded-xl overflow-hidden border border-border/20">
+          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
             <img src="/lovable-uploads/campus_onboarding1.jpg" alt="Onboarding Step 1" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden border border-border/20">
+          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
             <img src="/lovable-uploads/campus_onboarding2.jpg" alt="Onboarding Step 2" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden border border-border/20">
+          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
             <img src="/lovable-uploads/campus_onboarding3.jpg" alt="Onboarding Step 3" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden border border-border/20">
+          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
             <img src="/lovable-uploads/campus_onboarding4.jpg" alt="Onboarding Step 4" className="w-full h-auto" />
           </div>
         </div>
@@ -201,26 +249,26 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
               How it works:
             </h4>
-            <div className="space-y-3 mb-8">
+            <div className="space-y-4 mb-8">
               <div className="flex items-start">
-                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>1</div>
+                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center flex-shrink-0" style={{ backgroundColor: project.color }}>1</div>
                 <p className="text-muted-foreground">User fills out a short profile (e.g. program, age, level)</p>
               </div>
               <div className="flex items-start">
-                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>2</div>
+                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center flex-shrink-0" style={{ backgroundColor: project.color }}>2</div>
                 <p className="text-muted-foreground">HITbot adapts responses accordingly</p>
               </div>
               <div className="flex items-start">
-                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center" style={{ backgroundColor: project.color }}>3</div>
+                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center flex-shrink-0" style={{ backgroundColor: project.color }}>3</div>
                 <p className="text-muted-foreground">Real examples: finding a classroom, figuring out who to contact about tuition, or locating a campus office</p>
               </div>
             </div>
           </div>
           
-          <div className="flex justify-center lg:justify-end">
-            <div className="rounded-xl overflow-hidden border border-border/20 shadow-lg">
+          <div className="flex justify-center lg:justify-end lg:mt-8">
+            <div className="rounded-2xl overflow-hidden border-2 shadow-lg" style={{ borderColor: project.color + '40' }}>
               <video 
-                className="w-full rounded-lg max-w-xs" 
+                className="w-full rounded-2xl max-w-xs" 
                 controls 
                 autoPlay
                 muted
@@ -243,7 +291,6 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         <div className="space-y-8">
           <div>
             <div className="flex items-center mb-4">
-              <Palette className="h-5 w-5 mr-2" style={{ color: project.color }} />
               <h4 className="text-lg font-semibold">Color Palette</h4>
             </div>
             <p className="text-muted-foreground mb-6">
@@ -256,6 +303,9 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             <p className="text-muted-foreground mb-6">
               <strong>Gadi</strong> – a handwritten-style Hebrew font, used only in titles and short sentences to create a personal, optimistic feel.
             </p>
+            <p className="text-muted-foreground mb-6">
+              We used Rubik for most of the interface and body text. It's a rounded, lightweight, and highly readable font that brings warmth and clarity to the content.
+            </p>
           </div>
           
           <div className="rounded-xl overflow-hidden mb-8">
@@ -263,19 +313,19 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">Logo Design</h4>
+            <h4 className="text-lg font-semibold mb-4">And what about the Logo?</h4>
             <p className="text-muted-foreground mb-6">
               The Campus+ logo was designed to align with HIT's branding while standing on its own as a fresh, mobile-native product.
             </p>
             
-            <div className="flex gap-8 items-center justify-center mb-8">
+            <div className="flex gap-12 items-center justify-center mb-8">
               <div className="text-center">
-                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-32 mb-2 mx-auto" />
+                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-40 mb-2 mx-auto" />
                 <p className="text-sm text-muted-foreground">HIT</p>
               </div>
-              <ArrowRight className="h-8 w-8 text-muted-foreground" />
+              <ArrowRight className="h-12 w-12 text-muted-foreground" />
               <div className="text-center">
-                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-32 mb-2 mx-auto" />
+                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-40 mb-2 mx-auto" />
                 <p className="text-sm text-muted-foreground">Campus+</p>
               </div>
             </div>
@@ -283,8 +333,8 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         </div>
       </ProjectSection>
 
-      {/* Learnings */}
-      <ProjectSection title="Learnings" color={project.color}>
+      {/* More Than Just an App */}
+      <ProjectSection title="More Than Just an App" color={project.color}>
         <div className="space-y-4">
           <div className="flex items-start">
             <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
@@ -301,17 +351,17 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         </div>
       </ProjectSection>
 
-      {/* Demo Section */}
-      <ProjectSection title="Demo" color={project.color}>
+      {/* See It in Action Section */}
+      <ProjectSection title="See It in Action" color={project.color}>
         <p className="text-muted-foreground mb-8">
           See Campus+ in action through this interactive demo showcasing the full app flow.
         </p>
         
-        <div className="max-w-xl mx-auto">
+        <div className="max-w-md mx-auto">
           <h4 className="font-semibold mb-4">Full App Flow</h4>
-          <div className="rounded-xl overflow-hidden border border-border/20 shadow-lg">
+          <div className="rounded-2xl overflow-hidden border-2 shadow-lg" style={{ borderColor: project.color + '40' }}>
             <video 
-              className="w-full rounded-lg" 
+              className="w-full rounded-2xl" 
               controls 
               autoPlay
               muted
