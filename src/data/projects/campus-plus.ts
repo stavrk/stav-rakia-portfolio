@@ -34,10 +34,10 @@ export const campusPlus: Project = {
     }
   ],
   additionalImages: [
-    "/lovable-uploads/chat1.jpg",
     "/lovable-uploads/campus_home_page.jpg",
-    "/lovable-uploads/chat_video.jpg",
-    "/lovable-uploads/chat3.jpg"
+    "/lovable-uploads/chat1.jpg",
+    "/lovable-uploads/chat3.jpg",
+    "/lovable-uploads/chat_video.jpg"
   ],
   link: "https://www.figma.com/proto/R0SIy8oQA5kW9XlUbgNueS/Campus-plus?node-id=21-9181&p=f&t=uMZ8UfLDSiHL6vq4-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=21%3A9181&show-proto-sidebar=1",
   case: "Mobile onboarding and student support app for HIT students."

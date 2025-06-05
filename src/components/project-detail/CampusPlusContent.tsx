@@ -52,49 +52,41 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
   const insights = [
     {
       icon: AlertCircle,
-      text: "New students feel lost, unprepared, and overwhelmed",
-      bgColor: "#FEF3F2",
-      iconColor: "#F97316"
+      text: "New students feel lost, unprepared, and overwhelmed"
     },
     {
       icon: Target,
-      text: "Info is scattered across different websites and hard to trust",
-      bgColor: "#F0F9FF", 
-      iconColor: "#0EA5E9"
+      text: "Info is scattered across different websites and hard to trust"
     },
     {
       icon: Lightbulb,
-      text: "Students want short, clear, practical information in one place",
-      bgColor: "#FEFCE8",
-      iconColor: "#EAB308"
+      text: "Students want short, clear, practical information in one place"
     },
     {
       icon: MessageCircle,
-      text: "Strong need for a non-intrusive, helpful chatbot that doesn't stand alone",
-      bgColor: "#F0FDF4",
-      iconColor: "#22C55E"
+      text: "Strong need for a non-intrusive, helpful chatbot that doesn't stand alone"
     }
   ];
 
   const features = [
     {
       icon: Map,
-      title: "Interactive Campus Map",
+      title: "🗺️ Interactive Campus Map",
       description: "Clear design with filters by building, service type, and department"
     },
     {
       icon: Phone,
-      title: "Contact Directory", 
+      title: "📞 Contact Directory", 
       description: "Smart filters with names, roles, office hours, and locations"
     },
     {
       icon: MessageCircle,
-      title: "HITbot Assistant",
+      title: "🤖 HITbot Assistant",
       description: "Smart, tailored chatbot that adapts to user profiles"
     },
     {
       icon: Settings,
-      title: "Onboarding Flow",
+      title: "👋 Onboarding Flow",
       description: "Walkthrough of app features for new users"
     }
   ];
@@ -169,32 +161,8 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
 
       {/* Main Insights */}
       <ProjectSection title="Main Insights" color={project.color}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {insights.map((insight, index) => (
-            <motion.div
-              key={index}
-              className="rounded-xl p-6 border border-border/20"
-              style={{ backgroundColor: insight.bgColor }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5 }}
-            >
-              <div className="flex items-start">
-                <div className="flex-shrink-0 w-10 h-10 rounded-full bg-white flex items-center justify-center mr-4 shadow-sm">
-                  <insight.icon className="h-5 w-5" style={{ color: insight.iconColor }} />
-                </div>
-                <p className="text-foreground font-medium">{insight.text}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </ProjectSection>
-
-      {/* Key Features */}
-      <ProjectSection title="Key Features" color={project.color}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {features.map((feature, index) => (
             <motion.div
               key={index}
               className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
@@ -204,9 +172,27 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
               <div className="flex items-center mb-3">
-                <feature.icon className="h-6 w-6 mr-3" style={{ color: project.color }} />
-                <h4 className="font-semibold">{feature.title}</h4>
+                <insight.icon className="h-6 w-6 mr-3" style={{ color: project.color }} />
+                <h4 className="font-semibold text-sm">{insight.text}</h4>
               </div>
+            </motion.div>
+          ))}
+        </div>
+      </ProjectSection>
+
+      {/* Key Features */}
+      <ProjectSection title="Key Features" color={project.color}>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <h4 className="font-semibold mb-3">{feature.title}</h4>
               <p className="text-muted-foreground text-sm">{feature.description}</p>
             </motion.div>
           ))}
@@ -220,16 +206,16 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
+          <div className="rounded-xl overflow-hidden border-2 border-border/50 shadow-md">
             <img src="/lovable-uploads/campus_onboarding1.jpg" alt="Onboarding Step 1" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
+          <div className="rounded-xl overflow-hidden border-2 border-border/50 shadow-md">
             <img src="/lovable-uploads/campus_onboarding2.jpg" alt="Onboarding Step 2" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
+          <div className="rounded-xl overflow-hidden border-2 border-border/50 shadow-md">
             <img src="/lovable-uploads/campus_onboarding3.jpg" alt="Onboarding Step 3" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden border-2 border-border/30 shadow-md">
+          <div className="rounded-xl overflow-hidden border-2 border-border/50 shadow-md">
             <img src="/lovable-uploads/campus_onboarding4.jpg" alt="Onboarding Step 4" className="w-full h-auto" />
           </div>
         </div>
@@ -265,10 +251,10 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             </div>
           </div>
           
-          <div className="flex justify-center lg:justify-end lg:mt-8">
-            <div className="rounded-2xl overflow-hidden border-2 shadow-lg" style={{ borderColor: project.color + '40' }}>
+          <div className="flex justify-center lg:justify-end">
+            <div className="max-w-xs">
               <video 
-                className="w-full rounded-2xl max-w-xs" 
+                className="w-full rounded-3xl max-w-xs" 
                 controls 
                 autoPlay
                 muted
@@ -300,11 +286,11 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           
           <div>
             <h4 className="text-lg font-semibold mb-4">Typography</h4>
-            <p className="text-muted-foreground mb-6">
-              <strong>Gadi</strong> – a handwritten-style Hebrew font, used only in titles and short sentences to create a personal, optimistic feel.
+            <p className="text-muted-foreground mb-4">
+              <strong>Rubik</strong> – for most of the interface and body text. It's a rounded, lightweight, and highly readable font that brings warmth and clarity to the content.
             </p>
             <p className="text-muted-foreground mb-6">
-              We used Rubik for most of the interface and body text. It's a rounded, lightweight, and highly readable font that brings warmth and clarity to the content.
+              <strong>Gadi</strong> – a handwritten-style Hebrew font, used only in titles and short sentences to create a personal, optimistic feel.
             </p>
           </div>
           
@@ -313,19 +299,19 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold mb-4">And what about the Logo?</h4>
+            <h2 className="text-3xl font-bold mb-6" style={{ color: project.color }}>And what about the Logo?</h2>
             <p className="text-muted-foreground mb-6">
               The Campus+ logo was designed to align with HIT's branding while standing on its own as a fresh, mobile-native product.
             </p>
             
             <div className="flex gap-12 items-center justify-center mb-8">
               <div className="text-center">
-                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-40 mb-2 mx-auto" />
+                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-48 mb-2 mx-auto" />
                 <p className="text-sm text-muted-foreground">HIT</p>
               </div>
               <ArrowRight className="h-12 w-12 text-muted-foreground" />
               <div className="text-center">
-                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-40 mb-2 mx-auto" />
+                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-48 mb-2 mx-auto" />
                 <p className="text-sm text-muted-foreground">Campus+</p>
               </div>
             </div>
@@ -357,11 +343,10 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           See Campus+ in action through this interactive demo showcasing the full app flow.
         </p>
         
-        <div className="max-w-md mx-auto">
-          <h4 className="font-semibold mb-4">Full App Flow</h4>
-          <div className="rounded-2xl overflow-hidden border-2 shadow-lg" style={{ borderColor: project.color + '40' }}>
+        <div className="max-w-sm mx-auto">
+          <div className="rounded-3xl overflow-hidden">
             <video 
-              className="w-full rounded-2xl" 
+              className="w-full rounded-3xl" 
               controls 
               autoPlay
               muted
