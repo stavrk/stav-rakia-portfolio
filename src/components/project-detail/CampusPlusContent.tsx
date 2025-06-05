@@ -164,16 +164,14 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           {insights.map((insight, index) => (
             <motion.div
               key={index}
-              className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
+              className="bg-white rounded-xl p-6 shadow-sm border border-border/50 flex items-start"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
             >
-              <div className="flex items-center mb-3">
-                <insight.icon className="h-6 w-6 mr-3" style={{ color: project.color }} />
-                <h4 className="font-semibold text-sm">{insight.text}</h4>
-              </div>
+              <insight.icon className="h-6 w-6 mr-3 mt-1 flex-shrink-0" style={{ color: project.color }} />
+              <p className="text-sm text-muted-foreground">{insight.text}</p>
             </motion.div>
           ))}
         </div>
@@ -223,7 +221,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       {/* HITbot Core Feature */}
       <ProjectSection title="HITbot – Our Core Feature" color={project.color}>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <div>
+          <div className="lg:pt-8">
             <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
               What is HITbot?
             </h4>
@@ -251,9 +249,9 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           </div>
           
           <div className="flex justify-center lg:justify-end">
-            <div className="max-w-xs">
+            <div className="max-w-[200px]">
               <video 
-                className="w-full rounded-3xl max-w-xs" 
+                className="w-full rounded-[32px] max-w-[200px]" 
                 controls 
                 autoPlay
                 muted
@@ -342,23 +340,21 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           See Campus+ in action through this interactive demo showcasing the full app flow.
         </p>
         
-        <div className="max-w-sm mx-auto">
-          <div className="rounded-3xl overflow-hidden">
-            <video 
-              className="w-full rounded-3xl" 
-              controls 
-              autoPlay
-              muted
-              loop
-              preload="metadata"
-              poster="/lovable-uploads/campus_home_page.jpg"
-            >
-              <source src="/lovable-uploads/campus-plus-flow.mp4" type="video/mp4" />
-              <p className="text-muted-foreground text-center py-4">
-                Video not available. Please check the video file format and hosting.
-              </p>
-            </video>
-          </div>
+        <div className="max-w-[280px] mx-auto">
+          <video 
+            className="w-full rounded-[32px]" 
+            controls 
+            autoPlay
+            muted
+            loop
+            preload="metadata"
+            poster="/lovable-uploads/campus_home_page.jpg"
+          >
+            <source src="/lovable-uploads/campus-plus-flow.mp4" type="video/mp4" />
+            <p className="text-muted-foreground text-center py-4">
+              Video not available. Please check the video file format and hosting.
+            </p>
+          </video>
         </div>
       </ProjectSection>
     </>
