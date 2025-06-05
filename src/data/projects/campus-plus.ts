@@ -7,7 +7,7 @@ export const campusPlus: Project = {
   image: "/lovable-uploads/campusplus_mockup.png",
   tags: ["UX/UI Design", "Mobile App"],
   slug: "campus-plus",
-  color: "#00b0b7",
+  color: "#00747A",
   overview: "Campus+ is a comprehensive, student-first mobile experience for navigating academic life at HIT. The goal was to create a centralized, intuitive, and human-centered platform that eases students' transition into academic life and helps them navigate campus services with confidence and clarity.",
   challenge: "Many HIT students struggle to find accurate, centralized information when starting or navigating their academic journey. They often face confusion, stress, and a lack of clear guidance about administrative, academic, and logistical issues.",
   solution: "Design a mobile onboarding app that simplifies access to essential resources, supports self-service, and offers an intelligent chatbot for immediate assistance.",

@@ -5,7 +5,7 @@ import { projects } from '@/data/projects';
 
 const FeaturedProjects = () => {
   // Filter only the specific projects we want to show on the homepage
-  const featuredProjectSlugs = ['save-rapunzel', 'bip', 'roomie', 'studit'];
+  const featuredProjectSlugs = ['save-rapunzel', 'bip', 'campus-plus', 'studit'];
   const featuredProjects = projects.filter(project => 
     featuredProjectSlugs.includes(project.slug) && !project.comingSoon
   );

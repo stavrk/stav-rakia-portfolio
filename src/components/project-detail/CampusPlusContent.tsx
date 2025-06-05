@@ -1,8 +1,11 @@
 
 import { motion } from "framer-motion";
-import { Users, MessageCircle, Map, Phone, Settings, Palette } from "lucide-react";
+import { Users, MessageCircle, Map, Phone, Settings, Palette, AlertCircle, Target, Lightbulb, Navigation } from "lucide-react";
 import { Project } from "@/data/types";
 import { ProjectSection } from "./ProjectSection";
+import { PersonaCard } from "./PersonaCard";
+import { InsightCard } from "./InsightCard";
+import { FeatureCard } from "./FeatureCard";
 
 interface CampusPlusContentProps {
   project: Project;
@@ -10,6 +13,86 @@ interface CampusPlusContentProps {
 
 export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
   if (project.slug !== 'campus-plus') return null;
+  
+  const personas = [
+    {
+      name: "Liron",
+      age: 20,
+      degree: "Visual Communication",
+      description: "Confused on campus, looking for a welcoming start",
+      image: "/lovable-uploads/ceramic_art.jpg"
+    },
+    {
+      name: "Tomer",
+      age: 35,
+      degree: "Electrical Engineering MA",
+      description: "Wants everything in one place, fast and clean",
+      image: "/lovable-uploads/jewelry_making.jpg"
+    },
+    {
+      name: "Hadar",
+      age: 27,
+      degree: "Medical Tech",
+      description: "Overwhelmed by unclear bureaucracy",
+      image: "/lovable-uploads/pilates_reformer.jpg"
+    },
+    {
+      name: "Or",
+      age: 21,
+      degree: "Computer Science",
+      description: "Wants a virtual preview of how his first day will go",
+      image: "/lovable-uploads/traveling.jpg"
+    },
+    {
+      name: "Neta",
+      age: 25,
+      degree: "Learning Technologies",
+      description: "Frustrated by inconsistent, outdated content",
+      image: "/lovable-uploads/volunteering_with_dogs.jpg"
+    }
+  ];
+
+  const insights = [
+    {
+      icon: AlertCircle,
+      text: "New students feel lost, unprepared, and overwhelmed"
+    },
+    {
+      icon: Target,
+      text: "Info is scattered across different websites and hard to trust"
+    },
+    {
+      icon: Lightbulb,
+      text: "Students want short, clear, practical information in one place"
+    },
+    {
+      icon: MessageCircle,
+      text: "Strong need for a non-intrusive, helpful chatbot that doesn't stand alone"
+    }
+  ];
+
+  const features = [
+    {
+      icon: Map,
+      title: "Interactive Campus Map",
+      description: "Clear design with filters by building, service type, and department"
+    },
+    {
+      icon: Phone,
+      title: "Contact Directory",
+      description: "Smart filters with names, roles, office hours, and locations"
+    },
+    {
+      icon: MessageCircle,
+      title: "HITbot Assistant",
+      description: "Smart, tailored chatbot that adapts to user profiles"
+    },
+    {
+      icon: Settings,
+      title: "Onboarding Flow",
+      description: "Walkthrough of app features for new users"
+    }
+  ];
   
   return (
     <>
@@ -37,84 +120,48 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           We interviewed over 10 students from different degrees and years of study. Based on the research, we created five detailed personas representing real user types at HIT with unique pain points and goals.
         </p>
         
-        <div className="bg-secondary/30 p-6 rounded-xl mb-8">
-          <h4 className="text-lg font-semibold mb-4" style={{ color: project.color }}>
-            Key Personas
-          </h4>
-          <div className="space-y-3 text-sm">
-            <div><strong>Liron (20, Visual Communication):</strong> Confused on campus, looking for a welcoming start</div>
-            <div><strong>Tomer (35, Electrical Engineering MA):</strong> Wants everything in one place, fast and clean</div>
-            <div><strong>Hadar (27, Medical Tech):</strong> Overwhelmed by unclear bureaucracy</div>
-            <div><strong>Or (21, Computer Science):</strong> Wants a virtual preview of how his first day will go</div>
-            <div><strong>Neta (25, Learning Technologies):</strong> Frustrated by inconsistent, outdated content</div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+          {personas.map((persona, index) => (
+            <PersonaCard
+              key={persona.name}
+              name={persona.name}
+              age={persona.age}
+              degree={persona.degree}
+              description={persona.description}
+              image={persona.image}
+              color={project.color}
+              index={index}
+            />
+          ))}
         </div>
       </ProjectSection>
 
       {/* Main Insights */}
       <ProjectSection title="Main Insights">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
-              <p className="text-muted-foreground">New students feel lost, unprepared, and overwhelmed</p>
-            </div>
-            <div className="flex items-start">
-              <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
-              <p className="text-muted-foreground">Info is scattered across different websites and hard to trust</p>
-            </div>
-          </div>
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
-              <p className="text-muted-foreground">Students want short, clear, practical information in one place</p>
-            </div>
-            <div className="flex items-start">
-              <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
-              <p className="text-muted-foreground">Strong need for a non-intrusive, helpful chatbot that doesn't stand alone</p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {insights.map((insight, index) => (
+            <InsightCard
+              key={index}
+              icon={insight.icon}
+              text={insight.text}
+              color={project.color}
+            />
+          ))}
         </div>
       </ProjectSection>
 
       {/* Key Features */}
       <ProjectSection title="Key Features">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <Map className="h-6 w-6 mr-3 flex-shrink-0 mt-1" style={{ color: project.color }} />
-              <div>
-                <h4 className="font-semibold mb-2">Interactive Campus Map</h4>
-                <p className="text-muted-foreground text-sm">Clear design with filters by building, service type, and department</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <Phone className="h-6 w-6 mr-3 flex-shrink-0 mt-1" style={{ color: project.color }} />
-              <div>
-                <h4 className="font-semibold mb-2">Contact Directory</h4>
-                <p className="text-muted-foreground text-sm">Smart filters with names, roles, office hours, and locations</p>
-              </div>
-            </div>
-          </div>
-          
-          <div className="space-y-6">
-            <div className="flex items-start">
-              <MessageCircle className="h-6 w-6 mr-3 flex-shrink-0 mt-1" style={{ color: project.color }} />
-              <div>
-                <h4 className="font-semibold mb-2">HITbot Assistant</h4>
-                <p className="text-muted-foreground text-sm">Smart, tailored chatbot that adapts to user profiles</p>
-              </div>
-            </div>
-            
-            <div className="flex items-start">
-              <Settings className="h-6 w-6 mr-3 flex-shrink-0 mt-1" style={{ color: project.color }} />
-              <div>
-                <h4 className="font-semibold mb-2">Onboarding Flow</h4>
-                <p className="text-muted-foreground text-sm">Walkthrough of app features for new users</p>
-              </div>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {features.map((feature, index) => (
+            <FeatureCard
+              key={index}
+              icon={feature.icon}
+              title={feature.title}
+              description={feature.description}
+              color={project.color}
+            />
+          ))}
         </div>
       </ProjectSection>
 
@@ -268,36 +315,20 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       {/* Demo Section */}
       <ProjectSection title="Demo">
         <p className="text-muted-foreground mb-8">
-          See Campus+ in action through these interactive demos showcasing the full app flow and chatbot interaction.
+          See Campus+ in action through this interactive demo showcasing the full app flow.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h4 className="font-semibold mb-4">Full App Flow</h4>
-            <div className="rounded-xl overflow-hidden bg-black/5 p-4">
-              <video 
-                className="w-full rounded-lg" 
-                controls 
-                poster="/lovable-uploads/campus_home_page.png"
-              >
-                <source src="/lovable-uploads/campus-plus-flow.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
-          
-          <div>
-            <h4 className="font-semibold mb-4">Chatbot Interaction</h4>
-            <div className="rounded-xl overflow-hidden bg-black/5 p-4">
-              <video 
-                className="w-full rounded-lg" 
-                controls 
-                poster="/lovable-uploads/campus_home_page.png"
-              >
-                <source src="/lovable-uploads/campus-plus-chatbot.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            </div>
+        <div className="max-w-2xl mx-auto">
+          <h4 className="font-semibold mb-4">Full App Flow</h4>
+          <div className="rounded-xl overflow-hidden bg-black/5 p-4">
+            <video 
+              className="w-full rounded-lg" 
+              controls 
+              poster="/lovable-uploads/campus_home_page.png"
+            >
+              <source src="/lovable-uploads/campus-plus-flow.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </ProjectSection>
