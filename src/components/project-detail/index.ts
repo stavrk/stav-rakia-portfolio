@@ -13,6 +13,7 @@ export * from './ProjectCallToAction';
 export * from './ProjectMoreProjects';
 export * from './ChallengesSection';
 export * from './SaveRapunzelContent';
+export * from './CampusPlusContent';
 export * from './AnimationFeatures';
 export * from './ProjectSection';
 export * from './ProjectSummary';

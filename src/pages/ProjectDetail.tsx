@@ -17,6 +17,7 @@ import { ProjectGallery } from "@/components/project-detail/ProjectGallery";
 import { ProjectCallToAction } from "@/components/project-detail/ProjectCallToAction";
 import { ProjectMoreProjects } from "@/components/project-detail/ProjectMoreProjects";
 import { SaveRapunzelContent } from "@/components/project-detail/SaveRapunzelContent";
+import { CampusPlusContent } from "@/components/project-detail/CampusPlusContent";
 import { AnimationFeatures } from "@/components/project-detail/AnimationFeatures";
 import { ChallengesSection } from "@/components/project-detail/ChallengesSection";
 
@@ -81,25 +82,11 @@ const ProjectDetail = () => {
           {/* Reordered and merged sections for Save Rapunzel */}
           <SaveRapunzelContent project={project} />
           
-          {/* Project Structure Section - For Roomie project */}
-          {project.slug === 'roomie' && project.structureTree && 
-            <ProjectWireflow 
-              wireflow={{
-                title: project.structureTree.title || "Project Structure",
-                description: project.structureTree.description,
-                image: project.structureTree.image
-              }} 
-              color={project.color}
-            />
-          }
-
-          {/* Wireframes Section - For Roomie project */}
-          {project.slug === 'roomie' && project.wireframes && 
-            <ProjectWireflow wireflow={project.wireframes} color={project.color} />
-          }
+          {/* Campus+ specific content */}
+          <CampusPlusContent project={project} />
           
-          {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel */}
-          {project.slug !== 'save-rapunzel' && project.designProcessAndAesthetics && project.designImages && 
+          {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel and Campus+ */}
+          {project.slug !== 'save-rapunzel' && project.slug !== 'campus-plus' && project.designProcessAndAesthetics && project.designImages && 
             <ProjectAesthetics 
               designProcessAndAesthetics={project.designProcessAndAesthetics} 
               designImages={project.designImages} 
@@ -110,8 +97,10 @@ const ProjectDetail = () => {
           {/* Animation Features Section - For BIP */}
           <AnimationFeatures project={project} />
           
-          {/* Challenges & Solutions Section - For all projects except Save Rapunzel */}
-          <ChallengesSection project={project} />
+          {/* Challenges & Solutions Section - For all projects except Save Rapunzel and Campus+ */}
+          {project.slug !== 'save-rapunzel' && project.slug !== 'campus-plus' && 
+            <ChallengesSection project={project} />
+          }
         </div>
       </section>
       

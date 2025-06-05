@@ -2,7 +2,7 @@
 import { Project } from './types';
 import { saveRapunzel } from './projects/save-rapunzel';
 import { bip } from './projects/bip';
-import { roomie } from './projects/roomie';
+import { campusPlus } from './projects/campus-plus';
 import { studit } from './projects/studit';
 import { plantModule } from './projects/plant-module';
 import { playtika } from './projects/playtika';
@@ -11,7 +11,7 @@ import { playtika } from './projects/playtika';
 export const projectOrder = [
   "save-rapunzel",
   "bip",
-  "roomie", 
+  "campus-plus", 
   "studit"
 ];
 
@@ -19,7 +19,7 @@ export const projectOrder = [
 export const projects: Project[] = [
   saveRapunzel,
   bip,
-  roomie,
+  campusPlus,
   studit,
   plantModule,
   playtika
@@ -62,7 +62,7 @@ export const getNextProject = (currentSlug: string): Project | undefined => {
 // Export all project objects for individual access
 export * from './projects/save-rapunzel';
 export * from './projects/bip';
-export * from './projects/roomie';
+export * from './projects/campus-plus';
 export * from './projects/studit';
 export * from './projects/plant-module';
 export * from './projects/playtika';
