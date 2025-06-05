@@ -25,8 +25,8 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
           Project Gallery
         </motion.h2>
         
-        {project.slug === 'bip' ? (
-          // BIP gallery - 4 images in one row
+        {(project.slug === 'bip' || project.slug === 'campus-plus') ? (
+          // BIP and Campus+ gallery - 4 images in one row
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {project.additionalImages && project.additionalImages.map((image: string, index: number) => (
               <motion.div 

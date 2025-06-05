@@ -172,16 +172,16 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         </p>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-xl overflow-hidden border border-border/20">
             <img src="/lovable-uploads/campus_onboarding1.jpg" alt="Onboarding Step 1" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-xl overflow-hidden border border-border/20">
             <img src="/lovable-uploads/campus_onboarding2.jpg" alt="Onboarding Step 2" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-xl overflow-hidden border border-border/20">
             <img src="/lovable-uploads/campus_onboarding3.jpg" alt="Onboarding Step 3" className="w-full h-auto" />
           </div>
-          <div className="rounded-xl overflow-hidden">
+          <div className="rounded-xl overflow-hidden border border-border/20">
             <img src="/lovable-uploads/campus_onboarding4.jpg" alt="Onboarding Step 4" className="w-full h-auto" />
           </div>
         </div>
@@ -217,21 +217,23 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             </div>
           </div>
           
-          <div className="rounded-xl overflow-hidden bg-black/5 p-4">
-            <video 
-              className="w-full rounded-lg max-w-md mx-auto" 
-              controls 
-              autoPlay
-              muted
-              loop
-              preload="metadata"
-              poster="/lovable-uploads/campus_home_page.jpg"
-            >
-              <source src="/lovable-uploads/campus-plus-chatbot.mp4" type="video/mp4" />
-              <p className="text-muted-foreground text-center py-4">
-                Video not available. Please check the video file format and hosting.
-              </p>
-            </video>
+          <div className="flex justify-center lg:justify-end">
+            <div className="rounded-xl overflow-hidden border border-border/20 shadow-lg">
+              <video 
+                className="w-full rounded-lg max-w-xs" 
+                controls 
+                autoPlay
+                muted
+                loop
+                preload="metadata"
+                poster="/lovable-uploads/campus_home_page.jpg"
+              >
+                <source src="/lovable-uploads/campus-plus-chatbot.mp4" type="video/mp4" />
+                <p className="text-muted-foreground text-center py-4">
+                  Video not available. Please check the video file format and hosting.
+                </p>
+              </video>
+            </div>
           </div>
         </div>
       </ProjectSection>
@@ -268,12 +270,12 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             
             <div className="flex gap-8 items-center justify-center mb-8">
               <div className="text-center">
-                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-24 mb-2 mx-auto" />
+                <img src="/lovable-uploads/hitlogo.png" alt="HIT Logo" className="h-32 mb-2 mx-auto" />
                 <p className="text-sm text-muted-foreground">HIT</p>
               </div>
               <ArrowRight className="h-8 w-8 text-muted-foreground" />
               <div className="text-center">
-                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-24 mb-2 mx-auto" />
+                <img src="/lovable-uploads/campus-logo.png" alt="Campus+ Logo" className="h-32 mb-2 mx-auto" />
                 <p className="text-sm text-muted-foreground">Campus+</p>
               </div>
             </div>
@@ -299,39 +301,17 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         </div>
       </ProjectSection>
 
-      {/* Future Plans */}
-      <ProjectSection title="Future Plans" color={project.color}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
-              <p className="text-muted-foreground">Add multilingual support (Hebrew/English)</p>
-            </div>
-            <div className="flex items-start">
-              <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
-              <p className="text-muted-foreground">Implement voice interaction for better accessibility</p>
-            </div>
-          </div>
-          <div className="space-y-4">
-            <div className="flex items-start">
-              <div className="w-2 h-2 rounded-full mt-2 mr-3" style={{ backgroundColor: project.color }}></div>
-              <p className="text-muted-foreground">Expand the chatbot's knowledge base through real feedback</p>
-            </div>
-          </div>
-        </div>
-      </ProjectSection>
-
       {/* Demo Section */}
       <ProjectSection title="Demo" color={project.color}>
         <p className="text-muted-foreground mb-8">
           See Campus+ in action through this interactive demo showcasing the full app flow.
         </p>
         
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-xl mx-auto">
           <h4 className="font-semibold mb-4">Full App Flow</h4>
-          <div className="rounded-xl overflow-hidden bg-black/5 p-4">
+          <div className="rounded-xl overflow-hidden border border-border/20 shadow-lg">
             <video 
-              className="w-full rounded-lg max-w-lg mx-auto" 
+              className="w-full rounded-lg" 
               controls 
               autoPlay
               muted
