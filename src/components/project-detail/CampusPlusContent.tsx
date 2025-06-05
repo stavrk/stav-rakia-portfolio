@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { Users, MessageCircle, Map, Phone, Settings, User, Target, Lightbulb, AlertCircle, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
@@ -95,22 +96,22 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       {/* My Role Section */}
       <ProjectSection title="My Role" color={project.color}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50 text-center flex flex-col items-center justify-center">
             <User className="h-8 w-8 mb-4" style={{ color: project.color }} />
             <h4 className="font-semibold mb-2">UX Research</h4>
             <p className="text-sm text-muted-foreground">User interviews and persona creation</p>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50 text-center flex flex-col items-center justify-center">
             <Settings className="h-8 w-8 mb-4" style={{ color: project.color }} />
             <h4 className="font-semibold mb-2">Wireframing</h4>
             <p className="text-sm text-muted-foreground">Prototyping and user flows</p>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50 text-center flex flex-col items-center justify-center">
             <MessageCircle className="h-8 w-8 mb-4" style={{ color: project.color }} />
             <h4 className="font-semibold mb-2">UX Writing</h4>
             <p className="text-sm text-muted-foreground">Microcopy and content strategy</p>
           </div>
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
+          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50 text-center flex flex-col items-center justify-center">
             <Target className="h-8 w-8 mb-4" style={{ color: project.color }} />
             <h4 className="font-semibold mb-2">Visual Design</h4>
             <p className="text-sm text-muted-foreground">Design system and UI components</p>
@@ -232,26 +233,38 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
             <h4 className="text-xl font-semibold mb-4" style={{ color: project.color }}>
               How it works:
             </h4>
-            <div className="space-y-4 mb-8">
-              <div className="flex items-start">
-                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center flex-shrink-0" style={{ backgroundColor: project.color }}>1</div>
-                <p className="text-muted-foreground">User fills out a short profile (e.g. program, age, level)</p>
+            
+            <div className="space-y-6 mb-8">
+              <div>
+                <h5 className="font-semibold mb-2" style={{ color: project.color }}>Smart Profile Matching</h5>
+                <p className="text-muted-foreground text-sm">When a student first uses the app, they fill out a short profile (e.g. program, age, level of studies). HITbot uses this data to personalize the experience.</p>
               </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center flex-shrink-0" style={{ backgroundColor: project.color }}>2</div>
-                <p className="text-muted-foreground">HITbot adapts responses accordingly</p>
+              
+              <div>
+                <h5 className="font-semibold mb-2" style={{ color: project.color }}>Contextual Answers</h5>
+                <p className="text-muted-foreground text-sm">HITbot adapts responses to fit the user's context — offering short, clear answers and direct links to the relevant people, locations, or digital forms.</p>
               </div>
-              <div className="flex items-start">
-                <div className="w-6 h-6 rounded-full text-xs font-bold mr-4 mt-0.5 text-white flex items-center justify-center flex-shrink-0" style={{ backgroundColor: project.color }}>3</div>
-                <p className="text-muted-foreground">Real examples: finding a classroom, figuring out who to contact about tuition, or locating a campus office</p>
+              
+              <div>
+                <h5 className="font-semibold mb-2" style={{ color: project.color }}>Real-Life Examples</h5>
+                <div className="space-y-2 text-sm text-muted-foreground">
+                  <p><strong>"Where do I pay tuition?"</strong> → HITbot answers with the exact contact person, office hours, and a map link</p>
+                  <p><strong>"Where's my classroom?"</strong> → HITbot shows the campus map and nearest entrance</p>
+                  <p><strong>"I have a tech issue"</strong> → HITbot offers the right IT contact and a troubleshooting guide</p>
+                </div>
+              </div>
+              
+              <div>
+                <h5 className="font-semibold mb-2" style={{ color: project.color }}>Live Video Support</h5>
+                <p className="text-muted-foreground text-sm">In addition to text-based help, HITbot can initiate a live video call with a real representative — based on the user's location on campus and the issue they're facing. This feature allows students to speak directly with support staff in real time, making the help experience feel more human, immediate, and stress-free.</p>
               </div>
             </div>
           </div>
           
           <div className="flex justify-center lg:justify-end">
-            <div className="max-w-[200px]">
+            <div className="max-w-[200px] h-full">
               <video 
-                className="w-full rounded-[32px] max-w-[200px]" 
+                className="w-full h-full rounded-[32px] max-w-[200px] object-cover" 
                 controls 
                 autoPlay
                 muted
