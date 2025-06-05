@@ -1,4 +1,5 @@
 
+
 export const DemoVideoSection = () => {
   return (
     <>
@@ -8,7 +9,7 @@ export const DemoVideoSection = () => {
       
       <div className="max-w-[280px] mx-auto">
         <video 
-          className="w-full rounded-[35px]" 
+          className="w-full rounded-[36px]" 
           controls 
           autoPlay
           muted
@@ -25,3 +26,4 @@ export const DemoVideoSection = () => {
     </>
   );
 };
+
