@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, MessageCircle, Map, Phone, Settings, User, Target, Lightbulb, AlertCircle, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
@@ -264,7 +263,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
           <div className="flex justify-center lg:justify-end">
             <div className="max-w-[320px] h-full">
               <video 
-                className="w-full h-full rounded-[32px] max-w-[320px] object-cover" 
+                className="w-full h-full rounded-[40px] max-w-[320px] object-cover" 
                 controls 
                 autoPlay
                 muted
@@ -355,7 +354,7 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
         
         <div className="max-w-[280px] mx-auto">
           <video 
-            className="w-full rounded-[24px]" 
+            className="w-full rounded-[30px]" 
             controls 
             autoPlay
             muted

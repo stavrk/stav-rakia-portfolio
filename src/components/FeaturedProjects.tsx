@@ -10,6 +10,12 @@ const FeaturedProjects = () => {
     featuredProjectSlugs.includes(project.slug) && !project.comingSoon
   );
   
+  // Sort projects to match the desired order: Save Rapunzel, Campus+, BIP, Studit
+  const sortedFeaturedProjects = featuredProjects.sort((a, b) => {
+    const order = ['save-rapunzel', 'campus-plus', 'bip', 'studit'];
+    return order.indexOf(a.slug) - order.indexOf(b.slug);
+  });
+  
   return (
     <section id="featured-projects" className="py-20 md:py-24">
       <div className="container">
@@ -26,7 +32,7 @@ const FeaturedProjects = () => {
         </motion.div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {featuredProjects.map((project, index) => (
+          {sortedFeaturedProjects.map((project, index) => (
             <ProjectCard 
               key={project.slug} 
               title={project.title} 

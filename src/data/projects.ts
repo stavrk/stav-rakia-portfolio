@@ -7,7 +7,7 @@ import { studit } from './projects/studit';
 import { plantModule } from './projects/plant-module';
 import { playtika } from './projects/playtika';
 
-// Define the project order for consistent navigation - Campus+ comes first
+// Define the project order for consistent navigation - Campus+ comes second after Save Rapunzel
 export const projectOrder = [
   "save-rapunzel",
   "campus-plus",
@@ -18,8 +18,8 @@ export const projectOrder = [
 // Combine all projects into a single array
 export const projects: Project[] = [
   saveRapunzel,
-  bip,
   campusPlus,
+  bip,
   studit,
   plantModule,
   playtika
