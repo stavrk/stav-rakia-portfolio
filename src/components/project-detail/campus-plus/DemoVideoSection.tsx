@@ -8,7 +8,7 @@ export const DemoVideoSection = () => {
       
       <div className="max-w-[280px] mx-auto">
         <video 
-          className="w-full rounded-[33px]" 
+          className="w-full rounded-[35px]" 
           controls 
           autoPlay
           muted
