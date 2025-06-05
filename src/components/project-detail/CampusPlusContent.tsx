@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { Users, MessageCircle, Map, Phone, Settings, User, Target, Lightbulb, AlertCircle, ArrowRight } from "lucide-react";
 import { Project } from "@/data/types";
@@ -17,35 +16,35 @@ export const CampusPlusContent = ({ project }: CampusPlusContentProps) => {
       age: 20,
       degree: "Visual Communication",
       quote: "I just want to know where to go and what to do on my first day",
-      image: "/lovable-uploads/ceramic_art.jpg"
+      image: "/lovable-uploads/liron_persona.jpg"
     },
     {
       name: "Tomer",
       age: 35,
       degree: "Electrical Engineering MA", 
       quote: "Everything should be in one place, fast and clean",
-      image: "/lovable-uploads/jewelry_making.jpg"
+      image: "/lovable-uploads/tomer_persona.jpg"
     },
     {
       name: "Hadar",
       age: 27,
       degree: "Medical Tech",
       quote: "The bureaucracy is so confusing and unclear",
-      image: "/lovable-uploads/pilates_reformer.jpg"
+      image: "/lovable-uploads/hadar_persona.jpg"
     },
     {
       name: "Or",
       age: 21,
       degree: "Computer Science", 
       quote: "I want to preview how my first day will actually go",
-      image: "/lovable-uploads/traveling.jpg"
+      image: "/lovable-uploads/or_persona.jpg"
     },
     {
       name: "Neta",
       age: 25,
       degree: "Learning Technologies",
       quote: "The information is always outdated and inconsistent",
-      image: "/lovable-uploads/volunteering_with_dogs.jpg"
+      image: "/lovable-uploads/neta_persona.jpg"
     }
   ];
 
