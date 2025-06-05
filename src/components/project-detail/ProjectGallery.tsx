@@ -26,7 +26,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
         </motion.h2>
         
         {(project.slug === 'bip' || project.slug === 'campus-plus') ? (
-          // BIP and Campus+ gallery - 4 images in one row
+          // BIP and Campus+ gallery - 4 images in one row, with slightly larger Campus+ images
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {project.additionalImages && project.additionalImages.map((image: string, index: number) => (
               <motion.div 
@@ -40,7 +40,7 @@ export const ProjectGallery = ({ project }: ProjectGalleryProps) => {
                 <img 
                   src={image} 
                   alt={`${project.title} - Image ${index + 1}`} 
-                  className="w-full h-auto aspect-[9/19] object-cover" 
+                  className={`w-full h-auto aspect-[9/19] ${project.slug === 'campus-plus' ? 'object-contain scale-105' : 'object-cover'}`}
                 />
               </motion.div>
             ))}
