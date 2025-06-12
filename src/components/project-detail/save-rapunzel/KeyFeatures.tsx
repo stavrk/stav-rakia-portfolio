@@ -35,27 +35,25 @@ export const KeyFeatures = ({ color }: KeyFeaturesProps) => {
   ];
 
   return (
-    <div className="space-y-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       {features.map((feature, index) => (
         <motion.div
           key={feature.title}
-          className="space-y-6"
+          className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: index * 0.1, duration: 0.5 }}
         >
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-border/50">
-            <div className="flex items-center mb-3">
-              <feature.icon className="h-6 w-6 mr-3" style={{ color }} />
-              <h4 className="text-xl font-semibold" style={{ color }}>
-                {feature.title}
-              </h4>
-            </div>
-            <p className="text-muted-foreground mb-4">
-              {feature.description}
-            </p>
+          <div className="flex items-center mb-3">
+            <feature.icon className="h-6 w-6 mr-3" style={{ color }} />
+            <h4 className="text-xl font-semibold" style={{ color }}>
+              {feature.title}
+            </h4>
           </div>
+          <p className="text-muted-foreground mb-4">
+            {feature.description}
+          </p>
           
           <div className="rounded-xl overflow-hidden">
             <video 
@@ -65,7 +63,7 @@ export const KeyFeatures = ({ color }: KeyFeaturesProps) => {
               muted 
               playsInline
               className="w-full h-auto rounded-xl"
-              style={{ maxHeight: "400px", objectFit: "cover" }}
+              style={{ maxHeight: "300px", objectFit: "cover" }}
             />
           </div>
         </motion.div>

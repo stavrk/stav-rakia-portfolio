@@ -9,31 +9,49 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <motion.div
-        className="rounded-xl overflow-hidden"
+        className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <div className="bg-secondary/30 p-4 text-center">
-          <h4 className="font-medium mb-2" style={{ color }}>Editor Interface</h4>
-          <p className="text-sm text-muted-foreground">Teacher content creation tool</p>
+        <div className="mb-4">
+          <h4 className="font-medium mb-2" style={{ color }}>Game Mode for Students</h4>
+          <p className="text-sm text-muted-foreground">Student gameplay experience</p>
         </div>
-        <img src="/lovable-uploads/save-repunzel-editor.png" alt="Save Rapunzel Editor" className="w-full h-auto" />
+        <div className="rounded-xl overflow-hidden">
+          <video 
+            src="/lovable-uploads/repunzel-game.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-auto rounded-xl"
+          />
+        </div>
       </motion.div>
 
       <motion.div
-        className="rounded-xl overflow-hidden"
+        className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 0.1, duration: 0.5 }}
       >
-        <div className="bg-secondary/30 p-4 text-center">
-          <h4 className="font-medium mb-2" style={{ color }}>Game Interface</h4>
-          <p className="text-sm text-muted-foreground">Student gameplay experience</p>
+        <div className="mb-4">
+          <h4 className="font-medium mb-2" style={{ color }}>Game Editor for Teachers</h4>
+          <p className="text-sm text-muted-foreground">Teacher content creation tool</p>
         </div>
-        <img src="/lovable-uploads/save-repunzel.png" alt="Save Rapunzel Game" className="w-full h-auto" />
+        <div className="rounded-xl overflow-hidden">
+          <video 
+            src="/lovable-uploads/save-repunzl-editor.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-auto rounded-xl"
+          />
+        </div>
       </motion.div>
     </div>
   );
