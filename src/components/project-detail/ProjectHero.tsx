@@ -104,7 +104,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div className="rounded-xl overflow-hidden shadow-lg mx-auto max-w-2xl">
+            <div className={`mx-auto max-w-2xl ${project.slug === 'campus-plus' ? '' : 'rounded-xl overflow-hidden shadow-lg'}`}>
               <img src={project.image} alt={project.title} className="w-full h-auto" />
             </div>
           </motion.div>
