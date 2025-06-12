@@ -16,9 +16,22 @@ export const KeyAnimations = ({ color }: KeyAnimationsProps) => {
       <p className="text-muted-foreground mb-4">
         Strategic animations support the learning experience without causing distraction.
       </p>
-      <p className="text-muted-foreground">
+      <p className="text-muted-foreground mb-8">
         The introductory sequence – showing Rapunzel walking through the tower with a gradual zoom to the window – replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.
       </p>
+      
+      <div className="flex justify-center">
+        <div className="rounded-xl overflow-hidden max-w-2xl">
+          <video 
+            src="/lovable-uploads/story-talling.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-auto rounded-xl"
+          />
+        </div>
+      </div>
     </motion.div>
   );
 };

@@ -9,28 +9,24 @@ interface KeyFeaturesProps {
 export const KeyFeatures = ({ color }: KeyFeaturesProps) => {
   const features = [
     {
-      title: "Storytelling & Animation",
-      description: "Opens the game with a magical animated scene that sets the tone, immerses the children in the narrative, and establishes emotional engagement from the start.",
-      icon: Play,
-      video: "/lovable-uploads/story-talling.mp4"
+      title: "Game Editor for Teachers",
+      description: "A structured and friendly interface for educators, built without the need for code, featuring real-time validation and smart rules that help ensure high-quality educational content.",
+      icon: Edit3
     },
     {
       title: "Game Mode for Students", 
       description: "A clean, intuitive, and rewarding interface where children answer questions, receive real-time feedback, and see their progress clearly — encouraging playful learning.",
-      icon: Users,
-      image: "/lovable-uploads/save-repunzel-sec.png"
+      icon: Users
     },
     {
-      title: "Game Editor for Teachers",
-      description: "A structured and friendly interface for educators, built without the need for code, featuring real-time validation and smart rules that help ensure high-quality educational content.",
-      icon: Edit3,
-      image: "/lovable-uploads/save-repunzel-editor.png"
+      title: "Storytelling & Animation",
+      description: "Opens the game with a magical animated scene that sets the tone, immerses the children in the narrative, and establishes emotional engagement from the start.",
+      icon: Play
     },
     {
       title: "Game Feedback & Scoring",
       description: "Students receive a final score based on time, number of mistakes, and correct answers, providing comprehensive performance feedback.",
-      icon: BarChart3,
-      video: "/lovable-uploads/repunzel-finish-game.mp4"
+      icon: BarChart3
     }
   ];
 
@@ -51,30 +47,9 @@ export const KeyFeatures = ({ color }: KeyFeaturesProps) => {
               {feature.title}
             </h4>
           </div>
-          <p className="text-muted-foreground mb-4">
+          <p className="text-muted-foreground">
             {feature.description}
           </p>
-          
-          <div className="rounded-xl overflow-hidden">
-            {feature.video ? (
-              <video 
-                src={feature.video} 
-                autoPlay 
-                loop 
-                muted 
-                playsInline
-                className="w-full h-auto rounded-xl"
-                style={{ maxHeight: "240px", objectFit: "contain" }}
-              />
-            ) : (
-              <img 
-                src={feature.image} 
-                alt={feature.title}
-                className="w-full h-auto rounded-xl"
-                style={{ maxHeight: "240px", objectFit: "contain" }}
-              />
-            )}
-          </div>
         </motion.div>
       ))}
     </div>

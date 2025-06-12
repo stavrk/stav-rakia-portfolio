@@ -12,11 +12,11 @@ export const saveRapunzel: Project = {
   challenge: "Traditional educational materials often fail to engage students, while educators struggle with overly complex content creation tools.",
   solution: "An intuitive, dual-interface platform where students play an animated educational game and educators create content through a no-code game editor with validation features.",
   process: [
-    "Dual research (teachers & students)",
-    "Personas development", 
-    "Wireframes & prototypes",
-    "Usability testing",
-    "UI design for both editor and game"
+    "Conducted parallel research streams on educators' content creation needs and how children engage with educational games",
+    "Developed user personas for both audience segments (educators and students)", 
+    "Created initial concepts, wireframes, and interactive prototypes",
+    "Tested with both educators and students to refine UX",
+    "Designed vibrant visuals for students and a clean, professional interface for educators"
   ],
   additionalImages: [
     "/lovable-uploads/save-repunzel-my-games.png", 
