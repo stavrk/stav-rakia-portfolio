@@ -1,4 +1,3 @@
-
 // Export all project detail components for easier imports
 export * from './ProjectHero';
 export * from './ProjectChallengeSolution';
@@ -27,3 +26,11 @@ export * from './challenges/RoomieChallenges';
 export * from './challenges/BipChallenges';
 export * from './challenges/BipTechnicalChallenges';
 export * from './challenges/DefaultChallenges';
+
+// Save Rapunzel specific components
+export * from './save-rapunzel/EducatorPersonas';
+export * from './save-rapunzel/StudentPersonas'; 
+export * from './save-rapunzel/KeyFeatures';
+export * from './save-rapunzel/DesignSystems';
+export * from './save-rapunzel/TechnologiesUsed';
+export * from './save-rapunzel/VideoDemo';
