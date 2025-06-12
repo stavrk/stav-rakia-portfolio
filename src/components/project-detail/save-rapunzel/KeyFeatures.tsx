@@ -64,14 +64,14 @@ export const KeyFeatures = ({ color }: KeyFeaturesProps) => {
                 muted 
                 playsInline
                 className="w-full h-auto rounded-xl"
-                style={{ maxHeight: "300px", objectFit: "cover" }}
+                style={{ maxHeight: "240px", objectFit: "contain" }}
               />
             ) : (
               <img 
                 src={feature.image} 
                 alt={feature.title}
                 className="w-full h-auto rounded-xl"
-                style={{ maxHeight: "300px", objectFit: "cover" }}
+                style={{ maxHeight: "240px", objectFit: "contain" }}
               />
             )}
           </div>
