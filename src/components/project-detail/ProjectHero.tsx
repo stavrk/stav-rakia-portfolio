@@ -48,7 +48,7 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
         </motion.button>
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Content area - reduced from 6 to 4 columns (33%) */}
+          {/* Content area - consistent 4 columns (33%) for all projects */}
           <motion.div 
             className="lg:col-span-4"
             initial={{ opacity: 0, y: 20 }}
@@ -97,16 +97,14 @@ export const ProjectHero = ({ project }: ProjectHeroProps) => {
             </div>
           </motion.div>
           
-          {/* Image area - increased size for Campus+ on project page */}
+          {/* Image area - consistent size for all projects */}
           <motion.div 
             className="relative lg:col-span-8" 
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            <div className={`rounded-xl overflow-hidden shadow-lg mx-auto ${
-              project.slug === 'campus-plus' ? 'max-w-lg' : 'max-w-lg'
-            }`}>
+            <div className="rounded-xl overflow-hidden shadow-lg mx-auto max-w-lg">
               <img src={project.image} alt={project.title} className="w-full h-auto" />
             </div>
           </motion.div>

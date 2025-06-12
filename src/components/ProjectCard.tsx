@@ -45,18 +45,14 @@ const ProjectCard = ({
     >      
       {/* Project Image */}
       <div className="relative">
-        <div className={cn(
-          "overflow-hidden rounded-t-xl flex items-center justify-center",
-          slug === 'campus-plus' ? "aspect-[4/3]" : "aspect-video"
-        )}>
+        <div className="overflow-hidden rounded-t-xl aspect-video flex items-center justify-center">
           <img 
             src={image} 
             alt={title}
             loading="lazy" 
             className={cn(
-              "transition-transform duration-300 group-hover:scale-105", 
-              comingSoon && "opacity-80",
-              slug === 'campus-plus' ? "w-full h-full object-contain scale-110" : "w-full h-full object-cover object-center"
+              "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105", 
+              comingSoon && "opacity-80"
             )}
           />
           
