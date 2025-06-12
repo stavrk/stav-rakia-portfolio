@@ -7,7 +7,7 @@ interface VideoDemoProps {
 
 export const VideoDemo = ({ color }: VideoDemoProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="space-y-12">
       <motion.div
         className="bg-white rounded-xl p-6 shadow-sm border border-border/50"
         initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ delay: 0.1, duration: 0.5 }}
+        transition={{ delay: 0.2, duration: 0.5 }}
       >
         <div className="mb-4">
           <h4 className="font-medium mb-2" style={{ color }}>Game Editor for Teachers</h4>
