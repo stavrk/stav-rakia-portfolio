@@ -12,21 +12,21 @@ export const StudentPersonas = ({ color }: StudentPersonasProps) => {
       name: "Dana",
       age: 10,
       degree: "Student",
-      description: "I don't want just a quiz. I want to feel like I'm in a mission — with colors, characters and a goal.",
+      description: '"I don\'t want just a quiz. I want to feel like I\'m in a mission — with colors, characters and a goal."',
       image: "/lovable-uploads/liron_persona.jpg"
     },
     {
       name: "Itai",
       age: 9,
       degree: "Student", 
-      description: "When I get feedback and see if I got it right, it makes me want to keep going.",
+      description: '"When I get feedback and see if I got it right, it makes me want to keep going."',
       image: "/lovable-uploads/neta_persona.jpg"
     },
     {
       name: "Eden",
       age: 12,
       degree: "Student",
-      description: "I like it when the game talks fun — not like school. It makes me want to keep going.",
+      description: '"I like it when the game talks fun — not like school. It makes me want to keep going."',
       image: "/lovable-uploads/or_persona.jpg"
     }
   ];

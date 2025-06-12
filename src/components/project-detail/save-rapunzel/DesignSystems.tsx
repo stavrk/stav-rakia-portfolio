@@ -6,6 +6,29 @@ interface DesignSystemsProps {
 }
 
 export const DesignSystems = ({ color }: DesignSystemsProps) => {
+  const designImages = [
+    {
+      title: "My Games Dashboard",
+      image: "/lovable-uploads/save-repunzel-my-games.png",
+      description: "Teacher dashboard showing created games and management interface"
+    },
+    {
+      title: "Add New Game",
+      image: "/lovable-uploads/save-repunzel-my-games-add.png", 
+      description: "Game creation flow with intuitive step-by-step guidance"
+    },
+    {
+      title: "Game Editor Interface",
+      image: "/lovable-uploads/save-repunzel-sec.png",
+      description: "Advanced editing tools with real-time validation"
+    },
+    {
+      title: "Student Game View",
+      image: "/lovable-uploads/save-repunzel-third.png",
+      description: "Engaging gameplay interface designed for young learners"
+    }
+  ];
+
   return (
     <div className="space-y-12">
       {/* Game Design System */}
@@ -19,9 +42,6 @@ export const DesignSystems = ({ color }: DesignSystemsProps) => {
             <p className="text-muted-foreground mb-4">
               Deep blue, moss green, golden yellow, warm copper, brick red. Stronger contrast and saturation to support engagement and emotional immersion.
             </p>
-            <div className="rounded-lg overflow-hidden">
-              <img src="/lovable-uploads/save-repunzel-color-palette.png" alt="Game Color Palette" className="w-full h-auto" />
-            </div>
           </div>
           <div>
             <h4 className="text-lg font-medium mb-3" style={{ color }}>Typography & Iconography</h4>
@@ -64,6 +84,31 @@ export const DesignSystems = ({ color }: DesignSystemsProps) => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Design System Images */}
+      <div>
+        <h3 className="text-2xl font-semibold mb-6" style={{ color }}>
+          Interface Examples
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {designImages.map((item, index) => (
+            <motion.div
+              key={item.title}
+              className="rounded-xl overflow-hidden"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: index * 0.1, duration: 0.5 }}
+            >
+              <div className="bg-secondary/30 p-4 text-center">
+                <h4 className="font-medium mb-2" style={{ color }}>{item.title}</h4>
+                <p className="text-sm text-muted-foreground">{item.description}</p>
+              </div>
+              <img src={item.image} alt={item.title} className="w-full h-auto" />
+            </motion.div>
+          ))}
         </div>
       </div>
     </div>
