@@ -18,13 +18,13 @@ export const KeyFeatures = ({ color }: KeyFeaturesProps) => {
       title: "Game Mode for Students", 
       description: "A clean, intuitive, and rewarding interface where children answer questions, receive real-time feedback, and see their progress clearly — encouraging playful learning.",
       icon: Users,
-      video: "/lovable-uploads/repunzel-game.mp4"
+      image: "/lovable-uploads/save-repunzel-sec.png"
     },
     {
       title: "Game Editor for Teachers",
       description: "A structured and friendly interface for educators, built without the need for code, featuring real-time validation and smart rules that help ensure high-quality educational content.",
       icon: Edit3,
-      video: "/lovable-uploads/save-repunzl-editor.mp4"
+      image: "/lovable-uploads/save-repunzel-editor.png"
     },
     {
       title: "Game Feedback & Scoring",
@@ -56,15 +56,24 @@ export const KeyFeatures = ({ color }: KeyFeaturesProps) => {
           </p>
           
           <div className="rounded-xl overflow-hidden">
-            <video 
-              src={feature.video} 
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-              className="w-full h-auto rounded-xl"
-              style={{ maxHeight: "300px", objectFit: "cover" }}
-            />
+            {feature.video ? (
+              <video 
+                src={feature.video} 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-auto rounded-xl"
+                style={{ maxHeight: "300px", objectFit: "cover" }}
+              />
+            ) : (
+              <img 
+                src={feature.image} 
+                alt={feature.title}
+                className="w-full h-auto rounded-xl"
+                style={{ maxHeight: "300px", objectFit: "cover" }}
+              />
+            )}
           </div>
         </motion.div>
       ))}

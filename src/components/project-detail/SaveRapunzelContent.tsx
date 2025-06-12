@@ -8,6 +8,9 @@ import { KeyFeatures } from "./save-rapunzel/KeyFeatures";
 import { DesignSystems } from "./save-rapunzel/DesignSystems";
 import { TechnologiesUsed } from "./save-rapunzel/TechnologiesUsed";
 import { VideoDemo } from "./save-rapunzel/VideoDemo";
+import { GraphicDevelopment } from "./save-rapunzel/GraphicDevelopment";
+import { KeyAnimations } from "./save-rapunzel/KeyAnimations";
+import { TechnicalChallenges } from "./save-rapunzel/TechnicalChallenges";
 
 interface SaveRapunzelContentProps {
   project: Project;
@@ -34,6 +37,21 @@ export const SaveRapunzelContent = ({ project }: SaveRapunzelContentProps) => {
       {/* Design Systems */}
       <ProjectSection title="Design Systems" color={project.color}>
         <DesignSystems color={project.color} />
+      </ProjectSection>
+
+      {/* Graphic Development and Design Evolution */}
+      <ProjectSection title="Graphic Development and Design Evolution" color={project.color}>
+        <GraphicDevelopment color={project.color} />
+      </ProjectSection>
+
+      {/* Key Animations */}
+      <ProjectSection title="Key Animations" color={project.color}>
+        <KeyAnimations color={project.color} />
+      </ProjectSection>
+
+      {/* Technical & Development Challenges */}
+      <ProjectSection title="Technical & Development Challenges" color={project.color}>
+        <TechnicalChallenges color={project.color} />
       </ProjectSection>
 
       {/* Technologies Used */}

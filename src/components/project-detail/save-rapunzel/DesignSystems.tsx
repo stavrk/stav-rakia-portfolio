@@ -13,7 +13,7 @@ export const DesignSystems = ({ color }: DesignSystemsProps) => {
         <h3 className="text-2xl font-semibold mb-6" style={{ color }}>
           Visual & UX Design System – Game
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
           <div>
             <h4 className="text-lg font-medium mb-3" style={{ color }}>Color Palette</h4>
             <p className="text-muted-foreground mb-4">
@@ -32,10 +32,12 @@ export const DesignSystems = ({ color }: DesignSystemsProps) => {
                 <p>Rounded, colorful icons with clear status indicators for kids (checkmarks, animations, etc.)</p>
               </div>
             </div>
-            
-            <div className="mt-6 rounded-xl overflow-hidden">
-              <img src="/lovable-uploads/repunzel-players-ui.png" alt="Game UI Design" className="w-full h-auto max-w-md" />
-            </div>
+          </div>
+        </div>
+        
+        <div className="flex justify-center">
+          <div className="rounded-xl overflow-hidden max-w-md">
+            <img src="/lovable-uploads/repunzel-players-ui.png" alt="Game UI Design" className="w-full h-auto" />
           </div>
         </div>
       </div>
@@ -45,7 +47,7 @@ export const DesignSystems = ({ color }: DesignSystemsProps) => {
         <h3 className="text-2xl font-semibold mb-6" style={{ color }}>
           Visual & UX Design System – Editor
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
           <div>
             <h4 className="text-lg font-medium mb-3" style={{ color }}>Color Palette</h4>
             <p className="text-muted-foreground">
@@ -64,10 +66,12 @@ export const DesignSystems = ({ color }: DesignSystemsProps) => {
                 <p>Simplified tools (trash, pencil, confirm). Less vibrant, high contrast where needed for action buttons.</p>
               </div>
             </div>
-            
-            <div className="mt-6 rounded-xl overflow-hidden">
-              <img src="/lovable-uploads/repunzel-editors-ui.png" alt="Editor UI Design" className="w-full h-auto max-w-md" />
-            </div>
+          </div>
+        </div>
+        
+        <div className="flex justify-center">
+          <div className="rounded-xl overflow-hidden max-w-md">
+            <img src="/lovable-uploads/repunzel-editors-ui.png" alt="Editor UI Design" className="w-full h-auto" />
           </div>
         </div>
       </div>

@@ -34,3 +34,6 @@ export * from './save-rapunzel/KeyFeatures';
 export * from './save-rapunzel/DesignSystems';
 export * from './save-rapunzel/TechnologiesUsed';
 export * from './save-rapunzel/VideoDemo';
+export * from './save-rapunzel/GraphicDevelopment';
+export * from './save-rapunzel/KeyAnimations';
+export * from './save-rapunzel/TechnicalChallenges';
