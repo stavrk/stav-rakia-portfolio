@@ -20,8 +20,8 @@ export const KeyAnimations = ({ color }: KeyAnimationsProps) => {
         The introductory sequence – showing Rapunzel walking through the tower with a gradual zoom to the window – replaced our original storybook concept and significantly improved engagement metrics. Similarly, the prince's climbing animation provides immediate feedback on correct answers while strengthening emotional investment in the storyline.
       </p>
       
-      <div className="flex justify-center">
-        <div className="rounded-xl overflow-hidden max-w-2xl">
+      <div className="flex justify-center w-full">
+        <div className="rounded-xl overflow-hidden w-full">
           <video 
             src="/lovable-uploads/story-talling.mp4" 
             autoPlay 

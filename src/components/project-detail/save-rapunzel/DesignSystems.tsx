@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 interface DesignSystemsProps {
   color: string;
@@ -40,8 +41,8 @@ export const DesignSystems = ({
           </div>
         </div>
         
-        <div className="flex justify-center">
-          <div className="rounded-xl overflow-hidden w-full max-w-5xl">
+        <div className="flex justify-center w-full">
+          <div className="rounded-xl overflow-hidden w-full">
             <img src="/lovable-uploads/repunzel-players-ui.png" alt="Game UI Design" className="w-full h-auto" />
           </div>
         </div>
@@ -81,8 +82,8 @@ export const DesignSystems = ({
           </div>
         </div>
         
-        <div className="flex justify-center">
-          <div className="rounded-xl overflow-hidden w-full max-w-5xl">
+        <div className="flex justify-center w-full">
+          <div className="rounded-xl overflow-hidden w-full">
             <img src="/lovable-uploads/repunzel-editors-ui.png" alt="Editor UI Design" className="w-full h-auto object-contain" />
           </div>
         </div>
