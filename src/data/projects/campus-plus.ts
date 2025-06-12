@@ -1,9 +1,8 @@
-
 import { Project } from '../types';
 
 export const campusPlus: Project = {
   title: "CAMPUS+",
-  description: "A centralized mobile experience to support new and existing students at HIT.",
+  description: "An app for new and current HIT students to navigate campus life and enjoy a smoother student experience.",
   image: "/lovable-uploads/campusplus_mockup.png",
   tags: ["UX/UI Design", "Mobile App"],
   slug: "campus-plus",
