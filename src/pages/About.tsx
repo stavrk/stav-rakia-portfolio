@@ -4,12 +4,13 @@ import Skills from "@/components/Skills";
 import { motion } from "framer-motion";
 import { ExternalLink, Download } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+
 const About = () => {
   const artistsData = [{
     name: "Jorja Smith",
     image: "/lovable-uploads/jorja-smith.jpeg"
   }, {
-    name: "Adele",
+    name: "Adele", 
     image: "/lovable-uploads/adele.jpg"
   }, {
     name: "Alicia Keys",
@@ -114,7 +115,7 @@ const About = () => {
             duration: 0.5
           }}>
               <div className="aspect-square w-full mx-auto rounded-xl overflow-hidden border-4 border-white shadow-xl">
-                <img src="/lovable-uploads/stav_rakia.jpg" alt="Stav Rakia" className="w-full h-full object-cover" />
+                <img src="/lovable-uploads/fbd873be-505d-4b96-870b-6510d654a89a.png" alt="Stav Rakia" className="w-full h-full object-cover" />
               </div>
             </motion.div>
           </div>
@@ -230,7 +231,7 @@ const About = () => {
                 <p className="text-muted-foreground">Holon Institute of Technology</p>
                 <p className="text-sm text-muted-foreground">2022 - 2025</p>
               </div>
-              <p className="flex-grow overflow-y-auto text-sm">Dean’s List Honoree – 2023, President’s List Honoree – 2024 – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design.</p>
+              <p className="flex-grow overflow-y-auto text-sm">Dean's List Honoree – 2023, President's List Honoree – 2024 – GPA: 97. A cutting-edge program preparing professionals to lead in digital learning, instructional technology, and UX/UI design.</p>
               <div className="mt-4 pt-4 border-t border-border">
                 <p className="text-sm font-medium">Relevant Coursework:</p>
                 <p className="text-xs text-muted-foreground">UX/UI Design & Analysis, Knowledge Organization & Representation, Interactive Learning Environments, Visual Communication & Graphic Design, Mobile Interface Design & Interactive Media</p>
