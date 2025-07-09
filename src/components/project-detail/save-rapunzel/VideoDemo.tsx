@@ -39,7 +39,7 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
               target.parentNode?.replaceChild(img, target);
             }}
           >
-            <source src="/lovable-uploads/repunzel-game.mp4" type="video/mp4" />
+            <source src="/lovable-uploads/repunzel-game-2.mp4" type="video/mp4" />
             Your browser does not support the video tag. Please view the static image above.
           </video>
         </div>
@@ -76,7 +76,7 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
               target.parentNode?.replaceChild(img, target);
             }}
           >
-            <source src="/lovable-uploads/save-repunzl-editor.mp4" type="video/mp4" />
+            <source src="/lovable-uploads/save-repunzl-editor-2.mp4" type="video/mp4" />
             Your browser does not support the video tag. Please view the static image above.
           </video>
         </div>

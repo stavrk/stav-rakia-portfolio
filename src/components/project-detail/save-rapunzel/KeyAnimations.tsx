@@ -41,7 +41,7 @@ export const KeyAnimations = ({ color }: KeyAnimationsProps) => {
               target.parentNode?.replaceChild(img, target);
             }}
           >
-            <source src="/lovable-uploads/story-talling.mp4" type="video/mp4" />
+            <source src="/lovable-uploads/story-talling-2.mp4" type="video/mp4" />
             Your browser does not support the video tag. Please view the static image above.
           </video>
         </div>
