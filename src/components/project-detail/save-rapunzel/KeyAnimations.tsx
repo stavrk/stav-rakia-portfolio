@@ -22,19 +22,11 @@ export const KeyAnimations = ({ color }: KeyAnimationsProps) => {
       
       <div className="flex justify-center w-full">
         <div className="rounded-xl overflow-hidden w-full">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            controls
-            preload="metadata"
-            poster="/lovable-uploads/save-repunzel-interface.png"
+          <img 
+            src="/lovable-uploads/save-repunzel-interface.png"
+            alt="Save Rapunzel story animation interface"
             className="w-full h-auto rounded-xl"
-          >
-            <source src="/lovable-uploads/story-talling.mp4" type="video/mp4" />
-            Your browser does not support the video tag. Please view the static image above.
-          </video>
+          />
         </div>
       </div>
     </motion.div>
