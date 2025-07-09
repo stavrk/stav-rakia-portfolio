@@ -80,10 +80,10 @@ const ProjectDetail = () => {
           }
           
           {/* Reordered and merged sections for Save Rapunzel */}
-          <SaveRapunzelContent project={project} />
+          {project.slug === 'save-rapunzel' && <SaveRapunzelContent project={project} />}
           
           {/* Campus+ specific content */}
-          <CampusPlusContent project={project} />
+          {project.slug === 'campus-plus' && <CampusPlusContent project={project} />}
           
           {/* Design Process & Aesthetics Section with images - For projects other than Save Rapunzel and Campus+ */}
           {project.slug !== 'save-rapunzel' && project.slug !== 'campus-plus' && project.designProcessAndAesthetics && project.designImages && 
