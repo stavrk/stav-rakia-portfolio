@@ -21,13 +21,18 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
         </div>
         <div className="rounded-xl overflow-hidden">
           <video 
-            src="/lovable-uploads/repunzel-game.mp4" 
             autoPlay 
             loop 
             muted 
             playsInline
+            controls
+            preload="metadata"
+            poster="/lovable-uploads/save-repunzel.png"
             className="w-full h-auto rounded-xl"
-          />
+          >
+            <source src="/lovable-uploads/repunzel-game.mp4" type="video/mp4" />
+            Your browser does not support the video tag. Please view the static image above.
+          </video>
         </div>
       </motion.div>
 
@@ -44,13 +49,18 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
         </div>
         <div className="rounded-xl overflow-hidden">
           <video 
-            src="/lovable-uploads/save-repunzl-editor.mp4" 
             autoPlay 
             loop 
             muted 
             playsInline
+            controls
+            preload="metadata"
+            poster="/lovable-uploads/save-repunzel-editor.png"
             className="w-full h-auto rounded-xl"
-          />
+          >
+            <source src="/lovable-uploads/save-repunzl-editor.mp4" type="video/mp4" />
+            Your browser does not support the video tag. Please view the static image above.
+          </video>
         </div>
       </motion.div>
     </div>
