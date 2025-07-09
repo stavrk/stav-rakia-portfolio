@@ -20,11 +20,19 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
           <p className="text-sm text-muted-foreground">Student gameplay experience</p>
         </div>
         <div className="rounded-xl overflow-hidden">
-          <img 
-            src="/lovable-uploads/save-repunzel.png"
-            alt="Save Rapunzel game interface showing student gameplay experience"
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            controls
+            preload="metadata"
+            poster="/lovable-uploads/save-repunzel.png"
             className="w-full h-auto rounded-xl"
-          />
+          >
+            <source src="/lovable-uploads/repunzel-game.mp4" type="video/mp4" />
+            Your browser does not support the video tag. Please view the static image above.
+          </video>
         </div>
       </motion.div>
 
@@ -40,11 +48,19 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
           <p className="text-sm text-muted-foreground">Teacher content creation tool</p>
         </div>
         <div className="rounded-xl overflow-hidden">
-          <img 
-            src="/lovable-uploads/save-repunzel-editor.png"
-            alt="Save Rapunzel game editor interface for teachers"
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            controls
+            preload="metadata"
+            poster="/lovable-uploads/save-repunzel-editor.png"
             className="w-full h-auto rounded-xl"
-          />
+          >
+            <source src="/lovable-uploads/save-repunzl-editor.mp4" type="video/mp4" />
+            Your browser does not support the video tag. Please view the static image above.
+          </video>
         </div>
       </motion.div>
     </div>
