@@ -13,8 +13,8 @@ const About = () => {
     name: "Adele", 
     image: "/lovable-uploads/adele.jpg"
   }, {
-    name: "Alicia Keys",
-    image: "/lovable-uploads/alicia-keys.jpg"
+    name: "Tamir Grinberg",
+    image: "/lovable-uploads/tamir-grinberg.jpg"
   }, {
     name: "Ninet Tayeb",
     image: "/lovable-uploads/ninet_t.png"
