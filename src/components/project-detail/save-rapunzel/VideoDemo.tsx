@@ -27,17 +27,7 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
             playsInline
             controls
             preload="metadata"
-            poster="/lovable-uploads/save-repunzel.png"
             className="w-full h-auto rounded-xl"
-            onError={(e) => {
-              // Fallback to image if video fails to load
-              const target = e.target as HTMLVideoElement;
-              const img = document.createElement('img');
-              img.src = '/lovable-uploads/save-repunzel.png';
-              img.alt = 'Save Rapunzel game interface';
-              img.className = 'w-full h-auto rounded-xl';
-              target.parentNode?.replaceChild(img, target);
-            }}
           >
             <source src="/lovable-uploads/repunzel-game-2.mp4" type="video/mp4" />
             Your browser does not support the video tag. Please view the static image above.
@@ -64,17 +54,7 @@ export const VideoDemo = ({ color }: VideoDemoProps) => {
             playsInline
             controls
             preload="metadata"
-            poster="/lovable-uploads/save-repunzel-editor.png"
             className="w-full h-auto rounded-xl"
-            onError={(e) => {
-              // Fallback to image if video fails to load
-              const target = e.target as HTMLVideoElement;
-              const img = document.createElement('img');
-              img.src = '/lovable-uploads/save-repunzel-editor.png';
-              img.alt = 'Save Rapunzel editor interface';
-              img.className = 'w-full h-auto rounded-xl';
-              target.parentNode?.replaceChild(img, target);
-            }}
           >
             <source src="/lovable-uploads/save-repunzl-editor-2.mp4" type="video/mp4" />
             Your browser does not support the video tag. Please view the static image above.

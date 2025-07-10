@@ -29,17 +29,7 @@ export const KeyAnimations = ({ color }: KeyAnimationsProps) => {
             playsInline
             controls
             preload="metadata"
-            poster="/lovable-uploads/save-repunzel-interface.png"
             className="w-full h-auto rounded-xl"
-            onError={(e) => {
-              // Fallback to image if video fails to load
-              const target = e.target as HTMLVideoElement;
-              const img = document.createElement('img');
-              img.src = '/lovable-uploads/save-repunzel-interface.png';
-              img.alt = 'Save Rapunzel story interface';
-              img.className = 'w-full h-auto rounded-xl';
-              target.parentNode?.replaceChild(img, target);
-            }}
           >
             <source src="/lovable-uploads/story-talling-2.mp4" type="video/mp4" />
             Your browser does not support the video tag. Please view the static image above.
