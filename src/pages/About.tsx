@@ -27,7 +27,7 @@ const About = () => {
   }];
   const hobbiesData = [{
     name: "Jewelry making",
-    image: "/lovable-uploads/jewelry_making.jpg"
+    image: "/lovable-uploads/523976bd-b46c-4a21-8a3a-f8acaacdf3af.png"
   }, {
     name: "Pilates reformer",
     image: "/lovable-uploads/pilates_reformer.jpg"
