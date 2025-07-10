@@ -27,29 +27,24 @@ const ProjectCard = ({
   comingSoon = false,
   link
 }: ProjectCardProps) => {
-  // Handle card click - navigate to the project detail page unless "coming soon"
-  const handleCardClick = (e: React.MouseEvent) => {
-    if (!comingSoon && !e.defaultPrevented) {
-      window.location.href = `/projects/${slug}`;
-    }
-  };
+  // No longer needed - using Link component directly
 
   return (
     <motion.div
-      className="group relative overflow-hidden rounded-xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-md will-change-transform cursor-pointer"
+      className="group relative overflow-hidden rounded-xl bg-white dark:bg-card border border-border/50 shadow-sm hover:shadow-md will-change-transform"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: Math.min(index * 0.1, 0.3) + 0.2, duration: 0.4 }}
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
-      onClick={handleCardClick}
-    >      
+    >
       {/* Project Image */}
       <div className="relative">
         <div className="overflow-hidden rounded-t-xl aspect-video flex items-center justify-center">
           <img 
             src={image} 
             alt={title}
-            loading="lazy" 
+            loading="lazy"
+            decoding="async"
             className={cn(
               "w-full h-full object-cover object-center transition-transform duration-300 group-hover:scale-105", 
               comingSoon && "opacity-80"
@@ -77,8 +72,7 @@ const ProjectCard = ({
         {!comingSoon ? (
           <Link 
             to={`/projects/${slug}`}
-            className="inline-flex items-center text-black hover:text-[#8247E5] transition-colors duration-200 font-medium text-sm"
-            onClick={(e) => e.stopPropagation()} // Prevent triggering the parent div's onClick
+            className="inline-flex items-center text-black hover:text-[#8247E5] transition-colors duration-200 font-medium text-sm after:absolute after:inset-0"
           >
             View Case Study
             <ArrowRight className="ml-1 h-4 w-4 transition-colors duration-200" />

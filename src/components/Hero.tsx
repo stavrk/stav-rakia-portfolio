@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 const Hero = () => {
   return <section className="min-h-[90vh] flex flex-col justify-center items-center text-center px-4 pt-8 md:pt-12 relative">
       <motion.div initial={{
@@ -44,12 +45,12 @@ const Hero = () => {
         delay: 0.4,
         duration: 0.6
       }}>
-          <a href="/projects" className="inline-block px-5 py-2.5 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] hover:shadow-lg text-sm sm:text-base sm:px-6 sm:py-3">
+          <Link to="/projects" className="inline-block px-5 py-2.5 rounded-full bg-primary text-white font-medium transition-all hover:bg-primary/90 hover:translate-y-[-2px] hover:shadow-lg text-sm sm:text-base sm:px-6 sm:py-3">
             View Projects
-          </a>
-          <a href="/about" className="inline-block px-5 py-2.5 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px] text-sm sm:text-base sm:px-6 sm:py-3">
+          </Link>
+          <Link to="/about" className="inline-block px-5 py-2.5 rounded-full bg-white text-primary font-medium transition-all border-2 border-primary hover:bg-primary/5 hover:translate-y-[-2px] text-sm sm:text-base sm:px-6 sm:py-3">
             About Me
-          </a>
+          </Link>
         </motion.div>
       </motion.div>
       
