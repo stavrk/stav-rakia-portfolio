@@ -14,7 +14,7 @@ const About = () => {
     image: "/lovable-uploads/adele.jpg"
   }, {
     name: "Tamir Grinberg",
-    image: "/lovable-uploads/tamir-grinberg.jpg"
+    image: "/lovable-uploads/24c2478a-bf21-45c2-8513-490dedb6ab29.png"
   }, {
     name: "Ninet Tayeb",
     image: "/lovable-uploads/ninet_t.png"
