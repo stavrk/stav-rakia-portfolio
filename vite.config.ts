@@ -30,6 +30,5 @@ export default defineConfig(({ mode }) => ({
       },
     },
     target: 'es2015',
-    minify: 'terser',
   },
 }));
